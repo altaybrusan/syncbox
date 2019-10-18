@@ -1,5 +1,0 @@
-Removed Member From Class: ClassName=DIFF100 Member=SATA_CON_RX_N
-Removed Member From Class: ClassName=DIFF100 Member=SATA_CON_RX_P
-Removed Member From Class: ClassName=DIFF100 Member=SATA_CON_TX_N
-Removed Member From Class: ClassName=DIFF100 Member=SATA_CON_TX_P
-Added Class: Name=DIFF_SATA

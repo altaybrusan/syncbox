@@ -1,5 +1,0 @@
-Layer Pairs Export File for PCB: C:\Users\Altay\Documents\Altium\Projects\SyncBox\Work\Bogazici University\SyncBox\V3I1\Circuit\SYNCBOX.PcbDoc
-LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=syncbox-roundholes-plated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
-LayersSetName=Top_Bot_Plated_Slot_Holes|DrillFile=syncbox-slotholes-plated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
-LayersSetName=Top_Bot_Plated_Rect_Holes|DrillFile=syncbox-rectholes-plated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
-LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=syncbox-roundholes-nonplated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
