@@ -1,0 +1,101 @@
+\hypertarget{_p_i_c24e_def_8h}{}\section{P\+I\+C24e\+Def.\+h File Reference}
+\label{_p_i_c24e_def_8h}\index{P\+I\+C24e\+Def.\+h@{P\+I\+C24e\+Def.\+h}}
+
+
+P\+I\+C24 related operations and preparations.  
+
+
+{\ttfamily \#include \char`\"{}Connection\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for P\+I\+C24e\+Def.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{_p_i_c24e_def_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{_p_i_c24e_def_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_ad0ce9dde945f8ffe9221f71a4b039a92}\label{_p_i_c24e_def_8h_ad0ce9dde945f8ffe9221f71a4b039a92}} 
+void \hyperlink{_p_i_c24e_def_8h_ad0ce9dde945f8ffe9221f71a4b039a92}{Initialize\+Heap} ()
+\begin{DoxyCompactList}\small\item\em initialize heap. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_ae3a202337f42562c2c9d8c5590f2c516}\label{_p_i_c24e_def_8h_ae3a202337f42562c2c9d8c5590f2c516}} 
+void \hyperlink{_p_i_c24e_def_8h_ae3a202337f42562c2c9d8c5590f2c516}{Initialize\+P\+I\+C\+Speed} ()
+\begin{DoxyCompactList}\small\item\em initialize pic micro-\/controller speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_aaf130db27820311746f51999dff00c31}\label{_p_i_c24e_def_8h_aaf130db27820311746f51999dff00c31}} 
+void \hyperlink{_p_i_c24e_def_8h_aaf130db27820311746f51999dff00c31}{Initialize\+P\+I\+C\+Pins} ()
+\begin{DoxyCompactList}\small\item\em initialize pic pins. \end{DoxyCompactList}\item 
+void \hyperlink{_p_i_c24e_def_8h_a32666a085d5c95458d8c91c2b2e6949d}{Initialize\+U\+A\+R\+TS} ()
+\begin{DoxyCompactList}\small\item\em initialize uarts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_aaed242339275920a4ddcc7ed19b7fac1}\label{_p_i_c24e_def_8h_aaed242339275920a4ddcc7ed19b7fac1}} 
+void \hyperlink{_p_i_c24e_def_8h_aaed242339275920a4ddcc7ed19b7fac1}{Prioritize\+Interrupts} ()
+\begin{DoxyCompactList}\small\item\em update prioritize interrupts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_a1759f533ced7d6d880bd1e933b695678}\label{_p_i_c24e_def_8h_a1759f533ced7d6d880bd1e933b695678}} 
+void \hyperlink{_p_i_c24e_def_8h_a1759f533ced7d6d880bd1e933b695678}{Initialize\+Buzzer} ()
+\begin{DoxyCompactList}\small\item\em initialize buzzer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_afc875c0325fd3fe8c3f7c4340d7b5352}\label{_p_i_c24e_def_8h_afc875c0325fd3fe8c3f7c4340d7b5352}} 
+void \hyperlink{_p_i_c24e_def_8h_afc875c0325fd3fe8c3f7c4340d7b5352}{Initialize\+Timers} ()
+\begin{DoxyCompactList}\small\item\em initialize timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_p_i_c24e_def_8h_a06550a4d215f28b0e73daf822a58bffa}\label{_p_i_c24e_def_8h_a06550a4d215f28b0e73daf822a58bffa}} 
+bool {\bfseries E\+N\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+B\+O\+X\+\_\+\+S\+P\+E\+E\+K\+ER} = true
+\item 
+const \hyperlink{_p_i_c24e_def_8h_a6669898a4e095cd4b64513a16951b2ae}{H\+E\+A\+P\+\_\+\+S\+I\+ZE} = 400
+\begin{DoxyCompactList}\small\item\em heap size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+I\+C24 related operations and preparations. 
+
+The functions are used during bootup by kernel. Maps are used by \hyperlink{_connection_map_8h}{Connection\+Map.\+h} the pin numbers are compatible Easypic Fusion v7 devboard. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_p_i_c24e_def_8h_a32666a085d5c95458d8c91c2b2e6949d}\label{_p_i_c24e_def_8h_a32666a085d5c95458d8c91c2b2e6949d}} 
+\index{P\+I\+C24e\+Def.\+h@{P\+I\+C24e\+Def.\+h}!Initialize\+U\+A\+R\+TS@{Initialize\+U\+A\+R\+TS}}
+\index{Initialize\+U\+A\+R\+TS@{Initialize\+U\+A\+R\+TS}!P\+I\+C24e\+Def.\+h@{P\+I\+C24e\+Def.\+h}}
+\subsubsection{\texorpdfstring{Initialize\+U\+A\+R\+T\+S()}{InitializeUARTS()}}
+{\footnotesize\ttfamily void Initialize\+U\+A\+R\+TS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize uarts 
+
+\begin{DoxyNote}{Note}
+always call Initialize\+U\+A\+R\+TS after Initialize\+P\+I\+C\+Pins because the interrupts are enabled inside and this requires the pins set first 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{_p_i_c24e_def_8h_a32666a085d5c95458d8c91c2b2e6949d_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_p_i_c24e_def_8h_a6669898a4e095cd4b64513a16951b2ae}\label{_p_i_c24e_def_8h_a6669898a4e095cd4b64513a16951b2ae}} 
+\index{P\+I\+C24e\+Def.\+h@{P\+I\+C24e\+Def.\+h}!H\+E\+A\+P\+\_\+\+S\+I\+ZE@{H\+E\+A\+P\+\_\+\+S\+I\+ZE}}
+\index{H\+E\+A\+P\+\_\+\+S\+I\+ZE@{H\+E\+A\+P\+\_\+\+S\+I\+ZE}!P\+I\+C24e\+Def.\+h@{P\+I\+C24e\+Def.\+h}}
+\subsubsection{\texorpdfstring{H\+E\+A\+P\+\_\+\+S\+I\+ZE}{HEAP\_SIZE}}
+{\footnotesize\ttfamily const H\+E\+A\+P\+\_\+\+S\+I\+ZE = 400}
+
+
+
+heap size. 
+
+\begin{DoxyNote}{Note}
+start from 250 and increase. if you see some abnormal behavior reduce the heap size to 250 and try again. 
+\end{DoxyNote}

@@ -1,0 +1,267 @@
+Removed Pin From Net: NetName=GND Pin=J9-1
+Removed Pin From Net: NetName=TRD3_N Pin=J9-2
+Removed Pin From Net: NetName=TRD3_P Pin=J9-3
+Removed Pin From Net: NetName=GBE0_LINK100# Pin=J9-4
+Removed Pin From Net: NetName=GBE0_LINK1000# Pin=J9-5
+Removed Pin From Net: NetName=TRD2_N Pin=J9-6
+Removed Pin From Net: NetName=TRD2_P Pin=J9-7
+Removed Pin From Net: NetName=NetJ4_11 Pin=J9-8
+Removed Pin From Net: NetName=TRD1_N Pin=J9-9
+Removed Pin From Net: NetName=TRD1_P Pin=J9-10
+Removed Pin From Net: NetName=GND Pin=J9-11
+Removed Pin From Net: NetName=TRD0_N Pin=J9-12
+Removed Pin From Net: NetName=TRD0_P Pin=J9-13
+Removed Pin From Net: NetName=NetC9_2 Pin=J9-14
+Removed Pin From Net: NetName=SUS_S3 Pin=J9-15
+Removed Pin From Net: NetName=SATA_CON_TX_P Pin=J9-16
+Removed Pin From Net: NetName=SATA_CON_TX_N Pin=J9-17
+Removed Pin From Net: NetName=SUS_S4# Pin=J9-18
+Removed Pin From Net: NetName=SATA_CON_RX_P Pin=J9-19
+Removed Pin From Net: NetName=SATA_CON_RX_N Pin=J9-20
+Removed Pin From Net: NetName=GND Pin=J9-21
+Removed Pin From Net: NetName=SSRX0_N Pin=J9-22
+Removed Pin From Net: NetName=SSRX0_P Pin=J9-23
+Removed Pin From Net: NetName=SUS_S5# Pin=J9-24
+Removed Pin From Net: NetName=SSRX1_N Pin=J9-25
+Removed Pin From Net: NetName=SSRX1_P Pin=J9-26
+Removed Pin From Net: NetName=BATLOW# Pin=J9-27
+Removed Pin From Net: NetName=HDA_SYNC Pin=J9-29
+Removed Pin From Net: NetName=HDA_RST# Pin=J9-30
+Removed Pin From Net: NetName=GND Pin=J9-31
+Removed Pin From Net: NetName=HDA_BITCLK Pin=J9-32
+Removed Pin From Net: NetName=HDA_SDOUT Pin=J9-33
+Removed Pin From Net: NetName=BIOS_DISABLE# Pin=J9-34
+Removed Pin From Net: NetName=THRMTRIP# Pin=J9-35
+Removed Pin From Net: NetName=GND Pin=J9-41
+Removed Pin From Net: NetName=USB2_N Pin=J9-42
+Removed Pin From Net: NetName=USB2_P Pin=J9-43
+Removed Pin From Net: NetName=USB0_N Pin=J9-45
+Removed Pin From Net: NetName=USB0_P Pin=J9-46
+Removed Pin From Net: NetName=VCC_RTC Pin=J9-47
+Removed Pin From Net: NetName=EXCD0_PERST# Pin=J9-48
+Removed Pin From Net: NetName=EXCD0_CPPE# Pin=J9-49
+Removed Pin From Net: NetName=LPC_SERIRQ Pin=J9-50
+Removed Pin From Net: NetName=GND Pin=J9-51
+Removed Pin From Net: NetName=RSVD1 Pin=J9-52
+Removed Pin From Net: NetName=RSVD2 Pin=J9-53
+Removed Pin From Net: NetName=RSVD3 Pin=J9-55
+Removed Pin From Net: NetName=RSVD4 Pin=J9-56
+Removed Pin From Net: NetName=GND Pin=J9-57
+Removed Pin From Net: NetName=PCIE_TX3+ Pin=J9-58
+Removed Pin From Net: NetName=PCIE_TX3- Pin=J9-59
+Removed Pin From Net: NetName=GND Pin=J9-60
+Removed Pin From Net: NetName=PCIE_TX2+ Pin=J9-61
+Removed Pin From Net: NetName=PCIE_TX2- Pin=J9-62
+Removed Pin From Net: NetName=PCIE_TX1+ Pin=J9-64
+Removed Pin From Net: NetName=PCIE_TX1- Pin=J9-65
+Removed Pin From Net: NetName=GND Pin=J9-66
+Removed Pin From Net: NetName=PCIE_TX0+ Pin=J9-68
+Removed Pin From Net: NetName=PCIE_TX0- Pin=J9-69
+Removed Pin From Net: NetName=GND Pin=J9-70
+Removed Pin From Net: NetName=LVDS_A0+ Pin=J9-71
+Removed Pin From Net: NetName=LVDS_A0- Pin=J9-72
+Removed Pin From Net: NetName=LVDS_A1+ Pin=J9-73
+Removed Pin From Net: NetName=LVDS_A1- Pin=J9-74
+Removed Pin From Net: NetName=LVDS_A2+ Pin=J9-75
+Removed Pin From Net: NetName=LVDS_A2- Pin=J9-76
+Removed Pin From Net: NetName=LVDS_VDD_EN Pin=J9-77
+Removed Pin From Net: NetName=LVDS_A3+ Pin=J9-78
+Removed Pin From Net: NetName=LVDS_A3- Pin=J9-79
+Removed Pin From Net: NetName=GND Pin=J9-80
+Removed Pin From Net: NetName=LVDS_A_CK+ Pin=J9-81
+Removed Pin From Net: NetName=LVDS_I2C_CK Pin=J9-83
+Removed Pin From Net: NetName=LVDS_I2C_DAT Pin=J9-84
+Removed Pin From Net: NetName=RSVD5 Pin=J9-86
+Removed Pin From Net: NetName=EDP_HPD Pin=J9-87
+Removed Pin From Net: NetName=PCIE_CLK_REF+ Pin=J9-88
+Removed Pin From Net: NetName=PCIE_CLK_REF- Pin=J9-89
+Removed Pin From Net: NetName=GND Pin=J9-90
+Removed Pin From Net: NetName=SPI_PWR Pin=J9-91
+Removed Pin From Net: NetName=SPI_MISO Pin=J9-92
+Removed Pin From Net: NetName=SPI_CLK Pin=J9-94
+Removed Pin From Net: NetName=SPI_MOSI Pin=J9-95
+Removed Pin From Net: NetName=TPM_PP Pin=J9-96
+Removed Pin From Net: NetName=TYPE10# Pin=J9-97
+Removed Pin From Net: NetName=GND Pin=J9-100
+Removed Pin From Net: NetName=NetJ5_8 Pin=J9-101
+Removed Pin From Net: NetName=NetJ5_1 Pin=J9-102
+Removed Pin From Net: NetName=LID# Pin=J9-103
+Removed Pin From Net: NetName=+VIN Pin=J9-104
+Removed Pin From Net: NetName=+VIN Pin=J9-105
+Removed Pin From Net: NetName=+VIN Pin=J9-106
+Removed Pin From Net: NetName=+VIN Pin=J9-107
+Removed Pin From Net: NetName=+VIN Pin=J9-108
+Removed Pin From Net: NetName=+VIN Pin=J9-109
+Removed Pin From Net: NetName=GND Pin=J9-110
+Removed Pin From Net: NetName=GND Pin=J9-111
+Removed Pin From Net: NetName=NetJ4_9 Pin=J9-112
+Removed Pin From Net: NetName=LPC_FRAME# Pin=J9-113
+Removed Pin From Net: NetName=LPC_AD0 Pin=J9-114
+Removed Pin From Net: NetName=LPC_AD1 Pin=J9-115
+Removed Pin From Net: NetName=LPC_AD2 Pin=J9-116
+Removed Pin From Net: NetName=LPC_AD3 Pin=J9-117
+Removed Pin From Net: NetName=LPC_DRQ0# Pin=J9-118
+Removed Pin From Net: NetName=LPC_DRQ1# Pin=J9-119
+Removed Pin From Net: NetName=LPC_CLK Pin=J9-120
+Removed Pin From Net: NetName=GND Pin=J9-121
+Removed Pin From Net: NetName=SMB_CK Pin=J9-123
+Removed Pin From Net: NetName=SMB_DAT Pin=J9-124
+Removed Pin From Net: NetName=SMB_ALERT# Pin=J9-125
+Removed Pin From Net: NetName=SATA1_TX+ Pin=J9-126
+Removed Pin From Net: NetName=SATA1_TX- Pin=J9-127
+Removed Pin From Net: NetName=SUS_STAT# Pin=J9-128
+Removed Pin From Net: NetName=GND Pin=J9-131
+Removed Pin From Net: NetName=SSTX0_N Pin=J9-132
+Removed Pin From Net: NetName=SSTX0_P Pin=J9-133
+Removed Pin From Net: NetName=SSTX1_N Pin=J9-135
+Removed Pin From Net: NetName=SSTX1_P Pin=J9-136
+Removed Pin From Net: NetName=WDT Pin=J9-137
+Removed Pin From Net: NetName=HDA_SDIN2 Pin=J9-138
+Removed Pin From Net: NetName=HDA_SDIN1 Pin=J9-139
+Removed Pin From Net: NetName=HDA_SDIN0 Pin=J9-140
+Removed Pin From Net: NetName=GND Pin=J9-141
+Removed Pin From Net: NetName=SPKR Pin=J9-142
+Removed Pin From Net: NetName=NetJ9_143 Pin=J9-143
+Removed Pin From Net: NetName=NetJ9_144 Pin=J9-144
+Removed Pin From Net: NetName=THRM# Pin=J9-145
+Removed Pin From Net: NetName=GND Pin=J9-151
+Removed Pin From Net: NetName=USB3_N Pin=J9-152
+Removed Pin From Net: NetName=USB3_P Pin=J9-153
+Removed Pin From Net: NetName=USB1_N Pin=J9-155
+Removed Pin From Net: NetName=USB1_P Pin=J9-156
+Removed Pin From Net: NetName=EXCD1_PERST# Pin=J9-157
+Removed Pin From Net: NetName=EXCD1_CPPE# Pin=J9-158
+Removed Pin From Net: NetName=NetC53_2 Pin=J9-159
+Removed Pin From Net: NetName=GND Pin=J9-161
+Removed Pin From Net: NetName=RSVD6 Pin=J9-162
+Removed Pin From Net: NetName=RSVD7 Pin=J9-163
+Removed Pin From Net: NetName=RSVD8 Pin=J9-165
+Removed Pin From Net: NetName=RSVD9 Pin=J9-166
+Removed Pin From Net: NetName=PCIE_RX3+ Pin=J9-168
+Removed Pin From Net: NetName=PCIE_RX3- Pin=J9-169
+Removed Pin From Net: NetName=GND Pin=J9-170
+Removed Pin From Net: NetName=PCIE_RX2+ Pin=J9-171
+Removed Pin From Net: NetName=PCIE_RX2- Pin=J9-172
+Removed Pin From Net: NetName=PCIE_RX1+ Pin=J9-174
+Removed Pin From Net: NetName=PCIE_RX1- Pin=J9-175
+Removed Pin From Net: NetName=WAKE0# Pin=J9-176
+Removed Pin From Net: NetName=WAKE1# Pin=J9-177
+Removed Pin From Net: NetName=PCIE_RX0+ Pin=J9-178
+Removed Pin From Net: NetName=PCIE_RX0- Pin=J9-179
+Removed Pin From Net: NetName=GND Pin=J9-180
+Removed Pin From Net: NetName=HDMI_D0_TRC_P Pin=J9-181
+Removed Pin From Net: NetName=HDMI_D0_TRC_N Pin=J9-182
+Removed Pin From Net: NetName=HDMI_D1_TRC_P Pin=J9-183
+Removed Pin From Net: NetName=HDMI_D1_TRC_N Pin=J9-184
+Removed Pin From Net: NetName=HDMI_D2_TRC_P Pin=J9-185
+Removed Pin From Net: NetName=HDMI_D2_TRC_N Pin=J9-186
+Removed Pin From Net: NetName=DDI0_PAIR4+ Pin=J9-187
+Removed Pin From Net: NetName=DDI0_PAIR4- Pin=J9-188
+Removed Pin From Net: NetName=LVDS_BKLT_EN Pin=J9-189
+Removed Pin From Net: NetName=GND Pin=J9-190
+Removed Pin From Net: NetName=HDMI_D3_TRC_P Pin=J9-191
+Removed Pin From Net: NetName=HDMI_D3_TRC_N Pin=J9-192
+Removed Pin From Net: NetName=LVDS_BKLT_CTRL Pin=J9-193
+Removed Pin From Net: NetName=BIOS_DIS1# Pin=J9-198
+Removed Pin From Net: NetName=GND Pin=J9-200
+Removed Pin From Net: NetName=DDI0_PAIR5+ Pin=J9-201
+Removed Pin From Net: NetName=DDI0_PAIR5- Pin=J9-202
+Removed Pin From Net: NetName=DDI0_PAIR6+ Pin=J9-203
+Removed Pin From Net: NetName=DDI0_PAIR6- Pin=J9-204
+Removed Pin From Net: NetName=USB_HOST_PRSNT Pin=J9-206
+Removed Pin From Net: NetName=SPI_CS# Pin=J9-207
+Removed Pin From Net: NetName=GND Pin=J9-210
+Removed Pin From Net: NetName=FAN_PWMOUT Pin=J9-211
+Removed Pin From Net: NetName=FAN_TACHIN Pin=J9-212
+Removed Pin From Net: NetName=SLEEP# Pin=J9-213
+Removed Pin From Net: NetName=+VIN Pin=J9-214
+Removed Pin From Net: NetName=+VIN Pin=J9-215
+Removed Pin From Net: NetName=+VIN Pin=J9-216
+Removed Pin From Net: NetName=+VIN Pin=J9-217
+Removed Pin From Net: NetName=+VIN Pin=J9-218
+Removed Pin From Net: NetName=+VIN Pin=J9-219
+Removed Pin From Net: NetName=GND Pin=J9-220
+Change Component Footprint: Designator=J9 Old Footprint=CONN220_3-631849 - WM New Footprint=CONN220_3-631849
+Change Component Description : Designator=J9 Old Description=CONN PLUG 220POS 0.5MM DUAL SMT New Description=.5FHP08H,220,S,GIG,08/Sn,HT,NSYes
+Change component parameters: Designator = "J9"; Footprint = "CONN220_3-631849"; UniqueID = "\HJGIXSKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2016 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "3-6318491-6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PITCH(MM)"; Value = "0.5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POSITIONS"; Value = "220"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PRODUCT"; Value = "Connector"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ROWS/CONFIG"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TE_Part_Number"; Value = "3-6318491-6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Value"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Vendor"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetJ9_143 New Net Name=NetJ9_B33
+Change Net Name : Old Net Name=NetJ9_144 New Net Name=NetJ9_B34
+Added Pin To Net: NetName=NetJ9_A28 Pin=U9-2
+Added Net: Name=NetJ9_A28
+Added Net: Name=NetJ9_A36
+Added Net: Name=NetJ9_A37
+Added Net: Name=NetJ9_A38
+Added Net: Name=NetJ9_A39
+Added Net: Name=NetJ9_A40
+Added Pin To Net: NetName=NetJ9_A44 Pin=U15-2
+Added Pin To Net: NetName=NetJ9_A44 Pin=U15-3
+Added Net: Name=NetJ9_A44
+Added Net: Name=NetJ9_A54
+Added Pin To Net: NetName=NetJ9_A63 Pin=U10-7
+Added Net: Name=NetJ9_A63
+Added Pin To Net: NetName=NetJ9_A67 Pin=U10-5
+Added Net: Name=NetJ9_A67
+Added Pin To Net: NetName=NetJ9_A85 Pin=U10-3
+Added Net: Name=NetJ9_A85
+Added Pin To Net: NetName=NetJ9_A93 Pin=U10-2
+Added Net: Name=NetJ9_A93
+Added Pin To Net: NetName=NetJ9_A98 Pin=U13-13
+Added Net: Name=NetJ9_A98
+Added Pin To Net: NetName=NetJ9_A99 Pin=U13-15
+Added Net: Name=NetJ9_A99
+Added Pin To Net: NetName=NetJ9_B12 Pin=R40-2
+Added Net: Name=NetJ9_B12
+Added Net: Name=NetJ9_B19
+Added Net: Name=NetJ9_B20
+Added Pin To Net: NetName=NetJ9_B24 Pin=Q5-1
+Added Pin To Net: NetName=NetJ9_B24 Pin=R36-2
+Added Net: Name=NetJ9_B24
+Added Net: Name=NetJ9_B36
+Added Net: Name=NetJ9_B37
+Added Net: Name=NetJ9_B38
+Added Net: Name=NetJ9_B39
+Added Net: Name=NetJ9_B40
+Added Pin To Net: NetName=NetJ9_B44 Pin=U16-8
+Added Net: Name=NetJ9_B44
+Added Pin To Net: NetName=NetJ9_B50 Pin=R20-2
+Added Net: Name=NetJ9_B50
+Added Pin To Net: NetName=NetJ9_B54 Pin=U10-4
+Added Net: Name=NetJ9_B54
+Added Pin To Net: NetName=NetJ9_B57 Pin=U10-6
+Added Net: Name=NetJ9_B57
+Added Pin To Net: NetName=NetJ9_B63 Pin=U10-8
+Added Net: Name=NetJ9_B63
+Added Pin To Net: NetName=NetJ9_B89 Pin=U14-7
+Added Net: Name=NetJ9_B89
+Added Pin To Net: NetName=NetJ9_B95 Pin=R23-2
+Added Net: Name=NetJ9_B95
+Added Pin To Net: NetName=NetJ9_B98 Pin=R22-1
+Added Pin To Net: NetName=NetJ9_B98 Pin=U14-28
+Added Net: Name=NetJ9_B98
+Added Pin To Net: NetName=NetJ9_B99 Pin=R21-1
+Added Pin To Net: NetName=NetJ9_B99 Pin=U14-29
+Added Net: Name=NetJ9_B99
+Change Class Name : Old Net Name=[07] - CPU CONNECTORS New Net Name=[07] - CPU CONNECTORS 
+Added Member To Class: ClassName=[06] - MICRO CONTROLLER CONNECTORS Member=Component U26 MAX490ECSA+
+Added Member To Class: ClassName=DIFF100 Member=Wire TRD3_P
+Added Room: Name=[03] - MICRO CONTROLLER
+Added Room: Name=[04] - COMe CONNECTOR
+Added Room: Name=[05] - POWER
+Added Room: Name=[06] - MICRO CONTROLLER CONNECTORS
+Added Room: Name=[07] - CPU CONNECTORS 
+Added Room: Name=[08] - CPU USB
+Added Room: Name=[09] - PCB AND MECHANICALS

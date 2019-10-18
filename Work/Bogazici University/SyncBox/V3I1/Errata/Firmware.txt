@@ -1,0 +1,9 @@
+The connection to Delta-B2 servvo motor driver requires to be adjusted by Software first. In other words,
+the SyncBox can not itsef force the driver to switch into RS-232 Modbus RTU.
+ 
+For the next version, select a uC that supports a well-known RTOS (freeRTOS). for our job its good enough.
+
+What if the micro controller can not allocate memory. You did not put any mechanism for unsuccessful initiation
+
+The instrument class should handle the devices errornous responses. For example if mode returned by the GulmayAPI
+may be -1 which means the generators response is not valid. So, the Instrument class must handel it.

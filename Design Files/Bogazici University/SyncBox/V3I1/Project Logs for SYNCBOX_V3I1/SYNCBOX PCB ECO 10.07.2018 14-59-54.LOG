@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=GND Pin=R22-1
+Removed Pin From Net: NetName=NetJ2_9 Pin=R22-2
+Removed Pin From Net: NetName=NetJ2_2 Pin=R23-1
+Removed Pin From Net: NetName=NetQ3_3 Pin=R23-2
+Removed Pin From Net: NetName=NetQ4_1 Pin=R27-1
+Removed Pin From Net: NetName=+3V3 Pin=R27-2
+Removed Pin From Net: NetName=NetQ3_1 Pin=R28-1
+Removed Pin From Net: NetName=+3V3 Pin=R28-2
+Added Component: Designator=P2(TerminalBlock5P508)
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=NetP2_3 Pin=P2-3
+Added Pin To Net: NetName=NetP2_4 Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=GND Pin=R22-1
+Added Pin To Net: NetName=NetP3_4 Pin=R22-1
+Added Pin To Net: NetName=NetJ2_9 Pin=R22-2
+Added Pin To Net: NetName=NetK1_6 Pin=R22-2
+Added Pin To Net: NetName=NetJ2_2 Pin=R23-1
+Added Pin To Net: NetName=NetK1_5 Pin=R23-1
+Added Pin To Net: NetName=NetP3_4 Pin=R23-2
+Added Pin To Net: NetName=NetQ3_3 Pin=R23-2
+Added Pin To Net: NetName=NetK2_5 Pin=R27-1
+Added Pin To Net: NetName=NetQ4_1 Pin=R27-1
+Added Pin To Net: NetName=+3V3 Pin=R27-2
+Added Pin To Net: NetName=NetP3_2 Pin=R27-2
+Added Pin To Net: NetName=NetP3_2 Pin=R28-1
+Added Pin To Net: NetName=NetQ3_1 Pin=R28-1
+Added Pin To Net: NetName=+3V3 Pin=R28-2
+Added Pin To Net: NetName=NetK2_6 Pin=R28-2
+Added Member To Class: ClassName=[13] - COMM INTERFACES Member=Component P2 Header 5

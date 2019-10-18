@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_delta_servo_a_p_i_8h">
+    <title>DeltaServoAPI.h File Reference</title>
+    <programlisting>#include &quot;Types.h&quot;</programlisting>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+<para>Include dependency diagram for DeltaServoAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_delta_servo_a_p_i_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for DeltaServoAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_delta_servo_a_p_i_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_delta_servo_a_p_i_8h_1a70a2c25b73b13884d92616c782f30f4e">MIN_MOTOR_JOG</link><para><emphasis>define minimum motor jog.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_delta_servo_a_p_i_8h_1a0faedf55ff9b2ec1ec564cb197ca5838">MAX_MOTOR_JOG</link><para><emphasis>define maximum motor jog.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1a1be24a1b6189ea6e9161c93c400770ae">TurnOnSliderMotor</link> (
+)<para><emphasis>turn on slider motor on.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1a81608561a43bf2a44671ad65c2b3311c">TurnOffSliderMotor</link> (
+)<para><emphasis>turn off slider motor on.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1a7796779a0cfc1087d269785a1ae10427">SetSliderMotorSpeed</link> (
+int )<para><emphasis>set slider motor speed.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1afb5100c2ce2b491dee220607b0f3ba0b">RotateSliderMotorCounterClockwise</link> (
+)<para><emphasis>start slider motor to rotate counter clockwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1a1717f9911c674bf81afee0b513f6de37">RotateSliderMotorClockwise</link> (
+)<para><emphasis>start slider motor to rotate clockwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1a91a5f8567f150810290d2fcce6cc8d32">StopMotor</link> (
+)<para><emphasis>stop slider motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8h_1ae05447da479a74ce40ed44df1c83c20d">ActuatorProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>API for communicating with x-ray arm transform motor. </para>
+
+<para>The table top arm motor is drived by DeltaB2 driver and this API controls that. The driver supports Modbus RTU for communication. Instead of complete Modebus RTU protocol implementation, this API sends protocol-compatible packets to the DeltaB2. 
+<literallayout>
+</literallayout>
+ In order to find out the commands, first, the servo driver is connected to a PC on which ASDA soft version 5.3 ( Delta servo motor driver software) was running. The motor is controlled by the software while the channel was sniffing by Device Monitoring Studio version 7.73. In this way the set of all required commands are found and hard coded them in this API. <formalpara><title>Note: </title>
+
+<para>based on device specifications befor and after transmission 10ms of scilence in channel is required. </para>
+<simplesect/>
+<para>all operations are based on modebus command code 16 (0x10). </para>
+<simplesect/>
+<para>there is JUST one slave with address 127.</para>
+</formalpara>
+<table frame="all">
+    <title></title>
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+    <tbody>
+<caption>Delta Servo motor example</caption>
+<row>
+<entry>
+<para>Description </para>
+</entry><entry>
+<para>Byte one </para>
+</entry><entry>
+<para>Byte two </para>
+</entry></row>
+<row>
+<entry>
+<para>slave address </para>
+</entry><entry>
+<para>0X01 </para>
+</entry><entry>
+<para>- </para>
+</entry></row>
+<row>
+<entry>
+<para>function </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>- </para>
+</entry></row>
+<row>
+<entry>
+<para>starting data address </para>
+</entry><entry>
+<para>0X01(high) </para>
+</entry><entry>
+<para>0x12(low) </para>
+</entry></row>
+<row>
+<entry>
+<para>number of data (in word) </para>
+</entry><entry>
+<para>0x00(high) </para>
+</entry><entry>
+<para>0x02(low) </para>
+</entry></row>
+<row>
+<entry>
+<para>number of data (in byte) </para>
+</entry><entry>
+<para>0x04 </para>
+</entry><entry>
+<para>- </para>
+</entry></row>
+<row>
+<entry>
+<para>content of 1st data </para>
+</entry><entry>
+<para>0x0B(high) </para>
+</entry><entry>
+<para>0xB8(low) </para>
+</entry></row>
+<row>
+<entry>
+<para>content of 2st data </para>
+</entry><entry>
+<para>0x00(high) </para>
+</entry><entry>
+<para>0x00(low) </para>
+</entry></row>
+<row>
+<entry>
+<para>CRC </para>
+</entry><entry>
+<para>0xFC (low) </para>
+</entry><entry>
+<para>0xEB (high) </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</table>
+</para>
+
+<para>The complete list of commands is shown in the following table: <table frame="all">
+    <title></title>
+    <tgroup cols="8" align="left" colsep="1" rowsep="1">
+    <tbody>
+<caption>Command sets</caption>
+<row>
+<entry>
+<para>command </para>
+</entry><entry>
+<para>address </para>
+</entry><entry>
+<para>function code </para>
+</entry><entry>
+<para>start address </para>
+</entry><entry>
+<para>#word </para>
+</entry><entry>
+<para>#bytes </para>
+</entry><entry>
+<para>bytes </para>
+</entry><entry>
+<para>CRC </para>
+</entry></row>
+<row>
+<entry>
+<para>TURN ON MOTOR </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X02 0X3C </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X00 0X01 0X00 0X00 </para>
+</entry><entry>
+<para>0X26 0X67 </para>
+</entry></row>
+<row>
+<entry>
+<para>TURN OFF MOTOR </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X02 0X3C </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X00 0X00 0X00 0X00 </para>
+</entry><entry>
+<para>0X77 0XA7 </para>
+</entry></row>
+<row>
+<entry>
+<para>SPEED 100 </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X04 0X0A </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X00 0X64 0X00 0X00 </para>
+</entry><entry>
+<para>0X9E 0XE6 </para>
+</entry></row>
+<row>
+<entry>
+<para>ROTATE CCW </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X04 0X0A </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X13 0X86 0X00 0X00 </para>
+</entry><entry>
+<para>0X3A 0X54 </para>
+</entry></row>
+<row>
+<entry>
+<para>ROTATE CW </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X04 0X0A </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X13 0X87 0X00 0X00 </para>
+</entry><entry>
+<para>0X6B 0X94 </para>
+</entry></row>
+<row>
+<entry>
+<para>STOP ROTATION </para>
+</entry><entry>
+<para>0x7F </para>
+</entry><entry>
+<para>0x10 </para>
+</entry><entry>
+<para>0X04 0X0A </para>
+</entry><entry>
+<para>0X00 0X02 </para>
+</entry><entry>
+<para>0X04 </para>
+</entry><entry>
+<para>0X00 0X00 0X00 0X00 </para>
+</entry><entry>
+<para>0XDF 0X39 </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</table>
+</para>
+
+<para><formalpara><title>Note: </title>
+
+<para>before and after transmission 10ms of scilence is needed.</para>
+</formalpara>
+<formalpara><title>Author: </title>
+
+<para>Altay Brusan </para>
+</formalpara>
+</para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/DeltaServoAPI.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;DELTASERVOAPI_H</emphasis>
+2 <emphasis class="preprocessor">&#32;&#32;#define&#32;DELTASERVOAPI_H</emphasis>
+3 
+53 <emphasis class="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_types_8h">Types.h</link>&quot;</emphasis>
+54 <emphasis class="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>
+55 
+57 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a70a2c25b73b13884d92616c782f30f4e">MIN_MOTOR_JOG</link>&#32;;
+59 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a0faedf55ff9b2ec1ec564cb197ca5838">MAX_MOTOR_JOG</link>&#32;;
+60 &#32;&#32;
+61 &#32;&#32;<emphasis class="comment">//void&#32;SetConnectionToRS232Modbus();&#32;&#32;&#32;&#32;TODO:&#32;implement&#32;this</emphasis>
+63 <emphasis class="comment"></emphasis>&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a1be24a1b6189ea6e9161c93c400770ae">TurnOnSliderMotor</link>();
+65 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a81608561a43bf2a44671ad65c2b3311c">TurnOffSliderMotor</link>();
+67 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a7796779a0cfc1087d269785a1ae10427">SetSliderMotorSpeed</link>(<emphasis class="keywordtype">int</emphasis>);
+69 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1afb5100c2ce2b491dee220607b0f3ba0b">RotateSliderMotorCounterClockwise</link>();
+71 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a1717f9911c674bf81afee0b513f6de37">RotateSliderMotorClockwise</link>();
+73 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a91a5f8567f150810290d2fcce6cc8d32">StopMotor</link>();
+74 
+75 
+76 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;ActuatorProcessKernelFrame(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>);
+77 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

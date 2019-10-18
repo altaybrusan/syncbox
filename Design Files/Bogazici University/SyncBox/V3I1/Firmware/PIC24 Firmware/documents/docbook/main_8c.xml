@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8c">
+    <title>main.c File Reference</title>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+    <programlisting>#include &quot;Instrument.h&quot;</programlisting>
+<para>Include dependency diagram for main.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for main.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/main.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+65 <emphasis class="preprocessor">#include&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+66 <emphasis class="preprocessor">#include&quot;<link linkend="_instrument_8h">Instrument.h</link>&quot;</emphasis>
+67 
+68 <emphasis class="keywordtype">int</emphasis>&#32;&#32;main()
+69 {
+70 
+71 &#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1a90ae338762233fac549a147face7891d">KL_RegisterInstrument</link>(<link linkend="_instrument_8c_1a44183aa55ed986e78680ae1fec9ec93a">StartInstrument</link>);
+72 &#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1af01826d33dbf7faf2832db87998f8d47">KL_Bootup</link>();
+73 
+74 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;
+75 }
+    </computeroutput></literallayout>
+</section>

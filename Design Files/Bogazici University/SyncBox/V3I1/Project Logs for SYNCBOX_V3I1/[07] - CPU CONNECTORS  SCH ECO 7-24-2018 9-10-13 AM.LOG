@@ -1,0 +1,122 @@
+Change Value of Parameter .Checked PCB in Part C4 Old=used New=
+Change Value of Parameter .Checked SCH in Part C4 Old=used New=
+Change Value of Parameter .Checked PCB in Part C5 Old=used New=
+Change Value of Parameter .Checked SCH in Part C5 Old=used New=
+Change Value of Parameter .Checked PCB in Part C6 Old=used New=
+Change Value of Parameter .Checked SCH in Part C6 Old=used New=
+Change Value of Parameter .Checked PCB in Part C7 Old=used New=
+Change Value of Parameter .Checked SCH in Part C7 Old=used New=
+Change Value of Parameter .Checked PCB in Part C8 Old=used New=
+Change Value of Parameter .Checked SCH in Part C8 Old=used New=
+Change Value of Parameter .Checked PCB in Part C9 Old=used New=
+Change Value of Parameter .Checked SCH in Part C9 Old=used New=
+Change Value of Parameter .Checked PCB in Part C10 Old=used New=
+Change Value of Parameter .Checked SCH in Part C10 Old=used New=
+Change Value of Parameter .Checked PCB in Part C11 Old=used New=
+Change Value of Parameter .Checked SCH in Part C11 Old=used New=
+Change Value of Parameter .Checked PCB in Part C12 Old=used New=
+Change Value of Parameter .Checked SCH in Part C12 Old=used New=
+Change Value of Parameter .Checked PCB in Part C13 Old=used New=
+Change Value of Parameter .Checked SCH in Part C13 Old=used New=
+Change Value of Parameter .Checked PCB in Part C14 Old=used New=
+Change Value of Parameter .Checked SCH in Part C14 Old=used New=
+Change Value of Parameter .Checked PCB in Part C16 Old=used New=
+Change Value of Parameter .Checked SCH in Part C16 Old=used New=
+Change Value of Parameter .Checked PCB in Part C17 Old=used New=
+Change Value of Parameter .Checked SCH in Part C17 Old=used New=
+Change Value of Parameter .Checked PCB in Part D6 Old=used New=
+Change Value of Parameter .Checked SCH in Part D6 Old=used New=
+Change Value of Parameter .Checked PCB in Part FB1 Old=RF New=
+Change Value of Parameter .Checked SCH in Part FB1 Old=RF New=
+Change Value of Parameter .Checked PCB in Part J2 Old=RF New=
+Change Value of Parameter .Checked SCH in Part J2 Old=RF New=
+Change Value of Parameter .Checked PCB in Part J3 Old=used New=
+Change Value of Parameter .Checked SCH in Part J3 Old=used New=
+Change Value of Parameter .Checked PCB in Part J4 Old=MM New=
+Change Value of Parameter .Checked SCH in Part J4 Old=MM New=
+Change Value of Parameter .Checked PCB in Part J5 Old=used New=
+Change Value of Parameter .Checked SCH in Part J5 Old=used New=
+Change Value of Parameter .Checked PCB in Part Q1 Old=RF New=
+Change Value of Parameter .Checked SCH in Part Q1 Old=RF New=
+Change Value of Parameter .Checked PCB in Part Q2 Old=RF New=
+Change Value of Parameter .Checked SCH in Part Q2 Old=RF New=
+Change Value of Parameter .Checked PCB in Part R12 Old=used New=
+Change Value of Parameter .Checked SCH in Part R12 Old=used New=
+Change Value of Parameter .Checked PCB in Part R13 Old=used New=
+Change Value of Parameter .Checked SCH in Part R13 Old=used New=
+Change Value of Parameter .Checked PCB in Part R14 Old=used New=
+Change Value of Parameter .Checked SCH in Part R14 Old=used New=
+Change Value of Parameter .Checked PCB in Part R15 Old=RF New=
+Change Value of Parameter .Checked SCH in Part R15 Old=RF New=
+Change Value of Parameter .Checked PCB in Part R16 Old=used New=
+Change Value of Parameter .Checked SCH in Part R16 Old=used New=
+Change Value of Parameter .Checked PCB in Part R17 Old=used New=
+Change Value of Parameter .Checked SCH in Part R17 Old=used New=
+Change Value of Parameter .Checked PCB in Part R18 Old=used New=
+Change Value of Parameter .Checked SCH in Part R18 Old=used New=
+Change Value of Parameter .Checked PCB in Part R23 Old=used New=
+Change Value of Parameter .Checked SCH in Part R23 Old=used New=
+Change Value of Parameter .Checked PCB in Part R24 Old=used New=
+Change Value of Parameter .Checked SCH in Part R24 Old=used New=
+Change Value of Parameter .Checked PCB in Part R25 Old=used New=
+Change Value of Parameter .Checked SCH in Part R25 Old=used New=
+Change Value of Parameter .Checked PCB in Part R26 Old=used New=
+Change Value of Parameter .Checked SCH in Part R26 Old=used New=
+Change Value of Parameter .Checked PCB in Part R27 Old=used New=
+Change Value of Parameter .Checked SCH in Part R27 Old=used New=
+Change Value of Parameter .Checked PCB in Part T1 Old=MM New=
+Change Value of Parameter .Checked SCH in Part T1 Old=MM New=
+Added Parameter .Checked PCB= to Part C15
+Added Parameter .Checked PCB= to Part D5
+Added Parameter .Checked PCB= to Part F1
+Added Parameter .Checked PCB= to Part F2
+Added Parameter .Checked PCB= to Part F3
+Added Parameter .Checked PCB= to Part P2
+Added Parameter .Checked PCB= to Part P3
+Added Parameter .Checked PCB= to Part R19
+Added Parameter .Checked PCB= to Part R20
+Added Parameter .Checked PCB= to Part R21
+Added Parameter .Checked PCB= to Part R22
+Added Parameter .Checked PCB= to Part R28
+Added Parameter .Checked PCB= to Part R29
+Added Parameter .Checked PCB= to Part R30
+Added Parameter .Checked PCB= to Part U2
+Added Parameter .Checked PCB= to Part U3
+Added Parameter .Checked PCB= to Part U4
+Added Parameter .Checked PCB= to Part U5
+Added Parameter .Checked PCB= to Part U6
+Added Parameter .Checked PCB= to Part U7
+Added Parameter .Checked PCB= to Part U8
+Added Parameter .Checked PCB= to Part U9
+Added Parameter .Checked PCB= to Part U10
+Added Parameter .Checked PCB= to Part U11
+Added Parameter .Checked PCB= to Part U12
+Added Parameter .Checked PCB= to Part U13
+Added Parameter .Checked PCB= to Part U14
+Added Parameter .Checked SCH= to Part C15
+Added Parameter .Checked SCH= to Part D5
+Added Parameter .Checked SCH= to Part F1
+Added Parameter .Checked SCH= to Part F2
+Added Parameter .Checked SCH= to Part F3
+Added Parameter .Checked SCH= to Part P2
+Added Parameter .Checked SCH= to Part P3
+Added Parameter .Checked SCH= to Part R19
+Added Parameter .Checked SCH= to Part R20
+Added Parameter .Checked SCH= to Part R21
+Added Parameter .Checked SCH= to Part R22
+Added Parameter .Checked SCH= to Part R28
+Added Parameter .Checked SCH= to Part R29
+Added Parameter .Checked SCH= to Part R30
+Added Parameter .Checked SCH= to Part U2
+Added Parameter .Checked SCH= to Part U3
+Added Parameter .Checked SCH= to Part U4
+Added Parameter .Checked SCH= to Part U5
+Added Parameter .Checked SCH= to Part U6
+Added Parameter .Checked SCH= to Part U7
+Added Parameter .Checked SCH= to Part U8
+Added Parameter .Checked SCH= to Part U9
+Added Parameter .Checked SCH= to Part U10
+Added Parameter .Checked SCH= to Part U11
+Added Parameter .Checked SCH= to Part U12
+Added Parameter .Checked SCH= to Part U13
+Added Parameter .Checked SCH= to Part U14

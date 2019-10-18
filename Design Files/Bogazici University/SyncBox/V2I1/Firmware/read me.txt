@@ -1,0 +1,4 @@
+All the files needed for CPLD, EEPROMs, uController, BIOS, ...
+
+these are codes and samples that are used during the process of development.
+Author: Burak Erguder

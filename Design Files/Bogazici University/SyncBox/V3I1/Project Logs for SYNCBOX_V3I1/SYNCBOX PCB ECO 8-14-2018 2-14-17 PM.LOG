@@ -1,0 +1,12 @@
+Change Class Name : Old Net Name=[07] - CPU CONNECTORS New Net Name=[07] - CPU CONNECTORS 
+Change Class Name : Old Net Name=CPU_USB New Net Name=DIFF90
+Added Member To Class: ClassName=DIFF90 Member=Wire SSRX1_N
+Added Member To Class: ClassName=DIFF90 Member=Wire SSRX1_P
+Added Member To Class: ClassName=DIFF90 Member=Wire SSTX1_N
+Added Member To Class: ClassName=DIFF90 Member=Wire SSTX1_P
+Added Member To Class: ClassName=DIFF90 Member=Wire USB1_N
+Added Member To Class: ClassName=DIFF90 Member=Wire USB1_P
+Added Member To Class: ClassName=DIFF90 Member=Wire USB2_N
+Added Member To Class: ClassName=DIFF90 Member=Wire USB2_P
+Added Member To Class: ClassName=DIFF90 Member=Wire USB3_N
+Added Member To Class: ClassName=DIFF90 Member=Wire USB3_P

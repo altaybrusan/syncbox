@@ -1,0 +1,4 @@
+Added Member To Class: ClassName=CPU_USB Member=Wire SSRX0_N
+Added Member To Class: ClassName=CPU_USB Member=Wire SSRX0_P
+Added Member To Class: ClassName=CPU_USB Member=Wire SSTX0_N
+Added Member To Class: ClassName=CPU_USB Member=Wire SSTX0_P

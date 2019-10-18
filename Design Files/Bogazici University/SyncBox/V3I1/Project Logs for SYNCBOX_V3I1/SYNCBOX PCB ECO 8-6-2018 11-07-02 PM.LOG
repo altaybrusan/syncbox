@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=Diff90 Member=USB0_N
+Removed Member From Class: ClassName=Diff90 Member=USB0_P
+Change Class Name : Old Net Name=[07] - CPU CONNECTORS New Net Name=[07] - CPU CONNECTORS 
+Added Member To Class: ClassName=CPU_USB Member=Wire USB0_N
+Added Member To Class: ClassName=CPU_USB Member=Wire USB0_P

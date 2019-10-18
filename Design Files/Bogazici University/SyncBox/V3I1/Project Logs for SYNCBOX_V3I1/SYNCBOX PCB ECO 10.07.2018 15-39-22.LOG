@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=NetP3_1 Pin=R22-1
+Removed Pin From Net: NetName=NetP3_1 Pin=R23-2
+Removed Pin From Net: NetName=NetP3_3 Pin=R27-2
+Removed Pin From Net: NetName=NetP3_3 Pin=R28-1
+Change Component DesignItemId : Designator=R27 Old DesignItemId=R0603 New DesignItemId=RC0402FR-0710KL
+Change Component DesignItemId : Designator=R28 Old DesignItemId=R0603 New DesignItemId=RC0402FR-0710KL
+Change Component DesignItemId : Designator=R22 Old DesignItemId=R0603 New DesignItemId=RC0402FR-07200KL
+Change Component DesignItemId : Designator=R23 Old DesignItemId=R0603 New DesignItemId=RMCF0402FT240R
+Change Component Comment : Designator=R28 Old Comment=0 New Comment=10k
+Change Component Comment : Designator=R22 Old Comment=0 New Comment=200k
+Change Component Comment : Designator=R27 Old Comment=DNP - 0 New Comment=10k
+Change Component Comment : Designator=R23 Old Comment=DNP - 0 New Comment=240R
+Change Component Description : Designator=R27 Old Description=RESISTOR 0603 New Description=RES 10.0K OHM 1/16W 1% 0402 SMD
+Change Component Description : Designator=R28 Old Description=RESISTOR 0603 New Description=RES 10.0K OHM 1/16W 1% 0402 SMD
+Change Component Description : Designator=R22 Old Description=RESISTOR 0603 New Description=RES 200K OHM 1/16W 1% 0402 SMD
+Change Component Description : Designator=R23 Old Description=RESISTOR 0603 New Description=RES TF 240 OHM 1% 0.0625W 0402
+Change Component Library : Designator=R22 Old Library=Infusion pump library.IntLib New Library=Integrated_Library_RF_FEB_2012.IntLib
+Change Component Library : Designator=R23 Old Library=Infusion pump library.IntLib New Library=Integrated_Library_RF_FEB_2012.IntLib
+Change Component Library : Designator=R27 Old Library=Infusion pump library.IntLib New Library=Integrated_Library_RF_FEB_2012.IntLib
+Change Component Library : Designator=R28 Old Library=Infusion pump library.IntLib New Library=Integrated_Library_RF_FEB_2012.IntLib
+Added Component: Designator=R63(R0805)
+Added Component: Designator=R64(R0805)
+Added Component: Designator=R65(R0805)
+Added Component: Designator=R66(R0805)
+Added Pin To Net: NetName=GND Pin=R22-1
+Added Pin To Net: NetName=NetQ3_3 Pin=R23-2
+Added Pin To Net: NetName=+3V3 Pin=R27-2
+Added Pin To Net: NetName=NetQ3_1 Pin=R28-1
+Added Pin To Net: NetName=NetK2_5 Pin=R27-1
+Added Pin To Net: NetName=NetP3_3 Pin=R27-2
+Added Pin To Net: NetName=NetK1_5 Pin=R23-1
+Added Pin To Net: NetName=NetP3_1 Pin=R23-2
+Added Pin To Net: NetName=NetP3_3 Pin=R28-1
+Added Pin To Net: NetName=NetK2_6 Pin=R28-2
+Added Pin To Net: NetName=NetP3_1 Pin=R22-1
+Added Pin To Net: NetName=NetK1_6 Pin=R22-2

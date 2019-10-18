@@ -1,0 +1,16 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [SYNCBOX_V3I1.PrjPcb]
+   Generated File[SYNCBOX-RoundHoles-Plated.TXT]
+   Generated File[SYNCBOX-RoundHoles-NonPlated.TXT]
+   Generated File[SYNCBOX-SlotHoles-Plated.TXT]
+   Generated File[SYNCBOX-RectHoles-Plated.TXT]
+   Generated File[SYNCBOX.DRL]
+   Generated File[SYNCBOX.LDP]
+   Generated File[SYNCBOX.DRR]
+
+
+Files Generated   : 7
+Documents Printed : 0
+
+Finished Output Generation At 1:05:25 PM On 1/14/2019

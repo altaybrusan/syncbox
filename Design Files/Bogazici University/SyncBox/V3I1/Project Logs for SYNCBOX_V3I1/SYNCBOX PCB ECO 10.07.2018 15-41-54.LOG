@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=NetP3_1 Pin=R22-1
+Removed Pin From Net: NetName=NetK1_6 Pin=R22-2
+Removed Pin From Net: NetName=NetK1_5 Pin=R23-1
+Removed Pin From Net: NetName=NetP3_1 Pin=R23-2
+Removed Pin From Net: NetName=NetK2_5 Pin=R27-1
+Removed Pin From Net: NetName=NetP3_3 Pin=R27-2
+Removed Pin From Net: NetName=NetP3_3 Pin=R28-1
+Removed Pin From Net: NetName=NetK2_6 Pin=R28-2
+Added Component: Designator=K1(DoubleTypeRelay)
+Added Component: Designator=K2(DoubleTypeRelay)
+Added Component: Designator=R63(R0805)
+Added Component: Designator=R64(R0805)
+Added Component: Designator=R65(R0805)
+Added Component: Designator=R66(R0805)
+Added Pin To Net: NetName=NetK1_4 Pin=K1-4
+Added Pin To Net: NetName=NetK1_4 Pin=K1-4
+Added Pin To Net: NetName=NetK1_5 Pin=K1-5
+Added Pin To Net: NetName=NetK1_5 Pin=K1-5
+Added Pin To Net: NetName=NetK1_6 Pin=K1-6
+Added Pin To Net: NetName=NetK1_6 Pin=K1-6
+Added Pin To Net: NetName=+3V3 Pin=K1-7
+Added Pin To Net: NetName=+3V3 Pin=K1-7
+Added Pin To Net: NetName=NetD13_1 Pin=K1-8
+Added Pin To Net: NetName=NetD13_1 Pin=K1-8
+Added Pin To Net: NetName=NetK2_4 Pin=K2-4
+Added Pin To Net: NetName=NetK2_4 Pin=K2-4
+Added Pin To Net: NetName=NetK2_5 Pin=K2-5
+Added Pin To Net: NetName=NetK2_5 Pin=K2-5
+Added Pin To Net: NetName=NetK2_6 Pin=K2-6
+Added Pin To Net: NetName=NetK2_6 Pin=K2-6
+Added Pin To Net: NetName=+3V3 Pin=K2-7
+Added Pin To Net: NetName=+3V3 Pin=K2-7
+Added Pin To Net: NetName=NetD14_1 Pin=K2-8
+Added Pin To Net: NetName=NetD14_1 Pin=K2-8
+Added Pin To Net: NetName=GND Pin=R22-1
+Added Pin To Net: NetName=NetJ2_9 Pin=R22-2
+Added Pin To Net: NetName=NetJ2_2 Pin=R23-1
+Added Pin To Net: NetName=NetQ3_3 Pin=R23-2
+Added Pin To Net: NetName=NetQ4_1 Pin=R27-1
+Added Pin To Net: NetName=+3V3 Pin=R27-2
+Added Pin To Net: NetName=NetQ3_1 Pin=R28-1
+Added Pin To Net: NetName=+3V3 Pin=R28-2
+Added Pin To Net: NetName=NetK2_5 Pin=R27-1
+Added Pin To Net: NetName=NetP3_3 Pin=R27-2
+Added Pin To Net: NetName=NetK1_5 Pin=R23-1
+Added Pin To Net: NetName=NetP3_1 Pin=R23-2
+Added Pin To Net: NetName=NetP3_3 Pin=R28-1
+Added Pin To Net: NetName=NetK2_6 Pin=R28-2
+Added Pin To Net: NetName=NetP3_1 Pin=R22-1
+Added Pin To Net: NetName=NetK1_6 Pin=R22-2
+Added Member To Class: ClassName=[13] - COMM INTERFACES Member=Component K1 Relay-DPDT
+Added Member To Class: ClassName=[13] - COMM INTERFACES Member=Component K2 Relay-DPDT

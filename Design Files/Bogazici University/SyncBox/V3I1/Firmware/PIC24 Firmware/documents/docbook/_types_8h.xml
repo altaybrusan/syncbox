@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_types_8h">
+    <title>Types.h File Reference</title>
+<para>Include dependency diagram for Types.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_types_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Types.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_types_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef unsigned char  <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link><para><emphasis>byte is unsigned char.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef unsigned int  <link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link><para><emphasis>uint is unsigned int.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>global types ar defined here. These types are used to simplify the code clearance. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/Types.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+5 <emphasis class="preprocessor">#ifndef&#32;TYPE_H</emphasis>
+6 <emphasis class="preprocessor">&#32;&#32;#define&#32;TYPE_H</emphasis>
+<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">7 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>;
+<link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">8 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link>;
+9 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

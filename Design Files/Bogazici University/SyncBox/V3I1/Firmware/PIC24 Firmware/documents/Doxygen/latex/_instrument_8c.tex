@@ -1,0 +1,331 @@
+\hypertarget{_instrument_8c}{}\section{Instrument.\+c File Reference}
+\label{_instrument_8c}\index{Instrument.\+c@{Instrument.\+c}}
+
+
+implement instrument  
+
+
+{\ttfamily \#include \char`\"{}Instrument.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Kernel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Gulmay\+A\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Stone\+A\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Delta\+Servo\+A\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Connection\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\newline
+Include dependency graph for Instrument.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_instrument_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_i_s_p___s_t_a_t_e}{D\+I\+S\+P\+\_\+\+S\+T\+A\+TE}
+\begin{DoxyCompactList}\small\item\em display state variable type. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_g_e_n___s_t_a_t_e}{G\+E\+N\+\_\+\+S\+T\+A\+TE}
+\begin{DoxyCompactList}\small\item\em Generator state type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551}{D\+I\+S\+P\+\_\+\+S\+CR} \{ \hyperlink{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551a84b1e56a5fdb2c268151c1d5618e496c}{D\+I\+S\+P\+\_\+\+H\+O\+ME}, 
+\hyperlink{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ad1013f4b5b013c4c8f691cca71710959}{D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR}, 
+\hyperlink{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ab96939cbc6576df381d1e99260df000c}{D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR}
+ \}
+\item 
+enum \hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511b}{D\+I\+S\+P\+\_\+\+C\+MD} \{ \newline
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba213b7bb27185238a3594308180970d8a}{D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba0528fce503464b493abbc6a1a30fe015}{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511babe99c9d8f5315de6e9dda1234244d325}{D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba1fa9ae4b007f8a05391610e82841ba29}{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM}, 
+\newline
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba477eca8734318248b810482cf2ceb809}{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba292ff031806faf29cc8f69c646500e24}{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baf687ff79ec7d43360677b0bb6c75ad91}{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM}, 
+\hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baa604dc3ac06b636166edab370850721d}{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG}
+ \}
+\item 
+enum \hyperlink{_instrument_8c_ac7c96d55fc91167731c77ca574178036}{G\+E\+N\+\_\+\+E\+RR} \{ \hyperlink{_instrument_8c_ac7c96d55fc91167731c77ca574178036ae7ea7c8a4f53ef82107d7e6372270a5f}{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR}, 
+\hyperlink{_instrument_8c_ac7c96d55fc91167731c77ca574178036aab763d4f346fa15c52defaf2d8573ceb}{G\+E\+N\+\_\+\+E\+RR}
+ \}
+\item 
+enum \hyperlink{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8}{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG} \{ \hyperlink{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8a135d1f2c531aaa7865d08d6b9bfcb6cc}{G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM}, 
+\hyperlink{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8aaf14caafd4c6d40d91a0d433966be679}{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT}, 
+\hyperlink{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8ade08f5f4269ef03f6e5a99e9e523a593}{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG}
+ \}
+\item 
+enum \hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2}{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE} \{ \newline
+\hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a36c2e87ec6b6e3bac777cfdf1ce52b9b}{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO}, 
+\hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a93053adea44e6fc53ecd95c9679836d4}{G\+E\+N\+\_\+\+K\+E\+Y2}, 
+\hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a2e665a39626a498bfe84e714c9bbcc98}{G\+E\+N\+\_\+\+P\+RE}, 
+\hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2af931d7ba35af5b59ab40991445c3ddb3}{G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF}, 
+\newline
+\hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a325d635cf0a00c4c5a00470ff220eb54}{G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG}
+ \}
+\item 
+enum \hyperlink{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2}{G\+E\+N\+\_\+\+F\+CL} \{ \hyperlink{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2a8bfd4ffb253d5c3dc65c4dfc949581be}{G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL}, 
+\hyperlink{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2aafe76023068c2d6e16216c29722815dd}{G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_instrument_8c_ad442830d468e8519958f61a9fe8b68cb}\label{_instrument_8c_ad442830d468e8519958f61a9fe8b68cb}} 
+void \hyperlink{_instrument_8c_ad442830d468e8519958f61a9fe8b68cb}{Start\+Instrument\+Monitor} ()
+\begin{DoxyCompactList}\small\item\em start instrument monitor periodic check. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_aa239e8ff1adf33ccc97f9429e83ac00a}\label{_instrument_8c_aa239e8ff1adf33ccc97f9429e83ac00a}} 
+void \hyperlink{_instrument_8c_aa239e8ff1adf33ccc97f9429e83ac00a}{Stop\+Instrument\+Monitor} ()
+\begin{DoxyCompactList}\small\item\em stop instrument monitor periodic check. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_aef2657ae0e96da42122431f360a771b0}\label{_instrument_8c_aef2657ae0e96da42122431f360a771b0}} 
+void \hyperlink{_instrument_8c_aef2657ae0e96da42122431f360a771b0}{Instrument\+Monitor} ()
+\begin{DoxyCompactList}\small\item\em operations to be executed during periodic operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a7ccf8090b585b1cca5658182baa14818}\label{_instrument_8c_a7ccf8090b585b1cca5658182baa14818}} 
+void \hyperlink{_instrument_8c_a7ccf8090b585b1cca5658182baa14818}{Update\+State} ()
+\begin{DoxyCompactList}\small\item\em private function for updating state variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a9638a1c27e8bfd0c2fb002b4448ca230}\label{_instrument_8c_a9638a1c27e8bfd0c2fb002b4448ca230}} 
+void \hyperlink{_instrument_8c_a9638a1c27e8bfd0c2fb002b4448ca230}{On\+Generator\+Message\+Event\+Triggered} (char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Event handler for generator new message event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_abd73869307313dd276a760adb01ecd84}\label{_instrument_8c_abd73869307313dd276a760adb01ecd84}} 
+void \hyperlink{_instrument_8c_abd73869307313dd276a760adb01ecd84}{On\+Generator\+Exposure\+Stoped\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for generator stop exposure event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a87fae197dd4bf032daa58e25bd27b960}\label{_instrument_8c_a87fae197dd4bf032daa58e25bd27b960}} 
+void \hyperlink{_instrument_8c_a87fae197dd4bf032daa58e25bd27b960}{On\+Generator\+Kvp\+Updated\+Event\+Triggered} (int kvp)
+\begin{DoxyCompactList}\small\item\em Event handler for generator update K\+VP event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_af47e8c6db4aa181276e336d2ba52aa5b}\label{_instrument_8c_af47e8c6db4aa181276e336d2ba52aa5b}} 
+void \hyperlink{_instrument_8c_af47e8c6db4aa181276e336d2ba52aa5b}{On\+Generator\+Mode\+Event\+Triggered} (int mode)
+\begin{DoxyCompactList}\small\item\em Event handler for generator update mode event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a3fa404eaddbc4e2b26068456a255ae80}\label{_instrument_8c_a3fa404eaddbc4e2b26068456a255ae80}} 
+void \hyperlink{_instrument_8c_a3fa404eaddbc4e2b26068456a255ae80}{On\+Generatorm\+A\+Updated\+Event\+Triggered} (int amp)
+\begin{DoxyCompactList}\small\item\em Event handler for generator update milli-\/amper event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a4bc165a5cc6c324b8395c8d65745c4db}\label{_instrument_8c_a4bc165a5cc6c324b8395c8d65745c4db}} 
+void \hyperlink{_instrument_8c_a4bc165a5cc6c324b8395c8d65745c4db}{On\+Generator\+Passed\+Exposure\+Time\+Event\+Triggered} (int passed\+Time)
+\begin{DoxyCompactList}\small\item\em Event handler for generator ellapsed exposure time notification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a23be80842ff571441a39b44cf52880b5}\label{_instrument_8c_a23be80842ff571441a39b44cf52880b5}} 
+void \hyperlink{_instrument_8c_a23be80842ff571441a39b44cf52880b5}{On\+Generator\+Shoot\+Time\+Event\+Triggered} (int shoot\+Time)
+\begin{DoxyCompactList}\small\item\em Event handler for generator shoot time event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_ad846dbf655cde950b44e287102b8f1f0}\label{_instrument_8c_ad846dbf655cde950b44e287102b8f1f0}} 
+void \hyperlink{_instrument_8c_ad846dbf655cde950b44e287102b8f1f0}{On\+Generator\+Exposure\+Started\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for generator start exposure event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_ad242fcaf9f6b4a2b1495c37af301ce96}\label{_instrument_8c_ad242fcaf9f6b4a2b1495c37af301ce96}} 
+void \hyperlink{_instrument_8c_ad242fcaf9f6b4a2b1495c37af301ce96}{On\+Generator\+Error\+Event\+Triggered} (char $\ast$error)
+\begin{DoxyCompactList}\small\item\em Event handler for generator error event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a11a6cb180b6dbb99619e1aea04743a36}\label{_instrument_8c_a11a6cb180b6dbb99619e1aea04743a36}} 
+void \hyperlink{_instrument_8c_a11a6cb180b6dbb99619e1aea04743a36}{On\+Generator\+Warmup\+Finished\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for generator warmup finished event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a641dbae7f2049f9362fb83c22fe023f7}\label{_instrument_8c_a641dbae7f2049f9362fb83c22fe023f7}} 
+void \hyperlink{_instrument_8c_a641dbae7f2049f9362fb83c22fe023f7}{On\+Generator\+Requires\+Short\+Warmup\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for generator demands short warmup event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a1117b5233c95cb1b2ca9f611dd129816}\label{_instrument_8c_a1117b5233c95cb1b2ca9f611dd129816}} 
+void \hyperlink{_instrument_8c_a1117b5233c95cb1b2ca9f611dd129816}{On\+Generator\+Requires\+Long\+Warmup\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for generator demands for long warmup event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a5012d43bdbc97bae1fa8899667288c2b}\label{_instrument_8c_a5012d43bdbc97bae1fa8899667288c2b}} 
+void \hyperlink{_instrument_8c_a5012d43bdbc97bae1fa8899667288c2b}{On\+Generator\+Larg\+Focal\+Spot\+Size\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for x-\/ray tube is using larg focal spot event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a4fc6a736dd04d1d1b63b0f583eb9ea17}\label{_instrument_8c_a4fc6a736dd04d1d1b63b0f583eb9ea17}} 
+void \hyperlink{_instrument_8c_a4fc6a736dd04d1d1b63b0f583eb9ea17}{On\+Generator\+Small\+Focal\+Spot\+Size\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em Event handler for x-\/ray tube is using small focal spot event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_afc7eb1e24524218010de53587a3b298b}\label{_instrument_8c_afc7eb1e24524218010de53587a3b298b}} 
+void \hyperlink{_instrument_8c_afc7eb1e24524218010de53587a3b298b}{On\+Display\+Start\+Automatic\+Mode\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em event handler for automatic mode selection on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a59c5d6f4d42a37843db343a7041eadc5}\label{_instrument_8c_a59c5d6f4d42a37843db343a7041eadc5}} 
+void \hyperlink{_instrument_8c_a59c5d6f4d42a37843db343a7041eadc5}{On\+Display\+Goto\+Home\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em event handler for go home selection on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a3f70ca48cf29b08368f959f8af8638aa}\label{_instrument_8c_a3f70ca48cf29b08368f959f8af8638aa}} 
+void \hyperlink{_instrument_8c_a3f70ca48cf29b08368f959f8af8638aa}{On\+Display\+Start\+Exposure\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em event handler for start exposure selection on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a99167e2622817354b957f27ce2efae18}\label{_instrument_8c_a99167e2622817354b957f27ce2efae18}} 
+void \hyperlink{_instrument_8c_a99167e2622817354b957f27ce2efae18}{On\+Display\+Stop\+Exposure\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em event handler for stop exposure selection on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a5f47e92cf4585e7c569eab9d0bab16df}\label{_instrument_8c_a5f47e92cf4585e7c569eab9d0bab16df}} 
+void \hyperlink{_instrument_8c_a5f47e92cf4585e7c569eab9d0bab16df}{On\+Display\+Start\+Warmup\+Event\+Triggered} ()
+\begin{DoxyCompactList}\small\item\em event handler for start warmup selection on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a3960e26ab66c45b3446bf50cfab91e78}\label{_instrument_8c_a3960e26ab66c45b3446bf50cfab91e78}} 
+void \hyperlink{_instrument_8c_a3960e26ab66c45b3446bf50cfab91e78}{On\+Display\+Update\+Kvp\+Event\+Triggered} (int kvp)
+\begin{DoxyCompactList}\small\item\em event handler for updating K\+VP on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_ad3d7aa1f2e8173c423aab6268e6193f2}\label{_instrument_8c_ad3d7aa1f2e8173c423aab6268e6193f2}} 
+void \hyperlink{_instrument_8c_ad3d7aa1f2e8173c423aab6268e6193f2}{On\+Display\+Updatem\+A\+Event\+Triggered} (int ma)
+\begin{DoxyCompactList}\small\item\em event handler for updating milli-\/amper on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_a59ef45cf7c6e27c0813bf55bd5079753}\label{_instrument_8c_a59ef45cf7c6e27c0813bf55bd5079753}} 
+void \hyperlink{_instrument_8c_a59ef45cf7c6e27c0813bf55bd5079753}{On\+Display\+Update\+Time\+Event\+Triggered} (int time)
+\begin{DoxyCompactList}\small\item\em event handler for updating exposure time on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_aa94400d915b7eb851cfca7e9d8e220e0}\label{_instrument_8c_aa94400d915b7eb851cfca7e9d8e220e0}} 
+void \hyperlink{_instrument_8c_aa94400d915b7eb851cfca7e9d8e220e0}{On\+Display\+Update\+J\+O\+G\+Event\+Triggered} (int time)
+\begin{DoxyCompactList}\small\item\em event handler for updating J\+OG on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_ae9f840c897f8c1814b774c59eceb01f3}\label{_instrument_8c_ae9f840c897f8c1814b774c59eceb01f3}} 
+void \hyperlink{_instrument_8c_ae9f840c897f8c1814b774c59eceb01f3}{Reset\+System} ()
+\begin{DoxyCompactList}\small\item\em private function that reset generator, motor, display and all devices. \end{DoxyCompactList}\item 
+void \hyperlink{_instrument_8c_a44183aa55ed986e78680ae1fec9ec93a}{Start\+Instrument} ()
+\begin{DoxyCompactList}\small\item\em start instrument. This function is called by \hyperlink{_kernel_8c}{Kernel.\+c} at the end of bootup process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_instrument_8c_aad739424f4d866dc098e490744d37e53}\label{_instrument_8c_aad739424f4d866dc098e490744d37e53}} 
+\hyperlink{struct_d_i_s_p___s_t_a_t_e}{D\+I\+S\+P\+\_\+\+S\+T\+A\+TE} \hyperlink{_instrument_8c_aad739424f4d866dc098e490744d37e53}{\+\_\+\+\_\+\+D\+I\+S\+P\+\_\+\+S\+T\+AT}
+\begin{DoxyCompactList}\small\item\em instace of display state variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_instrument_8c_afe9a19151e49a5fb4337d674e83a6a0b}\label{_instrument_8c_afe9a19151e49a5fb4337d674e83a6a0b}} 
+\hyperlink{struct_g_e_n___s_t_a_t_e}{G\+E\+N\+\_\+\+S\+T\+A\+TE} \hyperlink{_instrument_8c_afe9a19151e49a5fb4337d674e83a6a0b}{\+\_\+\+\_\+\+G\+E\+N\+\_\+\+S\+T\+AT}
+\begin{DoxyCompactList}\small\item\em instace of generator state variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implement instrument 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511b}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511b}} 
+\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+C\+MD@{D\+I\+S\+P\+\_\+\+C\+MD}}
+\index{D\+I\+S\+P\+\_\+\+C\+MD@{D\+I\+S\+P\+\_\+\+C\+MD}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{D\+I\+S\+P\+\_\+\+C\+MD}{DISP\_CMD}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511b}{D\+I\+S\+P\+\_\+\+C\+MD}}
+
+display command options. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD@{D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD@{D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba213b7bb27185238a3594308180970d8a}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba213b7bb27185238a3594308180970d8a}} 
+D\+I\+S\+P\+\_\+\+N\+O\+\_\+\+C\+MD&display no command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP@{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP@{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba0528fce503464b493abbc6a1a30fe015}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba0528fce503464b493abbc6a1a30fe015}} 
+D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+E\+XP&display start exposure command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP@{D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP@{D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511babe99c9d8f5315de6e9dda1234244d325}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511babe99c9d8f5315de6e9dda1234244d325}} 
+D\+I\+S\+P\+\_\+\+S\+T\+P\+\_\+\+E\+XP&display stop exposure command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM@{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM@{D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba1fa9ae4b007f8a05391610e82841ba29}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba1fa9ae4b007f8a05391610e82841ba29}} 
+D\+I\+S\+P\+\_\+\+S\+T\+R\+\_\+\+W\+RM&display start warmup command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba477eca8734318248b810482cf2ceb809}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba477eca8734318248b810482cf2ceb809}} 
+D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+K\+VP&display update kvp command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba292ff031806faf29cc8f69c646500e24}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511ba292ff031806faf29cc8f69c646500e24}} 
+D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+mA&display update mA command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baf687ff79ec7d43360677b0bb6c75ad91}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baf687ff79ec7d43360677b0bb6c75ad91}} 
+D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+TM&display update time command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG@{D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG}}}\mbox{\Hypertarget{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baa604dc3ac06b636166edab370850721d}\label{_instrument_8c_ab38156ce3b27d67dd5e4d2ad7fc2511baa604dc3ac06b636166edab370850721d}} 
+D\+I\+S\+P\+\_\+\+U\+D\+T\+\_\+\+J\+OG&display update jog command \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551}\label{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551}} 
+\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+S\+CR}}
+\index{D\+I\+S\+P\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+S\+CR}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{D\+I\+S\+P\+\_\+\+S\+CR}{DISP\_SCR}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551}{D\+I\+S\+P\+\_\+\+S\+CR}}
+
+display\textquotesingle{}s screen options. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+H\+O\+ME@{D\+I\+S\+P\+\_\+\+H\+O\+ME}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+H\+O\+ME@{D\+I\+S\+P\+\_\+\+H\+O\+ME}}}\mbox{\Hypertarget{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551a84b1e56a5fdb2c268151c1d5618e496c}\label{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551a84b1e56a5fdb2c268151c1d5618e496c}} 
+D\+I\+S\+P\+\_\+\+H\+O\+ME&home screen (main menue) on the screen \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR}}}\mbox{\Hypertarget{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ad1013f4b5b013c4c8f691cca71710959}\label{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ad1013f4b5b013c4c8f691cca71710959}} 
+D\+I\+S\+P\+\_\+\+A\+U\+T\+O\+\_\+\+S\+CR&automatic screen on display \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR@{D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR}}}\mbox{\Hypertarget{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ab96939cbc6576df381d1e99260df000c}\label{_instrument_8c_a5e9ecb1d572f0c8d6aa7f5a2a4249551ab96939cbc6576df381d1e99260df000c}} 
+D\+I\+S\+P\+\_\+\+S\+R\+V\+\_\+\+S\+CR&service screen on display \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_instrument_8c_ac7c96d55fc91167731c77ca574178036}\label{_instrument_8c_ac7c96d55fc91167731c77ca574178036}} 
+\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+E\+RR}}
+\index{G\+E\+N\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+E\+RR}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+N\+\_\+\+E\+RR}{GEN\_ERR}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_ac7c96d55fc91167731c77ca574178036}{G\+E\+N\+\_\+\+E\+RR}}
+
+generator error sate items. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR}}}\mbox{\Hypertarget{_instrument_8c_ac7c96d55fc91167731c77ca574178036ae7ea7c8a4f53ef82107d7e6372270a5f}\label{_instrument_8c_ac7c96d55fc91167731c77ca574178036ae7ea7c8a4f53ef82107d7e6372270a5f}} 
+G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+RR&generator has no error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+E\+RR}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+E\+RR@{G\+E\+N\+\_\+\+E\+RR}}}\mbox{\Hypertarget{_instrument_8c_ac7c96d55fc91167731c77ca574178036aab763d4f346fa15c52defaf2d8573ceb}\label{_instrument_8c_ac7c96d55fc91167731c77ca574178036aab763d4f346fa15c52defaf2d8573ceb}} 
+G\+E\+N\+\_\+\+E\+RR&generator faced an error \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2}} 
+\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE@{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE}}
+\index{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE@{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE}{GEN\_EXP\_MODE}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2}{G\+E\+N\+\_\+\+E\+X\+P\+\_\+\+M\+O\+DE}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO@{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO@{G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO}}}\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a36c2e87ec6b6e3bac777cfdf1ce52b9b}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a36c2e87ec6b6e3bac777cfdf1ce52b9b}} 
+G\+E\+N\+\_\+\+N\+O\+\_\+\+E\+X\+PO&No Activity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+K\+E\+Y2@{G\+E\+N\+\_\+\+K\+E\+Y2}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+K\+E\+Y2@{G\+E\+N\+\_\+\+K\+E\+Y2}}}\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a93053adea44e6fc53ecd95c9679836d4}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a93053adea44e6fc53ecd95c9679836d4}} 
+G\+E\+N\+\_\+\+K\+E\+Y2&Key in position 2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+P\+RE@{G\+E\+N\+\_\+\+P\+RE}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+P\+RE@{G\+E\+N\+\_\+\+P\+RE}}}\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a2e665a39626a498bfe84e714c9bbcc98}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a2e665a39626a498bfe84e714c9bbcc98}} 
+G\+E\+N\+\_\+\+P\+RE&prewarming \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF@{G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF@{G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF}}}\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2af931d7ba35af5b59ab40991445c3ddb3}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2af931d7ba35af5b59ab40991445c3ddb3}} 
+G\+E\+N\+\_\+\+S\+W\+C\+\_\+\+NF&x-\/ray switching oN or o\+FF \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG@{G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG@{G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG}}}\mbox{\Hypertarget{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a325d635cf0a00c4c5a00470ff220eb54}\label{_instrument_8c_a0a0a6ad3ca0fd908a8a84e98eccb2bf2a325d635cf0a00c4c5a00470ff220eb54}} 
+G\+E\+N\+\_\+\+E\+X\+P\+O\+S\+I\+NG&x-\/ray on \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2}\label{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2}} 
+\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+F\+CL}}
+\index{G\+E\+N\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+F\+CL}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+N\+\_\+\+F\+CL}{GEN\_FCL}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2}{G\+E\+N\+\_\+\+F\+CL}}
+
+Generator focal spot size options. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL}}}\mbox{\Hypertarget{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2a8bfd4ffb253d5c3dc65c4dfc949581be}\label{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2a8bfd4ffb253d5c3dc65c4dfc949581be}} 
+G\+E\+N\+\_\+\+F\+I\+N\+\_\+\+F\+CL&fine focal spot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL@{G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL}}}\mbox{\Hypertarget{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2aafe76023068c2d6e16216c29722815dd}\label{_instrument_8c_acc83001a39eb4fd4e0d7731f807de9c2aafe76023068c2d6e16216c29722815dd}} 
+G\+E\+N\+\_\+\+B\+R\+D\+\_\+\+F\+CL&broad focal spot \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8}\label{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8}} 
+\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG}}
+\index{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG}{GEN\_WRM\_PRG}}
+{\footnotesize\ttfamily enum \hyperlink{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8}{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+P\+RG}}
+
+generator warmup program state items. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM@{G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM@{G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM}}}\mbox{\Hypertarget{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8a135d1f2c531aaa7865d08d6b9bfcb6cc}\label{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8a135d1f2c531aaa7865d08d6b9bfcb6cc}} 
+G\+E\+N\+\_\+\+N\+O\+\_\+\+W\+RM&no warmup required \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT}}}\mbox{\Hypertarget{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8aaf14caafd4c6d40d91a0d433966be679}\label{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8aaf14caafd4c6d40d91a0d433966be679}} 
+G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+S\+RT&short warmup program \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG}!Instrument.\+c@{Instrument.\+c}}\index{Instrument.\+c@{Instrument.\+c}!G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG@{G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG}}}\mbox{\Hypertarget{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8ade08f5f4269ef03f6e5a99e9e523a593}\label{_instrument_8c_a00569347f0e8acf61061534ffff3e6e8ade08f5f4269ef03f6e5a99e9e523a593}} 
+G\+E\+N\+\_\+\+W\+R\+M\+\_\+\+L\+NG&long warmup program \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_instrument_8c_a44183aa55ed986e78680ae1fec9ec93a}\label{_instrument_8c_a44183aa55ed986e78680ae1fec9ec93a}} 
+\index{Instrument.\+c@{Instrument.\+c}!Start\+Instrument@{Start\+Instrument}}
+\index{Start\+Instrument@{Start\+Instrument}!Instrument.\+c@{Instrument.\+c}}
+\subsubsection{\texorpdfstring{Start\+Instrument()}{StartInstrument()}}
+{\footnotesize\ttfamily void Start\+Instrument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start instrument. This function is called by \hyperlink{_kernel_8c}{Kernel.\+c} at the end of bootup process. 
+
+inception point of the instrument after successfull boot. 

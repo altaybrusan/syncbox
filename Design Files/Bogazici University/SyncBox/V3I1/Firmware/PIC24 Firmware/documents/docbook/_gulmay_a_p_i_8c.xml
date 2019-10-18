@@ -1,0 +1,979 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gulmay_a_p_i_8c">
+    <title>GulmayAPI.c File Reference</title>
+    <programlisting>#include &quot;GulmayAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+    <programlisting>#include &quot;jsmn.h&quot;</programlisting>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+<para>Include dependency diagram for GulmayAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_gulmay_a_p_i_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for GulmayAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_gulmay_a_p_i_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1a08cc0951c183e99e05ff47f230721892">MAX_KVP</link><para><emphasis>maximum allowd KVP.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1a93b11c2c97d25a712b1b1ad47647204c">MIN_KVP</link><para><emphasis>minimum allowd KVP.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1a8953300db9a1c7b2e78094b16525bce8">MAX_mAMP</link><para><emphasis>maximum allowd milli-amper.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1a51e5b8cb44b406747ac85a94a82e0d4c">MIN_mAMP</link><para><emphasis>minimum allowd milli-amper.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1ae9834f5fc94c8ce2c8cae348de2a35fa">MIN_EXPOSURE_TIME</link><para><emphasis>minimum exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8c_1a2c2d24d812e1e26c7ade9c404b844f11">MAX_EXPOSURE_TIME</link><para><emphasis>maximum exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorMessageEvent <link linkend="_gulmay_a_p_i_8c_1ab25563a3d2a3b5a53193d7d76485fb58">_messageLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ExposureStopedEvent <link linkend="_gulmay_a_p_i_8c_1a3b400c15527da840949fdd6f833c79ad">_exposureStopedLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>KvpUpdatedEvent <link linkend="_gulmay_a_p_i_8c_1acad46b400e46cc72f2dc606da1f5bf6c">_kvpValueLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorModeEvent <link linkend="_gulmay_a_p_i_8c_1a79ee95919c0456bcec3f86502f11d544">_modeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>AmpUpdatedEvent <link linkend="_gulmay_a_p_i_8c_1a72dbe76b8aea76a0e72b524876fe6141">_ampValueLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>PassedExposureTimeEvent <link linkend="_gulmay_a_p_i_8c_1aa5c12b82b56993a5139eb12e71ec7ad0">_passedExposureTimeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ShootTimeEvent <link linkend="_gulmay_a_p_i_8c_1a936db3001a432948ec33a5890aa519cc">_shootTimeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ExposureStartedEvent <link linkend="_gulmay_a_p_i_8c_1a03462546db3007cdb0df7098600d5f43">_exposureStartedLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorErrorEvent <link linkend="_gulmay_a_p_i_8c_1a7cfcb0854eed9cf1a748f0f0c55a4510">_errorLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorWarmupFinishedEvent <link linkend="_gulmay_a_p_i_8c_1a9de8b7a2883b6183834de6fc68f368ca">_warmupFinishedLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorRequiresShortWarmupEvent <link linkend="_gulmay_a_p_i_8c_1a57c1069510b1291dd21e6d657a0b89d1">_shortWarmupIsRequiredLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeneratorRequiresLongWarmupEvent <link linkend="_gulmay_a_p_i_8c_1a1bc1b66f00c7adbeaec677e402824c2e">_longWarmupIsRequiredLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>LargFocalSpotSizeEvent <link linkend="_gulmay_a_p_i_8c_1a58fca1fe714bd05aa79fc840d0e53120">_largFocalSpotSizeTriggeredLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>SmallFocalSpotSizeEvent <link linkend="_gulmay_a_p_i_8c_1a24ae2e6c6500f2a510b5da0afa277aa8">_smallFocalSpotSizeTriggeredLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a00b39578a75fc76ecf79da2417004d28">RegisterMessageListener</link> (
+GeneratorMessageEvent )<para><emphasis>register a listener for generator message event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a32227935f419c511377b3404b9b97c11">RegisterErrorListener</link> (
+GeneratorErrorEvent )<para><emphasis>register a listener for generator error event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a6c2ce8bac19b3df6b653f20887f69624">RegisterGeneratorModeListener</link> (
+GeneratorModeEvent )<para><emphasis>register a listener for generator mode event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a8f297a7cbe7fd42a852a46edc13b32fc">RegisterFocalspotListeners</link> (
+LargFocalSpotSizeEvent , SmallFocalSpotSizeEvent )<para><emphasis>register a listener for generator focal spot change event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a0c52580fd90bf8e9cc8b31e2b2bf0ae3">RegisterExposureStateListeners</link> (
+ExposureStartedEvent , PassedExposureTimeEvent , ExposureStopedEvent )<para><emphasis>register a listener for generator exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a59839e767937b0825009d53ef0eaa1e8">RegisterExposureParameterListeners</link> (
+KvpUpdatedEvent , AmpUpdatedEvent , ShootTimeEvent )<para><emphasis>register a listener for generator exposure parameter event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1afaf5df49badd43c433b8bbafcf93e203">RegisterWarmupListeners</link> (
+GeneratorRequiresShortWarmupEvent , GeneratorRequiresLongWarmupEvent , GeneratorWarmupFinishedEvent )<para><emphasis>register a listener for generator warmup event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a6fde37577be735f02c1e67e9b337769c">CallKernelSendService</link> (
+char * message, <link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link> type)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1acb531b9b9a08a4274d876f3f602fc7de">IntToThreeDigitString</link> (
+int param, char * destination)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_gulmay_a_p_i_8c_1a1c2133526a3a912f9f6d521d86d8c22a">StringToInteger</link> (
+char * str, int index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a2739ffd6c208395bf3e9563592f410c9">UpdateKvp</link> (
+int newValue)<para><emphasis>update KVP value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1ae6da7f07c0176169fc6e31a6636bbb4b">UpdateAmp</link> (
+int newValue)<para><emphasis>update milli-amper value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a3946c95c3a1aa7e04793954f945e832a">UpdateShootTime</link> (
+int newValue)<para><emphasis>update shoot time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1ac549b847f1e073981dd7276f042ceff9">StartExposure</link> (
+)<para><emphasis>start exposure.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1afcff0f20c10416c89d36544a14b98f2d">StopExposure</link> (
+)<para><emphasis>stop exposure.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a109a478fc2238fad56c6a1c266a393e6">SetFineFocalSpotSize</link> (
+)<para><emphasis>activate fine focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a92f2423b2925db5e42315fdac82bbab9">SetBroadFocalSpotSize</link> (
+)<para><emphasis>activate broad focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a28d0fba12b3f30ffd4ff75bbe7d97bdc">StartShortTermWarmup</link> (
+)<para><emphasis>start short term warm up program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a46e773d024d2106424c1ac4ee45e331b">StartLongTermWarmup</link> (
+)<para><emphasis>start long term warm up program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1acc6aec4a2abf80dab4cc10d24fee24d6">QueryGeneratorMode</link> (
+)<para><emphasis>get the generator exposure mode.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a936ac171697cec2e7d3520656b8d7a26">QueryExposureParameters</link> (
+)<para><emphasis>get the exposure parameters (KVP,mAmp and time).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a5dbb19be539e00bbbf950cdf26198b39">GeneratorProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> frame)<para><emphasis>call back function. Kernel messages are received by this function.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1abeda6d4243dec415776eb16beacb0b38">QueryWarmupProgram</link> (
+)<para><emphasis>check generetor for what is the required warmup program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a3759ed567b072f3cd49020359d998d33">QueryFocalSpotSize</link> (
+)<para><emphasis>check generator for the active focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1adbb4af99d58174947214b531e2cbd45c">SetGeneratorInUserMode</link> (
+)<para><emphasis>activate the user mode program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a9eee8d4a57bdcda8bc8195629b91c51c">SuppressErrorsVoltageAndAmpError</link> (
+)<para><emphasis>suppress voltage and ampere errors.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a6b577498aedd9f37f5ecf58079203c1a">CheckGeneratorErrors</link> (
+)<para><emphasis>check the generetor errors</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1a4fa5370e4ed7ac42f50631f707ee8c2a">QueryEllapsedExposureTime</link> (
+)<para><emphasis>query ellapsed exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8c_1abb608877dc715ca117536e8ea8b0a111">ResetGenerator</link> (
+)<para><emphasis>reset generator.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/GulmayAPI.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">//&#32;Abbrivation:&#32;lst:&#32;Listener</emphasis>
+2 <emphasis class="preprocessor">#include&quot;<link linkend="_gulmay_a_p_i_8h">GulmayAPI.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+4 <emphasis class="preprocessor">#include&quot;jsmn.h&quot;</emphasis>
+5 <emphasis class="preprocessor">#include&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>
+6 
+<link linkend="_gulmay_a_p_i_8h_1a08cc0951c183e99e05ff47f230721892">7 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a08cc0951c183e99e05ff47f230721892">MAX_KVP</link>&#32;=&#32;120;
+<link linkend="_gulmay_a_p_i_8h_1a93b11c2c97d25a712b1b1ad47647204c">8 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a93b11c2c97d25a712b1b1ad47647204c">MIN_KVP</link>&#32;=&#32;40;
+<link linkend="_gulmay_a_p_i_8h_1a8953300db9a1c7b2e78094b16525bce8">9 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a8953300db9a1c7b2e78094b16525bce8">MAX_mAMP</link>&#32;=&#32;100;
+<link linkend="_gulmay_a_p_i_8h_1a51e5b8cb44b406747ac85a94a82e0d4c">10 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a51e5b8cb44b406747ac85a94a82e0d4c">MIN_mAMP</link>&#32;=&#32;1;
+<link linkend="_gulmay_a_p_i_8h_1ae9834f5fc94c8ce2c8cae348de2a35fa">11 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae9834f5fc94c8ce2c8cae348de2a35fa">MIN_EXPOSURE_TIME</link>&#32;=&#32;1;
+<link linkend="_gulmay_a_p_i_8h_1a2c2d24d812e1e26c7ade9c404b844f11">12 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a2c2d24d812e1e26c7ade9c404b844f11">MAX_EXPOSURE_TIME</link>&#32;=&#32;100;
+13 
+14 <emphasis class="comment">//&#32;accept&#32;just&#32;one&#32;observer.</emphasis>
+15 <emphasis class="comment">//&#32;TODO:&#32;implement&#32;publisher&#32;&amp;&#32;&#32;subscriber</emphasis>
+16 
+17 GeneratorMessageEvent&#32;_messageLst&#32;=&#32;0;
+18 ExposureStopedEvent&#32;_exposureStopedLst&#32;=&#32;0;
+19 KvpUpdatedEvent&#32;_kvpValueLst&#32;=&#32;0;
+20 GeneratorModeEvent&#32;_modeLst&#32;=&#32;0;
+21 AmpUpdatedEvent&#32;_ampValueLst&#32;=&#32;0;
+22 PassedExposureTimeEvent&#32;_passedExposureTimeLst&#32;=&#32;0;
+23 ShootTimeEvent&#32;_shootTimeLst&#32;=&#32;0;
+24 ExposureStartedEvent&#32;_exposureStartedLst&#32;=&#32;0;
+25 GeneratorErrorEvent&#32;_errorLst&#32;=&#32;0;
+26 GeneratorWarmupFinishedEvent&#32;_warmupFinishedLst&#32;=&#32;0;
+27 GeneratorRequiresShortWarmupEvent&#32;_shortWarmupIsRequiredLst&#32;=&#32;0;
+28 GeneratorRequiresLongWarmupEvent&#32;_longWarmupIsRequiredLst&#32;=&#32;0;
+29 LargFocalSpotSizeEvent&#32;_largFocalSpotSizeTriggeredLst&#32;=&#32;0;
+30 SmallFocalSpotSizeEvent&#32;_smallFocalSpotSizeTriggeredLst&#32;=&#32;0;
+31 
+32 
+<link linkend="_gulmay_a_p_i_8h_1ac5d01c6ebb446d070401697563c27f97">33 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac5d01c6ebb446d070401697563c27f97">RegisterMessageListener</link>(GeneratorMessageEvent&#32;messageLst)
+34 {
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_messageLst&#32;=&#32;messageLst;
+36 }
+<link linkend="_gulmay_a_p_i_8h_1a4d3de4466610ab5ff9719860082abb2c">37 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a4d3de4466610ab5ff9719860082abb2c">RegisterErrorListener</link>(GeneratorErrorEvent&#32;errorLst)
+38 {
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_errorLst&#32;=&#32;errorLst;
+40 }
+<link linkend="_gulmay_a_p_i_8h_1ad8857dcb2550f6b2ab1ea1745044be4c">41 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ad8857dcb2550f6b2ab1ea1745044be4c">RegisterGeneratorModeListener</link>(GeneratorModeEvent&#32;modeLst)
+42 {
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_modeLst&#32;=&#32;modeLst;
+44 }
+<link linkend="_gulmay_a_p_i_8h_1a6537404a8cbbeab00b3f6fb3b7e04a24">45 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a6537404a8cbbeab00b3f6fb3b7e04a24">RegisterFocalspotListeners</link>(LargFocalSpotSizeEvent&#32;largFocalSpotSizeTriggeredLst,
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SmallFocalSpotSizeEvent&#32;smallFocalSpotSizeTriggeredLst)
+47 {
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_largFocalSpotSizeTriggeredLst&#32;=&#32;largFocalSpotSizeTriggeredLst;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_smallFocalSpotSizeTriggeredLst&#32;=&#32;smallFocalSpotSizeTriggeredLst;
+50 }
+<link linkend="_gulmay_a_p_i_8h_1abac22860be7c048152d41af0899a5d67">51 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abac22860be7c048152d41af0899a5d67">RegisterExposureStateListeners</link>(ExposureStartedEvent&#32;exposureStartedLst,
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PassedExposureTimeEvent&#32;ellapsedExposureTimeLst,
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ExposureStopedEvent&#32;exposureStopedLst)
+54 {
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_exposureStartedLst&#32;=&#32;exposureStartedLst;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_passedExposureTimeLst&#32;=&#32;ellapsedExposureTimeLst;
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_exposureStopedLst&#32;=&#32;exposureStopedLst;
+58 
+59 }
+<link linkend="_gulmay_a_p_i_8h_1ac2e42f9cf31e8451ea55a8584f200b19">60 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac2e42f9cf31e8451ea55a8584f200b19">RegisterExposureParameterListeners</link>(KvpUpdatedEvent&#32;kvpValueLst,
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AmpUpdatedEvent&#32;ampValueLst,
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ShootTimeEvent&#32;shootTimeLst)
+63 {
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_kvpValueLst&#32;=&#32;kvpValueLst;
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_ampValueLst&#32;=&#32;ampValueLst;
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_shootTimeLst&#32;=&#32;shootTimeLst;
+67 }
+<link linkend="_gulmay_a_p_i_8h_1ae475af8e61d9df377a66dbcbd352811d">68 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae475af8e61d9df377a66dbcbd352811d">RegisterWarmupListeners</link>(GeneratorRequiresShortWarmupEvent&#32;shortWarmupIsRequiredLst,
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GeneratorRequiresLongWarmupEvent&#32;longWarmupIsRequiredLst,
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GeneratorWarmupFinishedEvent&#32;&#32;warmupFinishedLst)
+71 {
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_warmupFinishedLst&#32;=&#32;warmupFinishedLst;
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_shortWarmupIsRequiredLst&#32;=&#32;shortWarmupIsRequiredLst;
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_longWarmupIsRequiredLst&#32;=&#32;longWarmupIsRequiredLst;
+75 }
+76 
+77 
+78 <emphasis class="keywordtype">void</emphasis>&#32;CallKernelSendService(<emphasis class="keywordtype">char</emphasis>*&#32;message,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link>&#32;type)
+79 {
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;_frame;&#32;<emphasis class="comment">//=&#32;{&#32;0,0,0,0,0,0&#32;};</emphasis>
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1af979252e2c7fa6f78f4cfda607e7587b">F_SENDER</link>&#32;=&#32;GENERATOR;
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae2d1e98376527216fa6ff53b940a7c7a">F_RECEIVER</link>&#32;=&#32;GENERATOR;
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae24624f2af7ede4b38b487a23cf5c947">F_TYPE</link>&#32;=&#32;type;
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>&#32;=&#32;message;
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.MESSAGE_LENGTH&#32;=&#32;0;
+86 
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strcmp(message,&#32;<emphasis class="stringliteral">&quot;?E\r&quot;</emphasis>)&#32;==&#32;0&#32;||
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcmp(message,&#32;<emphasis class="stringliteral">&quot;?M\r&quot;</emphasis>)&#32;==&#32;0&#32;||
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcmp(message,&#32;<emphasis class="stringliteral">&quot;?F\r&quot;</emphasis>)&#32;==&#32;0&#32;||
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcmp(message,&#32;<emphasis class="stringliteral">&quot;?W\r&quot;</emphasis>)&#32;==&#32;0
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)&#32;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;starting&#32;and&#32;stoping&#32;&#32;exposure&#32;requires&#32;realtime&#32;frames.</emphasis>
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">F_PRIORITY</link>&#32;=&#32;REALTIME_FRAME;
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;other&#32;commands&#32;are&#32;normal&#32;frames</emphasis>
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">F_PRIORITY</link>&#32;=&#32;REALTIME_FRAME;
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+101 
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1a6fa687e39b416d7d42b3365f89a20160">KL_SendFrame</link>(&amp;_frame);
+103 }
+104 
+105 
+106 <emphasis class="comment">/*</emphasis>
+107 <emphasis class="comment">&#32;*&#32;Function&#32;Name:</emphasis>
+108 <emphasis class="comment">&#32;*&#32;&#32;&#32;IntToThreeDigitString</emphasis>
+109 <emphasis class="comment">&#32;*&#32;Description:</emphasis>
+110 <emphasis class="comment">&#32;*&#32;&#32;&#32;Private&#32;function.&#32;Specifically&#32;designed&#32;for&#32;Gulmay&#32;Generator&#32;API.</emphasis>
+111 <emphasis class="comment">&#32;*&#32;Arguments:</emphasis>
+112 <emphasis class="comment">&#32;*&#32;&#32;&#32;param:&#32;the&#32;value&#32;to&#32;be&#32;converted.</emphasis>
+113 <emphasis class="comment">&#32;*&#32;&#32;&#32;destination:&#32;C-style&#32;return&#32;function</emphasis>
+114 <emphasis class="comment">&#32;*&#32;Returns:</emphasis>
+115 <emphasis class="comment">&#32;*&#32;&#32;&#32;void</emphasis>
+116 <emphasis class="comment">&#32;*&#32;NOTES:</emphasis>
+117 <emphasis class="comment">&#32;*&#32;&#32;&#32;this&#32;function&#32;is&#32;prrivate</emphasis>
+118 <emphasis class="comment">&#32;*/</emphasis>
+119 <emphasis class="keywordtype">void</emphasis>&#32;IntToThreeDigitString(<emphasis class="keywordtype">int</emphasis>&#32;param,&#32;<emphasis class="keywordtype">char</emphasis>*&#32;destination)
+120 {
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_buffer[7]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>&#32;};
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntToStrWithZeros(param,&#32;_buffer);
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;destination[0]&#32;=&#32;_buffer[3];
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;destination[1]&#32;=&#32;_buffer[4];
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;destination[2]&#32;=&#32;_buffer[5];
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+127 }
+128 
+137 <emphasis class="keywordtype">int</emphasis>&#32;StringToInteger(<emphasis class="keywordtype">char</emphasis>*&#32;str,&#32;<emphasis class="keywordtype">int</emphasis>&#32;index)
+138 {
+139 
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_temp[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};&#32;&#32;<emphasis class="comment">//C-string&#32;needs&#32;the&#32;null&#32;termination&#32;char</emphasis>
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_temp,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;3);&#32;<emphasis class="comment">//clear&#32;static&#32;buffer&#32;contents.</emphasis>
+142 
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(index)&#32;{
+144 
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;1:
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_temp,&#32;&amp;str[2],&#32;3);
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;2:
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_temp,&#32;&amp;str[6],&#32;3);
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;3:
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_temp,&#32;&amp;str[10],&#32;3);
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+157 
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(isdigit(_temp[0])&#32;&amp;&amp;&#32;isdigit(_temp[1])&#32;&amp;&amp;&#32;isdigit(_temp[2]))
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;atoi(&amp;_temp[0]);
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;-1;
+162 }
+163 
+164 
+<link linkend="_gulmay_a_p_i_8h_1a2739ffd6c208395bf3e9563592f410c9">165 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a2739ffd6c208395bf3e9563592f410c9">UpdateKvp</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue)
+166 {
+167 
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_gulmay_a_p_i_8h_1a93b11c2c97d25a712b1b1ad47647204c">MIN_KVP</link>&#32;&lt;=&#32;newValue&#32;&amp;&amp;&#32;newValue&#32;&lt;=&#32;<link linkend="_gulmay_a_p_i_8h_1a08cc0951c183e99e05ff47f230721892">MAX_KVP</link>)
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7],&#32;_valueBuffer[3];
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;6);
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_valueBuffer,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;3);
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntToThreeDigitString(newValue,&#32;_valueBuffer);
+174 
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!V&quot;</emphasis>,&#32;2);
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(&amp;_cmd[2],&#32;_valueBuffer,&#32;3);
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[5]&#32;=&#32;<emphasis class="charliteral">&apos;\r&apos;</emphasis>;&#32;&#32;<emphasis class="comment">//&#32;append&#32;carrage&#32;return&#32;to&#32;the&#32;end&#32;of&#32;command</emphasis>
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[6]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+180 
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+182 }
+183 
+<link linkend="_gulmay_a_p_i_8h_1ae6da7f07c0176169fc6e31a6636bbb4b">184 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae6da7f07c0176169fc6e31a6636bbb4b">UpdateAmp</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue)
+185 {
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_gulmay_a_p_i_8h_1a51e5b8cb44b406747ac85a94a82e0d4c">MIN_mAMP</link>&#32;&lt;=&#32;newValue&#32;&amp;&amp;&#32;newValue&#32;&lt;=&#32;<link linkend="_gulmay_a_p_i_8h_1a8953300db9a1c7b2e78094b16525bce8">MAX_mAMP</link>)
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7],&#32;_valueBuffer[3];
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;7);
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_valueBuffer,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;3);
+191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntToThreeDigitString(newValue,&#32;_valueBuffer);
+192 
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!I&quot;</emphasis>,&#32;2);
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(&amp;_cmd[2],&#32;_valueBuffer,&#32;3);
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[5]&#32;=&#32;<emphasis class="charliteral">&apos;\r&apos;</emphasis>;&#32;&#32;<emphasis class="comment">//&#32;append&#32;carrage&#32;return&#32;to&#32;the&#32;end&#32;of&#32;command</emphasis>
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[6]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;&#32;&#32;&#32;<emphasis class="comment">//C-style&#32;terminating&#32;string</emphasis>
+197 
+198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+200 }
+201 
+<link linkend="_gulmay_a_p_i_8h_1a3946c95c3a1aa7e04793954f945e832a">202 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a3946c95c3a1aa7e04793954f945e832a">UpdateShootTime</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue)
+203 {
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_gulmay_a_p_i_8h_1ae9834f5fc94c8ce2c8cae348de2a35fa">MIN_EXPOSURE_TIME</link>&#32;&lt;=&#32;newValue&#32;&amp;&amp;&#32;newValue&#32;&lt;=&#32;<link linkend="_gulmay_a_p_i_8h_1a2c2d24d812e1e26c7ade9c404b844f11">MAX_EXPOSURE_TIME</link>)
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7],&#32;_valueBuffer[3];
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;7);
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_valueBuffer,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;3);
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntToThreeDigitString(newValue,&#32;_valueBuffer);
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!T&quot;</emphasis>,&#32;2);
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(&amp;_cmd[2],&#32;_valueBuffer,&#32;3);
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[5]&#32;=&#32;<emphasis class="charliteral">&apos;\r&apos;</emphasis>;&#32;&#32;<emphasis class="comment">//&#32;append&#32;carrage&#32;return&#32;to&#32;the&#32;end&#32;of&#32;command</emphasis>
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[6]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;&#32;&#32;<emphasis class="comment">//&#32;C-style&#32;terminating</emphasis>
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+216 }
+217 
+<link linkend="_gulmay_a_p_i_8h_1ac549b847f1e073981dd7276f042ceff9">221 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac549b847f1e073981dd7276f042ceff9">StartExposure</link>()
+222 {
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;X&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+225 }
+226 
+<link linkend="_gulmay_a_p_i_8h_1afcff0f20c10416c89d36544a14b98f2d">230 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1afcff0f20c10416c89d36544a14b98f2d">StopExposure</link>()
+231 {
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;O&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//memset(_cmd,&apos;&#32;&apos;,4);</emphasis>
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//memcpy(_cmd,&quot;!O\r&quot;,4);</emphasis>
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//_cmd[4]&#32;=&#32;&apos;\0&apos;;&#32;&#32;//&#32;C-style&#32;terminating</emphasis>
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+237 }
+238 
+<link linkend="_gulmay_a_p_i_8h_1a109a478fc2238fad56c6a1c266a393e6">239 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a109a478fc2238fad56c6a1c266a393e6">SetFineFocalSpotSize</link>()
+240 {
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;F&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+243 }
+244 
+<link linkend="_gulmay_a_p_i_8h_1a92f2423b2925db5e42315fdac82bbab9">245 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a92f2423b2925db5e42315fdac82bbab9">SetBroadFocalSpotSize</link>()
+246 {
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;B&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+249 }
+250 
+<link linkend="_gulmay_a_p_i_8h_1a28d0fba12b3f30ffd4ff75bbe7d97bdc">251 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a28d0fba12b3f30ffd4ff75bbe7d97bdc">StartShortTermWarmup</link>()
+252 {
+253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;P&apos;</emphasis>,<emphasis class="charliteral">&apos;1&apos;</emphasis>,<emphasis class="charliteral">&apos;0&apos;</emphasis>,<emphasis class="charliteral">&apos;0&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+255 
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;7);
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!X\r&quot;</emphasis>,&#32;3);
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[4]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;&#32;&#32;<emphasis class="comment">//&#32;C-style&#32;terminating</emphasis>
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+261 }
+262 
+<link linkend="_gulmay_a_p_i_8h_1a46e773d024d2106424c1ac4ee45e331b">263 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a46e773d024d2106424c1ac4ee45e331b">StartLongTermWarmup</link>()
+264 {
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;P&apos;</emphasis>,<emphasis class="charliteral">&apos;1&apos;</emphasis>,<emphasis class="charliteral">&apos;0&apos;</emphasis>,<emphasis class="charliteral">&apos;1&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+267 
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;6);
+269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!X\r&quot;</emphasis>,&#32;3);
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[4]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;&#32;<emphasis class="comment">//&#32;C-Style&#32;string&#32;termination</emphasis>
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+272 }
+273 
+274 
+<link linkend="_gulmay_a_p_i_8h_1acc6aec4a2abf80dab4cc10d24fee24d6">286 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1acc6aec4a2abf80dab4cc10d24fee24d6">QueryGeneratorMode</link>()
+287 {
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_modecmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;M&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_modecmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+290 }
+291 
+<link linkend="_gulmay_a_p_i_8h_1a936ac171697cec2e7d3520656b8d7a26">296 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a936ac171697cec2e7d3520656b8d7a26">QueryExposureParameters</link>()
+297 {
+298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;X&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+300 }
+301 
+<link linkend="_gulmay_a_p_i_8h_1aa7270f2beb762972ec1966e9eb4b5616">305 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1aa7270f2beb762972ec1966e9eb4b5616">GeneratorProcessKernelFrame</link>(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;frame)
+306 {
+307 
+308 <emphasis class="preprocessor">#if&#32;build==debug</emphasis>
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//SendDebugMsg(&quot;\r•GULMAY&#32;FRAME&#32;HANDLER.&quot;);</emphasis>
+310 <emphasis class="preprocessor">#endif</emphasis>
+311 
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strchr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="charliteral">&apos;M&apos;</emphasis>))
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;last&#32;command&#32;was&#32;mode&#32;related</emphasis>
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_mod&#32;=&#32;0;
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_mod&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+317 
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_modeLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_mod&#32;!=&#32;-1)
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_modeLst(_mod);
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+324 
+325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;!O&quot;</emphasis>))
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;is&#32;it&#32;good&#32;to&#32;inform&#32;this&#32;to&#32;workstation?</emphasis>
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_exposureStopedLst&#32;!=&#32;0)
+329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Listener&#32;function&#32;is&#32;listening,&#32;call&#32;it</emphasis>
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_exposureStopedLst();
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+335 
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strchr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="charliteral">&apos;V&apos;</emphasis>))
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_val&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_kvpValueLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_val&#32;!=&#32;-1)
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_kvpValueLst(_val);
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+345 
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strchr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="charliteral">&apos;I&apos;</emphasis>))
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_val&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_ampValueLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_val&#32;!=&#32;-1)
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_ampValueLst(_val);
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?T&quot;</emphasis>))
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_val&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_passedExposureTimeLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_val&#32;!=&#32;-1)
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_passedExposureTimeLst(_val);
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;!T&quot;</emphasis>))
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_val&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_shootTimeLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_val&#32;!=&#32;-1)
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_shootTimeLst(_val);
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;!X&quot;</emphasis>))
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_exposureStartedLst&#32;!=&#32;0)
+376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_exposureStartedLst();
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+382 
+383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strchr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="charliteral">&apos;E&apos;</emphasis>))
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strcmp(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?E&quot;</emphasis>)&#32;==&#32;0)&#32;<emphasis class="comment">//&#32;here&#32;zero&#32;means&#32;two&#32;strings&#32;are&#32;equal</emphasis>
+386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;no&#32;error</emphasis>
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;error&#32;happened</emphasis>
+392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//StopExposure();&#32;//&#32;Gulmay&#32;generator&#32;automatically&#32;do&#32;this!</emphasis>
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+394 
+395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_errorLst&#32;!=&#32;0)
+396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_errorLst(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>);
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+400 
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?X&quot;</emphasis>))
+403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+404 
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_KVP&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_mA&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;2);
+407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_Time&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;3);
+408 
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_kvpValueLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_KVP&#32;!=&#32;-1)
+410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_kvpValueLst(_KVP);
+413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_ampValueLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_mA&#32;!=&#32;-1)
+415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_ampValueLst(_mA);
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_shootTimeLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_Time&#32;!=&#32;-1)
+420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_shootTimeLst(_Time);
+423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?W&quot;</emphasis>))
+427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+428 
+429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;_result&#32;=&#32;StringToInteger(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;1);
+430 
+431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(_result)
+432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0:
+434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_warmupFinishedLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_result&#32;!=&#32;-1)
+435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_warmupFinishedLst();
+438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;100:
+441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_shortWarmupIsRequiredLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_result&#32;!=&#32;-1)
+442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_shortWarmupIsRequiredLst();
+445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;101:
+448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_longWarmupIsRequiredLst&#32;!=&#32;0&#32;&amp;&amp;&#32;_result&#32;!=&#32;-1)
+449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_longWarmupIsRequiredLst();
+452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?FB&quot;</emphasis>))
+457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_largFocalSpotSizeTriggeredLst&#32;!=&#32;0)
+459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_largFocalSpotSizeTriggeredLst();
+462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(strstr(frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>,&#32;<emphasis class="stringliteral">&quot;?FF&quot;</emphasis>))
+466 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_SmallFocalSpotSizeTriggeredLst&#32;!=&#32;0)
+468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+469 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//callback&#32;function&#32;is&#32;registered</emphasis>
+470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_SmallFocalSpotSizeTriggeredLst();
+471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+472 
+473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+474 
+475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+476 }
+477 
+<link linkend="_gulmay_a_p_i_8h_1abeda6d4243dec415776eb16beacb0b38">487 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abeda6d4243dec415776eb16beacb0b38">QueryWarmupProgram</link>()
+488 {
+489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;W&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+491 }
+492 
+<link linkend="_gulmay_a_p_i_8h_1a3759ed567b072f3cd49020359d998d33">493 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a3759ed567b072f3cd49020359d998d33">QueryFocalSpotSize</link>()
+494 {
+495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;F&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+497 }
+498 
+<link linkend="_gulmay_a_p_i_8h_1adbb4af99d58174947214b531e2cbd45c">505 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1adbb4af99d58174947214b531e2cbd45c">SetGeneratorInUserMode</link>()
+506 {
+507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[7]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;!&apos;</emphasis>,<emphasis class="charliteral">&apos;P&apos;</emphasis>,<emphasis class="charliteral">&apos;0&apos;</emphasis>,<emphasis class="charliteral">&apos;0&apos;</emphasis>,<emphasis class="charliteral">&apos;2&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+508 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+509 }
+510 
+<link linkend="_gulmay_a_p_i_8h_1a9eee8d4a57bdcda8bc8195629b91c51c">511 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a9eee8d4a57bdcda8bc8195629b91c51c">SuppressErrorsVoltageAndAmpError</link>()
+512 {
+513 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Engineering&#32;Flags&#32;on</emphasis>
+514 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[11]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>&#32;};
+515 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!P902\r&quot;</emphasis>,&#32;6);
+516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[7]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;
+517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+518 
+519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Engineering&#32;Auto&#32;restart&#32;function&#32;on&#32;three&#32;times&#32;in&#32;five&#32;min</emphasis>
+520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;11);
+521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;!P978,3,5\r&quot;</emphasis>,&#32;10);
+522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[11]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;
+523 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+524 
+525 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Just&#32;for&#32;debuging:&#32;check&#32;the&#32;Eninering&#32;flag</emphasis>
+526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;11);
+527 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;?P888\r&quot;</emphasis>,&#32;6);
+528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+529 
+530 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Just&#32;for&#32;debuging:&#32;count&#32;the&#32;retry&#32;to&#32;restart</emphasis>
+531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_cmd,&#32;<emphasis class="charliteral">&apos;&#32;&apos;</emphasis>,&#32;11);
+532 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_cmd,&#32;<emphasis class="stringliteral">&quot;?P978\r&quot;</emphasis>,&#32;6);
+533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_cmd[7]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;
+534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+535 }
+536 
+<link linkend="_gulmay_a_p_i_8h_1a6b577498aedd9f37f5ecf58079203c1a">541 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a6b577498aedd9f37f5ecf58079203c1a">CheckGeneratorErrors</link>()
+542 {
+543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;E&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+545 }
+546 
+<link linkend="_gulmay_a_p_i_8h_1a4fa5370e4ed7ac42f50631f707ee8c2a">550 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a4fa5370e4ed7ac42f50631f707ee8c2a">QueryEllapsedExposureTime</link>()
+551 {
+552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[4]&#32;=&#32;{&#32;<emphasis class="charliteral">&apos;?&apos;</emphasis>,<emphasis class="charliteral">&apos;T&apos;</emphasis>,<emphasis class="charliteral">&apos;\r&apos;</emphasis>,<emphasis class="charliteral">&apos;\0&apos;</emphasis>&#32;};
+553 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallKernelSendService(_cmd,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+554 }
+555 
+<link linkend="_gulmay_a_p_i_8h_1abb608877dc715ca117536e8ea8b0a111">556 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abb608877dc715ca117536e8ea8b0a111">ResetGenerator</link>()
+557 {
+558 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Step&#32;1:&#32;Control&#32;Errors</emphasis>
+559 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1a6b577498aedd9f37f5ecf58079203c1a">CheckGeneratorErrors</link>();
+560 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+561 
+562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Step&#32;2:&#32;Turn&#32;off&#32;exposure</emphasis>
+563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1afcff0f20c10416c89d36544a14b98f2d">StopExposure</link>();
+564 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+565 
+566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Step&#32;3:&#32;suppress&#32;errors&#32;such&#32;as&#32;E18,E19</emphasis>
+567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;SuppressErrorsVoltageAndAmpError();</emphasis>
+568 
+569 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;//Step&#32;4:&#32;Set&#32;to&#32;manual&#32;Program&#32;mode</emphasis>
+570 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//SetGeneratorInUserMode();</emphasis>
+571 
+572 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Step&#32;5:&#32;Get&#32;Exposure&#32;Parameters</emphasis>
+573 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1a936ac171697cec2e7d3520656b8d7a26">QueryExposureParameters</link>();
+574 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+575 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+576 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Step&#32;6:&#32;Get&#32;Focal&#32;spot&#32;size</emphasis>
+577 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1a3759ed567b072f3cd49020359d998d33">QueryFocalSpotSize</link>();
+578 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+579 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+580 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Step&#32;7:&#32;Get&#32;Generator&#32;mode</emphasis>
+581 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1acc6aec4a2abf80dab4cc10d24fee24d6">QueryGeneratorMode</link>();
+582 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+583 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+584 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Step&#32;8:&#32;Query&#32;Warmup&#32;program</emphasis>
+585 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gulmay_a_p_i_8h_1abeda6d4243dec415776eb16beacb0b38">QueryWarmupProgram</link>();
+586 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(20);
+587 }
+    </computeroutput></literallayout>
+</section>

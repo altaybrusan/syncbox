@@ -1,0 +1,359 @@
+\hypertarget{_stone_a_p_i_8h}{}\section{Stone\+A\+P\+I.\+h File Reference}
+\label{_stone_a_p_i_8h}\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+
+
+A\+PI for communicating with Stone display.  
+
+
+{\ttfamily \#include \char`\"{}Kernel.\+h\char`\"{}}\newline
+Include dependency graph for Stone\+A\+P\+I.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{_stone_a_p_i_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{_stone_a_p_i_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_aae9ebb7ba3b36ce2fee95f4c4ff6849f}\label{_stone_a_p_i_8h_aae9ebb7ba3b36ce2fee95f4c4ff6849f}} 
+typedef void($\ast$ {\bfseries Start\+Automatic\+Mode\+Session\+Event}) ()
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a1652e3922207ea6bb81a75296d550136}\label{_stone_a_p_i_8h_a1652e3922207ea6bb81a75296d550136}} 
+typedef void($\ast$ {\bfseries Goto\+Home\+Event}) ()
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a5a7573dffc56f43001786a10a59d040d}\label{_stone_a_p_i_8h_a5a7573dffc56f43001786a10a59d040d}} 
+typedef void($\ast$ {\bfseries Start\+Exposure\+Event}) ()
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a1e27e52a56d56f67bb881e8807776e2c}\label{_stone_a_p_i_8h_a1e27e52a56d56f67bb881e8807776e2c}} 
+typedef void($\ast$ {\bfseries Stop\+Exposure\+Event}) ()
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a7738e5604b7c6ad2f76dbbd97425edcc}\label{_stone_a_p_i_8h_a7738e5604b7c6ad2f76dbbd97425edcc}} 
+typedef void($\ast$ {\bfseries Start\+Warmup\+Event}) ()
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a336f9b0708cbd1c69e6966844dca2bc6}\label{_stone_a_p_i_8h_a336f9b0708cbd1c69e6966844dca2bc6}} 
+typedef void($\ast$ {\bfseries Update\+Kvp\+Event}) (int kvp)
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a5ee6d4e207a9aecd9d9e1521ee1b0795}\label{_stone_a_p_i_8h_a5ee6d4e207a9aecd9d9e1521ee1b0795}} 
+typedef void($\ast$ {\bfseries Updatem\+A\+Event}) (int mA)
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a853cc5d2bef99a3d332f3625cd395ba9}\label{_stone_a_p_i_8h_a853cc5d2bef99a3d332f3625cd395ba9}} 
+typedef void($\ast$ {\bfseries Update\+Time\+Event}) (int time)
+\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a33ad88434baa7fcbacf877d1c94e7b64}\label{_stone_a_p_i_8h_a33ad88434baa7fcbacf877d1c94e7b64}} 
+typedef void($\ast$ {\bfseries Update\+J\+O\+G\+Event}) (int jog)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_stone_a_p_i_8h_abdb1785bf497531b4a561ea6999d8260}{Display\+Process\+Kernel\+Frame} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME})
+\begin{DoxyCompactList}\small\item\em Receive the frames that are sent by \hyperlink{_kernel_8c}{Kernel.\+c}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a902c1af74cbe0cfb10248b7618de7022}\label{_stone_a_p_i_8h_a902c1af74cbe0cfb10248b7618de7022}} 
+void \hyperlink{_stone_a_p_i_8h_a902c1af74cbe0cfb10248b7618de7022}{Init\+Display} ()
+\begin{DoxyCompactList}\small\item\em initialize the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a50de73c57a4a139c15f4851ac1b58415}\label{_stone_a_p_i_8h_a50de73c57a4a139c15f4851ac1b58415}} 
+void \hyperlink{_stone_a_p_i_8h_a50de73c57a4a139c15f4851ac1b58415}{Show\+Main\+Menue} ()
+\begin{DoxyCompactList}\small\item\em show main menue on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a37d600cef94b18570da0dafbb3194db5}\label{_stone_a_p_i_8h_a37d600cef94b18570da0dafbb3194db5}} 
+void \hyperlink{_stone_a_p_i_8h_a37d600cef94b18570da0dafbb3194db5}{Init\+Parameter\+Board} ()
+\begin{DoxyCompactList}\small\item\em initialize numberic values region on the board. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_a30cc244ba2a37ad4c495620b9f8a00dc}{Set\+Kvp\+Boundaries} (int minkvp, int maxkvp)
+\begin{DoxyCompactList}\small\item\em set boundries on K\+VP value selector. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_aa121dee7134d8fcf78e5db9ce91ed1a1}{Setm\+A\+Boundaries} (int minmA, int maxmA)
+\begin{DoxyCompactList}\small\item\em set boundries on milli-\/\+Amper value selector. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_a27b4f33b9e0dac43cd57d0de8d76d433}{Set\+Time\+Boundaries} (int min\+Time, int max\+Time)
+\begin{DoxyCompactList}\small\item\em set boundries on time value selector. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_aecee82983f45b0a31928ff1babb52dbb}{Set\+Jog\+Boundaries} (int min\+Jog, int max\+Jog)
+\begin{DoxyCompactList}\small\item\em set boundries on J\+OG value selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_afd834277b44df0db2f4dc24c55e74b73}\label{_stone_a_p_i_8h_afd834277b44df0db2f4dc24c55e74b73}} 
+void \hyperlink{_stone_a_p_i_8h_afd834277b44df0db2f4dc24c55e74b73}{Set\+Kvp\+Step\+Size} (int step)
+\begin{DoxyCompactList}\small\item\em set the step value for K\+VP numeric selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a6dba667e707dcfd867b46dbd12284a0d}\label{_stone_a_p_i_8h_a6dba667e707dcfd867b46dbd12284a0d}} 
+void \hyperlink{_stone_a_p_i_8h_a6dba667e707dcfd867b46dbd12284a0d}{Setm\+A\+Step\+Size} (int step)
+\begin{DoxyCompactList}\small\item\em set the step value for milli-\/amper numeric selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a9ad5a2fe597b5bb1130504b8e5764358}\label{_stone_a_p_i_8h_a9ad5a2fe597b5bb1130504b8e5764358}} 
+void \hyperlink{_stone_a_p_i_8h_a9ad5a2fe597b5bb1130504b8e5764358}{Set\+Time\+Step\+Size} (int step)
+\begin{DoxyCompactList}\small\item\em set the step value for exposure numeric selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a03f57cada9dfce1fd9ddff7b91fd6db1}\label{_stone_a_p_i_8h_a03f57cada9dfce1fd9ddff7b91fd6db1}} 
+void \hyperlink{_stone_a_p_i_8h_a03f57cada9dfce1fd9ddff7b91fd6db1}{Set\+Jog\+Step\+Size} (int step)
+\begin{DoxyCompactList}\small\item\em set the step value for J\+OG numeric selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a179ad87bd6e342cbf88a2c3ea95f1b70}\label{_stone_a_p_i_8h_a179ad87bd6e342cbf88a2c3ea95f1b70}} 
+void \hyperlink{_stone_a_p_i_8h_a179ad87bd6e342cbf88a2c3ea95f1b70}{Display\+Automatic\+Mode\+Warmingup\+State} ()
+\begin{DoxyCompactList}\small\item\em display automatic mode warmingup state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a1efd99bd9546c4799356b2359db7e25e}\label{_stone_a_p_i_8h_a1efd99bd9546c4799356b2359db7e25e}} 
+void \hyperlink{_stone_a_p_i_8h_a1efd99bd9546c4799356b2359db7e25e}{Display\+Automatic\+Mode\+Pending\+State} ()
+\begin{DoxyCompactList}\small\item\em display automatic mode pending state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a3919db395d6f46ae310b9156f6a8215d}\label{_stone_a_p_i_8h_a3919db395d6f46ae310b9156f6a8215d}} 
+void \hyperlink{_stone_a_p_i_8h_a3919db395d6f46ae310b9156f6a8215d}{Display\+Automatic\+Mode\+Working\+State} ()
+\begin{DoxyCompactList}\small\item\em display automatic mode working state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a4b35197a7f3dae5a4c04a18b6425e4c4}\label{_stone_a_p_i_8h_a4b35197a7f3dae5a4c04a18b6425e4c4}} 
+void \hyperlink{_stone_a_p_i_8h_a4b35197a7f3dae5a4c04a18b6425e4c4}{Display\+Automatic\+Mode\+Error\+State} ()
+\begin{DoxyCompactList}\small\item\em display automatic mode error state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a5371889296412e101c1f3a004f449cf5}\label{_stone_a_p_i_8h_a5371889296412e101c1f3a004f449cf5}} 
+void \hyperlink{_stone_a_p_i_8h_a5371889296412e101c1f3a004f449cf5}{Display\+Service\+Mode\+Warmingup\+State} ()
+\begin{DoxyCompactList}\small\item\em display service mode warmingup state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_aad5c25aa42ff92ac6d66866951d0be4b}\label{_stone_a_p_i_8h_aad5c25aa42ff92ac6d66866951d0be4b}} 
+void \hyperlink{_stone_a_p_i_8h_aad5c25aa42ff92ac6d66866951d0be4b}{Display\+Service\+Mode\+Warmup\+Error\+State} ()
+\begin{DoxyCompactList}\small\item\em display service mode warmup error state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_ac6881bffd08da680e8c46c377762d703}\label{_stone_a_p_i_8h_ac6881bffd08da680e8c46c377762d703}} 
+void \hyperlink{_stone_a_p_i_8h_ac6881bffd08da680e8c46c377762d703}{Display\+Service\+Mode\+Pending\+State} ()
+\begin{DoxyCompactList}\small\item\em display service mode pending state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_ad7b66eeb3ec69bd31f24b16e7d55bcae}\label{_stone_a_p_i_8h_ad7b66eeb3ec69bd31f24b16e7d55bcae}} 
+void \hyperlink{_stone_a_p_i_8h_ad7b66eeb3ec69bd31f24b16e7d55bcae}{Display\+Service\+Mode\+Working\+State} ()
+\begin{DoxyCompactList}\small\item\em display service mode working state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_stone_a_p_i_8h_a08fcb1c995537c269d1f83e492cbb5fa}\label{_stone_a_p_i_8h_a08fcb1c995537c269d1f83e492cbb5fa}} 
+void \hyperlink{_stone_a_p_i_8h_a08fcb1c995537c269d1f83e492cbb5fa}{Display\+Service\+Mode\+Error\+State} ()
+\begin{DoxyCompactList}\small\item\em display service mode error state \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_aee1ecb5c9fc7ab3bc77a61012c379aba}{Register\+Start\+Automatic\+Mode\+Session\+Listener} (Start\+Automatic\+Mode\+Session\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for start automatic mode event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_ad462a944099154337a431650f631c5af}{Register\+Goto\+Home\+Listener} (Goto\+Home\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for go to home event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_afbdbc3ff988fb466aa824e5a3f01ccf8}{Register\+Start\+Exposure\+Listener} (Start\+Exposure\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for start exposure event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_a1c11ed6f8ecd59615298403f6c5daddd}{Register\+Stop\+Exposure\+Listener} (Stop\+Exposure\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for stop exposure event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_a2e4e3c258a026cb0595f02be2be19a09}{Register\+Start\+Warmup\+Event\+Listener} (Start\+Warmup\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for start warmup event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_a93a23fc41f3963ad8cdfef4c878c8b70}{Register\+Update\+Kvp\+Event\+Listener} (Update\+Kvp\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for update K\+VP event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_aea4fdecae805e4c2a5a922c8a90ee906}{Register\+Updatem\+A\+Event\+Listener} (Updatem\+A\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for update milli-\/amper event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_ade8911e6ef98b92aea3f077c2404a419}{Register\+Update\+Time\+Event\+Listener} (Update\+Time\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for update exposure time event. \end{DoxyCompactList}\item 
+void \hyperlink{_stone_a_p_i_8h_ada219a6836996fd054252b7003bea979}{Register\+Update\+J\+O\+G\+Event\+Listener} (Update\+J\+O\+G\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for update J\+OG event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for communicating with Stone display. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_stone_a_p_i_8h_abdb1785bf497531b4a561ea6999d8260}\label{_stone_a_p_i_8h_abdb1785bf497531b4a561ea6999d8260}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Display\+Process\+Kernel\+Frame@{Display\+Process\+Kernel\+Frame}}
+\index{Display\+Process\+Kernel\+Frame@{Display\+Process\+Kernel\+Frame}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Display\+Process\+Kernel\+Frame()}{DisplayProcessKernelFrame()}}
+{\footnotesize\ttfamily void Display\+Process\+Kernel\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}}]{ }\end{DoxyParamCaption})}
+
+
+
+Receive the frames that are sent by \hyperlink{_kernel_8c}{Kernel.\+c}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} & The frame that sent by kernel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_ad462a944099154337a431650f631c5af}\label{_stone_a_p_i_8h_ad462a944099154337a431650f631c5af}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Goto\+Home\+Listener@{Register\+Goto\+Home\+Listener}}
+\index{Register\+Goto\+Home\+Listener@{Register\+Goto\+Home\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Goto\+Home\+Listener()}{RegisterGotoHomeListener()}}
+{\footnotesize\ttfamily void Register\+Goto\+Home\+Listener (\begin{DoxyParamCaption}\item[{Goto\+Home\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for go to home event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive goto home event. 
+\begin{DoxyParams}{Parameters}
+{\em Goto\+Home\+Event} & The function that is going to be called when goto home button is pressed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_aee1ecb5c9fc7ab3bc77a61012c379aba}\label{_stone_a_p_i_8h_aee1ecb5c9fc7ab3bc77a61012c379aba}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Start\+Automatic\+Mode\+Session\+Listener@{Register\+Start\+Automatic\+Mode\+Session\+Listener}}
+\index{Register\+Start\+Automatic\+Mode\+Session\+Listener@{Register\+Start\+Automatic\+Mode\+Session\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Start\+Automatic\+Mode\+Session\+Listener()}{RegisterStartAutomaticModeSessionListener()}}
+{\footnotesize\ttfamily void Register\+Start\+Automatic\+Mode\+Session\+Listener (\begin{DoxyParamCaption}\item[{Start\+Automatic\+Mode\+Session\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for start automatic mode event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive start-\/automatic-\/mode event. 
+\begin{DoxyParams}{Parameters}
+{\em Start\+Automatic\+Mode\+Session\+Event} & The function that is going to be called when automatic mode is selected on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_afbdbc3ff988fb466aa824e5a3f01ccf8}\label{_stone_a_p_i_8h_afbdbc3ff988fb466aa824e5a3f01ccf8}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Start\+Exposure\+Listener@{Register\+Start\+Exposure\+Listener}}
+\index{Register\+Start\+Exposure\+Listener@{Register\+Start\+Exposure\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Start\+Exposure\+Listener()}{RegisterStartExposureListener()}}
+{\footnotesize\ttfamily void Register\+Start\+Exposure\+Listener (\begin{DoxyParamCaption}\item[{Start\+Exposure\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for start exposure event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive start exposure event. 
+\begin{DoxyParams}{Parameters}
+{\em Start\+Exposure\+Event} & The function that is going to be called when start exposure button is pressed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_a2e4e3c258a026cb0595f02be2be19a09}\label{_stone_a_p_i_8h_a2e4e3c258a026cb0595f02be2be19a09}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Start\+Warmup\+Event\+Listener@{Register\+Start\+Warmup\+Event\+Listener}}
+\index{Register\+Start\+Warmup\+Event\+Listener@{Register\+Start\+Warmup\+Event\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Start\+Warmup\+Event\+Listener()}{RegisterStartWarmupEventListener()}}
+{\footnotesize\ttfamily void Register\+Start\+Warmup\+Event\+Listener (\begin{DoxyParamCaption}\item[{Start\+Warmup\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for start warmup event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive start warmup event. 
+\begin{DoxyParams}{Parameters}
+{\em Start\+Warmup\+Event} & The function that is going to be called when start warmup button is pressed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_a1c11ed6f8ecd59615298403f6c5daddd}\label{_stone_a_p_i_8h_a1c11ed6f8ecd59615298403f6c5daddd}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Stop\+Exposure\+Listener@{Register\+Stop\+Exposure\+Listener}}
+\index{Register\+Stop\+Exposure\+Listener@{Register\+Stop\+Exposure\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Stop\+Exposure\+Listener()}{RegisterStopExposureListener()}}
+{\footnotesize\ttfamily void Register\+Stop\+Exposure\+Listener (\begin{DoxyParamCaption}\item[{Stop\+Exposure\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for stop exposure event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive stop exposure event. 
+\begin{DoxyParams}{Parameters}
+{\em Stop\+Exposure\+Event} & The function that is going to be called when stop exposure button is pressed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_ada219a6836996fd054252b7003bea979}\label{_stone_a_p_i_8h_ada219a6836996fd054252b7003bea979}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Update\+J\+O\+G\+Event\+Listener@{Register\+Update\+J\+O\+G\+Event\+Listener}}
+\index{Register\+Update\+J\+O\+G\+Event\+Listener@{Register\+Update\+J\+O\+G\+Event\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Update\+J\+O\+G\+Event\+Listener()}{RegisterUpdateJOGEventListener()}}
+{\footnotesize\ttfamily void Register\+Update\+J\+O\+G\+Event\+Listener (\begin{DoxyParamCaption}\item[{Update\+J\+O\+G\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for update J\+OG event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive update J\+OG event. 
+\begin{DoxyParams}{Parameters}
+{\em Update\+J\+O\+G\+Event} & The function that is going to be called when J\+OG value is changed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_a93a23fc41f3963ad8cdfef4c878c8b70}\label{_stone_a_p_i_8h_a93a23fc41f3963ad8cdfef4c878c8b70}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Update\+Kvp\+Event\+Listener@{Register\+Update\+Kvp\+Event\+Listener}}
+\index{Register\+Update\+Kvp\+Event\+Listener@{Register\+Update\+Kvp\+Event\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Update\+Kvp\+Event\+Listener()}{RegisterUpdateKvpEventListener()}}
+{\footnotesize\ttfamily void Register\+Update\+Kvp\+Event\+Listener (\begin{DoxyParamCaption}\item[{Update\+Kvp\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for update K\+VP event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive update K\+VP event. 
+\begin{DoxyParams}{Parameters}
+{\em Update\+Kvp\+Event} & The function that is going to be called when K\+VP value is changed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_aea4fdecae805e4c2a5a922c8a90ee906}\label{_stone_a_p_i_8h_aea4fdecae805e4c2a5a922c8a90ee906}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Updatem\+A\+Event\+Listener@{Register\+Updatem\+A\+Event\+Listener}}
+\index{Register\+Updatem\+A\+Event\+Listener@{Register\+Updatem\+A\+Event\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Updatem\+A\+Event\+Listener()}{RegisterUpdatemAEventListener()}}
+{\footnotesize\ttfamily void Register\+Updatem\+A\+Event\+Listener (\begin{DoxyParamCaption}\item[{Updatem\+A\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for update milli-\/amper event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive update milli-\/amper event. 
+\begin{DoxyParams}{Parameters}
+{\em Updatem\+A\+Event} & The function that is going to be called when milli-\/amper value is changed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_ade8911e6ef98b92aea3f077c2404a419}\label{_stone_a_p_i_8h_ade8911e6ef98b92aea3f077c2404a419}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Register\+Update\+Time\+Event\+Listener@{Register\+Update\+Time\+Event\+Listener}}
+\index{Register\+Update\+Time\+Event\+Listener@{Register\+Update\+Time\+Event\+Listener}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Update\+Time\+Event\+Listener()}{RegisterUpdateTimeEventListener()}}
+{\footnotesize\ttfamily void Register\+Update\+Time\+Event\+Listener (\begin{DoxyParamCaption}\item[{Update\+Time\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for update exposure time event. 
+
+the user of the Stone\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive update exposure time event. 
+\begin{DoxyParams}{Parameters}
+{\em Update\+Time\+Event} & The function that is going to be called when exposure time value is changed on the display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_aecee82983f45b0a31928ff1babb52dbb}\label{_stone_a_p_i_8h_aecee82983f45b0a31928ff1babb52dbb}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Set\+Jog\+Boundaries@{Set\+Jog\+Boundaries}}
+\index{Set\+Jog\+Boundaries@{Set\+Jog\+Boundaries}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Set\+Jog\+Boundaries()}{SetJogBoundaries()}}
+{\footnotesize\ttfamily void Set\+Jog\+Boundaries (\begin{DoxyParamCaption}\item[{int}]{min\+Jog,  }\item[{int}]{max\+Jog }\end{DoxyParamCaption})}
+
+
+
+set boundries on J\+OG value selector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min\+Jog} & minimum J\+OG value. \\
+\hline
+\mbox{\tt in}  & {\em max\+Jog} & maximum J\+OG value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_a30cc244ba2a37ad4c495620b9f8a00dc}\label{_stone_a_p_i_8h_a30cc244ba2a37ad4c495620b9f8a00dc}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Set\+Kvp\+Boundaries@{Set\+Kvp\+Boundaries}}
+\index{Set\+Kvp\+Boundaries@{Set\+Kvp\+Boundaries}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Set\+Kvp\+Boundaries()}{SetKvpBoundaries()}}
+{\footnotesize\ttfamily void Set\+Kvp\+Boundaries (\begin{DoxyParamCaption}\item[{int}]{minkvp,  }\item[{int}]{maxkvp }\end{DoxyParamCaption})}
+
+
+
+set boundries on K\+VP value selector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em minkvp} & minimum K\+VP value. \\
+\hline
+\mbox{\tt in}  & {\em maxkvp} & maximum K\+VP value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_aa121dee7134d8fcf78e5db9ce91ed1a1}\label{_stone_a_p_i_8h_aa121dee7134d8fcf78e5db9ce91ed1a1}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Setm\+A\+Boundaries@{Setm\+A\+Boundaries}}
+\index{Setm\+A\+Boundaries@{Setm\+A\+Boundaries}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Setm\+A\+Boundaries()}{SetmABoundaries()}}
+{\footnotesize\ttfamily void Setm\+A\+Boundaries (\begin{DoxyParamCaption}\item[{int}]{minmA,  }\item[{int}]{maxmA }\end{DoxyParamCaption})}
+
+
+
+set boundries on milli-\/\+Amper value selector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em minmA} & minimum amper value. \\
+\hline
+\mbox{\tt in}  & {\em maxmA} & maximum amper value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_stone_a_p_i_8h_a27b4f33b9e0dac43cd57d0de8d76d433}\label{_stone_a_p_i_8h_a27b4f33b9e0dac43cd57d0de8d76d433}} 
+\index{Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}!Set\+Time\+Boundaries@{Set\+Time\+Boundaries}}
+\index{Set\+Time\+Boundaries@{Set\+Time\+Boundaries}!Stone\+A\+P\+I.\+h@{Stone\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Set\+Time\+Boundaries()}{SetTimeBoundaries()}}
+{\footnotesize\ttfamily void Set\+Time\+Boundaries (\begin{DoxyParamCaption}\item[{int}]{min\+Time,  }\item[{int}]{max\+Time }\end{DoxyParamCaption})}
+
+
+
+set boundries on time value selector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min\+Time} & minimum time value. \\
+\hline
+\mbox{\tt in}  & {\em max\+Time} & maximum time value. \\
+\hline
+\end{DoxyParams}

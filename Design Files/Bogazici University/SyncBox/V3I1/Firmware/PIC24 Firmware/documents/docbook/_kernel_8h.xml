@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_kernel_8h">
+    <title>Kernel.h File Reference</title>
+    <programlisting>#include &quot;jsmn.h&quot;</programlisting>
+<para>Include dependency diagram for Kernel.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_kernel_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Kernel.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_kernel_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link></para>
+<para><emphasis>define the structure of messages.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct_d_e_v_i_c_e___s_l_o_t">DEVICE_SLOT</link></para>
+<para><emphasis>Define the structure of a device slot on the kernel.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">DEVICE_TYPE</link> {
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa25f3bf3a2e88de62cf28d7414ee44bb1">WORKSTATION</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa4fa3cd4b6ded76bc4eb76b8a0d081a50">GENERATOR</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa69212010f56a65da58b3869d43701910">ACTUATOR</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa20279052c7108b8993a3de33423793cb">COLLIMATOR</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfabbc3cf4a9cbee11e6dc95c58594dc677">DETECTOR</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfad05ef599f60e0393365b5c19fdb67541">VENTILATOR</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfac4212312865bd8ac6810b9651d9e80df">ALARM</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa3b043537875f509fa630e3dfd6360696">COOLING</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfab853c1004c3396eaa2a89d575d12fa79">DISPLAY</link>,
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510dfa7be8b60781b7762cb14113ea3325d3a8">__DEVICE_TYPES_COUNT</link>= 9
+}</literallayout>
+<para><emphasis>includes all kernel supported \b device \b types and its cardinality.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="_kernel_8h_1af5e9645fe9377c277ec62dad1641d2d5">FRAME_PRIORITY</link> {
+<link linkend="_kernel_8h_1af5e9645fe9377c277ec62dad1641d2d5aeb4f7fd6d9e397d1141feb133746637a">NORMAL_FRAME</link>,
+<link linkend="_kernel_8h_1af5e9645fe9377c277ec62dad1641d2d5a472d3182b98d3d6f2af23a8885a3dceb">REALTIME_FRAME</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link> {
+<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>,
+<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78">STRUCTURED</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_kernel_8h_1ab96dbbd80cdc30bf145d9be0f9b2a63e">FrameHandler</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_kernel_8h_1a4432f2abe66dc10846c854051709d329">InstrumentStart</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1a6889b166b7a1eaada7823b212ce23162">KL_RegisterDevice</link> (
+<link linkend="struct_d_e_v_i_c_e___s_l_o_t">DEVICE_SLOT</link> )<para><emphasis>register a device into kernel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1a2208f705266c6573e312dc94de1c36b1">KL_SendFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> * )<para><emphasis>proxy function for dispatching frames made by APIs.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1a9d2f637c78495c0b7d8e70f0e70114b0">KL_SendSignal</link> (
+void * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1a2eb0b07e9263cf2f57a81f1e4302fb0e">KL_Read</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1af01826d33dbf7faf2832db87998f8d47">KL_Bootup</link> (
+)<para><emphasis>bootup kernel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_kernel_8h_1a6e56804f0227fcd97cf46ec5d43cf385">KL_RegisterInstrument</link> (
+InstrumentStart )<para><emphasis>register instrument&apos;s start function.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>public interface of the xPOST kernel. </para>
+
+<para>The kernel header files include kernel&apos;s public methods,structures and enums. This file can be seen as the <emphasis>public</emphasis> <emphasis>interface</emphasis> of the kernel. The device APIs and instrument can include this header file and then call the kernels services. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/Kernel.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;KERNEL_H</emphasis>
+9 <emphasis class="preprocessor">&#32;&#32;#define&#32;KERNEL_H</emphasis>
+10 &#32;&#32;
+11 <emphasis class="preprocessor">&#32;&#32;#include&#32;&quot;jsmn.h&quot;</emphasis>
+12 &#32;&#32;
+13 
+14 &#32;&#32;<emphasis class="comment">//*********************************&#32;&#32;structures&#32;****************************</emphasis>
+<link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">22 </link><emphasis class="comment"></emphasis>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
+23 &#32;&#32;&#32;WORKSTATION,
+24 &#32;&#32;&#32;GENERATOR,
+25 &#32;&#32;&#32;ACTUATOR,
+26 &#32;&#32;&#32;COLLIMATOR,
+27 &#32;&#32;&#32;DETECTOR,
+28 &#32;&#32;&#32;VENTILATOR,
+29 &#32;&#32;&#32;ALARM,
+30 &#32;&#32;&#32;COOLING,
+31 &#32;&#32;&#32;DISPLAY,
+32 &#32;&#32;&#32;__DEVICE_TYPES_COUNT&#32;=&#32;9
+33 &#32;&#32;}&#32;<link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">DEVICE_TYPE</link>;
+34 &#32;&#32;
+41 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
+42 &#32;&#32;&#32;&#32;NORMAL_FRAME,
+43 &#32;&#32;&#32;&#32;REALTIME_FRAME
+44 &#32;&#32;}&#32;FRAME_PRIORITY;
+45 &#32;&#32;
+<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">50 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>{
+<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">51 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>,&#32;
+<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78">52 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78">STRUCTURED</link>&#32;&#32;&#32;&#32;
+53 &#32;&#32;&#32;}&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link>;
+54 &#32;&#32;&#32;
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">62 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1af979252e2c7fa6f78f4cfda607e7587b">63 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">DEVICE_TYPE</link>&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1af979252e2c7fa6f78f4cfda607e7587b">F_SENDER</link>;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae2d1e98376527216fa6ff53b940a7c7a">64 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">DEVICE_TYPE</link>&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae2d1e98376527216fa6ff53b940a7c7a">F_RECEIVER</link>;&#32;&#32;&#32;&#32;
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae24624f2af7ede4b38b487a23cf5c947">65 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link>&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae24624f2af7ede4b38b487a23cf5c947">F_TYPE</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">66 </link>&#32;&#32;&#32;&#32;&#32;&#32;FRAME_PRIORITY&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">F_PRIORITY</link>;&#32;
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">67 </link>&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+68 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;MESSAGE_LENGTH;
+69 &#32;&#32;&#32;}&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>;
+70 &#32;&#32;
+71 &#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*FrameHandler)(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>);
+72 &#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*InstrumentStart)();
+<link linkend="struct_d_e_v_i_c_e___s_l_o_t">80 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1acaef663101fbc6dccf5014851d1cecd6">81 </link>&#32;&#32;&#32;<link linkend="_kernel_8h_1add57988c892c423bff906e04292510df">DEVICE_TYPE</link>&#32;<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1acaef663101fbc6dccf5014851d1cecd6">device</link>;&#32;&#32;&#32;
+<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1a2e75310ca6d52cb0e1d07a1000a86436">82 </link>&#32;&#32;&#32;FrameHandler&#32;handler;&#32;
+83 &#32;&#32;}&#32;<link linkend="struct_d_e_v_i_c_e___s_l_o_t">DEVICE_SLOT</link>;
+84 
+85 
+86 
+87 &#32;<emphasis class="comment">//**********************&#32;Kernel&#32;System&#32;Calls&#32;*****************************</emphasis>
+88 
+89 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_kernel_8h_1a6889b166b7a1eaada7823b212ce23162">KL_RegisterDevice</link>(<link linkend="struct_d_e_v_i_c_e___s_l_o_t">DEVICE_SLOT</link>);
+90 
+91 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_kernel_8h_1a2208f705266c6573e312dc94de1c36b1">KL_SendFrame</link>(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>*);
+92 
+93 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;KL_SendSignal(<emphasis class="keywordtype">void</emphasis>*);&#32;<emphasis class="comment">//&#32;TODO:&#32;implement&#32;this</emphasis>
+94 
+95 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;KL_Read();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;implement&#32;this</emphasis>
+96 &#32;&#32;
+97 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_kernel_8h_1af01826d33dbf7faf2832db87998f8d47">KL_Bootup</link>();
+98 
+99 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_kernel_8h_1a6e56804f0227fcd97cf46ec5d43cf385">KL_RegisterInstrument</link>(InstrumentStart);
+100 &#32;&#32;
+101 &#32;&#32;<emphasis class="comment">//void&#32;KL_StartInstrument();</emphasis>
+102 
+103 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

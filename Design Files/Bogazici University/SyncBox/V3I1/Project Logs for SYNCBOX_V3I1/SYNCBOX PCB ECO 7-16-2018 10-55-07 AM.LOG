@@ -1,0 +1,15 @@
+Change Net Name : Old Net Name=SSRX1+ New Net Name=SSRX1_P
+Change Net Name : Old Net Name=SSRX1- New Net Name=SSRX1_N
+Change Net Name : Old Net Name=SSTX1+ New Net Name=SSTX1_P
+Change Net Name : Old Net Name=SSTX1- New Net Name=SSTX1_N
+Change Net Name : Old Net Name=USB1+ New Net Name=USB1_P
+Change Net Name : Old Net Name=USB1- New Net Name=USB1_N
+Added Class: Name=diff_USB
+Added Differential Pair: Name=SSRX1
+Added Differential Pair: Name=SSTX1
+Added Differential Pair: Name=USB1
+Added Room: Name=[04] - POWERS +5V, +3V3
+Added Room: Name=[05] - PWR IN LEDS BUTTONS MECH
+Added Room: Name=[08] - USB
+Added Room: Name=[10] - CONNECTOR
+Added Room: Name=[12] - HDMI

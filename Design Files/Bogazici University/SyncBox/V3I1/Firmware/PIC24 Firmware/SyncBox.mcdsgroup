@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=firmware\Firmware.mcpds
+Project1=bootloader\USB HID Bootloader\Projects\mikromedia for PIC24EP - P24EP256GU810\USB HID Bootloader.mcpds
+[ActiveProject]
+Index=1

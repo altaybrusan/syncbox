@@ -1,0 +1,151 @@
+\hypertarget{_kernel_8h}{}\section{Kernel.\+h File Reference}
+\label{_kernel_8h}\index{Kernel.\+h@{Kernel.\+h}}
+
+
+public interface of the x\+P\+O\+ST kernel.  
+
+
+{\ttfamily \#include \char`\"{}jsmn.\+h\char`\"{}}\newline
+Include dependency graph for Kernel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{_kernel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{_kernel_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}
+\begin{DoxyCompactList}\small\item\em define the structure of messages. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_e_v_i_c_e___s_l_o_t}{D\+E\+V\+I\+C\+E\+\_\+\+S\+L\+OT}
+\begin{DoxyCompactList}\small\item\em Define the structure of a device slot on the kernel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_kernel_8h_ab96dbbd80cdc30bf145d9be0f9b2a63e}\label{_kernel_8h_ab96dbbd80cdc30bf145d9be0f9b2a63e}} 
+typedef void($\ast$ {\bfseries Frame\+Handler}) (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME})
+\item 
+\mbox{\Hypertarget{_kernel_8h_a4432f2abe66dc10846c854051709d329}\label{_kernel_8h_a4432f2abe66dc10846c854051709d329}} 
+typedef void($\ast$ {\bfseries Instrument\+Start}) ()
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_kernel_8h_add57988c892c423bff906e04292510df}{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE} \{ \newline
+{\bfseries W\+O\+R\+K\+S\+T\+A\+T\+I\+ON}, 
+{\bfseries G\+E\+N\+E\+R\+A\+T\+OR}, 
+{\bfseries A\+C\+T\+U\+A\+T\+OR}, 
+{\bfseries C\+O\+L\+L\+I\+M\+A\+T\+OR}, 
+\newline
+{\bfseries D\+E\+T\+E\+C\+T\+OR}, 
+{\bfseries V\+E\+N\+T\+I\+L\+A\+T\+OR}, 
+{\bfseries A\+L\+A\+RM}, 
+{\bfseries C\+O\+O\+L\+I\+NG}, 
+\newline
+{\bfseries D\+I\+S\+P\+L\+AY}, 
+{\bfseries \+\_\+\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+C\+O\+U\+NT} = 9
+ \}\begin{DoxyCompactList}\small\item\em includes all kernel supported {\bfseries device} {\bfseries types} and its cardinality. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_kernel_8h_af5e9645fe9377c277ec62dad1641d2d5}\label{_kernel_8h_af5e9645fe9377c277ec62dad1641d2d5}} 
+enum {\bfseries F\+R\+A\+M\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} \{ {\bfseries N\+O\+R\+M\+A\+L\+\_\+\+F\+R\+A\+ME}, 
+{\bfseries R\+E\+A\+L\+T\+I\+M\+E\+\_\+\+F\+R\+A\+ME}
+ \}
+\item 
+enum \hyperlink{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487}{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE} \{ \hyperlink{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a}{U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED}, 
+\hyperlink{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78}{S\+T\+R\+U\+C\+T\+U\+R\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_kernel_8h_a6889b166b7a1eaada7823b212ce23162}\label{_kernel_8h_a6889b166b7a1eaada7823b212ce23162}} 
+void \hyperlink{_kernel_8h_a6889b166b7a1eaada7823b212ce23162}{K\+L\+\_\+\+Register\+Device} (\hyperlink{struct_d_e_v_i_c_e___s_l_o_t}{D\+E\+V\+I\+C\+E\+\_\+\+S\+L\+OT})
+\begin{DoxyCompactList}\small\item\em register a device into kernel. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8h_a2208f705266c6573e312dc94de1c36b1}{K\+L\+\_\+\+Send\+Frame} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$)
+\begin{DoxyCompactList}\small\item\em proxy function for dispatching frames made by A\+P\+Is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8h_a9d2f637c78495c0b7d8e70f0e70114b0}\label{_kernel_8h_a9d2f637c78495c0b7d8e70f0e70114b0}} 
+void {\bfseries K\+L\+\_\+\+Send\+Signal} (void $\ast$)
+\item 
+\mbox{\Hypertarget{_kernel_8h_a2eb0b07e9263cf2f57a81f1e4302fb0e}\label{_kernel_8h_a2eb0b07e9263cf2f57a81f1e4302fb0e}} 
+void {\bfseries K\+L\+\_\+\+Read} ()
+\item 
+\mbox{\Hypertarget{_kernel_8h_af01826d33dbf7faf2832db87998f8d47}\label{_kernel_8h_af01826d33dbf7faf2832db87998f8d47}} 
+void \hyperlink{_kernel_8h_af01826d33dbf7faf2832db87998f8d47}{K\+L\+\_\+\+Bootup} ()
+\begin{DoxyCompactList}\small\item\em bootup kernel. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8h_a6e56804f0227fcd97cf46ec5d43cf385}{K\+L\+\_\+\+Register\+Instrument} (Instrument\+Start)
+\begin{DoxyCompactList}\small\item\em register instrument\textquotesingle{}s start function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+public interface of the x\+P\+O\+ST kernel. 
+
+The kernel header files include kernel\textquotesingle{}s public methods,structures and enums. This file can be seen as the {\itshape public} {\itshape interface} of the kernel. The device A\+P\+Is and instrument can include this header file and then call the kernels services. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_kernel_8h_add57988c892c423bff906e04292510df}\label{_kernel_8h_add57988c892c423bff906e04292510df}} 
+\index{Kernel.\+h@{Kernel.\+h}!D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE@{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE@{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}!Kernel.\+h@{Kernel.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}{DEVICE\_TYPE}}
+{\footnotesize\ttfamily enum \hyperlink{_kernel_8h_add57988c892c423bff906e04292510df}{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}}
+
+
+
+includes all kernel supported {\bfseries device} {\bfseries types} and its cardinality. 
+
+\begin{DoxyNote}{Note}
+these types are written to make the code more clear, however, a more general code can use more abstract nameing convention such as D\+E\+V\+E\+I\+C\+E1, D\+E\+V\+I\+C\+E2, etc. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487}\label{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487}} 
+\index{Kernel.\+h@{Kernel.\+h}!F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE@{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE}}
+\index{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE@{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE}!Kernel.\+h@{Kernel.\+h}}
+\subsubsection{\texorpdfstring{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE}{FRAME\_TYPE}}
+{\footnotesize\ttfamily enum \hyperlink{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487}{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE}}
+
+define frame types. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED@{U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED}!Kernel.\+h@{Kernel.\+h}}\index{Kernel.\+h@{Kernel.\+h}!U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED@{U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED}}}\mbox{\Hypertarget{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a}\label{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a}} 
+U\+N\+S\+T\+R\+U\+C\+T\+U\+R\+ED&Does not require J\+S\+ON parse. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+R\+U\+C\+T\+U\+R\+ED@{S\+T\+R\+U\+C\+T\+U\+R\+ED}!Kernel.\+h@{Kernel.\+h}}\index{Kernel.\+h@{Kernel.\+h}!S\+T\+R\+U\+C\+T\+U\+R\+ED@{S\+T\+R\+U\+C\+T\+U\+R\+ED}}}\mbox{\Hypertarget{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78}\label{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487a273cb5e61bba4b254f4102bef3b17f78}} 
+S\+T\+R\+U\+C\+T\+U\+R\+ED&Requires J\+S\+ON parse. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_kernel_8h_a6e56804f0227fcd97cf46ec5d43cf385}\label{_kernel_8h_a6e56804f0227fcd97cf46ec5d43cf385}} 
+\index{Kernel.\+h@{Kernel.\+h}!K\+L\+\_\+\+Register\+Instrument@{K\+L\+\_\+\+Register\+Instrument}}
+\index{K\+L\+\_\+\+Register\+Instrument@{K\+L\+\_\+\+Register\+Instrument}!Kernel.\+h@{Kernel.\+h}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Register\+Instrument()}{KL\_RegisterInstrument()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Register\+Instrument (\begin{DoxyParamCaption}\item[{Instrument\+Start}]{function }\end{DoxyParamCaption})}
+
+
+
+register instrument\textquotesingle{}s start function. 
+
+at the last step of boot process, the kernel calls instrument start function. this function must already be registered. \mbox{\Hypertarget{_kernel_8h_a2208f705266c6573e312dc94de1c36b1}\label{_kernel_8h_a2208f705266c6573e312dc94de1c36b1}} 
+\index{Kernel.\+h@{Kernel.\+h}!K\+L\+\_\+\+Send\+Frame@{K\+L\+\_\+\+Send\+Frame}}
+\index{K\+L\+\_\+\+Send\+Frame@{K\+L\+\_\+\+Send\+Frame}!Kernel.\+h@{Kernel.\+h}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Send\+Frame()}{KL\_SendFrame()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Send\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$}]{frame }\end{DoxyParamCaption})}
+
+
+
+proxy function for dispatching frames made by A\+P\+Is. 
+
+public function that is used by A\+P\+Is to send message to a device or communicate in between themselves. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame made by A\+PI. \\
+\hline
+\end{DoxyParams}

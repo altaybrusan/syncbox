@@ -1,0 +1,74 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Altay\Documents\Altium\Projects\SyncBox\Work\Bogazici University\SyncBox\V3I1\Circuit\SYNCBOX.PcbDoc
+Date     : 1/14/2019
+Time     : 1:03:02 PM
+
+Processing Rule : Clearance Constraint (Gap=15.748mil) (IsRegion AND OnLayer('L4 (PWR)')),(IsRegion)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=5.905mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=5.905mil) (IsRegion AND OnLayer('L4 (PWR)')),(IsVia)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7.874mil) (Max=78.74mil) (Preferred=9.842mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7.874mil) (Max=1574.803mil) (Preferred=15.748mil) (InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7.874mil) (Max=9.842mil) (Preferred=9.842mil) (InDifferentialPairClass('DIFF90'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7.874mil) (Max=9.842mil) (Preferred=9.842mil) (InDifferentialPairClass('DIFF100'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7.874mil) (Max=157.48mil) (Preferred=15.748mil) (InNet('+VIN') OR InNet('+5V') OR InNet('+3V3') OR InNet('+1V5') OR InNet('+12V_ATX'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=7.874mil) (Conductor Width=11.811mil) (Air Gap=7.874mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=19.685mil) (Air Gap=7.874mil) (Entries=4) ((InNet('GND') and IsPad))
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=393.701mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=5mil) (InDifferentialPairClass('DIFF90'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=5mil) (InDifferentialPairClass('DIFF100'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1574.803mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:08

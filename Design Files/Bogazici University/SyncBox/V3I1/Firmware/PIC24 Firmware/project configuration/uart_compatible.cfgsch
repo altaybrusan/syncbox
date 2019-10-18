@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<MCU_DEVICE_FLAGS>
+  <DEVICE>
+    <DEVICE_NAME>P24EP512GU810</DEVICE_NAME>
+    <SETTINGS>
+      <COUNT>25</COUNT>
+      <SETTING0>
+        <NAME>General Segment Write-Protect bit</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING0>
+      <SETTING1>
+        <NAME>General Segment Code-Protect bit</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING1>
+      <SETTING2>
+        <NAME>General Segment Key bits</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING2>
+      <SETTING3>
+        <NAME>Initial Oscillator Source Selection</NAME>
+        <DESCRIPTION>Primary Oscillator (XT, HS, EC) with PLL</DESCRIPTION>
+      </SETTING3>
+      <SETTING4>
+        <NAME>Two-speed Oscillator Start-up</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING4>
+      <SETTING5>
+        <NAME>Primary Oscillator Mode</NAME>
+        <DESCRIPTION>XT Crystal Oscillator Mode</DESCRIPTION>
+      </SETTING5>
+      <SETTING6>
+        <NAME>OSC2 Pin Function</NAME>
+        <DESCRIPTION>OSC2 is clock output</DESCRIPTION>
+      </SETTING6>
+      <SETTING7>
+        <NAME>Peripheral pin select configuration</NAME>
+        <DESCRIPTION>Allow multiple reconfigurations</DESCRIPTION>
+      </SETTING7>
+      <SETTING8>
+        <NAME>Clock Switching Modes</NAME>
+        <DESCRIPTION>Both Clock switching and Fail-safe Clock Monitor are disabled</DESCRIPTION>
+      </SETTING8>
+      <SETTING9>
+        <NAME>Watchdog Timer Postscaler bits</NAME>
+        <DESCRIPTION>1:32,768</DESCRIPTION>
+      </SETTING9>
+      <SETTING10>
+        <NAME>Watchdog Timer Prescaler bit</NAME>
+        <DESCRIPTION>1:128</DESCRIPTION>
+      </SETTING10>
+      <SETTING11>
+        <NAME>PLL Lock Wait</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING11>
+      <SETTING12>
+        <NAME>Watchdog Timer Window</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING12>
+      <SETTING13>
+        <NAME>Watchdog Timer</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING13>
+      <SETTING14>
+        <NAME>Power-on Reset Timer Value</NAME>
+        <DESCRIPTION>128ms</DESCRIPTION>
+      </SETTING14>
+      <SETTING15>
+        <NAME>Brown-out Reset (BOR) Detection</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING15>
+      <SETTING16>
+        <NAME>Alternate I2C pins for I2C1</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING16>
+      <SETTING17>
+        <NAME>Alternate I2C pins for I2C2</NAME>
+        <DESCRIPTION>Enabled</DESCRIPTION>
+      </SETTING17>
+      <SETTING18>
+        <NAME>ICD Communication Channel</NAME>
+        <DESCRIPTION>Communicate on PGEC1 and PGED1</DESCRIPTION>
+      </SETTING18>
+      <SETTING19>
+        <NAME>Reset Target Vector</NAME>
+        <DESCRIPTION>Device will obtain reset instruction from Primary flash</DESCRIPTION>
+      </SETTING19>
+      <SETTING20>
+        <NAME>JTAG</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING20>
+      <SETTING21>
+        <NAME>Background Debug</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING21>
+      <SETTING22>
+        <NAME>Auxiliary Segment Write-protect bit</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING22>
+      <SETTING23>
+        <NAME>Auxiliary Segment Code-protect bit</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING23>
+      <SETTING24>
+        <NAME>Auxiliary Segment Key bits</NAME>
+        <DESCRIPTION>Disabled</DESCRIPTION>
+      </SETTING24>
+    </SETTINGS>
+  </DEVICE>
+</MCU_DEVICE_FLAGS>

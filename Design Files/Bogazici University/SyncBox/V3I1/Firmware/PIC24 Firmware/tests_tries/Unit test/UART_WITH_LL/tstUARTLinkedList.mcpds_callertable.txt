@@ -1,0 +1,33 @@
+main
+	PPS_Mapping
+		_PPS_Mapping
+			Unlock_IOLOCK
+			Lock_IOLOCK
+	ClearBuffer
+		memset
+	UART1_Init
+		Get_Fosc_kHz
+		Get_Fosc_Per_Cyc
+		Delay_100ms
+		_Multiply_32x32
+		_Modulus_32x32
+		_Divide_32x32
+	EnableRXInterrupt
+	AllocateHeap
+		MM_Init
+	AllocateIOBuffers
+		addNode
+			initNode
+		Malloc
+			MM_GetMemAlign
+			MM_Defragment
+				MM_CheckBlocks
+		UART1_Write_Text
+			UART1_Write
+UART1MessageReceiveHandler
+	UART1_Data_Ready
+	UART1_Read
+	memcpy
+	strcpy
+	UART1_Write_Text
+	ClearBuffer

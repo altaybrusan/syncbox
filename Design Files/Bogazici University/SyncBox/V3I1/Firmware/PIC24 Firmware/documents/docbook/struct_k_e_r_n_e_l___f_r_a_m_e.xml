@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="struct_k_e_r_n_e_l___f_r_a_m_e">
+<title>KERNEL_FRAME struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="_kernel_8h">&lt;Kernel.h&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for KERNEL_FRAME</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="struct_k_e_r_n_e_l___f_r_a_m_e__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for KERNEL_FRAME</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="struct_k_e_r_n_e_l___f_r_a_m_e__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DEVICE_TYPE F_SENDER<para><emphasis>Which device produced the FRAME. Useful for device level priority.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DEVICE_TYPE F_RECEIVER<para><emphasis>in which buffer the FRAME is stored in.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>FRAME_TYPE F_TYPE<para><emphasis>JSON parser is required or not.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>FRAME_PRIORITY F_PRIORITY<para><emphasis>Frame priority used by Kernel dispatcher.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * FRAME_MESSAGE<para><emphasis>Frame Content.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int MESSAGE_LENGTH</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>define the structure of messages. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Kernel accept and deliver message between APIs and devices in a <link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> format. This format includes the message and some meta-data. based on this meta-data kernel treat the message in special way. </para>
+                <para>Definition at line 62 of file Kernel.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Kernel.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+</section>

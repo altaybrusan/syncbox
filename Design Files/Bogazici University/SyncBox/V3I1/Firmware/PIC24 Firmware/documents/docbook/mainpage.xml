@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Firmware</title>
+<section xml:id="index_1project_name">
+<title>Project Details</title>
+
+<para>syncbox 
+<literallayout>
+</literallayout>
+ <formalpara><title>Copyright: </title>
+
+<para>&#169; 2018 Bogazici University 
+<literallayout>
+</literallayout>
+ License: GNU Public License. 
+<literallayout>
+</literallayout>
+ Bogazici University &#169; 2018 </para>
+</formalpara>
+</para>
+</section>
+<section xml:id="index_1revision_history">
+<title>Revision History</title>
+
+<para><table frame="all">
+    <title></title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <tbody>
+<caption>Revision Summary</caption>
+<row>
+<entry>
+<para>revision </para>
+</entry><entry>
+<para>details </para>
+</entry></row>
+<row>
+<entry>
+<para>0.1 </para>
+</entry><entry>
+<para>Pooling method for UART communication. </para>
+</entry></row>
+<row>
+<entry>
+<para>0.5 </para>
+</entry><entry>
+<para>RS-232 Modbus RTU commuication. </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</table>
+<formalpara><title>Note: </title>
+
+<para><emphasis role="bold"> Current Status: under development.</emphasis> </para>
+</formalpara>
+</para>
+</section>
+<section xml:id="index_1descriptopn">
+<title>Description</title>
+
+<para>The syncbox is a device that can control and synctonize ALL medical ( and non-medical ) X-ray machine components. Usually, these components ( but not confined ) are <itemizedlist>
+<listitem>
+
+<para>X-ray generator </para>
+</listitem>
+<listitem>
+
+<para>X-ray detector </para>
+</listitem>
+<listitem>
+
+<para>ventilator </para>
+</listitem>
+<listitem>
+
+<para>security, alarm and switches </para>
+</listitem>
+<listitem>
+
+<para>worksation </para>
+</listitem>
+</itemizedlist>
+Each manufacturer has its own set of communication protocol and design specs. The aim of this synchronization box (syncbox) is to abstract away all these sort of details and let the workstation software ( we have implemented one as <link xlink:href="https://github.com/altaybrusan/ibex">iBEX</link>) be free of concerning details. At the heart of syncbox there is Computer-On-module-Express(COMe) module and a PIC24E microcontroller.The controller is responsible for high speed and accurate signalling and COMe mainly deals with detector&apos;s outputs and image processing. This project is a firmware of the PIC24E and it is responsible for communication with <itemizedlist>
+<listitem>
+
+<para>&quot;RS-232&quot; based serial generator </para>
+</listitem>
+<listitem>
+
+<para>&quot;RS-232 ModBus RTU&quot; based actuator </para>
+</listitem>
+<listitem>
+
+<para>&quot;RS-232&quot; based touch screen display </para>
+</listitem>
+<listitem>
+
+<para>serial communication with worksation machine </para>
+</listitem>
+<listitem>
+
+<para>external trigger switch </para>
+</listitem>
+</itemizedlist>
+The code consists of a kernel and set of APIs that control the devices. Whole machine is integrated and controlled inside a section which is called instrument. Component diagram of the machine is shown bellow.  
+    <figure>
+        <title></title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="componentdiagram.png"></imagedata>
+            </imageobject>
+        <caption>
+Component Diagram
+        </caption>
+        </mediaobject>
+    </figure>
+</para>
+</section>
+<section xml:id="index_1dev_env">
+<title>Developement Environment and Tools</title>
+
+<para><table frame="all">
+    <title></title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <tbody>
+<caption>Environment factors table</caption>
+<row>
+<entry>
+<para>Factor </para>
+</entry><entry>
+<para>details </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU </para>
+</entry><entry>
+<para>P24EP512GU810 </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU Dev.Board </para>
+</entry><entry>
+<para>EasyPIC Fusion v.7 </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU Oscillator </para>
+</entry><entry>
+<para>140.00 MHz </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU Compiler </para>
+</entry><entry>
+<para>MikroC Pro for dsPIC v.7 </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU Compiler </para>
+</entry><entry>
+<para>mikroC PRO for dsPIC v7.0.0 </para>
+</entry></row>
+<row>
+<entry>
+<para>MCU Ext. Modules </para>
+</entry><entry>
+<para>x </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</table>
+</para>
+</section>
+<section xml:id="index_1refs">
+<title>Refs</title>
+
+<para><link xlink:href="http://download.mikroe.com/documents/compilers/mikroc/dspic/help/mikroc_libraries.htm">http://download.mikroe.com/documents/compilers/mikroc/dspic/help/mikroc_libraries.htm</link> 
+<literallayout>
+</literallayout>
+ <link xlink:href="https://github.com/altaybrusan/ibex">https://github.com/altaybrusan/ibex</link> </para>
+</section>
+
+</chapter>

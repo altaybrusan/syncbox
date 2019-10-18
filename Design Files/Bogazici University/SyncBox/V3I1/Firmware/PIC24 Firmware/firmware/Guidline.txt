@@ -1,0 +1,24 @@
+   GUID:  For PIC24E with MikroC compiler
+   __________________________________________________________
+   x is {A,B,C,D,E,F,G}
+   ANSELx = 0x00;         // Convert all I/O pins to digital
+   TRISx = 0;             // Initialize PORTA as output
+   LATx = 0;              // Set PORTA to zero
+   LATx = ~PORTx;           // Flip pins
+   
+   
+   Always set pins digital and if you wish the input/output direction
+   and then configure the interrupts!
+   
+   even in the interrupt handler for UARTxRX: first check if(UARTx_Data_Ready())
+   x: is 1,2,3 or 4 (depends on uC)
+   
+   call these functions together
+   
+   	SetFineFocalSpotSize();
+	QueryFocalSpotSize();
+	
+	SetBroadFocalSpotSize();
+	QueryFocalSpotSize();
+	
+	

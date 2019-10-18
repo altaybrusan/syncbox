@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="jsmn_8h">
+    <title>jsmn.h File Reference</title>
+    <programlisting>#include &lt;stddef.h&gt;</programlisting>
+<para>Include dependency diagram for jsmn.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="jsmn_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jsmn.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="jsmn_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structjsmntok__t">jsmntok_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structjsmn__parser">jsmn_parser</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802f">jsmntype_t</link> {
+<link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802fa7bc5faeddd33197250cf352af984f185">JSMN_UNDEFINED</link>= 0,
+<link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802fa416d6e733082bedc1166f0d66f571867">JSMN_OBJECT</link>= 1,
+<link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802fabc4c47216dacf36bd4f64ac3d649d471">JSMN_ARRAY</link>= 2,
+<link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802fad4ea6277c135d9d3377bf8b719779539">JSMN_STRING</link>= 3,
+<link linkend="jsmn_8h_1a065320719769f9dc1fbe30094e52802fa2550c93fe929f81f30ea9b629ed98742">JSMN_PRIMITIVE</link>= 4
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="jsmn_8h_1afbbe22e63007677ec9e7837b5c1b80ea">jsmnerr</link> {
+<link linkend="jsmn_8h_1afbbe22e63007677ec9e7837b5c1b80eaafa350a2c19cc5fddbfb7c90309d3fe41">JSMN_ERROR_NOMEM</link>= -1,
+<link linkend="jsmn_8h_1afbbe22e63007677ec9e7837b5c1b80eaa3297b1c54d926ce497b7a20530689171">JSMN_ERROR_INVAL</link>= -2,
+<link linkend="jsmn_8h_1afbbe22e63007677ec9e7837b5c1b80eaa851a0e75343c14a13c6893b3727ead16">JSMN_ERROR_PART</link>= -3
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="jsmn_8h_1a8d4a8b3ce5c3d600feea38615b5f9aa6">jsmn_init</link> (
+<link linkend="structjsmn__parser">jsmn_parser</link> * parser)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="jsmn_8h_1a774f985a9750a10c7e88304e30191e03">jsmn_parse</link> (
+<link linkend="structjsmn__parser">jsmn_parser</link> * parser, const char * js, size_t len, <link linkend="structjsmntok__t">jsmntok_t</link> * tokens, unsigned int num_tokens)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/jsmn.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;__JSMN_H_</emphasis>
+2 <emphasis class="preprocessor">#define&#32;__JSMN_H_</emphasis>
+3 
+4 <emphasis class="preprocessor">#include&#32;&lt;stddef.h&gt;</emphasis>
+5 
+6 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+7 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;{
+8 <emphasis class="preprocessor">#endif</emphasis>
+9 
+17 <emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_UNDEFINED&#32;=&#32;0,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_OBJECT&#32;=&#32;1,
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_ARRAY&#32;=&#32;2,
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_STRING&#32;=&#32;3,
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_PRIMITIVE&#32;=&#32;4
+23 }&#32;jsmntype_t;
+24 
+25 <emphasis class="keyword">enum</emphasis>&#32;jsmnerr&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Not&#32;enough&#32;tokens&#32;were&#32;provided&#32;*/</emphasis>
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_ERROR_NOMEM&#32;=&#32;-1,
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Invalid&#32;character&#32;inside&#32;JSON&#32;string&#32;*/</emphasis>
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_ERROR_INVAL&#32;=&#32;-2,
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;The&#32;string&#32;is&#32;not&#32;a&#32;full&#32;JSON&#32;packet,&#32;more&#32;bytes&#32;expected&#32;*/</emphasis>
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JSMN_ERROR_PART&#32;=&#32;-3
+32 };
+33 
+<link linkend="structjsmntok__t">40 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;jsmntype_t&#32;type;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;start;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;end;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;size;
+45 <emphasis class="preprocessor">#ifdef&#32;JSMN_PARENT_LINKS</emphasis>
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;parent;
+47 <emphasis class="preprocessor">#endif</emphasis>
+48 }&#32;<link linkend="structjsmntok__t">jsmntok_t</link>;
+49 
+<link linkend="structjsmn__parser">54 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;pos;&#32;<emphasis class="comment">/*&#32;offset&#32;in&#32;the&#32;JSON&#32;string&#32;*/</emphasis>
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;toknext;&#32;<emphasis class="comment">/*&#32;next&#32;token&#32;to&#32;allocate&#32;*/</emphasis>
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;toksuper;&#32;<emphasis class="comment">/*&#32;superior&#32;token&#32;node,&#32;e.g&#32;parent&#32;object&#32;or&#32;array&#32;*/</emphasis>
+58 }&#32;<link linkend="structjsmn__parser">jsmn_parser</link>;
+59 
+63 <emphasis class="keywordtype">void</emphasis>&#32;jsmn_init(<link linkend="structjsmn__parser">jsmn_parser</link>&#32;*parser);
+64 
+69 <emphasis class="keywordtype">int</emphasis>&#32;jsmn_parse(<link linkend="structjsmn__parser">jsmn_parser</link>&#32;*parser,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*js,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;len,
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="structjsmntok__t">jsmntok_t</link>&#32;*<link linkend="_kernel_8c_1aa7be1644f671af19abd6c01662fa3425">tokens</link>,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;num_tokens);
+71 
+72 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+73 }
+74 <emphasis class="preprocessor">#endif</emphasis>
+75 
+76 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;__JSMN_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

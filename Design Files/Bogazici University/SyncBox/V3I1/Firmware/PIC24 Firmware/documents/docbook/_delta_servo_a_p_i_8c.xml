@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_delta_servo_a_p_i_8c">
+    <title>DeltaServoAPI.c File Reference</title>
+    <programlisting>#include &quot;DeltaServoAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+    <programlisting>#include &lt;built_in.h&gt;</programlisting>
+<para>Include dependency diagram for DeltaServoAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_delta_servo_a_p_i_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for DeltaServoAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_delta_servo_a_p_i_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_delta_servo_a_p_i_8c_1a70a2c25b73b13884d92616c782f30f4e">MIN_MOTOR_JOG</link><para><emphasis>define minimum motor jog.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_delta_servo_a_p_i_8c_1a0faedf55ff9b2ec1ec564cb197ca5838">MAX_MOTOR_JOG</link><para><emphasis>define maximum motor jog.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const char <link linkend="_delta_servo_a_p_i_8c_1a066c5e2d9164cf4b8b6d06c08401d2e2">SET_CONNECTION_MECHANISM_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1a0d3918b1f48b49044af95e3b5bfb2b13">TURN_ON_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1ac78a9938499ccd89701a2d233c173f8e">TURN_OFF_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1adf61151e7c15ceeac3b4f0fcc17b4f67">ROTATE_CW_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1ad5f493231fce79ec3348c558e71823dd">ROTATE_CCW_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1ac6b2438c2012921377e59b81acc2c881">STOP_ROTATION_CMD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1a0de539bfc4fb8f43921838c095b94ea4">_startingAddress</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1ace6cf3189c883de264c3554bd0ed95fa">_numberOfRegisters</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> <link linkend="_delta_servo_a_p_i_8c_1aa5290b1a02d88f47665a0e738eda00a8">_dataRegisters</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_delta_servo_a_p_i_8c_1a30fed58c1ea108afcf88b4676cc647a2">_crc</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link> <link linkend="_delta_servo_a_p_i_8c_1ac4bb91fd7b33cb29b29cad29bccfbfaf">ModRTU_CRC</link> (
+<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> buf, int len)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a4234a2a2356ba9723748c88062bed619">PrepareCommandStructure</link> (
+<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link> * command)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a559d6510582ccf7283ef8100454eaae9">CallActuatorKernelSendService</link> (
+char * message, <link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link> type)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a4f1c681787d8ea0f316fbd2315a8cfe1">SetConnectionToRS232Modbus</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a1be24a1b6189ea6e9161c93c400770ae">TurnOnSliderMotor</link> (
+)<para><emphasis>turn on slider motor on.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a81608561a43bf2a44671ad65c2b3311c">TurnOffSliderMotor</link> (
+)<para><emphasis>turn off slider motor on.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1ab5fbab35b042706598314fc2e86197a8">SetSliderMotorSpeed</link> (
+int speed)<para><emphasis>set slider motor speed.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1afb5100c2ce2b491dee220607b0f3ba0b">RotateSliderMotorCounterClockwise</link> (
+)<para><emphasis>start slider motor to rotate counter clockwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a1717f9911c674bf81afee0b513f6de37">RotateSliderMotorClockwise</link> (
+)<para><emphasis>start slider motor to rotate clockwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a91a5f8567f150810290d2fcce6cc8d32">StopMotor</link> (
+)<para><emphasis>stop slider motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_delta_servo_a_p_i_8c_1a991a5201efc05a43188e08a51033ffa7">ActuatorProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> frame)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/DeltaServoAPI.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_delta_servo_a_p_i_8h">DeltaServoAPI.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+4 <emphasis class="preprocessor">#include&#32;&lt;built_in.h&gt;</emphasis>&#32;&#32;&#32;<emphasis class="comment">//&#32;loads&#32;MikroC&#32;internal&#32;functions</emphasis>
+5 
+<link linkend="_delta_servo_a_p_i_8h_1a70a2c25b73b13884d92616c782f30f4e">6 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a70a2c25b73b13884d92616c782f30f4e">MIN_MOTOR_JOG</link>&#32;=&#32;100;
+<link linkend="_delta_servo_a_p_i_8h_1a0faedf55ff9b2ec1ec564cb197ca5838">7 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a0faedf55ff9b2ec1ec564cb197ca5838">MAX_MOTOR_JOG</link>&#32;=&#32;800;
+8 
+9 <emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;SET_CONNECTION_MECHANISM_CMD[]&#32;=&#32;{0x00,&#32;0x00,&#32;0x00,&#32;0x00};
+10 
+11 <emphasis class="keyword">const</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;TURN_ON_CMD[]&#32;=&#32;&#32;{0x00,&#32;0x01,&#32;0x00,&#32;0x00};
+12 <emphasis class="keyword">const</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;TURN_OFF_CMD[]&#32;=&#32;{0x00,&#32;0x00,&#32;0x00,&#32;0x00};
+13 
+14 <emphasis class="keyword">const</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;ROTATE_CW_CMD[]&#32;=&#32;&#32;{0x13,&#32;0x87,&#32;0x00,&#32;0x00};
+15 <emphasis class="keyword">const</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;ROTATE_CCW_CMD[]&#32;=&#32;{0x13,&#32;0x86,&#32;0x00,&#32;0x00};
+16 <emphasis class="keyword">const</emphasis>&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;STOP_ROTATION_CMD[]&#32;=&#32;{0x00,&#32;0x00,&#32;0x00,&#32;0x00};
+17 
+18 <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_startingAddress[2];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Starting&#32;register&#32;address</emphasis>
+19 <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_numberOfRegisters[2]&#32;=&#32;{0x00&#32;,&#32;0x02};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;endian&#32;problem&#32;is&#32;hard&#32;to&#32;solve,&#32;so&#32;I&#32;use&#32;this&#32;trick</emphasis>
+20 <link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_dataRegisters[4];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Data&#32;registers&#32;content</emphasis>
+21 <emphasis class="keywordtype">int</emphasis>&#32;_crc;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Save&#32;the&#32;CRC&#32;inside</emphasis>
+22 
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Buffer&#32;to&#32;keep&#32;latest&#32;command&#32;in.</emphasis>
+24 
+25 
+26 <emphasis class="comment">//&#32;Compute&#32;the&#32;MODBUS&#32;RTU&#32;CRC</emphasis>
+27 <link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link>&#32;ModRTU_CRC(<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;buf[],&#32;<emphasis class="keywordtype">int</emphasis>&#32;len)
+28 {
+29 &#32;&#32;<link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link>&#32;crc&#32;=&#32;0xFFFF;
+30 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;pos=0,&#32;index=0;
+31 
+32 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(&#32;pos&#32;=&#32;0;&#32;pos&#32;&lt;&#32;len;&#32;pos++)&#32;{
+33 &#32;&#32;&#32;&#32;crc&#32;^=&#32;(<link linkend="_types_8h_1a91ad9478d81a7aaf2593e8d9c3d06a14">uint</link>)buf[pos];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;XOR&#32;byte&#32;into&#32;least&#32;sig.&#32;byte&#32;of&#32;crc</emphasis>
+34 
+35 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(&#32;index&#32;=&#32;8;&#32;index&#32;!=&#32;0;&#32;index--)&#32;{&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Loop&#32;over&#32;each&#32;bit</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((crc&#32;&amp;&#32;0x0001)&#32;!=&#32;0)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;If&#32;the&#32;LSB&#32;is&#32;set</emphasis>
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;crc&#32;&gt;&gt;=&#32;1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Shift&#32;right&#32;and&#32;XOR&#32;0xA001</emphasis>
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;crc&#32;^=&#32;0xA001;
+39 &#32;&#32;&#32;&#32;&#32;&#32;}
+40 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Else&#32;LSB&#32;is&#32;not&#32;set</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;crc&#32;&gt;&gt;=&#32;1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Just&#32;shift&#32;right</emphasis>
+42 &#32;&#32;&#32;&#32;}
+43 &#32;&#32;}
+44 &#32;&#32;<emphasis class="comment">//&#32;Note,&#32;this&#32;number&#32;has&#32;low&#32;and&#32;high&#32;bytes&#32;swapped,&#32;</emphasis>
+45 &#32;&#32;<emphasis class="comment">//&#32;so&#32;use&#32;it&#32;accordingly&#32;(or&#32;swap&#32;bytes)</emphasis>
+46 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;crc;
+47 }
+48 
+49 <emphasis class="keywordtype">void</emphasis>&#32;PrepareCommandStructure(<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>*&#32;command)
+50 {
+51 &#32;&#32;<emphasis class="comment">//&#32;clear&#32;buffer</emphasis>
+52 &#32;&#32;memset(command,0x00,13);
+53 &#32;&#32;memset(_dataRegisters,0x00,4);
+54 &#32;&#32;
+55 &#32;&#32;<emphasis class="comment">//&#32;set&#32;slave&#32;address</emphasis>
+56 &#32;&#32;command[0]=&#32;0x7F;
+57 &#32;&#32;
+58 &#32;&#32;<emphasis class="comment">//&#32;set&#32;modbus&#32;function&#32;call&#32;code</emphasis>
+59 &#32;&#32;command[1]=&#32;0x10;
+60 &#32;&#32;
+61 &#32;&#32;<emphasis class="comment">//&#32;number&#32;of&#32;registers</emphasis>
+62 &#32;&#32;memcpy(&amp;command[4],&#32;_numberOfRegisters,2);
+63 &#32;&#32;
+64 &#32;&#32;<emphasis class="comment">//&#32;bytes&#32;count</emphasis>
+65 &#32;&#32;command[6]=&#32;0x04;
+66 }
+67 
+68 
+69 <emphasis class="comment">//&#32;This&#32;is&#32;not&#32;best&#32;practice:&#32;WHYE&#32;THE&#32;COMMANDS&#32;LENGTH&#32;IS&#32;FIX?!</emphasis>
+70 <emphasis class="keywordtype">void</emphasis>&#32;CallActuatorKernelSendService(<emphasis class="keywordtype">char</emphasis>*&#32;message,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link>&#32;type)
+71 {
+72 &#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//int&#32;temp&#32;=&#32;0;</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;_frame&#32;;<emphasis class="comment">//=&#32;{&#32;0,0,0,0,0,0&#32;};</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1af979252e2c7fa6f78f4cfda607e7587b">F_SENDER</link>&#32;=&#32;ACTUATOR;
+75 &#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae2d1e98376527216fa6ff53b940a7c7a">F_RECEIVER</link>&#32;=&#32;ACTUATOR;
+76 &#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae24624f2af7ede4b38b487a23cf5c947">F_TYPE</link>&#32;=&#32;type;
+77 &#32;&#32;&#32;&#32;&#32;_frame.MESSAGE_LENGTH=13;
+78 &#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>&#32;=&#32;message;
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">F_PRIORITY</link>&#32;=&#32;NORMAL_FRAME;&#32;<emphasis class="comment">//&#32;ALL&#32;frames&#32;are&#32;normal.</emphasis>
+80 &#32;&#32;&#32;&#32;&#32;&#32;Delay_ms(10);&#32;<emphasis class="comment">//based&#32;on&#32;delta&#32;guidline.&#32;We&#32;can&#32;count&#32;on&#32;dispacher&#32;delay&#32;over&#32;normal&#32;frames</emphasis>
+81 &#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1a6fa687e39b416d7d42b3365f89a20160">KL_SendFrame</link>(&amp;_frame);
+82 }
+83 
+84 
+85 <emphasis class="keywordtype">void</emphasis>&#32;SetConnectionToRS232Modbus()
+86 {
+87 &#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;reimplement&#32;this</emphasis>
+88 &#32;&#32;&#32;
+89 &#32;&#32;<emphasis class="comment">//&#32;This&#32;function&#32;did&#32;not&#32;work.</emphasis>
+90 &#32;&#32;<emphasis class="comment">//&#32;char&#32;_cmd1[]&#32;={0Xff,&#32;0x03,&#32;0x03,&#32;0x00,&#32;0x00,&#32;0x01,&#32;0x91,&#32;0x90};</emphasis>
+91 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd2[]&#32;={0X7f,&#32;0x06,&#32;0x03,&#32;0x08,&#32;0x00,&#32;0x00,&#32;0x02,&#32;0x52};</emphasis>
+92 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd3[]&#32;={0X7f,&#32;0x03,&#32;0x03,&#32;0x0a,&#32;0x00,&#32;0x02,&#32;0xee,&#32;0x53};</emphasis>
+93 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd4[]&#32;={0X7f,&#32;0x10,&#32;0x03,&#32;0x0a,&#32;0x00,&#32;0x02,&#32;0x04,&#32;0x00,&#32;0x01,&#32;0x00,&#32;0x00,&#32;0xa8,&#32;0xc9};</emphasis>
+94 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd5[]&#32;={0Xff,&#32;0x06,&#32;0x03,&#32;0x0a,&#32;0x00,&#32;0x00,&#32;0xBC,&#32;0x52};</emphasis>
+95 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd6[]&#32;={0Xff,&#32;0x03,&#32;0x03,&#32;0x00,&#32;0x00,&#32;0x02,&#32;0xd1,&#32;0x91};</emphasis>
+96 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd7[]&#32;={0X7f,&#32;0x06,&#32;0x03,&#32;0x08,&#32;0x00,&#32;0x00,&#32;0x02,&#32;0x52};</emphasis>
+97 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd8[]&#32;=&#32;{0X7f,&#32;0x03,&#32;0x03,&#32;0x10,&#32;0x00,&#32;0x02,&#32;0xcf,&#32;0x94};</emphasis>
+98 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd9[]&#32;=&#32;{0X7f,&#32;0x67,&#32;0x00,&#32;0x12,&#32;0x00,&#32;0x03,&#32;0xde,&#32;0x18};</emphasis>
+99 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd10[]&#32;={0X7f,&#32;0x03,&#32;0x00,&#32;0x00,&#32;0x00,&#32;0x01,&#32;0x8e,&#32;0x14};</emphasis>
+100 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd11[]&#32;={0X7f,&#32;0x67,&#32;0x00,&#32;0x12,&#32;0x00,&#32;0x03,&#32;0xde,&#32;0x18};</emphasis>
+101 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd12[]&#32;={0X7f,&#32;0x03,&#32;0x00,&#32;0x00,&#32;0x00,&#32;0x01,&#32;0x8e,&#32;0x14};</emphasis>
+102 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd13[]&#32;={0X7f,&#32;0x67,&#32;0x00,&#32;0x12,&#32;0x00,&#32;0x03,&#32;0xde,&#32;0x18};</emphasis>
+103 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd14[]&#32;={0X7f,&#32;0x03,&#32;0x00,&#32;0x00,&#32;0x00,&#32;0x01,&#32;0x8e,&#32;0x14};</emphasis>
+104 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd15[]&#32;={0X7f,&#32;0x06,&#32;0x02,&#32;0x10,&#32;0x00,&#32;0x0c,&#32;0x83,&#32;0xac};</emphasis>
+105 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd16[]&#32;={0X7f,&#32;0x03,&#32;0x02,&#32;0x10,&#32;0x00,&#32;0x01,&#32;0x8e,&#32;0x69};</emphasis>
+106 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;char&#32;_cmd17[]&#32;={0x7f,&#32;0x10,&#32;0x03,&#32;0x0a,&#32;0x00,&#32;0x02,&#32;0x04,&#32;0x00,&#32;0x00,&#32;0x00,&#32;0x00,&#32;0xf9,&#32;0x09};</emphasis>
+107 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd1,&#32;8);</emphasis>
+108 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd2,&#32;8);</emphasis>
+109 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd3,&#32;8);</emphasis>
+110 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd4,&#32;13);</emphasis>
+111 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd5,&#32;8);</emphasis>
+112 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd6,&#32;8);</emphasis>
+113 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd7,&#32;8);</emphasis>
+114 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd8,&#32;8);</emphasis>
+115 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd9,&#32;8);</emphasis>
+116 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd10,&#32;8);</emphasis>
+117 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd11,&#32;8);</emphasis>
+118 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd12,&#32;8);</emphasis>
+119 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd13,&#32;8);</emphasis>
+120 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd14,&#32;8);</emphasis>
+121 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd15,&#32;8);</emphasis>
+122 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd16,&#32;8);</emphasis>
+123 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;SendInitCommand(_cmd17,&#32;13);</emphasis>
+124 &#32;&#32;&#32;
+125 }
+126 
+<link linkend="_delta_servo_a_p_i_8h_1a1be24a1b6189ea6e9161c93c400770ae">127 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a1be24a1b6189ea6e9161c93c400770ae">TurnOnSliderMotor</link>()
+128 {
+129 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+130 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+131 &#32;&#32;&#32;&#32;&#32;
+132 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x02;
+133 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x3c;
+134 &#32;&#32;&#32;&#32;&#32;
+135 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress,2);
+136 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;TURN_ON_CMD,4);
+137 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+138 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+139 &#32;&#32;&#32;
+140 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+141 }
+142 
+<link linkend="_delta_servo_a_p_i_8h_1a81608561a43bf2a44671ad65c2b3311c">143 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a81608561a43bf2a44671ad65c2b3311c">TurnOffSliderMotor</link>()
+144 {
+145 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+146 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+147 
+148 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x02;
+149 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x3c;
+150 &#32;&#32;&#32;&#32;&#32;
+151 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress,2);
+152 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;TURN_OFF_CMD,4);
+153 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+154 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+155 
+156 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+157 }
+158 
+<link linkend="_delta_servo_a_p_i_8h_1a7796779a0cfc1087d269785a1ae10427">159 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a7796779a0cfc1087d269785a1ae10427">SetSliderMotorSpeed</link>(<emphasis class="keywordtype">int</emphasis>&#32;speed)
+160 {
+161 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(&#32;&#32;<link linkend="_delta_servo_a_p_i_8h_1a70a2c25b73b13884d92616c782f30f4e">MIN_MOTOR_JOG</link>&#32;&lt;=&#32;speed&#32;&amp;&amp;&#32;speed&#32;&lt;=&#32;<link linkend="_delta_servo_a_p_i_8h_1a0faedf55ff9b2ec1ec564cb197ca5838">MAX_MOTOR_JOG</link>&#32;)
+162 &#32;&#32;&#32;&#32;{
+163 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+164 &#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;_cmd[]&#32;={0x00,0x00,0x00,0x00};
+165 &#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//byte&#32;lbyte&#32;=&#32;Lo(speed);</emphasis>
+166 &#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//byte&#32;hbyte&#32;=&#32;hi(speed);</emphasis>
+167 &#32;&#32;&#32;&#32;&#32;_cmd[0]=&#32;hi(speed);<emphasis class="comment">//hbyte;&#32;&#32;&#32;&#32;&#32;//swap&#32;the&#32;byte&#32;order&#32;of&#32;int&#32;data&#32;type</emphasis>
+168 &#32;&#32;&#32;&#32;&#32;_cmd[1]=&#32;Lo(speed);<emphasis class="comment">//lbyte;</emphasis>
+169 
+170 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+171 &#32;&#32;&#32;&#32;&#32;
+172 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x04;
+173 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x0a;
+174 
+175 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress,2);
+176 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;_cmd,4);
+177 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+178 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+179 
+180 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+181 &#32;&#32;&#32;&#32;}
+182 }
+183 
+184 
+<link linkend="_delta_servo_a_p_i_8h_1afb5100c2ce2b491dee220607b0f3ba0b">185 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1afb5100c2ce2b491dee220607b0f3ba0b">RotateSliderMotorCounterClockwise</link>()
+186 {
+187 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+188 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+189 
+190 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x04;
+191 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x0a;
+192 
+193 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress,2);
+194 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;ROTATE_CCW_CMD,4);
+195 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+196 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+197 
+198 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+199 }
+200 
+<link linkend="_delta_servo_a_p_i_8h_1a1717f9911c674bf81afee0b513f6de37">201 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a1717f9911c674bf81afee0b513f6de37">RotateSliderMotorClockwise</link>()
+202 {
+203 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+204 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+205 
+206 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x04;
+207 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x0a;
+208 &#32;&#32;&#32;&#32;&#32;
+209 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress,2);
+210 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;ROTATE_CW_CMD,4);
+211 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+212 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+213 
+214 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+215 }
+216 
+<link linkend="_delta_servo_a_p_i_8h_1a91a5f8567f150810290d2fcce6cc8d32">217 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_delta_servo_a_p_i_8h_1a91a5f8567f150810290d2fcce6cc8d32">StopMotor</link>()
+218 {
+219 &#32;&#32;&#32;&#32;&#32;<link linkend="_types_8h_1a0c8186d9b9b7880309c27230bbb5e69d">byte</link>&#32;_command[13];
+220 &#32;&#32;&#32;&#32;&#32;PrepareCommandStructure(_command);
+221 
+222 &#32;&#32;&#32;&#32;&#32;_startingAddress[0]=0x04;
+223 &#32;&#32;&#32;&#32;&#32;_startingAddress[1]=0x0a;
+224 &#32;&#32;&#32;&#32;&#32;
+225 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[2],&#32;_startingAddress&#32;,&#32;2);
+226 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[7],&#32;STOP_ROTATION_CMD,&#32;4);
+227 &#32;&#32;&#32;&#32;&#32;_crc&#32;=&#32;&#32;&#32;ModRTU_CRC(_command,11);&#32;&#32;&#32;<emphasis class="comment">//&#32;calculate&#32;crc</emphasis>
+228 &#32;&#32;&#32;&#32;&#32;memcpy(&amp;_command[11],&amp;_crc,2);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;append&#32;&#32;crc&#32;to&#32;the&#32;buffer</emphasis>
+229 
+230 &#32;&#32;&#32;&#32;&#32;CallActuatorKernelSendService(_command,<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487ac89ce62fe1fa4f8e316031d7754f478a">UNSTRUCTURED</link>);
+231 }
+232 
+233 <emphasis class="keywordtype">void</emphasis>&#32;ActuatorProcessKernelFrame(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;frame)
+234 {
+235 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;_temp&#32;=&#32;0;</emphasis>
+236 <emphasis class="preprocessor">#if&#32;build&#32;==&#32;debug</emphasis>
+237 &#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;WE&#32;DID&#32;NOT&#32;RECEIVED&#32;FEEDBACK&#32;IN&#32;OUR&#32;API.</emphasis>
+238 &#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;BUT&#32;WE&#32;CAN&#32;CHECK&#32;THE&#32;MESSAGES&#32;FEEDBACKS</emphasis>
+239 &#32;&#32;&#32;<emphasis class="comment">//SendDebugMsg(&quot;\r&#32;&#32;&#32;&#32;&gt;&gt;ACTUATOR&#32;RECIEVED:&#32;&quot;);</emphasis>
+240 &#32;&#32;&#32;<emphasis class="comment">//SendDebugMsg(frame.FRAME_MESSAGE);</emphasis>
+241 <emphasis class="preprocessor">#endif</emphasis>
+242 <emphasis class="preprocessor">}</emphasis>
+    </computeroutput></literallayout>
+</section>

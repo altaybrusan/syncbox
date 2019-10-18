@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_connection_map_8h">
+    <title>ConnectionMap.h File Reference</title>
+<para>Include dependency diagram for ConnectionMap.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_connection_map_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ConnectionMap.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_connection_map_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Devices</title>
+      <description>
+<para>There 1:1 map between each DEVICE_TYPE &amp; Communication port </para>
+</description>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a19a251b46b04cee3fd8612bf2c5fb3d6">UART1MappedDevice</link> GENERATOR</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aa41dfef3ad002d29bf9dd7185e264e6c">UART2MappedDevice</link> ACTUATOR</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a6ffacf4569652e94c075afb464255015">UART3MappedDevice</link> WORKSTATION</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a05502dd71095271c855ec569b862597d">UART4MappedDevice</link> DISPLAY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>MicroC command map</title>
+      <description>
+<para>A set of functions that maps the MicroC UART commands into more readable form.</para>
+
+<para><link linkend="_kernel_8c">Kernel.c</link> needs to write into serial ports. To make the <link linkend="_kernel_8c">Kernel.c</link> more clear a set of SendTo macros are defined. <formalpara><title>Note: </title>
+
+<para>Instead of sending whole message at once, using MikroC <emphasis role="bold">Uartx_Write_Text</emphasis>, charachter based transmission is prefered. In practice, Uartx_Write_Text addes some not-wanted charachters to the end of transmitted message. For example, MeSsAgEü may appear instead of !MeSsAgE. </para>
+</formalpara>
+</para>
+</description>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ad2731d221b525ebf2d261ca509b1cdd7">SendToGenerator</link> UART1_Write(msg)<para><emphasis>rename MicroC UARTx_Write command to SendToGenerator.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ac359f38d30e6b036b02bb4320b4ebc96">SendToActuator</link> UART2_Write(msg)<para><emphasis>rename MicroC UARTx_Write command to SendToActuator.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1afb324ab68dc7689f397f7dfe29de058c">SendToWorkstation</link> UART3_Write(msg)<para><emphasis>rename MicroC UARTx_Write command to SendToWorkstation.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1abcf5d591cde4bb9a39ee64180a181ede">SendToDisplay</link> UART4_Write(msg)<para><emphasis>rename MicroC UARTx_Write command to SendToDisplay.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a057c92e4c30690f2618df7d1814fabf0">SendDebugMsg</link> UART3_Write_Text(msg)<para><emphasis>rename MicroC UARTx_Write command to SendDebugMsg.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a0959c4c87a8e202f9263a740604b5207">SendDebugChr</link> UART3_Write(msg)<para><emphasis>rename MicroC UARTx_Write command to SendDebugChr.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>UART pin map</title>
+      <description>
+<para>Pins are compatible with PIC Fusion v.7 devboard </para>
+</description>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aa97b2533063dfbfcd603d7845492776a">MAP_U1RX</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ab1330b667f4859a604c3c412a6742993">MAP_U1TX</link> 101</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a678392b619a2763c0208a608338b9e7d">MAP_U2RX</link> 108</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a0536087115f0638acd2881a6967da71e">MAP_U2TX</link> 109</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ae30392838f3b8102e7c20de487861f5b">MAP_U3RX</link> 124</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a10022e3bed483f8b10e2270ccc7c107d">MAP_U3TX</link> 125</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aa99873684dcfd5801029fb5ab6f97c38">MAP_U4RX</link> 112</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a7b1cd31f8fbca088fe291027c27671fd">MAP_U4TX</link> 113</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>serial ports settings</title>
+      <description>
+<para>Specify: bitrate, parity, data bit and stop bit. </para>
+</description>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a77886b9a97eb863b281adadc72ca8023">UART1_BITRATE</link> 9600</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a1ff024f7b26f29a108ee4c641d095055">UART1_CONF</link> _UART_8BIT_NOPARITY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ad9171125a0f3f0ecb41ace1eba2c4ac5">UART1_STOPBIT</link> _UART_ONE_STOPBIT</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aac31fb6c838c1aa070e88a2737140249">UART1_SPEED</link> _UART_LOW_SPEED</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ae963fb4bf70c37887babd9fa1a0c8499">UART2_BITRATE</link> 9600</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ac33d3997e556812f9242a71a171f959c">UART2_CONF</link> _UART_8BIT_NOPARITY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ac3f2fada823206ca45ac41c42f8b3f4c">UART2_STOPBIT</link> _UART_TWO_STOPBITS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1accacd1e26d86834058ad0dd625fb6982">UART2_SPEED</link> _UART_LOW_SPEED</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a950f2005adba7cc4bbaae8d448fff4c2">UART3_BITRATE</link> 9600</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a64999dd177c0788d633421d81d14e6ad">UART3_CONF</link> _UART_8BIT_NOPARITY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a71b6ffa46b52aa482d69e8b4a50e577e">UART3_STOPBIT</link> _UART_TWO_STOPBITS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ad2ded3499fdcaf33ddd04f4d0decc7b0">UART3_SPEED</link> _UART_LOW_SPEED</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aed7daac2bb4cc8c328af44afddf0dbef">UART4_BITRATE</link> 9600</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1acea86e2ebfb1a194fb1f3187aa76fd0e">UART4_CONF</link> _UART_8BIT_NOPARITY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a74f0af1f25871927b632743d38e4fe68">UART4_STOPBIT</link> _UART_TWO_STOPBITS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a98e9973b57ed9ffe39fdde8f4842d13a">UART4_SPEED</link> _UART_Hi_SPEED</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>serial connection message terminator</title>
+      <description>
+<para>Serial connection messages are packed and processed. The messages may have fixed length, finished at a specific delimiter or processed charachter by charachter. </para>
+</description>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a3af69910ac5de5a229e3486211ec9944">UART1_MSG_LENGTH</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aa5a18ef2cd8bdee21c3bdf2b93dee3c9">UART2_MSG_LENGTH</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a4704e5492e5de6f023d519e911d7ba43">UART3_MSG_LENGTH</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1af6ad5d197c564ad4a7d3a19ed76f362d">UART4_MSG_LENGTH</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1adae2579ea095f57cda20d3a3d9b93fcb">UART1_DELIMITER</link> 0x0d</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a8b99c3a3ceadd01a51f5a211d4ebc4b3">UART2_DELIMITER</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1a32717dfa7cc08af0494c325f1ec485f7">UART3_DELIMITER</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1ae65f4ef2d52a2d8c491b20af3c56afbf">UART4_DELIMITER</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1af7a5aa944fb2d9a0c1696e3fd6add389">MAP_SPK_PIN</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_connection_map_8h_1aee101e2d200a902eac84ac35d3a742b5">MAP_SPK_PORT</link> &amp;PORTD</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Contains global configuration and settings of connections. Each device type (generator, actuator,etc.) has a special set of connection parameters. The <link linkend="_connection_map_8h">ConnectionMap.h</link> stores all these parameters. The <formalpara><title>See also: </title>
+
+<para><link linkend="_kernel_8c">kernel.c</link> uses the connection parameters to setup the microntroller. </para>
+</formalpara>
+<formalpara><title>Note: </title>
+
+<para>The API&apos;s normally do not use <link linkend="_connection_map_8h">ConnectionMap.h</link> unless for debugging. </para>
+</formalpara>
+</para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/ConnectionMap.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+13 <emphasis class="preprocessor">#define&#32;UART1MappedDevice&#32;&#32;&#32;&#32;GENERATOR&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1aa41dfef3ad002d29bf9dd7185e264e6c">15 </link><emphasis class="preprocessor">#define&#32;UART2MappedDevice&#32;&#32;&#32;&#32;ACTUATOR&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a6ffacf4569652e94c075afb464255015">16 </link><emphasis class="preprocessor">#define&#32;UART3MappedDevice&#32;&#32;&#32;&#32;WORKSTATION&#32;</emphasis>
+<link linkend="_connection_map_8h_1a05502dd71095271c855ec569b862597d">17 </link><emphasis class="preprocessor">#define&#32;UART4MappedDevice&#32;&#32;&#32;&#32;DISPLAY&#32;&#32;&#32;&#32;&#32;</emphasis>
+18 <emphasis class="preprocessor"></emphasis>
+20 
+29 
+<link linkend="_connection_map_8h_1ad2731d221b525ebf2d261ca509b1cdd7">35 </link><emphasis class="preprocessor">#define&#32;SendToGenerator(msg)&#32;&#32;&#32;&#32;&#32;UART1_Write(msg)</emphasis>
+36 &#32;
+<link linkend="_connection_map_8h_1ac359f38d30e6b036b02bb4320b4ebc96">41 </link><emphasis class="preprocessor">#define&#32;SendToActuator(msg)&#32;&#32;&#32;&#32;&#32;&#32;UART2_Write(msg)</emphasis>
+42 &#32;
+<link linkend="_connection_map_8h_1afb324ab68dc7689f397f7dfe29de058c">47 </link><emphasis class="preprocessor">#define&#32;SendToWorkstation(msg)&#32;&#32;&#32;UART3_Write(msg)</emphasis>
+48 &#32;
+<link linkend="_connection_map_8h_1abcf5d591cde4bb9a39ee64180a181ede">53 </link><emphasis class="preprocessor">#define&#32;SendToDisplay(msg)&#32;&#32;&#32;&#32;&#32;&#32;&#32;UART4_Write(msg)</emphasis>
+54 
+<link linkend="_connection_map_8h_1a057c92e4c30690f2618df7d1814fabf0">61 </link><emphasis class="preprocessor">#define&#32;SendDebugMsg(msg)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UART3_Write_Text(msg)</emphasis>
+62 &#32;
+<link linkend="_connection_map_8h_1a0959c4c87a8e202f9263a740604b5207">69 </link><emphasis class="preprocessor">#define&#32;SendDebugChr(msg)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UART3_Write(msg)</emphasis>
+70 &#32;
+72 
+76 <emphasis class="preprocessor">#define&#32;MAP_U1RX&#32;100</emphasis>
+78 <emphasis class="preprocessor">#define&#32;MAP_U1TX&#32;101</emphasis>
+79 <emphasis class="preprocessor">#define&#32;MAP_U2RX&#32;108</emphasis>
+80 <emphasis class="preprocessor">#define&#32;MAP_U2TX&#32;109</emphasis>
+81 <emphasis class="preprocessor">#define&#32;MAP_U3RX&#32;124</emphasis>
+82 <emphasis class="preprocessor">#define&#32;MAP_U3TX&#32;125</emphasis>
+83 <emphasis class="preprocessor">#define&#32;MAP_U4RX&#32;112</emphasis>
+84 <emphasis class="preprocessor">#define&#32;MAP_U4TX&#32;113</emphasis>
+85 
+90 <emphasis class="preprocessor">#define&#32;UART1_BITRATE&#32;9600&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a1ff024f7b26f29a108ee4c641d095055">92 </link><emphasis class="preprocessor">#define&#32;UART1_CONF&#32;_UART_8BIT_NOPARITY&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ad9171125a0f3f0ecb41ace1eba2c4ac5">93 </link><emphasis class="preprocessor">#define&#32;UART1_STOPBIT&#32;&#32;_UART_ONE_STOPBIT&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1aac31fb6c838c1aa070e88a2737140249">94 </link><emphasis class="preprocessor">#define&#32;UART1_SPEED&#32;_UART_LOW_SPEED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ae963fb4bf70c37887babd9fa1a0c8499">96 </link><emphasis class="preprocessor">#define&#32;UART2_BITRATE&#32;9600&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ac33d3997e556812f9242a71a171f959c">97 </link><emphasis class="preprocessor">#define&#32;UART2_CONF&#32;_UART_8BIT_NOPARITY&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ac3f2fada823206ca45ac41c42f8b3f4c">98 </link><emphasis class="preprocessor">#define&#32;UART2_STOPBIT&#32;&#32;_UART_TWO_STOPBITS&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1accacd1e26d86834058ad0dd625fb6982">99 </link><emphasis class="preprocessor">#define&#32;UART2_SPEED&#32;_UART_LOW_SPEED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a950f2005adba7cc4bbaae8d448fff4c2">101 </link><emphasis class="preprocessor">#define&#32;UART3_BITRATE&#32;9600&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a64999dd177c0788d633421d81d14e6ad">102 </link><emphasis class="preprocessor">#define&#32;UART3_CONF&#32;_UART_8BIT_NOPARITY&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a71b6ffa46b52aa482d69e8b4a50e577e">103 </link><emphasis class="preprocessor">#define&#32;UART3_STOPBIT&#32;&#32;_UART_TWO_STOPBITS&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ad2ded3499fdcaf33ddd04f4d0decc7b0">104 </link><emphasis class="preprocessor">#define&#32;UART3_SPEED&#32;_UART_LOW_SPEED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1aed7daac2bb4cc8c328af44afddf0dbef">106 </link><emphasis class="preprocessor">#define&#32;UART4_BITRATE&#32;9600&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1acea86e2ebfb1a194fb1f3187aa76fd0e">107 </link><emphasis class="preprocessor">#define&#32;UART4_CONF&#32;_UART_8BIT_NOPARITY&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a74f0af1f25871927b632743d38e4fe68">108 </link><emphasis class="preprocessor">#define&#32;UART4_STOPBIT&#32;&#32;_UART_TWO_STOPBITS&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a98e9973b57ed9ffe39fdde8f4842d13a">109 </link><emphasis class="preprocessor">#define&#32;UART4_SPEED&#32;_UART_Hi_SPEED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+110 <emphasis class="preprocessor"></emphasis>
+112 
+113 
+114 <emphasis class="comment">//&#32;UART&#32;MESSAGE&#32;LENGTH&#32;TYPE</emphasis>
+115 <emphasis class="comment">//&#32;these&#32;lengths&#32;must&#32;be&#32;smaller&#32;than:&#32;MAX_MSG_SIZE</emphasis>
+116 <emphasis class="comment">//&#32;defined&#32;inside&#32;the&#32;kernel</emphasis>
+117 
+122 <emphasis class="preprocessor">#define&#32;UART1_MSG_LENGTH&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1aa5a18ef2cd8bdee21c3bdf2b93dee3c9">124 </link><emphasis class="preprocessor">#define&#32;UART2_MSG_LENGTH&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a4704e5492e5de6f023d519e911d7ba43">125 </link><emphasis class="preprocessor">#define&#32;UART3_MSG_LENGTH&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1af6ad5d197c564ad4a7d3a19ed76f362d">126 </link><emphasis class="preprocessor">#define&#32;UART4_MSG_LENGTH&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+128 <emphasis class="preprocessor">//&#32;UART&#32;DELIMITER</emphasis>
+<link linkend="_connection_map_8h_1adae2579ea095f57cda20d3a3d9b93fcb">129 </link><emphasis class="preprocessor">#define&#32;UART1_DELIMITER&#32;0x0d&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a8b99c3a3ceadd01a51f5a211d4ebc4b3">130 </link><emphasis class="preprocessor">#define&#32;UART2_DELIMITER&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1a32717dfa7cc08af0494c325f1ec485f7">131 </link><emphasis class="preprocessor">#define&#32;UART3_DELIMITER&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1ae65f4ef2d52a2d8c491b20af3c56afbf">132 </link><emphasis class="preprocessor">#define&#32;UART4_DELIMITER&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+134 <emphasis class="preprocessor"></emphasis>
+136 <emphasis class="comment">//SPEEKER&#32;PIN&#32;MAP</emphasis>
+<link linkend="_connection_map_8h_1af7a5aa944fb2d9a0c1696e3fd6add389">137 </link><emphasis class="preprocessor">#define&#32;MAP_SPK_PIN&#32;3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<link linkend="_connection_map_8h_1aee101e2d200a902eac84ac35d3a742b5">138 </link><emphasis class="preprocessor">#define&#32;MAP_SPK_PORT&#32;&amp;PORTD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+    </computeroutput></literallayout>
+</section>

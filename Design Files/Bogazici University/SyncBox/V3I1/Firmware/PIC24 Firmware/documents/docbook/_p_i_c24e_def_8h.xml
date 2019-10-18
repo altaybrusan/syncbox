@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_p_i_c24e_def_8h">
+    <title>PIC24eDef.h File Reference</title>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+    <programlisting>#include &lt;stdbool.h&gt;</programlisting>
+<para>Include dependency diagram for PIC24eDef.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_p_i_c24e_def_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for PIC24eDef.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_p_i_c24e_def_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_p_i_c24e_def_8h_1a06550a4d215f28b0e73daf822a58bffa">ENABLE_SYNCBOX_SPEEKER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="_p_i_c24e_def_8h_1a6669898a4e095cd4b64513a16951b2ae">HEAP_SIZE</link><para><emphasis>heap size.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1ad0ce9dde945f8ffe9221f71a4b039a92">InitializeHeap</link> (
+)<para><emphasis>initialize heap.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1ae3a202337f42562c2c9d8c5590f2c516">InitializePICSpeed</link> (
+)<para><emphasis>initialize pic micro-controller speed.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1aaf130db27820311746f51999dff00c31">InitializePICPins</link> (
+)<para><emphasis>initialize pic pins.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1a32666a085d5c95458d8c91c2b2e6949d">InitializeUARTS</link> (
+)<para><emphasis>initialize uarts</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1aaed242339275920a4ddcc7ed19b7fac1">PrioritizeInterrupts</link> (
+)<para><emphasis>update prioritize interrupts</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1a1759f533ced7d6d880bd1e933b695678">InitializeBuzzer</link> (
+)<para><emphasis>initialize buzzer.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_p_i_c24e_def_8h_1afc875c0325fd3fe8c3f7c4340d7b5352">InitializeTimers</link> (
+)<para><emphasis>initialize timers.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>PIC24 related operations and preparations. </para>
+
+<para>The functions are used during bootup by kernel. Maps are used by <link linkend="_connection_map_8h">ConnectionMap.h</link> the pin numbers are compatible Easypic Fusion v7 devboard. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/PIC24eDef.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+7 <emphasis class="preprocessor">#ifndef&#32;PIC24UTILITIES_H</emphasis>
+8 <emphasis class="preprocessor">#define&#32;PIC24UTILITIES_H</emphasis>
+9 
+10 <emphasis class="preprocessor">&#32;#include&#32;&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>
+11 <emphasis class="preprocessor">&#32;#include&#32;&lt;stdbool.h&gt;</emphasis>
+12 
+13 &#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;&#32;ENABLE_SYNCBOX_SPEEKER&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+14 
+<link linkend="_p_i_c24e_def_8h_1a6669898a4e095cd4b64513a16951b2ae">20 </link><emphasis class="keyword">const</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1a6669898a4e095cd4b64513a16951b2ae">HEAP_SIZE</link>&#32;=&#32;400;
+21 &#32;
+<link linkend="_p_i_c24e_def_8h_1ad0ce9dde945f8ffe9221f71a4b039a92">25 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1ad0ce9dde945f8ffe9221f71a4b039a92">InitializeHeap</link>()
+26 &#32;{
+27 &#32;&#32;&#32;MM_Init();
+28 &#32;&#32;&#32;Delay_ms(200);
+29 &#32;}
+30 
+<link linkend="_p_i_c24e_def_8h_1ae3a202337f42562c2c9d8c5590f2c516">34 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1ae3a202337f42562c2c9d8c5590f2c516">InitializePICSpeed</link>()
+35 {
+36 &#32;&#32;<emphasis class="comment">//&#32;Setting&#32;output&#32;frequency&#32;to&#32;140MHz</emphasis>
+37 &#32;&#32;PLLFBD&#32;=&#32;70;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;PLL&#32;multiplier&#32;M=70</emphasis>
+38 &#32;&#32;CLKDIV&#32;=&#32;0x0000;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;PLL&#32;prescaler&#32;N1=2,&#32;PLL&#32;postscaler&#32;N2=2</emphasis>
+39 }
+40 
+<link linkend="_p_i_c24e_def_8h_1aaf130db27820311746f51999dff00c31">44 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1aaf130db27820311746f51999dff00c31">InitializePICPins</link>()
+45 {
+46 
+47 &#32;&#32;ANSELA&#32;=&#32;0x00;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Convert&#32;all&#32;I/O&#32;pins&#32;to&#32;digital</emphasis>
+48 &#32;&#32;ANSELB&#32;=&#32;0x00;
+49 &#32;&#32;ANSELC&#32;=&#32;0x00;
+50 &#32;&#32;ANSELD&#32;=&#32;0x00;
+51 &#32;&#32;ANSELE&#32;=&#32;0x00;
+52 &#32;&#32;ANSELG&#32;=&#32;0x00;
+53 
+54 &#32;&#32;<emphasis class="comment">//&#32;for&#32;debug&#32;with&#32;LED</emphasis>
+55 &#32;&#32;<emphasis class="comment">//TRISA&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTA&#32;as&#32;output</emphasis>
+56 &#32;&#32;<emphasis class="comment">//TRISB&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTB&#32;as&#32;output</emphasis>
+57 &#32;&#32;<emphasis class="comment">//TRISC&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTC&#32;as&#32;output</emphasis>
+58 &#32;&#32;<emphasis class="comment">//TRISD&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTD&#32;as&#32;output</emphasis>
+59 &#32;&#32;<emphasis class="comment">//TRISF&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTE&#32;as&#32;output</emphasis>
+60 &#32;&#32;<emphasis class="comment">//TRISG&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Initialize&#32;PORTG&#32;as&#32;output</emphasis>
+61 
+62 &#32;&#32;PORTA=0x00;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Set&#32;pins&#32;to&#32;zero&#32;volt</emphasis>
+63 &#32;&#32;PORTB=0x00;
+64 &#32;&#32;PORTC=0x00;
+65 &#32;&#32;PORTE=0x00;
+66 &#32;&#32;PORTF=0x00;
+67 &#32;&#32;PORTG=0x00;
+68 &#32;&#32;
+69 }
+70 
+<link linkend="_p_i_c24e_def_8h_1a32666a085d5c95458d8c91c2b2e6949d">77 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1a32666a085d5c95458d8c91c2b2e6949d">InitializeUARTS</link>()
+78 {
+79 &#32;&#32;<emphasis class="comment">//&#32;prepare&#32;UART&#32;serial&#32;port.</emphasis>
+80 
+81 &#32;&#32;<emphasis class="comment">//&#32;Point&#32;:&#32;RP100&#32;DOES&#32;NOT&#32;MEAN&#32;PIN&#32;NUMBER&#32;100&#32;!!!</emphasis>
+82 
+83 &#32;&#32;PPS_Mapping(MAP_U1RX,&#32;_INPUT,&#32;&#32;_U1RX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP100&#32;(F4)&#32;to&#32;be&#32;Input,&#32;and&#32;maps&#32;U1RX&#32;to&#32;it</emphasis>
+84 &#32;&#32;PPS_Mapping(MAP_U1TX,&#32;_OUTPUT,&#32;_U1TX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP101&#32;(F5)&#32;to&#32;be&#32;Output,&#32;and&#32;maps&#32;U1TX&#32;to&#32;it</emphasis>
+85 &#32;&#32;Delay_ms(200);
+86 
+87 
+88 &#32;&#32;PPS_Mapping(MAP_U2RX,&#32;_INPUT,&#32;&#32;_U2RX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP108&#32;(F12)&#32;to&#32;be&#32;Input,&#32;and&#32;maps&#32;U2RX&#32;to&#32;it</emphasis>
+89 &#32;&#32;PPS_Mapping(MAP_U2TX,&#32;_OUTPUT,&#32;_U2TX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP109&#32;(F13)to&#32;be&#32;Output,&#32;and&#32;maps&#32;U2TX&#32;to&#32;it</emphasis>
+90 &#32;&#32;Delay_ms(200);
+91 
+92 &#32;&#32;PPS_Mapping(MAP_U3RX,&#32;_INPUT,&#32;&#32;_U3RX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP124&#32;(F12)&#32;to&#32;be&#32;Input,&#32;and&#32;maps&#32;U2RX&#32;to&#32;it</emphasis>
+93 &#32;&#32;PPS_Mapping(MAP_U3TX,&#32;_OUTPUT,&#32;_U3TX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP125&#32;(F13)to&#32;be&#32;Output,&#32;and&#32;maps&#32;U2TX&#32;to&#32;it</emphasis>
+94 &#32;&#32;Delay_ms(200);
+95 
+96 &#32;&#32;PPS_Mapping(MAP_U4RX,&#32;_INPUT,&#32;&#32;_U4RX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP112&#32;(F12)&#32;to&#32;be&#32;Input,&#32;and&#32;maps&#32;U2RX&#32;to&#32;it</emphasis>
+97 &#32;&#32;PPS_Mapping(MAP_U4TX,&#32;_OUTPUT,&#32;_U4TX);&#32;&#32;<emphasis class="comment">//&#32;Sets&#32;pin&#32;RP113&#32;(F13)to&#32;be&#32;Output,&#32;and&#32;maps&#32;U2TX&#32;to&#32;it</emphasis>
+98 &#32;&#32;Delay_ms(200);
+99 &#32;&#32;
+100 &#32;&#32;UART1_Init_Advanced(<link linkend="_connection_map_8h_1a77886b9a97eb863b281adadc72ca8023">UART1_BITRATE</link>,&#32;<link linkend="_connection_map_8h_1a1ff024f7b26f29a108ee4c641d095055">UART1_CONF</link>,<link linkend="_connection_map_8h_1ad9171125a0f3f0ecb41ace1eba2c4ac5">UART1_STOPBIT</link>,<link linkend="_connection_map_8h_1aac31fb6c838c1aa070e88a2737140249">UART1_SPEED</link>);
+101 &#32;&#32;Delay_ms(200);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wait&#32;for&#32;UART&#32;module&#32;to&#32;stabilize</emphasis>
+102 
+103 
+104 &#32;&#32;UART2_Init_Advanced(<link linkend="_connection_map_8h_1ae963fb4bf70c37887babd9fa1a0c8499">UART2_BITRATE</link>,&#32;<link linkend="_connection_map_8h_1ac33d3997e556812f9242a71a171f959c">UART2_CONF</link>,&#32;<link linkend="_connection_map_8h_1ac3f2fada823206ca45ac41c42f8b3f4c">UART2_STOPBIT</link>,<link linkend="_connection_map_8h_1accacd1e26d86834058ad0dd625fb6982">UART2_SPEED</link>);
+105 &#32;&#32;Delay_ms(200);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wait&#32;for&#32;UART&#32;module&#32;to&#32;stabilize</emphasis>
+106 &#32;&#32;
+107 &#32;&#32;UART3_Init_Advanced(<link linkend="_connection_map_8h_1a950f2005adba7cc4bbaae8d448fff4c2">UART3_BITRATE</link>,&#32;<link linkend="_connection_map_8h_1a64999dd177c0788d633421d81d14e6ad">UART3_CONF</link>,&#32;<link linkend="_connection_map_8h_1a71b6ffa46b52aa482d69e8b4a50e577e">UART3_STOPBIT</link>,<link linkend="_connection_map_8h_1ad2ded3499fdcaf33ddd04f4d0decc7b0">UART3_SPEED</link>);
+108 &#32;&#32;Delay_ms(200);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wait&#32;for&#32;UART&#32;module&#32;to&#32;stabilize</emphasis>
+109 &#32;&#32;
+110 &#32;&#32;UART4_Init_Advanced(<link linkend="_connection_map_8h_1aed7daac2bb4cc8c328af44afddf0dbef">UART4_BITRATE</link>,&#32;<link linkend="_connection_map_8h_1acea86e2ebfb1a194fb1f3187aa76fd0e">UART4_CONF</link>,&#32;<link linkend="_connection_map_8h_1a74f0af1f25871927b632743d38e4fe68">UART4_STOPBIT</link>,<link linkend="_connection_map_8h_1a98e9973b57ed9ffe39fdde8f4842d13a">UART4_SPEED</link>);
+111 
+112 &#32;&#32;Delay_ms(200);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wait&#32;for&#32;UART&#32;module&#32;to&#32;stabilize</emphasis>
+113 &#32;&#32;
+114 &#32;&#32;<emphasis class="comment">//Enable&#32;RX&#32;UART&#32;interrupts</emphasis>
+115 &#32;&#32;U1RXIE_bit&#32;=&#32;1;&#32;U2RXIE_bit&#32;=&#32;1;&#32;U3RXIE_bit&#32;=&#32;1;&#32;U4RXIE_bit&#32;=&#32;1;
+116 &#32;&#32;U1RXIF_bit&#32;=&#32;0;&#32;U2RXIF_bit&#32;=&#32;0;&#32;U3RXIF_bit&#32;=&#32;0;&#32;U4RXIF_bit&#32;=&#32;0;
+117 
+118 
+119 }
+120 
+<link linkend="_p_i_c24e_def_8h_1aaed242339275920a4ddcc7ed19b7fac1">124 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1aaed242339275920a4ddcc7ed19b7fac1">PrioritizeInterrupts</link>()
+125 {
+126 &#32;&#32;&#32;&#32;IPC6.B14&#32;=&#32;0;&#32;IPC6.B13&#32;=&#32;0;&#32;&#32;IPC6.B12&#32;=&#32;1;
+127 &#32;&#32;&#32;&#32;IPC7.B2&#32;=&#32;0;&#32;&#32;IPC7.B1&#32;=&#32;0;&#32;&#32;&#32;IPC7.B0&#32;=&#32;1;
+128 
+129 &#32;&#32;&#32;&#32;IPC1.B14&#32;=&#32;0;&#32;IPC1.B13&#32;=&#32;0;&#32;&#32;IPC1.B12&#32;=&#32;1;
+130 &#32;&#32;&#32;&#32;IPC2.B2&#32;=&#32;0;&#32;&#32;IPC2.B1&#32;=&#32;0;&#32;&#32;&#32;IPC2.B0&#32;=&#32;1;
+131 }
+132 
+<link linkend="_p_i_c24e_def_8h_1a1759f533ced7d6d880bd1e933b695678">136 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1a1759f533ced7d6d880bd1e933b695678">InitializeBuzzer</link>()
+137 {
+138 &#32;&#32;&#32;Sound_Init(<link linkend="_connection_map_8h_1aee101e2d200a902eac84ac35d3a742b5">MAP_SPK_PORT</link>,&#32;<link linkend="_connection_map_8h_1af7a5aa944fb2d9a0c1696e3fd6add389">MAP_SPK_PIN</link>);
+139 }
+140 
+<link linkend="_p_i_c24e_def_8h_1afc875c0325fd3fe8c3f7c4340d7b5352">144 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_p_i_c24e_def_8h_1afc875c0325fd3fe8c3f7c4340d7b5352">InitializeTimers</link>()
+145 {
+146 &#32;&#32;&#32;IPC0.B12=1;
+147 &#32;&#32;&#32;IPC0.B13=1;
+148 &#32;&#32;&#32;IPC0.B14=1;
+149 }
+150 
+151 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

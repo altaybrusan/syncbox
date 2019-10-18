@@ -1,0 +1,10 @@
+This bootloader has been downloaded from:
+
+https://forum.mikroe.com/download/file.php?id=10775
+https://forum.mikroe.com/viewtopic.php?f=101&t=63404
+
+IT HAS BEEN WRITTEN FOR P24EP256GU810
+BUT WE USE IT FOR       P24EP512GU810
+
+IF YOU HAVE ANY PROBLEM PLEASE REFER TO bin folder for
+better alternative.

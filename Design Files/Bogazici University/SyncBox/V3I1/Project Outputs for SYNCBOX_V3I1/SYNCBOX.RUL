@@ -1,0 +1,11 @@
+DRC Rules Export File for PCB: C:\Users\Altay\Documents\Altium\Projects\SyncBox\Work\Bogazici University\SyncBox\V3I1\Circuit\SYNCBOX.PcbDoc
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.87
+RuleKind=Width|RuleName=Width Ground|Scope=Board|Minimum=7.87
+RuleKind=Width|RuleName=Width Power|Scope=Board|Minimum=7.87
+RuleKind=Width|RuleName=DiffPair_DIFF90Width|Scope=Board|Minimum=7.87
+RuleKind=Width|RuleName=DiffPair_DIFF100Width|Scope=Board|Minimum=7.87
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.91
+RuleKind=Clearance|RuleName=Poly to Poly|Scope=Board|Minimum=15.75
+RuleKind=Clearance|RuleName=Poly PWR to Via|Scope=Board|Minimum=5.91

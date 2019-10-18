@@ -1,0 +1,4 @@
+Added Differential Pair: Name=USB3
+Added Member To Class: ClassName=[10] - CONNECTOR Member=Component J12 *
+Added Member To Class: ClassName=diff_USB Member=Wire USB3_N
+Added Member To Class: ClassName=diff_USB Member=Wire USB3_P

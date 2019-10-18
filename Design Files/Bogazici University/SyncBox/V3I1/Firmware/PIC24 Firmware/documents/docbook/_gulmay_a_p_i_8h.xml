@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gulmay_a_p_i_8h">
+    <title>GulmayAPI.h File Reference</title>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+<para>Include dependency diagram for GulmayAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_gulmay_a_p_i_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for GulmayAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_gulmay_a_p_i_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a02668eaaa258ebaf11cde72d957f0920">GeneratorMessageEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a0843186891150233d594f19bdf589672">ExposureStopedEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a65e2369b247a1d59e344d4c0cd714c73">KvpUpdatedEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a34b27715a6bf1a6319b7dc1e5658b1f7">GeneratorModeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1aa5b6abbbe83a758c090d232e323a8a55">AmpUpdatedEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a0dfc674cf1d0216ad72fdbd2b7ee7064">PassedExposureTimeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a217fd750d01cadd3bd6b9142e7850ba8">ShootTimeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a5f3b59192c46c17d136d08282f550f9f">ExposureStartedEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a9c699a8c744d9ebe5205490fda712310">GeneratorErrorEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a398a8c838e4496500b3e8ec5b1c2617f">GeneratorWarmupFinishedEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a9a5a1b79c840ac0a1e17448dfa74c98c">GeneratorRequiresShortWarmupEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1abf1824d93d9614de8423383b7d77b752">GeneratorRequiresLongWarmupEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1aaeb5a80c05e58ccec28ecbecbc405815">LargFocalSpotSizeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_gulmay_a_p_i_8h_1a63ae76097579e2801c2719eaf27dc43e">SmallFocalSpotSizeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1a08cc0951c183e99e05ff47f230721892">MAX_KVP</link><para><emphasis>maximum allowd KVP.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1a93b11c2c97d25a712b1b1ad47647204c">MIN_KVP</link><para><emphasis>minimum allowd KVP.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1a8953300db9a1c7b2e78094b16525bce8">MAX_mAMP</link><para><emphasis>maximum allowd milli-amper.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1a51e5b8cb44b406747ac85a94a82e0d4c">MIN_mAMP</link><para><emphasis>minimum allowd milli-amper.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1ae9834f5fc94c8ce2c8cae348de2a35fa">MIN_EXPOSURE_TIME</link><para><emphasis>minimum exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="_gulmay_a_p_i_8h_1a2c2d24d812e1e26c7ade9c404b844f11">MAX_EXPOSURE_TIME</link><para><emphasis>maximum exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1abb608877dc715ca117536e8ea8b0a111">ResetGenerator</link> (
+)<para><emphasis>reset generator.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a2739ffd6c208395bf3e9563592f410c9">UpdateKvp</link> (
+int newValue)<para><emphasis>update KVP value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ae6da7f07c0176169fc6e31a6636bbb4b">UpdateAmp</link> (
+int newValue)<para><emphasis>update milli-amper value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a3946c95c3a1aa7e04793954f945e832a">UpdateShootTime</link> (
+int newValue)<para><emphasis>update shoot time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ac549b847f1e073981dd7276f042ceff9">StartExposure</link> (
+)<para><emphasis>start exposure.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1afcff0f20c10416c89d36544a14b98f2d">StopExposure</link> (
+)<para><emphasis>stop exposure.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a109a478fc2238fad56c6a1c266a393e6">SetFineFocalSpotSize</link> (
+)<para><emphasis>activate fine focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a92f2423b2925db5e42315fdac82bbab9">SetBroadFocalSpotSize</link> (
+)<para><emphasis>activate broad focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a28d0fba12b3f30ffd4ff75bbe7d97bdc">StartShortTermWarmup</link> (
+)<para><emphasis>start short term warm up program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a46e773d024d2106424c1ac4ee45e331b">StartLongTermWarmup</link> (
+)<para><emphasis>start long term warm up program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1acc6aec4a2abf80dab4cc10d24fee24d6">QueryGeneratorMode</link> (
+)<para><emphasis>get the generator exposure mode.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a936ac171697cec2e7d3520656b8d7a26">QueryExposureParameters</link> (
+)<para><emphasis>get the exposure parameters (KVP,mAmp and time).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1aa7270f2beb762972ec1966e9eb4b5616">GeneratorProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> )<para><emphasis>call back function. Kernel messages are received by this function.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1abeda6d4243dec415776eb16beacb0b38">QueryWarmupProgram</link> (
+)<para><emphasis>check generetor for what is the required warmup program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a3759ed567b072f3cd49020359d998d33">QueryFocalSpotSize</link> (
+)<para><emphasis>check generator for the active focal spot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1adbb4af99d58174947214b531e2cbd45c">SetGeneratorInUserMode</link> (
+)<para><emphasis>activate the user mode program.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a9eee8d4a57bdcda8bc8195629b91c51c">SuppressErrorsVoltageAndAmpError</link> (
+)<para><emphasis>suppress voltage and ampere errors.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a6b577498aedd9f37f5ecf58079203c1a">CheckGeneratorErrors</link> (
+)<para><emphasis>check the generetor errors</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a4fa5370e4ed7ac42f50631f707ee8c2a">QueryEllapsedExposureTime</link> (
+)<para><emphasis>query ellapsed exposure time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a5c136c7523618f19e288758db1231c2a">SendMessage</link> (
+char * currentRequest)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ac5d01c6ebb446d070401697563c27f97">RegisterMessageListener</link> (
+GeneratorMessageEvent )<para><emphasis>register a listener for generator message event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a4d3de4466610ab5ff9719860082abb2c">RegisterErrorListener</link> (
+GeneratorErrorEvent )<para><emphasis>register a listener for generator error event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ad8857dcb2550f6b2ab1ea1745044be4c">RegisterGeneratorModeListener</link> (
+GeneratorModeEvent )<para><emphasis>register a listener for generator mode event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1a6537404a8cbbeab00b3f6fb3b7e04a24">RegisterFocalspotListeners</link> (
+LargFocalSpotSizeEvent , SmallFocalSpotSizeEvent )<para><emphasis>register a listener for generator focal spot change event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1abac22860be7c048152d41af0899a5d67">RegisterExposureStateListeners</link> (
+ExposureStartedEvent , PassedExposureTimeEvent , ExposureStopedEvent )<para><emphasis>register a listener for generator exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ac2e42f9cf31e8451ea55a8584f200b19">RegisterExposureParameterListeners</link> (
+KvpUpdatedEvent , AmpUpdatedEvent , ShootTimeEvent )<para><emphasis>register a listener for generator exposure parameter event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_gulmay_a_p_i_8h_1ae475af8e61d9df377a66dbcbd352811d">RegisterWarmupListeners</link> (
+GeneratorRequiresShortWarmupEvent , GeneratorRequiresLongWarmupEvent , GeneratorWarmupFinishedEvent )<para><emphasis>register a listener for generator warmup event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>API for communicating with Gulmay Generator. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/GulmayAPI.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+5 <emphasis class="preprocessor">#ifndef&#32;GULMAYAPI_H</emphasis>
+6 <emphasis class="preprocessor">&#32;&#32;#define&#32;GULMAYAPI_H</emphasis>
+7 <emphasis class="preprocessor">&#32;&#32;&#32;#include&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+8 &#32;&#32;<emphasis class="comment">//&#32;Global&#32;state&#32;variables</emphasis>
+9 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a08cc0951c183e99e05ff47f230721892">MAX_KVP</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+10 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a93b11c2c97d25a712b1b1ad47647204c">MIN_KVP</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+11 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a8953300db9a1c7b2e78094b16525bce8">MAX_mAMP</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+12 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a51e5b8cb44b406747ac85a94a82e0d4c">MIN_mAMP</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+13 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae9834f5fc94c8ce2c8cae348de2a35fa">MIN_EXPOSURE_TIME</link>;&#32;&#32;&#32;
+14 &#32;&#32;<emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a2c2d24d812e1e26c7ade9c404b844f11">MAX_EXPOSURE_TIME</link>;&#32;&#32;&#32;
+15 
+16 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abb608877dc715ca117536e8ea8b0a111">ResetGenerator</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+17 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a2739ffd6c208395bf3e9563592f410c9">UpdateKvp</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue);&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+18 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae6da7f07c0176169fc6e31a6636bbb4b">UpdateAmp</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue);&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+19 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a3946c95c3a1aa7e04793954f945e832a">UpdateShootTime</link>(<emphasis class="keywordtype">int</emphasis>&#32;newValue);&#32;
+20 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac549b847f1e073981dd7276f042ceff9">StartExposure</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+21 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1afcff0f20c10416c89d36544a14b98f2d">StopExposure</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+22 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a109a478fc2238fad56c6a1c266a393e6">SetFineFocalSpotSize</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+23 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a92f2423b2925db5e42315fdac82bbab9">SetBroadFocalSpotSize</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+24 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a28d0fba12b3f30ffd4ff75bbe7d97bdc">StartShortTermWarmup</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+25 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a46e773d024d2106424c1ac4ee45e331b">StartLongTermWarmup</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+26 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1acc6aec4a2abf80dab4cc10d24fee24d6">QueryGeneratorMode</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+27 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a936ac171697cec2e7d3520656b8d7a26">QueryExposureParameters</link>();&#32;&#32;&#32;&#32;&#32;
+28 &#32;&#32;<emphasis class="comment">//void&#32;InitConnection();</emphasis>
+29 
+30 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1aa7270f2beb762972ec1966e9eb4b5616">GeneratorProcessKernelFrame</link>(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>);&#32;
+31 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abeda6d4243dec415776eb16beacb0b38">QueryWarmupProgram</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+32 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a3759ed567b072f3cd49020359d998d33">QueryFocalSpotSize</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+33 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1adbb4af99d58174947214b531e2cbd45c">SetGeneratorInUserMode</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+34 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a9eee8d4a57bdcda8bc8195629b91c51c">SuppressErrorsVoltageAndAmpError</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+35 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a6b577498aedd9f37f5ecf58079203c1a">CheckGeneratorErrors</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+36 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a4fa5370e4ed7ac42f50631f707ee8c2a">QueryEllapsedExposureTime</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+37 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;SendMessage(<emphasis class="keywordtype">char</emphasis>*&#32;currentRequest);&#32;&#32;&#32;
+38 
+39 &#32;&#32;
+40 &#32;&#32;<emphasis class="comment">//&#32;Events</emphasis>
+41 &#32;&#32;<emphasis class="comment">//&#32;The&#32;user&#32;of&#32;the&#32;GeneratorAPI&#32;get&#32;informed&#32;by&#32;registering</emphasis>
+42 &#32;&#32;<emphasis class="comment">//&#32;its&#32;callback&#32;into&#32;the&#32;following&#32;callback&#32;functions</emphasis>
+43 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorMessageEvent)(<emphasis class="keywordtype">char</emphasis>*);
+44 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*ExposureStopedEvent)();
+45 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*KvpUpdatedEvent)(int);
+46 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorModeEvent)(int);
+47 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*AmpUpdatedEvent)(int);
+48 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*PassedExposureTimeEvent)(int);
+49 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*ShootTimeEvent)(int);
+50 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*ExposureStartedEvent)();
+51 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorErrorEvent)(<emphasis class="keywordtype">char</emphasis>*);
+52 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorWarmupFinishedEvent)();
+53 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorRequiresShortWarmupEvent)();
+54 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GeneratorRequiresLongWarmupEvent)();
+55 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*LargFocalSpotSizeEvent)();
+56 &#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*SmallFocalSpotSizeEvent)();
+57 
+64 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac5d01c6ebb446d070401697563c27f97">RegisterMessageListener</link>(&#32;GeneratorMessageEvent&#32;);&#32;
+71 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a4d3de4466610ab5ff9719860082abb2c">RegisterErrorListener</link>(&#32;GeneratorErrorEvent&#32;);&#32;
+78 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ad8857dcb2550f6b2ab1ea1745044be4c">RegisterGeneratorModeListener</link>(&#32;GeneratorModeEvent&#32;);
+86 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1a6537404a8cbbeab00b3f6fb3b7e04a24">RegisterFocalspotListeners</link>(&#32;LargFocalSpotSizeEvent,
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SmallFocalSpotSizeEvent&#32;);
+96 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1abac22860be7c048152d41af0899a5d67">RegisterExposureStateListeners</link>(&#32;ExposureStartedEvent,
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PassedExposureTimeEvent,
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ExposureStopedEvent&#32;);
+107 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ac2e42f9cf31e8451ea55a8584f200b19">RegisterExposureParameterListeners</link>(&#32;KvpUpdatedEvent,
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AmpUpdatedEvent,
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ShootTimeEvent&#32;);
+110 &#32;&#32;
+119 &#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_gulmay_a_p_i_8h_1ae475af8e61d9df377a66dbcbd352811d">RegisterWarmupListeners</link>(&#32;GeneratorRequiresShortWarmupEvent,
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GeneratorRequiresLongWarmupEvent,
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GeneratorWarmupFinishedEvent&#32;);
+122 
+123 
+124 
+125 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>
