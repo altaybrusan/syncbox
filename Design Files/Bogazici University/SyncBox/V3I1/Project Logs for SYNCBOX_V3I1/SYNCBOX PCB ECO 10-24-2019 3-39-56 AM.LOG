@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=MCU_UART4_TX Pin=J12-1
+Added Pin To Net: NetName=MCU_UART4_TX Pin=J23-1
+Change Class Name : Old Net Name=[07] - CPU CONNECTORS New Net Name=[07] - CPU CONNECTORS 
