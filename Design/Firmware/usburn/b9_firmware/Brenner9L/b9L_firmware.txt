@@ -1,0 +1,36 @@
+++ACHTUNG++
+Die HEX-Files wurden mit der Student-Edition des C18-Compilers erstellt.
+
+
+Im Brenner9L arbeitet ein PIC18LF2550 als Steuer-PIC. Dieser wird nur mit 3,3V betrieben, was es erforderlich macht,
+speziell darauf abgestimmte Bootloader und Firmware zu verwenden. Diese Bootloader und Firmware tragen als Kennzeichen
+jeweils ein L im Namen.
+Die L-Firmware und der L-Bootloader funktionieren auch im normalen Brenner9. Andersherum ist der Betrieb der normalen
+Firmware/Bootloader im Brenner9L nicht durch die Microchip-Spezifikation des PIC18LF2550 abgedeckt. 
+
+
+
+Firmware für Brenner9L V 3.12 (20.04.2009)
+=============================
+stabile Version
+
+Firmware für Brenner9L V 3.16 (01.06.2011)
+=============================
+neue Version
+
+
+
+Das ist die Firmware für den Brenner9L. Sie muß in den Steuerpic vom Typ PIC18LF2550 gebrannt werden.
+
+Die Firmware erlaubt zusammen mit der Windowssoftware US-Burn V1.10 das Brennen von
+3,3V-PICs der Serien PIC24H, PIC24F, dsPIC33F und PIC18FxxJxx via ICSP.
+
+
+Um die Firmware in den SteuerPIC des Brenner9L zu bekommen, muss zunächst der BootloaderL_0 in den PIC gebrannt worden sein.
+Je nachdem , was für einen Quarz/Resonator man im Brenner9L einsetzen will, wählt man den passenden Bootloader aus (4/8/12/16 oder 20 MHz)
+
+Danach wird der PIC in den Brenner9L als SteuerPIC eingesetzt. Nun kann die Firmware mit US-Burn in den PIC nachgeladen werden,
+während der PIC als SteuerPIC im Brernner9L sitzt.
+
+
+sprut

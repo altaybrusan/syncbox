@@ -1,0 +1,14 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo4 -N"C:\Users\Burak\Desktop\SyncBox Kodlarý\USB_To_RS232\USB_To_RS232.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\Burak\Desktop\SyncBox Kodlarý\USB_To_RS232\" "USB_To_RS232.c" "USBdsc.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_ADC_A_D.mcl" "__Lib_UART_c67.mcl" "__Lib_USB_genHID.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	USB_To_RS232.c
+warning: 59	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	USB_To_RS232.c
+diagnostics: 155	123	Compiled Successfully	USB_To_RS232.c
+diagnostics: 0	122	Compilation Started	USBdsc.c
+diagnostics: 166	123	Compiled Successfully	USBdsc.c
+diagnostics: 0	127	All files Compiled in 63 ms	 
+hint: 0	1144	Used RAM (bytes): 302 (15%)  Free RAM (bytes): 1725 (85%)	Used RAM (bytes): 302 (15%)  Free RAM (bytes): 1725 (85%)
+hint: 0	1144	Used ROM (bytes): 7207 (22%)  Free ROM (bytes): 25561 (78%)	Used ROM (bytes): 7207 (22%)  Free ROM (bytes): 25561 (78%)
+diagnostics: 0	125	Project Linked Successfully	USB_To_RS232.mcppi
+diagnostics: 0	128	Linked in 62 ms	 
+diagnostics: 0	129	Project 'USB_To_RS232.mcppi' completed: 156 ms	 
+diagnostics: 0	103	Finished successfully: 18 Þub 2016, 16:17:30	USB_To_RS232.mcppi

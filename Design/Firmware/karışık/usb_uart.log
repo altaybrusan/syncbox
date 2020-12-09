@@ -1,0 +1,18 @@
+0	1	mikroCdsPIC.exe -MSF -DBG -pP24EP512GU810 -DL -SSA -O11111114 -fo140 -N"C:\Users\Burak\Desktop\karýþýk\usb_uart.mcpds" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for dsPIC\defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for dsPIC\uses\" -SP"C:\Users\Burak\Desktop\karýþýk\" -SP"C:\Users\Burak\Desktop\" "usb_uart.c" "USBdsc.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays_ep.mcl" "__Lib_Button.mcl" "__Lib_ADC_12_p33EP.mcl" "__Lib_UART_1234_p24_p33.mcl" "__Lib_PPS_p24EP512GU810.mcl" "__Lib_USB_EP.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_TFT.mcl" "__Lib_TFT_Defs.mcl" "__Lib_TouchPanel_TFT.mcl" "__Lib_TouchPanel.mcl"	 
+diagnostics: 0	121	Loading...	 
+diagnostics: 0	122	Compilation Started	usb_uart.c
+hint: 0	1004	interrupt handler (USB1Interrupt at 0x00C0)	usb_uart.c
+warning: 90	1508	Implicit conversion of int to ptr	usb_uart.c
+diagnostics: 124	123	Compiled Successfully	usb_uart.c
+warning: 77	1519	Logical expression is always: 'False'	usb_uart.c
+warning: 105	1519	Logical expression is always: 'False'	usb_uart.c
+diagnostics: 0	122	Compilation Started	USBdsc.c
+diagnostics: 166	123	Compiled Successfully	USBdsc.c
+diagnostics: 0	127	All files Compiled in 94 ms	 
+hint: 0	1144	Used RX (bytes): 32 (100%)   Free RX (bytes): 0 (0%)	Used RX (bytes): 32 (100%)   Free RX (bytes): 0 (0%)
+hint: 0	1144	Static RAM (bytes): 20858   Dynamic RAM (bytes): 28096	Static RAM (bytes): 20858   Dynamic RAM (bytes): 28096
+hint: 0	1144	Used ROM (bytes): 14296 (4%)  Free ROM (bytes): 335912 (96%)	Used ROM (bytes): 14296 (4%)  Free ROM (bytes): 335912 (96%)
+diagnostics: 0	125	Project Linked Successfully	usb_uart.mcpds
+diagnostics: 0	128	Linked in 1094 ms	 
+diagnostics: 0	129	Project 'usb_uart.mcpds' completed: 1938 ms	 
+diagnostics: 0	103	Finished successfully: 25 Aug 2015, 17:42:09	usb_uart.mcpds

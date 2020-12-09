@@ -1,0 +1,15 @@
+Das ist der Bootloader V 1.0 für den Brenner8
+=============================================
+
+Der Bootloader kann mit einem beliebigen Brenner in den SteuerPIC des Brenner8 gebrannt werden. Mit USBurn ab v.1.3 kann dann beliebige Brenner8-Firmware direkt in den Steuer-PIC geladen werden. 
+
+Der Bootloader steht in drei Versionen für unterschiedliche Taktquellen zur Verfügung:
+20 MHz, 8MHz, 4MHz.
+Soll der Brenner8 mit einem 20MHz-Quarz betrieben werden ist z.B. der Bootloader boot_0_20mhz.hex in den PIC zu brennen, und der PIC dann in den Brenner8 einzusetzen.
+
+Die eigentliche Firmware des Brenner8 kann dann mit US-Burn und dem Bootloader in den PIC nachgeladen werden, wärend der als SteuerPIC im Brenner8 eingesetzt ist.
+
+Diese Files basieren auf dem Microchip-USB-Framework V1.0.
+
+sprut
+19.08.2007

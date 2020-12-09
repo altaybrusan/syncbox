@@ -1,0 +1,18 @@
+Das ist der Bootloader V 1.0 fr den Brenner9L
+==============================================
+
+Der Bootloader kann mit einem beliebigen Brenner in den SteuerPIC des Brenner9L gebrannt werden.
+Mit USBurn ab v.1.3 kann dann beliebige Brenner9L-Firmware direkt in den Steuer-PIC geladen werden. 
+
+Der Bootloader steht in vier Versionen fr unterschiedliche Taktquellen zur Verfgung:
+20 MHz, 12MHz, 8MHz, 4MHz.
+Soll der Brenner9 mit einem 20MHz-Quarz betrieben werden ist z.B. der Bootloader boot_0L_20mhz.hex
+in den PIC zu brennen, und der PIC dann in den Brenner9L einzusetzen.
+
+Die eigentliche Firmware des Brenner9L kann dann mit US-Burn und dem Bootloader in den PIC nachgeladen
+werden, w„rend der als SteuerPIC im Brenner9L eingesetzt ist.
+
+Diese Files basieren auf dem Microchip-USB-Framework V1.0.
+
+sprut
+05.12.2008

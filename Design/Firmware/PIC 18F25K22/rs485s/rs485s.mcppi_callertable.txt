@@ -1,0 +1,10 @@
+main
+	__CC2DW
+	UART1_Init
+	UART_Set_Active
+	RS485Slave_Init
+	RS485Slave_Send
+		____DoIFC
+interrupt
+	RS485Slave_Receive
+		____DoIFC

@@ -1,0 +1,2156 @@
+CONFIG
+OSC
+Oscillator
+This is the only option. It is here for backward compatibility
+WDT
+Watchdog Timer
+Enabled
+Disabled
+CP
+Code Protect
+MCLRE
+Master Clear Enable
+IOSCFS
+Internal Oscillator Frequency Select bit
+8 MHz
+4 MHz
+MCPU
+Master Clear Pull-up Enable bit
+Watchdog Timer Enable bit
+Code protection bit
+GP3/MCLR Pin Function Select bit
+Oscillator Selection bits
+external RC oscillator
+LP oscillator
+XT oscillator
+internal RC oscillator
+Code Protection bit
+Oscillator Select
+EXTRC with 1.125 ms DRT
+INTOSC with 1.125 ms DRT
+XT oscillator with 18 ms DRT
+LP oscillator with 18 ms DRT
+Master Clear Enable bit
+LP Osc With 18 ms DRT
+XT Osc With 18 ms DRT
+INTRC With 1 ms DRT
+EXTRC With 1 ms DRT
+WDTE
+8 MHz INTOSC Speed
+4 MHz INTOSC Speed
+CPDF
+Code Protection bit - Flash Data Memory
+Watchdog Timer Enable
+MCLR
+Internal Oscillator Frequency Select
+Code Protect bit - Self Writable Memory
+RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN
+RCIO oscillator: I/O function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN
+INTOSC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN
+EC: I/O function on GP4/OSC2/CLKOUT pin, CLKIN on GP5/OSC1/CLKIN
+HS oscillator: High-speed crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN
+XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN
+LP oscillator: Low-power crystal on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN
+PWRTE
+Power-up Timer Enable bit
+MCLR Pin Function Select bit
+BOREN
+Brown-out Reset Selection bits
+BOR enabled during operation and disabled in Sleep
+BOR disabled
+EXTRC oscillator: CLKOUT function on RA4/AN3/T1G/OSC2/CLKOUT, RC on RA5/T1CKI/OSC1/CLKIN
+EXTRCIO oscillator: I/O function on RA4/AN3/T1G/OSC2/CLKOUT, RC on RA5/T1CKI/OSC1/CLKIN
+INTOSC oscillator: CLKOUT function on RA4/AN3/T1G/OSC2/CLKOUT, I/O function on RA5/T1CKI/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on RA4/AN3/T1G/OSC2/CLKOUT, I/O function on RA5/T1CKI/OSC1/CLKIN
+EC: I/O function on RA4/AN3/T1G/OSC2/CLKOUT, CLKIN on RA5/T1CKI/OSC1/CLKIN
+HS oscillator: High-speed crystal/resonator on RA5/T1CKI/OSC1/CLKIN and RA4/AN3/T1G/OSC2/CLKOUT
+XT oscillator: Crystal/resonator on RA5/T1CKI/OSC1/CLKIN and RA4/AN3/T1G/OSC2/CLKOUT
+LP oscillator: Low-power crystal on RA5/T1CKI/OSC1/CLKIN and RA4/AN3/T1G/OSC2/CLKOUT
+WRT
+Flash Program Memory Self Write Enable bits
+000h to 1FFh write protected, 200h to 7FFh may be modified by PMCON1 control
+000h to 3FFh write protected, 400h to 7FFh may be modified by PMCON1 control
+000h to 7FFh write protected, entire program memory is write protected.
+FOSC
+RC oscillator: I/O function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN
+INTOSC oscillator: I/O function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN
+HS oscillator: High speed crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN
+LP oscillator: Low power crystal on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN
+Power-Up Timer Enable bit
+GP3/MCLR pin function select
+Brown-out Detect Enable bit
+CPD
+Data Code Protection bit
+BG
+Bandgap Calibration bits for BOD and POR voltage
+Highest bandgap voltage
+Middle Bandgap Voltage
+Lowest bandgap voltage
+RC oscillator: CLKOUT function on RA4/T1G/OSC2/CLKOUT pin, RC on RA5/T1CKI/OSC1/CLKIN
+RCIO oscillator: I/O function on RA4/T1G/OSC2/CLKOUT pin, RC on RA5/T1CKI/OSC1/CLKIN
+INTOSC oscillator: CLKOUT function on RA4/T1G/OSC2/CLKOUT pin, I/O function on RA5/T1CKI/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on RA4/T1G/OSC2/CLKOUT pin, I/O function on RA5/T1CKI/OSC1/CLKIN
+EC: I/O function on RA4/T1G/OSC2/CLKOUT, CLKIN on RA5/T1CKI/OSC1/CLKIN
+HS oscillator: High-speed crystal/resonator on RA5/T1CKI/OSC1/CLKIN and RA4/T1G/OSC2/CLKOUT
+XT oscillator: Crystal/resonator on RA5/T1CKI/OSC1/CLKIN and RA4/T1G/OSC2/CLKOUT
+LP oscillator: Low-power crystal on RA5/T1CKI/OSC1/CLKIN and RA4/T1G/OSC2/CLKOUT
+PUT
+MCLR pin function select bit
+BOD
+BOD enabled while running and disabled in Sleep. SBODEN bit disabled.
+SBODEN controls BOD function
+IESO
+Internal-External Switchover bit
+FCMEN
+Fail-Safe Clock Monitor Enable bit
+WURE
+Wake-Up Reset Enable bit
+EXTRC oscillator: External RC on RA5/OSC1/CLKIN, CLKOUT function on RA4/OSC2/CLKOUT pin
+EXTRCIO oscillator: External RC on RA5/OSC1/CLKIN, I/O function on RA4/OSC2/CLKOUT pin
+INTOSC oscillator: CLKOUT function on RA4/OSC2/CLKOUT pin, I/O function on RA5/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O function on RA5/OSC1/CLKIN
+EC: I/O function on RA4/OSC2/CLKOUT pin, CLKIN on RA5/OSC1/CLKIN
+HS oscillator: High-speed crystal/resonator on RA4/OSC2/CLKOUT and RA5/OSC1/CLKIN
+XT oscillator: Crystal/resonator on RA4/OSC2/CLKOUT and RA5/OSC1/CLKINT
+LP oscillator: Low-power crystal on RA4/OSC2/CLKOUT and RA5/OSC1/CLKIN
+Brown Out Detect
+BOR controlled by SBOREN bit of the PCON register
+Internal External Switchover bit
+Fail-Safe Clock Monitor Enabled bit
+...
+EC oscillator mode.  CLKIN function on RA5/CLKIN
+Internal oscillator mode.  I/O function on RA5/CLKIN
+Power Up Timer
+BOR enabled
+BOR disabled during Sleep and enabled during run
+000h to 0FFh write protected
+000h to 1FFh write protected
+000h to 3FFh write protected
+CKLOUTEN
+DEBUG
+CONFIG1
+Oscillator Selection
+ECH, External Clock, High Power Mode (4-32 MHz): device clock supplied to CLKIN pin
+ECM, External Clock, Medium Power Mode (0.5-4 MHz): device clock supplied to CLKIN pin
+ECL, External Clock, Low Power Mode (0-0.5 MHz): device clock supplied to CLKIN pin
+INTOSC oscillator: I/O function on CLKIN pin
+EXTRC oscillator: External RC circuit connected to CLKIN pin
+HS Oscillator, High-speed crystal/resonator connected between OSC1 and OSC2 pins
+XT Oscillator, Crystal/resonator connected between OSC1 and OSC2 pins
+LP Oscillator, Low-power crystal connected between OSC1 and OSC2 pins
+WDT enabled while running and disabled in Sleep
+WDT controlled by the SWDTEN bit in the WDTCON register
+Power-up Timer Enable
+MCLR Pin Function Select
+Flash Program Memory Code Protection
+Data Memory Code Protection
+Brown-out Reset Enable
+Brown-out Reset enabled while running and disabled in Sleep
+Brown-out Reset controlled by the SBOREN bit in the BORCON register
+CLKOUTEN
+Clock Out Enable
+Internal/External Switchover
+Fail-Safe Clock Monitor Enable
+CONFIG2
+Flash Memory Self-Write Protection
+000h to 1FFh write protected, 200h to 7FFh may be modified by EECON control
+000h to 3FFh write protected, 400h to 7FFh may be modified by EECON control
+000h to 7FFh write protected, no addresses may be modified by EECON control
+VCAPEN
+VDDCORE Visibility
+PLLEN
+PLL Enable
+STVREN
+Stack Overflow/Underflow Reset Enable
+BORV
+Brown-out Reset Voltage Selection
+Brown-out Reset Voltage (VBOR) set to 1.9 V
+Brown-out Reset Voltage (VBOR) set to 2.5 V
+In-Circuit Debugger Mode
+LVP
+Low-Voltage Programming Enable
+000h to 1FFh write protected, 200h to FFFh may be modified by EECON control
+000h to 7FFh write protected, 800h to FFFh may be modified by EECON control
+000h to FFFh write protected, no addresses may be modified by EECON control
+VCOREV
+Oscillator selection bits
+RC oscillator
+HS oscillator
+Watchdog timer enable bit
+Reserved
+FLASH Program Memory Code Protection bit
+Brown-out Reset Enable bit
+EXTRC oscillator; CLKO function on RA6/OSC2/CLKO (32kHz..4MHz)
+EXTRC oscillator; port I/O function on RA6/OSC2/CLKO (32kHz..4MHz)
+INTRC oscillator; CLKO function on RA6/OSC2/CLKO pin and port I/O function on RA7/OSC1/CLKI pin
+INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin
+ECIO; port I/O function on RA6/OSC2/CLKO (32kHz..40MHz)
+HS oscillator (4MHz..25MHz)
+XT oscillator (200kHz..4MHz)
+LP oscillator (32kHz..200kHz)
+RA5/MCLR/VPP Pin Function Select bit
+Low-Voltage Programming Enable bit
+Data EE Memory Code Protection bit
+Flash Program Memory Write Enable bits
+0000h to 00FFh write-protected, 0100h to 0FFFh may be modified by EECON control
+0000h to 07FFh write-protected, 0800h to 0FFFh may be modified by EECON control
+0000h to 0FFFh write-protected
+In-Circuit Debugger Mode bit
+CCPMX
+CCP1 Pin Selection bit
+CCP1 function on RB0
+CCP1 function on RB3
+Flash Program Memory Code Protection bit
+External RC oscillator/CLKOUT function on RB4/OSC2/CLKOUT pin
+External RC oscillator/RB4 function on RB4/OSC2/CLKOUT pin
+Internal RC oscillator/CLKOUT function on RB4/OSC2/CLKOUT pin
+Internal RC oscillator/RB4 function on RB4/OSC2/CLKOUT pin
+EC oscillator/RB4 function on RB4/OSC2/CLKOUT pin
+RB3/MCLR Pin Function Select bit
+LP oscillator and 18 ms DRT
+XT oscillator and 18 ms DRT
+HS oscillator and 18 ms DRT
+EC Osc With RB4 and 1.125 ms DRT
+INTRC With RB4 and 1.125 ms DRT
+INTRC With CLKOUT and 1.125 ms DRT
+EXTRC With RB4 and 1.125 ms DRT
+EXTRC With CLKOUT and 1.125 ms DRT
+EC oscillator with RB4 function on RB4/OSC2/CLKOUT and 1 ms DRT
+INTRC with RB4 function on RB4/OSC2/CLKOUT and 1 ms DRT
+INTRC with CLKOUT function on RB4/OSC2/CLKOUT and 1 ms DRT
+EXTRC with RB4 function on RB4/OSC2/CLKOUT and 1 ms DRT
+EXTRC with CLKOUT function on RB4/OSC2/CLKOUT and 1 ms DRT
+RC oscillator: CLKOUT function on RA4/OSC2/CLKOUT pin, RC on RA5/OSC1/CLKIN
+RCIO oscillator: I/O function on RA4/OSC2/CLKOUT pin, RC on RA5/OSC1/CLKIN
+XT oscillator: Crystal/resonator on RA4/OSC2/CLKOUT and RA5/OSC1/CLKIN
+ER oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, Resistor on RA7/OSC1/CLKIN
+ER oscillator: I/O function on RA6/OSC2/CLKOUT pin, Resistor on RA7/OSC1/CLKIN
+INTRC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+INTRC oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+EC: I/O function on RA6/OSC2/CLKOUT pin, CLKIN on RA7/OSC1/CLKIN
+HS oscillator: High-speed crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+LP oscillator: Low-power crystal on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+RA5/MCLR pin function select
+Code Protection bits
+Program memory code protection off
+0200h-03FFh code protected
+0000h-03FFh code protected
+0400h-07FFh code protected
+0200h-07FFh code protected
+0000h-07FFh code protected
+RC oscillator: I/O function on RA4/OSC2/CLKOUT pin, RC on RA5/OSC1/CLKIN
+INTOSC oscillator: I/O function on RA4/OSC2/CLKOUT pin, I/O function on RA5/OSC1/CLKIN
+HS oscillator: High speed crystal/resonator on RA4/OSC2/CLKOUT and RA5/OSC1/CLKIN
+LP oscillator: Low power crystal on RA4/OSC2/CLKOUT and RA5/OSC1/CLKIN
+RA3/MCLR pin function select
+.
+RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN
+RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN
+INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function  on RA7/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN pins
+EC oscillator: I/O function on RA6/OSC2/CLKOUT pin, CLKIN on RA7/OSC1/CLKIN
+HS oscillator: High Speed crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+XT oscillator: Crystal/resonator on RA6/OSC2/CLKIN and RA7/OSC1/CLKIN
+RE3/MCLR Pin Function Select bit
+Brown-out Reset Voltage Selection bit
+Brown-out Reset Voltage (VBOR) set to 1.9 V nominal
+Brown-out Reset Voltage (VBOR) set to 2.5 V nominal
+INTOSC PLLEN Enable Bit
+Voltage Regulator Capacitor Enable bits
+VCAP functionality is enabled on RA6
+VCAP functionality is enabled on RA5
+VCAP functionality is enabled on RA0
+BODEN
+BODENV
+Brown-out Reset Voltage bit
+VBOR set to 4.0V
+VBOR set to 2.5V
+EC oscillator: CLKO function on RA4/CLKO pin, CLKI on RA5/CLKI
+EC oscillator: I/O function on RA4/CLKO pin, CLKI on RA5/CLKI
+INTOSC oscillator: CLKO function on RA4/CLKO pin, I/O function on RA5/CLKI
+INTOSCIO oscillator: I/O function on RA4/CLKO pin, I/O function on RA5/CLKI
+WDTEN
+RA3/MCLR/VPP Pin Function Select bit
+Brown-out Reset Enable bits
+Brown-out Reset enabled during operation and disabled in Sleep
+Debugger Mode
+WRTEN
+Flash memory self-write protection bits
+0h to 1FFh of flash memory write protected, 200h to FFFh may be modified
+0h to 7FFh of flash memory write protected, 800h to FFFh may be modified
+0h to FFFh of flash memory write protected, no address may be modified
+INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+nPWRTE
+RE3/MCLR pin function select bit
+RES
+Brown-out Reset Voltage selection bit
+WDTCS
+Watchdog Timer Clock Select
+Standard Watchdog Timer is selected
+Low Power Watchdog Timer is selected
+All VCAP pin functions are disabled
+EXTRC oscillator; CLKO function on OSC2/CLKO/RA6 (32kHz..4MHz)
+EXTRC oscillator; port I/O function on OSC2/CLKO/RA6 (32kHz..4MHz)
+INTRC oscillator; CLKO function on OSC2/CLKO/RA6 and port I/O function on OSC1/CLKI/RA7
+INTRC oscillator; port I/O function on OSC1/CLKI/RA7 and OSC2/CLKO/RA6
+EXTCLK; port I/O function on OSC2/CLKO/RA6 (32kHz..40MHz)
+HS oscillator (4MHz..20MHz)
+MCLR/VPP/RE3 Pin Function Select bit
+Brown-out Reset Voltage bits
+VBOR set to 2.0V
+VBOR set to 2.7V
+VBOR set to 4.2V
+VBOR set to 4.5V
+CCP2MX
+CCP2 Multiplex bit
+CCP2 is on RC1
+CCP2 is on RB3
+Flash Program Memory Code Protection bits
+BORSEN
+Brown-out Reset Software Enable bit
+EXTRC oscillator; CLKO function on RA6/OSC2/CLKO pin
+EXTRC oscillator; port I/O function on RA6/OSC2/CLKO pin
+EXTCLK; port I/O function on RA6/OSC2/CLKO pin
+0000h to 01FFh write-protected, 0200h to 03FFh may be modified by EECON control
+0000h to 03FFh write-protected
+CCP1 function on RB2
+0000h to 01FFh write-protected, 0200h to 07FFh may be modified by EECON control
+0000h to 03FFh write-protected, 0400h to 07FFh may be modified by EECON control
+0000h to 05FFh write-protected, 0600h to 07FFh may be modified by EECON control
+FLASH Program Memory Code Protection bits
+Low Voltage In-Circuit Serial Programming Enable bit
+Data EE Memory Code Protection
+FLASH Program Memory Write Enable
+Unprotected program memory may be written to by EECON control
+0F00h to 0FFFh code protected
+0800h to 0FFFh code protected
+0000h to 0FFFh code protected
+1F00h to 1FFFh code protected
+1000h to 1FFFh code protected
+0000h to 1FFFh code protected
+Brown Out Reset Selection bits
+Low Voltage Programming Enable bit
+BOR4V
+Brown-out Reset Selection bit
+Brown-out Reset set to 2.1V
+Brown-out Reset set to 4.0V
+0000h to 03FFh write protected, 0400h to 07FFh may be modified by EECON control
+0000h to 00FFh write protected, 0100h to 07FFh may be modified by EECON control
+0000h to 07FFh write protected, 0800h to 0FFFh may be modified by EECON control
+0000h to 03FFh write protected, 0400h to 0FFFh may be modified by EECON control
+0000h to 00FFh write protected, 0100h to 0FFFh may be modified by EECON control
+0000h to 0FFFh write protected, 1000h to 1FFFh may be modified by EECON control
+0000h to 07FFh write protected, 0800h to 1FFFh may be modified by EECON control
+0000h to 00FFh write protected, 0100h to 1FFFh may be modified by EECON control
+RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT/T1OSO pin, RC on RA7/OSC1/CLKIN/T1OSI
+RCIO oscillator: I/O function on RA6/OSC2/CLKOUT/T1OSO pin, RC on RA7/OSC1/CLKIN/T1OSI
+INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT/T1OSO pin, I/O function on RA7/OSC1/CLKIN/T1OSI
+INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT/T1OSO pin, I/O function on RA7/OSC1/CLKIN/T1OSI
+EC: I/O function on RA6/OSC2/CLKOUT/T1OSO pin, CLKIN on RA7/OSC1/CLKIN/T1OSI
+HS oscillator: High-speed crystal/resonator on RA6/OSC2/CLKOUT/T1OSO and RA7/OSC1/CLKIN/T1OSI
+XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT/T1OSO and RA7/OSC1/CLKIN/T1OSI
+LP oscillator: Low-power crystal on RA6/OSC2/CLKOUT/T1OSO and RA7/OSC1/CLKIN/T1OSI
+Power Up Timer Enable bit
+ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pin
+000h to 1FFh write protected, 200h to 1FFFh may be modified by EECON control
+000h to FFFh write protected, 1000h to 1FFFh may be modified by EECON control
+000h to 1FFFh write protected, no addresses may be modified by EECON control
+Voltage Regulator Capacitor Enable bit
+LPBOR
+Low-Power Brown Out Reset
+000h to 1FFh write protected, 200h to 3FFFh may be modified by EECON control
+000h to 1FFFh write protected, 2000h to 3FFFh may be modified by EECON control
+000h to 3FFFh write protected, no addresses may be modified by EECON control
+000h to 1FFh write protected, 200h to 3FFFh may be modified by PMCON control
+000h to FFFh write protected, 2000h to 3FFFh may be modified by PMCON control
+000h to 3FFFh write protected, no addresses may be modified by PMCON control
+LPBOREN
+Low Power Brown-Out Reset Enable Bit
+Low power brown-out is disabled
+Low power brown-out is enabled
+Low Power Brown-Out Enable Bit
+Ultra low power brown out is enabled
+Voltage Regulator Capacitor Enable
+RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, Resistor and Capacitor on RA7/OSC1/CLKIN
+RC oscillator: I/O function on RA6/OSC2/CLKOUT pin, Resistor and Capacitor on RA7/OSC1/CLKIN
+INTOSC oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+INTOSC PLL Enable bit
+Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
+Data EEPROM Memory Code Protection bit
+0000h to 00FFh write-protected; 0100h to 0FFFh may be written to by EECON control
+0000h to 03FFh write-protected; 0400h to 0FFFh may be written to by EECON control
+0000h to 07FFh write-protected; 0800h to 0FFFh may be written to by EECON control
+0000h to 00FFh write-protected; 0100h to 1FFFh may be written to by EECON control
+0000h to 07FFh write-protected; 0800h to 1FFFh may be written to by EECON control
+0000h to 0FFFh write-protected; 1000h to 1FFFh may be written to by EECON control
+Low power brown out is disabled
+000h to 1FFh write protected, 200h to 7FFh may be modified by PMCON control
+000h to 3FFh write protected, 400h to 7FFh may be modified by PMCON control
+000h to 7FFh write protected, no addresses may be modified by PMCON control
+Low-Power Brown-out Reset
+CONFIG1H
+RC oscillator w/ OSC2 configured as RA6 (32kHz..4MHz)
+HS oscillator with PLL enabled/Clock frequency = (4 x FOSC) (16MHz..40MHz)
+EC oscillator w/ OSC2 configured as RA6 (32kHz..40MHz)
+EC oscillator w/ OSC2 configured as divide-by-4 clock output (32kHz..40MHz)
+RC oscillator (32kHz..4MHz)
+OSCS
+Oscillator System Clock Switch Enable bit
+CONFIG2L
+PWRT
+BOR
+CONFIG2H
+WDTPS
+Watchdog Timer Postscale Select bits
+1:128
+1:64
+1:32
+1:16
+1:8
+1:4
+1:2
+1:1
+CONFIG3H
+CCP2MUX
+CCP2 Mux bit
+CONFIG4L
+STVR
+Stack Full/Underflow Reset Enable bit
+Low Voltage ICSP Enable bit
+Background Debugger Enable bit
+CONFIG5L
+CP0
+CP1
+RESERVED
+Maintain bits as 1s.
+CONFIG5H
+CPB
+Boot Block Code Protection bit
+Data EEPROM Code Protection bit
+CONFIG6L
+WRT0
+Write Protection bit
+WRT1
+CONFIG6H
+WRTC
+Configuration Register Write Protection bit
+WRTB
+Boot Block Write Protection bit
+WRTD
+Data EEPROM Write Protection bit
+CONFIG7L
+EBTR0
+Table Read Protection bit
+EBTR1
+CONFIG7H
+EBTRB
+Boot Block Table Read Protection bit
+Low-Voltage ICSP Enable bit
+CP2
+CP3
+WRT2
+WRT3
+EBTR2
+EBTR3
+External RC oscillator, CLKO function on RA6 (32kHz..4MHz)
+Internal RC oscillator, CLKO function on RA6 and port function on RA7
+Internal RC oscillator, port function on RA6 and port function on RA7
+External RC oscillator, port function on RA6 (32kHz..4MHz)
+HS oscillator, PLL enabled (clock frequency = 4 x FOSC1) (16MHz..40MHz)
+EC oscillator, port function on RA6 (32kHz..40MHz)
+EC oscillator, CLKO function on RA6 (32kHz..40MHz)
+HS Oscillator (4MHz..20MHz)
+XT Oscillator (1000kHz..4MHz)
+LP Oscillator (32kHz..200kHz)
+FSCM
+1:32768
+1:16384
+1:8192
+1:4096
+1:2048
+1:1024
+1:512
+1:256
+MCLR Pin Enable bit
+11XX External RC oscillator, CLKO function on RA6 (32kHz..4MHz)
+101X External RC oscillator, CLKO function on RA6 (32kHz..4MHz)
+Internal oscillator, CLKO function on RA6, port function on RA7
+Internal oscillator, port function on RA6 and RA7
+HS oscillator, PLL enabled (Clock Frequency = 4 x FOSC1) (16MHz..40MHz)
+External RC oscillator, CLKO function on RA6
+Internal/External Oscillator Switchover bit
+Brown-out Reset enabled in hardware only (SBOREN is disabled)
+Brown-out Reset enabled in hardware only and disabled in Sleep mode (SBOREN is disabled)
+Brown-out Reset enabled and controlled by software (SBOREN is enabled)
+Minimum setting
+Maximum setting
+CONFIG3L
+PWMPIN
+PWM Output Pins Reset State Control bit
+LPOL
+Low-Side Transistors Polarity bit (Even PWM Output Polarity Control bit)
+PWM0, PWM2 and PWM4 are active-high (default)
+PWM0, PWM2 and PWM4 are active-low
+HPOL
+High Side Transistors Polarity bit (Odd PWM Output Polarity Control bit)
+PWM1, PWM3 and PWM5 are active-high (default)
+PWM1, PWM3 and PWM5 are active-low
+FLTAMX
+FLTA Mux bit
+FLTA input is muxed onto RA5
+FLTA input is muxed onto RA7
+T1OSCMX
+T1OSO/T1CKI MUX bit
+T1OSO/T1CKI pin resides on RA6
+T1OSO/T1CKI pin resides on RB2
+Stack Overflow/Underflow Reset Enable bit
+ICPRT
+Dedicated In-Circuit Debug/Programming Port (ICPORT) Enable bit
+ICPORT disabled
+BBSIZ
+Boot Block Size Select bits
+512 Words (1024 Bytes) Boot Block size
+256 Words (512 Bytes) Boot Block size
+XINST
+Extended Instruction Set Enable bit
+Code Protection bit Block 0 (000400-0007FF)
+Code Protection bit Block 1 (000800-000FFF)
+Code Protection bit (Boot Block Memory Area)
+Code Protection bit (Data EEPROM)
+Write Protection bit Block 0 (000400-0007FF)
+Write Protection bit Block 1 (000800-000FFF)
+Write Protection bit (Configuration Registers)
+Write Protection bit (Boot Block Memory Area)
+Write Protection bit (Data EEPROM)
+Table Read Protection bit Block 0 (000400-0007FF)
+Table Read Protection bit Block 1 (000800-000FFF)
+Table Read Protection bit (Boot Block Memory Area)
+1K Words (2048 Bytes) Boot Block size
+Code Protection bit Block 0 (000800-000FFF)
+Code Protection bit Block 1 (001000-001FFF)
+Write Protection bit Block 0 (000800-000FFF)
+Write Protection bit Block 1 (001000-001FFF)
+Table Read Protection bit Block 0 (000800-000FFF)
+Table Read Protection bit Block 1 (001000-001FFF)
+Internal/External Switchover bit
+Power-up Timer enable bit
+Brown-out Reset enable bit
+CCP2 MUX bit
+PBAD
+PORTB A/D Enable bit
+PORTB<4:0> pins are configured as analog input channels on Reset
+PORTB<4:0> pins are configured as digital I/O on Reset
+Single-Supply ICSP Enable bit
+11XX External RC oscillator, CLKO function on RA6
+101X External RC oscillator, CLKO function on RA6
+Internal oscillator block, CLKO function on RA6, port function on RA7
+Internal oscillator block, port function on RA6 and RA7
+External RC oscillator, port function on RA6
+HS oscillator, PLL enabled (Clock Frequency = 4 x FOSC1)
+EC oscillator, port function on RA6
+EC oscillator, CLKO function on RA6
+HS Oscillator
+XT Oscillator
+LP Oscillator
+Minimum Setting
+Maximum Setting
+CCP2 input/output is multiplexed with RC1
+CCP2 input/output is multiplexed with RB3
+PBADEN
+LPT1OSC
+Low-Power Timer1 Oscillator Enable bit
+Maintain bit as 0.
+ 512 Word
+ 256 Word
+Boot Block Code Protection bitProtect Boot
+1024 Word
+Internal oscillator block, CLKO function on RA6 and port function on RA7
+Internal oscillator block, port function on RA6 and port function on RA7
+External RC oscillator, CLKO function on RA6 (32kHz..40MHz)
+XT oscillator (1000kHz..4MHz)
+Internal External Oscillator Switchover bit
+PWRTEN
+Brown Out Reset Voltage bits
+WDPS
+WINEN
+Watchdog Timer Window Enable bit
+PWM output pins Reset state control
+Low-Side Transistors Polarity
+PWM0, 2, 4 and 6 are active-high
+PWM0, 2, 4 and 6 are active-low
+High-Side Transistors Polarity
+PWM1, 3, 5 and 7 are active-high
+PWM1, 3, 5 and 7 are active-low
+Timer1 Oscillator MUX
+Maintain bit as 1.
+11XX External RC oscillator, CLKOUT function on RA6 (32kHz..4MHz)
+101X External RC oscillator, CLKOUT function on RA6 (32kHz..4MHz)
+XT oscillator (100kHz..4MHz)
+LP oscillator (32kHz..33kHz)
+HS oscillator with PLL enabled; clock frequency = (4 x FOSC)
+EC oscillator w/ OSC2 configured as RA6
+EC oscillator w/ OSC2 configured as divide-by-4 clock output
+CONFIG1L
+PLLDIV
+PLL Prescaler Selection bits
+Divide by 12 (48 MHz oscillator input)
+Divide by 10 (40 MHz oscillator input)
+Divide by 6 (24 MHz oscillator input)
+Divide by 5 (20 MHz oscillator input)
+Divide by 4 (16 MHz oscillator input)
+Divide by 3 (12 MHz oscillator input)
+Divide by 2 (8 MHz oscillator input)
+No prescale (4 MHz oscillator input drives PLL directly)
+CPUDIV
+System Clock Postscaler Selection bits
+[Primary Oscillator Src: /4][96 MHz PLL Src: /6]
+[Primary Oscillator Src: /3][96 MHz PLL Src: /4]
+[Primary Oscillator Src: /2][96 MHz PLL Src: /3]
+[Primary Oscillator Src: /1][96 MHz PLL Src: /2]
+USBDIV
+USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1)
+USB clock source comes from the 96 MHz PLL divided by 2
+USB clock source comes directly from the primary oscillator block with no postscale
+HS oscillator, PLL enabled (HSPLL) (4MHz..48MHz)
+HS oscillator (HS) (4MHz..25MHz)
+Internal oscillator, HS oscillator used by USB (INTHS)
+Internal oscillator, XT used by USB (INTXT)
+Internal oscillator, CLKO function on RA6, EC used by USB (INTCKO)
+Internal oscillator, port function on RA6, EC used by USB (INTIO)
+EC oscillator, PLL enabled, CLKO function on RA6 (ECPLL) (32kHz..48MHz)
+EC oscillator, PLL enabled, port function on RA6 (ECPIO) (32kHz..48MHz)
+EC oscillator, CLKO function on RA6 (EC) (32kHz..48MHz)
+EC oscillator, port function on RA6 (ECIO) (32kHz..48MHz)
+XT oscillator, PLL enabled (XTPLL) (100kHz..4MHz)
+XT oscillator (XT) (100kHz..4MHz)
+2.1V
+2.8V
+4.3V
+4.6V
+VREGEN
+USB Voltage Regulator Enable bit
+Low-Power Timer 1 Oscillator Enable bit
+Boot Block Size Select bit
+2KW Boot block size
+1KW Boot block size
+VBOR set to 2.1V
+VBOR set to 2.8V
+VBOR set to 4.3V
+VBOR set to 4.6V
+2K words (4K bytes) boot block
+1K words (2K bytes) boot block
+Internal oscillator block, CLKOUT function on RA6, port function on RA7
+EC oscillator, CLKOUT function on RA6 (32kHz..40MHz)
+4K words (8K bytes) Boot Block
+2K words (4K bytes) Boot Block
+1K words (2K bytes) Boot Block
+CP4
+WRT4
+EBTR4
+CP5
+WRT5
+EBTR5
+FLTA MUX bit
+FLTA input is multiplexed with RC1
+FLTA input is multiplexed with RD4
+SSPMX
+SSP I/O MUX bit
+SCK/SCL clocks and SDA/SDI data are multiplexed with RC5 and RC4, respectively. SDO output is multiplexed with RC7.
+SCK/SCL clocks and SDA/SDI data are multiplexed with RD3 and RD2, respectively. SDO output is multiplexed with RD1.
+PWM4MX
+PWM4 MUX bit
+PWM4 output is multiplexed with RB5
+PWM4 output is multiplexed with RD5
+EXCLKMX
+TMR0/T5CKI External clock MUX bit
+TMR0/T5CKI external clock input is multiplexed with RC3
+TMR0/T5CKI external clock input is multiplexed with RD0
+11XX EXT RC-CLKOUT on RA6 (32kHz..4MHz)
+101X EXT RC-CLKOUT on RA6 (32kHz..4MHz)
+Internal External Switch Over Mode
+Brown Out Voltage
+Watchdog Postscaler
+CCP2 Mux
+CCP2 input/output is multiplexed with RE7
+Low Power Timer1 Osc enable
+Stack Overflow Reset
+Code Protect 00000-01FFF
+Code Protect 00000-03FFF
+HS oscillator with PLL enabled; clock frequency = (4 x FOSC) (16MHz..40MHz)
+RC oscillator w/ OSC2 configured as divide-by-4 clock output (32kHz..4MHz)
+Maintain bits as 1s
+Maintain bit as 1
+Timer1 OSC
+Legacy
+Low Power
+RC-OSC2 as RA6 (32kHz..4MHz)
+HS oscillator with SW enabled 4x PLL (4MHz..25MHz)
+EC oscillator with OSC2 configured as RA6 and SW enabled 4x PLL (32kHz..40MHz)
+EC oscillator with OSC2 configured as RA6 and HW enabled 4x PLL (32kHz..40MHz)
+RC oscillator with OSC2 configured as RA6 (32kHz..4MHz)
+HS oscillator with HW enabled 4x PLL (16MHz..40MHz)
+EC oscillator with OSC2 configured as RA6 (32kHz..40MHz)
+EC oscillator with OSC2 configured as divide by 4 clock output (32kHz..40MHz)
+RC oscillator with OSC2 configured as divide by 4 clock output (32kHz..4MHz)
+Watchdog Timer Postscaler Select bits
+ECCP2 Mux bit
+Multiplexed with RC1
+Multiplexed with RB3 or RE7
+MCLR Enable bit
+Brown-out Voltage bits
+ECCP2 input/output is multiplexed with RC1
+ECCP2 input/output is multiplexed with RE7
+4K words (8 Kbytes) Boot Block size
+2K words (4 Kbytes) Boot Block size
+1K word (2 Kbytes) Boot Block size
+Code Protection bit Block 0
+Code Protection bit Block 1
+Code Protection bit Block 2
+Write Protection bit Block 0
+Write Protection bit Block 1
+Write Protection bit Block 2
+Table Read Protection bit Block 0
+Table Read Protection bit Block 1
+Table Read Protection bit Block 2
+Osc. Switch Enable
+MCLR enable
+Low Voltage Program
+Code Protect 000800-0003FFF
+Code Protect 0004000-007FFF
+Code Protect 008000-00BFFF
+Code Protect Boot
+Data EE Read Protect
+Table Write Protect 00800-003FFF
+Table Write Protect 004000-007FFF
+Table Write Protect 08000-0BFFF
+Config. Write Protect
+Table Write Protect Boot
+Data EE Write Protect
+Table Read Protect 00800-003FFF
+Table Read Protect 004000-07FFF
+Table Read Protect 08000-0BFFF
+Table Read Protect Boot
+Code Protection bit Block 3
+Write Protection bit Block 3
+Table Read Protection bit Block 3
+Code Protection bit Block 4
+Code Protection bit Block 5
+Write Protection bit Block 4
+Write Protection bit Block 5
+Table Read Protection bit Block 4
+Table Read Protection bit Block 5
+Processor Mode
+External Bus Wait
+ECCPMX
+ECCP Mux
+P1B, P1C are multiplexed with RE6, RE5
+Code Protect 00C000-00FFFF
+Table Write Protect 0C000-0FFFF
+Table Read Protect 0C000-0FFFF
+CP6
+CP7
+WRT6
+WRT7
+EBTR6
+EBTR7
+Code Protection bit Block 6
+Code Protection bit Block 7
+Write Protection bit Block 6
+Write Protection bit Block 7
+Table Read Protection bit Block 6
+Table Read Protection bit Block 7
+PM
+Microcontroller mode
+Microprocessor mode
+Microprocessor with Boot Block mode
+Extended Microcontroller mode
+BW
+Bus Width
+16-bit External Bus Data Width
+8-bit External Bus Data Width
+WAIT
+CCP2 is multiplexed with RB3 in Extended Microcontroller, Microprocessor or Microprocessor with Boot Block mode. Or with RE7 in Microcontroller mode.
+EBTR
+Table Read Protect 00000-01FFF
+Microcontroller
+Table Read Protect 00000-03FFF
+MODE
+Processor Mode Select bits
+External Bus Data Wait Enable bit
+ECCP Mux bit
+ECCP1 (P1B/P1C) and ECCP3 (P3B/P3C) PWM outputs are multiplexed with RE6 through RE3
+ECCP1 (P1B/P1C) and ECCP3 (P3B/P3C) PWM outputs are multiplexed with RH7 through RH4
+Processor Data Memory Mode Select bits
+ADDRBW
+Address Bus Width Select bits
+20-bit Address Bus
+16-bit Address Bus
+12-bit Address Bus
+8-bit Address Bus
+DATABW
+Data Bus Width Select bit
+16-bit External Bus mode
+8-bit External Bus mode
+ECCP2 is multiplexed with RB3 in Extended Microcontroller, Microprocessor or Microprocessor with Boot Block mode. Or with RE7 in Microcontroller mode.
+ECCP MUX bit
+ECCP1/3 (P1B/P1C/P3B/P3C) are multiplexed onto RE6, RE5, RE4 and RE3 respectively
+ECCP1/3 (P1B/P1C/P3B/P3C) are multiplexed onto RH7, RH6, RH5 and RH4 respectively
+P1B, P1C are multiplexed with RH7, RH6
+FBS
+BWRP
+Boot Segment Write Protect
+Boot Segment may be written
+Boot Segment is write protected
+BSS
+Boot Segment Program Flash Code Protection
+No Boot Segment
+Standard Security, Small-sized Boot Flash
+Standard Security, Medium-sized Boot Flash
+High Security, Small-sized Boot Flash
+High Security, Medium-sized Boot Flash
+FGS
+GWRP
+General Code Segment Write Protect
+General Segment may be written
+General Segment is write protected
+GSS
+General Segment Code Protection
+High Security Code Protection Enabled
+FOSCSEL
+FNOSC
+Oscillator Mode
+Primary Oscillator (HS, EC) w/ PLL
+Primary Oscillator (HS, EC)
+Internal Fast RC (FRC) w/ PLL
+Internal Fast RC (FRC)
+POSCMD
+Primary Oscillator Source
+Primary Oscillator Disabled
+HS Oscillator Mode
+EC Oscillator Mode
+OSCIOFNC
+OSCI/OSCO Pin Function
+OSCO pin has clock out function
+OSCO pin has digital I/O function
+FRANGE
+Frequency Range Select
+Low Range
+High Range
+FCKSM
+Clock Switching and Monitor
+Sw Disabled, Mon Disabled
+Sw Enabled, Mon Disabled
+Sw Enabled, Mon Enabled
+FWDT
+Watchdog Timer Postscaler
+1:32,768
+1:16,384
+1:8,192
+1:4,096
+1:2,048
+1:1,024
+FWPSA0
+WDT Prescaler
+WWDTEN
+Watchdog Timer Window
+Non-Window mode
+Window mode
+FWDTEN
+Enable
+Disable
+FPOR
+FPWRT
+POR Timer Value
+128ms
+64ms
+32ms
+16ms
+8ms
+4ms
+2ms
+Off
+FICD
+ICS
+Comm Channel Select
+Use PGC/EMUC and PGD/EMUD
+Use EMUC1 and EMUD1
+Use EMUC2 and EMUD2
+BACKBUG
+Background Debug
+FUID0
+FPR
+Primary Oscillator Mode
+ECIO w/ PLL 16x
+ECIO w/ PLL 8x
+ECIO w/ PLL 4x
+ECIO
+EC
+ERC
+ERCIO
+XT w/PLL 16x
+XT w/PLL 8x
+XT w/PLL 4x
+XT
+HS
+XTL
+FOS
+Oscillator Source
+Primary Oscillator
+Internal Low-Power RC
+Internal Fast RC
+Low-Power 32KHz Osc <TMR1 Osc>
+FCKSMEN
+FWPSB
+WDT Prescaler B
+1:3
+1:5
+1:6
+1:7
+1:9
+1:10
+1:11
+1:12
+1:13
+1:14
+1:15
+FWPSA
+WDT Prescaler A
+FBORPOR
+Timer Disabled
+4.5V
+4.2V
+2.7V
+PBOR Enable
+Low-side PWM Output Polarity
+Active High
+Active Low
+High-side PWM Output Polarity
+PWM Output Pin Reset
+Control with PORT/TRIS regs
+Control with HPOL/LPOL bits
+RESERVED1
+RES3
+RES2
+RES1
+RESERVED2
+GCP
+Reserved bit
+dummy
+ICD
+Use EMUC3 and EMUD3
+COE
+Set Clip On Emulation Mode
+FOSFPR
+ECIO w/PLL 4x
+ECIO w/PLL 8x
+ECIO w/PLL 16x
+FRC w/PLL 4x
+FRC w/PLL 8x
+FRC w/PLL 16x
+HS2 w/PLL 4x
+HS2 w/PLL 8x
+HS2 w/PLL 16x
+HS3 w/PLL 4x
+HS3 w/PLL 8x
+HS3 w/PLL 16x
+Low-Power 32KHz Osc (No change to Primary Osc Mode bits)
+Internal Fast RC (No change to Primary Osc Mode bits)
+Internal Low-Power RC (No change to Primary Osc Mode bits)
+RES0
+FRC w/ PLL 8x
+FRC w/ PLL 16x
+FRC w/ PLL 4x
+Reset Into Operational Mode
+Reset Into Clip On Emulation Mode
+2.0V
+Boot Segment Program Memory Write Protect
+Boot Segment Program Memory may be written
+Boot Segment Program Memory is write protected
+Boot Segment Program Flash Memory Code Protection
+Standard Security, Large-sized Boot Flash
+High Security, Large-sized Boot Flash
+EBS
+Boot Segment Data EEPROM Protection
+No Boot EEPROM
+Boot EEPROM Enabled
+RBS
+Boot Segment Data RAM Protection
+No Boot RAM
+Small-sized Boot RAM
+Medium-sized Boot RAM
+Large-sized Boot RAM
+FSS
+SWRP
+Secure Segment Program Write Protect
+SSS
+Secure Segment Program Flash Memory Code Protection
+No Secure Segment
+Standard Security, Small-sized Secure Flash
+Standard Security, Medium-sized Secure Flash
+Standard Security, Large-sized Secure Flash
+High Security, Small-sized Secure Flash
+High Security, Medium-sized Secure Flash
+High Security, Large-sized Secure Flash
+ESS
+Secure Segment Data EEPROM Protection
+No Segment Data EEPROM
+Small-sized Secure Data EEPROM
+Medium-sized Secure Data EEPROM
+Large-sized Secure Data EEPROM
+RSS
+Secure Segment Data RAM Protection
+No Secure RAM
+Small-sized Secure RAM
+Medium-sized Secure RAM
+Large-sized Secure RAM
+General Code Segment Code Protect
+High Security Code Protection Enable
+Oscillator Source Selection
+Internal Fast RC (FRC) oscillator with postscaler
+Internal Fast RC (FRC) with divide by 16
+Low Power RC oscillator (LPRC)
+Secondary Oscillator (SOSC)
+Primary Oscillator (XT, HS, EC) with PLL
+Primary Oscillator (XT, HS, EC)
+Internal Fast RC (FRC) with PLL
+Internal Fast RC (FRC) oscillator
+Primary oscillator disabled
+HS Crystal Oscillator Mode
+XT Crystal Oscillator Mode
+EC (External Clock) Mode
+OSC2 Pin Function
+IOL1WAY
+Peripheral Pin Select Configuration
+Clock switching and Fail-Safe Clock Monitor are disabled, Mon Disabled
+Clock switching is enabled, Fail-Safe Clock Monitor is Disabled
+Clock switching and Fail-Safe Clock Monitor are enabled
+WDTPOST
+WDTPRE
+WINDIS
+Communicate on PGC1/EMUC1 and PGD1/EMUD1
+Communicate on PGC2/EMUC2 and PGD2/EMUD2
+Communicate on PGC3/EMUC3 and PGD3/EMUD3
+Reserved, do not use
+JTAGEN
+JTAG Port Enable
+Debugger/Emulation Enable Bit
+Boot segment is write-protected
+No Boot program Flash segment
+Boot Segment RAM Protection
+Secure segment may be written
+Secure segment is write-protected
+Secure Segment Program Flash Code Protection
+Internal Fast RC (FRC) with divide by N
+Internal Fast RC (FRC) divide by 16
+Low Power RC Oscillator (LPRC)
+Primary Oscillator (XT, HS, EC) w/ PLL
+XT Oscillator Mode
+Both Clock Switching and Fail-Safe Clock Monitor are disabled
+Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+Both Clock Switching and Fail-Safe Clock Monitor are enabled
+ALTI2C
+Alternate I2C  pins
+TEMP
+Temperature Protection Enable
+Two-speed Oscillator Start-Up Enable
+Secure Segment may be written
+Secure segment is write protected
+Motor Control PWM Low Side Polarity bit
+Motor Control PWM High Side Polarity bit
+Motor Control PWM Module Pin Mode bit
+POSCMOD
+Primary Oscillator Select
+HS Oscillator mode selected
+MS Oscillator mode selected
+EC Oscillator mode selected
+Alternate I2C pins
+IOLOCK Protection
+Primary Oscillator Output Function
+Clock switching and Fail-Safe Clock Monitor are disabled
+Clock switching is enabled, Fail-Safe Clock Monitor is enabled
+Primary Oscillator (MS, HS, EC)
+Primary Oscillator (MS, HS, EC) w/ PLL
+WDTWIN
+Watchdog Window Select
+Watchdog Window is 25% of WDT period
+Watchdog Window is 37.5% of WDT period
+Watchdog Window is 50% of WDT period
+Watchdog Window is 75% of WDT period
+PWMLOCK
+PWM Lock Enable
+Prescaler ratio of 1:128
+Prescaler ratio of 1:32
+PLLKEN
+PLL Lock Enable
+Communicate on PGEC1/PGED1
+Communicate on PGEC2/PGED2
+Communicate on PGEC3/PGED3
+SIGN
+Signature Bit
+Correct
+PLL Lock Enable bit
+Clock Switching Mode bits
+Both Clock switching and Fail-safe Clock Monitor are disabled
+Both Clock switching and Fail-safe Clock Monitor are enabled
+ALTSS1
+Enable Alternate SS1 pin bit
+ALTQIO
+Enable Alternate QEI1 pin bit
+Internal Fast RC (FRC) Oscillator with postscaler
+Internal Fast RC (FRC) Oscillator with divide-by-16
+Low-Power RC Oscillator (LPRC)
+Internal Fast RC with PLL (FRCPLL)
+Primary Oscillator disabled
+Clock switching is enabled,Fail-safe Clock Monitor is disabled
+FCMP
+HYST0
+Even Comparator Hysteresis Select
+45 mV Hysteresis
+30 mV Hysteresis
+15 mV Hysteresis
+No Hysteresis
+CMPPOL0
+Comparator Hysteresis Polarity (for even numbered comparators)
+Hysteresis is applied to falling edge
+Hysteresis is applied to rising edge
+HYST1
+Odd Comparator Hysteresis Select
+CMPPOL1
+Comparator Hysteresis Polarity (for odd numbered comparators)
+General Segment Code Flash Write Protection bit
+General Segment Code Flash Code Protection bit
+Fast RC oscillator (FRC)
+Fast RC oscillator with divide-by-N with PLL module (FRCDIV+PLL)
+Primary oscillator (XT, HS, EC)
+Primary oscillator with PLL module (HS+PLL, EC+PLL)
+Secondary oscillator (SOSC)
+Low-Power RC oscillator (LPRC)
+500 kHz Low-Power FRC oscillator with divide-by-N (LPFRCDIV)
+8 MHz FRC oscillator with divide-by-N (FRCDIV)
+Internal External Switch Over bit
+Primary Oscillator Configuration bits
+XT Oscillator mode selected
+External Clock mode selected
+CLKO Enable Configuration bit
+POSCFREQ
+Primary Oscillator Frequency Range Configuration bits
+Primary oscillator/external clock input frequency greater than 8 MHz
+Primary oscillator/external clock input frequency between 100 kHz and 8 MHz
+Primary oscillator/external clock input frequency less than 100 kHz
+SOSCSEL
+SOSC Power Selection Configuration bits
+Secondary oscillator configured for high-power operation
+Secondary oscillator configured for low-power operation
+Clock Switching and Monitor Selection
+Clock switching is disabled, Fail-Safe Clock Monitor is disabled
+WDT prescaler ratio of 1:128
+WDT prescaler ratio of 1:32
+Windowed Watchdog Timer Disable bit
+Brown-out Reset enabled in hardware; SBOREN bit disabled
+Brown-out Reset enabled only while device is active and disabled in Sleep; SBOREN bit disabled
+Brown-out Reset controlled with the SBOREN bit setting
+Brown-out Reset disabled in hardware; SBOREN bit disabled
+Brown-out Reset set to lowest voltage (1.8V)
+Brown-out Reset set to 2.0V
+Brown-out Reset set to highest voltage (2.7V)
+Low-Power Brown-out reset occurs around 2.0V
+PGC2/PGD2 are used for programming the device
+PGC3/PGD3 are used for programming the device
+Set Clip On Emulation bit
+BKBUG
+FDS
+DSWDTPS
+Deep Sleep Watchdog Timer Postscale Select bits
+1:2,147,483,648 (25.7 Days)
+1:536,870,912 (6.4 Days)
+1:134,217,728 (38.5 Hours)
+1:33,554,432 (9.6 Hours)
+1:8,388,608 (2.4 Hours)
+1:2,097,152 (36 Minutes)
+1:524,288 (9 Minutes)
+1:131,072 (135 Seconds)
+1:32,768 (34 Seconds)
+1:8192 (8.5 Seconds)
+1:2048 (2.1 Seconds)
+1:512 (528 ms)
+1:128 (132 ms)
+1:32 (33 ms)
+1:8 (8.3 ms)
+1:2 (2.1 ms)
+DSWDTOSC
+DSWDT Reference Clock Select bit
+DSBOREN
+Deep Sleep Zero-Power BOR Enable bit
+DSWDTEN
+Deep Sleep Watchdog Timer Enable bit
+Boot segment Protect
+Standard security, boot program Flash segment starts at 200h, ends at 000AFEh
+High security boot program Flash segment starts at 200h, ends at 000AFEh
+HS oscillator mode selected
+XT oscillator mode selected
+External clock mode selected
+Both Clock Switching and Fail-safe Clock Monitor are disabled
+Both Clock Switching and Fail-safe Clock Monitor are enabled
+I2C1SEL
+Alternate I2C1 Pin Mapping bit
+Default location for SCL1/SDA1 pins
+Alternate location for SCL1/SDA1 pins
+Brown-out Reset set at 2.0V
+Brown-out Reset set to Highest Voltage (2.7V)
+Low-power Brown-Out Reset occurs around 2.0V
+ICD Pin Placement Select bits
+PGC1/PGD1 are used for programming and debugging the device
+PGC2/PGD2 are used for programming and debugging the device
+PGC3/PGD3 are used for programming and debugging the device
+Device will reset into Operational Mode
+Device will reset into Clip On Emulation Mode
+DSWDT uses LPRC as reference clock
+DSWDT uses SOSC as reference clock
+RTCOSC
+RTCC Reference Clock Select bit
+RTCC uses SOSC as reference clock
+RTCC uses LPRC as reference clock
+Standard security, boot program Flash segment starts at 200h, ends at 0015FEh
+High security, boot program Flash segment starts at 200h, ends at 0015FEh
+Standard Security Boot Protect 000200h - 000AFEh
+Standard Security Boot Protect 000200h - 0015FEh
+High Security Boot Protect 000200h - 000AFEh
+High Security Boot Protect 000200h - 0015FEh
+General Segment Write Protect
+General Segment Code Protect
+Fast RC Oscillator with divide-by-N (FRCDIV)
+Low-Power Fast RC oscillator (FRC) divided by N limited to 500kHz
+Primary oscillator with PLL Module (MS+PLL, HS+PLL, EC+PLL)
+Fast RC Oscillator with divide-by-N with PLL Module (FRCDIV+PLL)
+Fast RC Oscillator (FRC)
+SOSCSRC
+SOSC Source Type
+Analog Mode for use with crystal
+Digital Mode for use with external source
+Internal Oscillator Power and Accuracy
+High Power/High Accuracy Mode
+Low Power/Low Accuracy Mode
+HS oscillator mode selected (4MHz - 25MHz)
+XT oscillator mode selected (100kHz - 4MHz)
+Primary oscillator/External clock input frequency greater than 8MHz
+Primary oscillator/External clock input frequency between 100kHz and 8MHz
+Primary oscillator/External clock input frequency less than 100kHz
+High Power SOSC circuit selected
+Low Power SOSC circuit selected
+Clock Switching is enabled, Fail-safe Clock Monitor is disabled
+FWTEN0
+Watchdog Timer Enable bits
+WDT enabled while device is active and disabled in Sleep; SWDTEN bit disabled
+WDT controlled with the SWDTEN bit setting
+Brown-out Reset enabled in hardware, SBOREN bit disabled
+Brown-out Reset enabled only while device is active and disabled in SLEEP, SBOREN bit disabled
+Brown-out Rest controlled by SBOREN bit setting
+Brown-out Reset disabled in hardware, SBOREN bit disabled
+RETVRDIS
+Retention Voltage Regulator Control Enable Bit 
+Retention Voltage Regulator not available
+Retention Voltage Regulator Available (Controlled by RETEN bit during Sleep) 
+Use Default location for SCL1/SDA1 Pins for I2C1 configuration
+Use Alternate location for SCL1/ASDA1 Pins for I2C1 configuration
+Brown-out Reset set at 2.7V
+Brown-out Reset set to Highest Voltage (3.0V)
+EMUC/EMUD share PGC1/PGD1
+EMUC/EMUD share PGC2/PGD2
+EMUC/EMUD share PGC3/PGD3
+DSWDT uses Low Power RC Oscillator (LPRC)
+DSWDT uses Secondary Oscillator (SOSC)
+Standard Security Boot Protect 000200h - 002BFEh
+High Security Boot Protect 000200h - 002BFEh
+I2C1 Pin Location Select
+Use default SCL1/SDA1 pins
+Use alternate SCL1/SDA1 pins
+Fast RC Oscillator with Postscaler (FRCDIV)
+Primary Oscillator with PLL module (HSPLL, ECPLL)
+Fast RC Oscillator with PLL module (FRCPLL)
+Sec Oscillator Select
+Default Secondary Oscillator (SOSC)
+Low Power Secondary Oscillator (LPSOSC)
+WUTSEL
+Wake-up timer Select
+Legacy Wake-up Timer
+Fast Wake-up Timer
+Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1
+Emulator EMUC2/EMUD2 pins are shared with PGC2/PGD2
+Emulator EMUC3/EMUD3 pins are shared with PGC3/PGD3
+CONFIG4
+DSWDT Postscale Select
+1:2,147,483,648 (25.7 days)
+1:536,870,912 (6.4 days)
+1:134,217,728 (38.5 hours)
+1:33,554,432 (9.6 hours)
+1:8,388,608 (2.4 hours)
+1:2,097,152 (36 minutes)
+1:524,288 (9 minutes)
+1:131,072 (135 seconds)
+1:32,768 (34 seconds)
+1:8,192 (8.5 seconds)
+1:2,048 (2.1 seconds)
+DSWCKSEL
+Deep Sleep Watchdog Timer Oscillator Select
+RTCCKSEL
+RTCC Reference Oscillator  Select
+RTCC uses Secondary Oscillator (SOSC)
+RTCC uses Low Power RC Oscillator (LPRC)
+Deep Sleep BOR Enable bit
+Deep Sleep Watchdog Timer
+CONFIG3
+WPFP
+Write Protection Flash Page Segment Boundary
+Page 0 (0x0)
+Page 1 (0x400)
+Page 2 (0x800)
+Page 3 (0xC00)
+Page 4 (0x1000)
+Page 5 (0x1400)
+Page 6 (0x1800)
+Page 7 (0x1C00)
+Page 8 (0x2000)
+Page 9 (0x2400)
+Page 10 (0x2800)
+Page 11 (0x2C00)
+Page 12 (0x3000)
+Page 13 (0x3400)
+Page 14 (0x3800)
+Page 15 (0x3C00)
+Page 16 (0x4000)
+Page 17 (0x4400)
+Page 18 (0x4800)
+Page 19 (0x4C00)
+Page 20 (0x5000)
+Page 21 (0x5400)
+Highest Page (same as page 21)
+Secondary Oscillator Pin Mode Select
+SOSC pins in Default (high drive-strength) Oscillator Mode
+SOSC pins in Low-Power (low drive-strength) Oscillator Mode
+SOSC pins have digital I/O functions (RA4, RB4)
+Voltage Regulator Wake-up Time Select
+Default regulator start-up time used
+Fast regulator start-up time used
+WPDIS
+Segment Write Protection Disable
+Segmented code protection disabled
+Segmented code protection enabled
+WPCFG
+Write Protect Configuration Page Select
+Last page and Flash Configuration words are unprotected
+Last page and Flash Configuration words are code-protected
+WPEND
+Segment Write Protection End Page Select
+Write Protect from WPFP to the last page of memory
+Write Protect from page 0 to WPFP
+I2C1 Pin Select bit
+Use default SCL1/SDA1 pins for I2C1 
+Use alternate SCL1/SDA1 pins for I2C1
+IOLOCK One-Way Set Enable
+OSCO Pin Configuration
+Clock Switching and Fail-Safe Clock Monitor
+Initial Oscillator Select
+Primary Oscillator with PLL module (XTPLL, HSPLL, ECPLL)
+Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
+Internal External Switchover
+Windowed WDT
+Emulator Pin Placement Select bits
+Emulator functions are shared with PGEC3/PGED3
+Emulator functions are shared with PGEC2/PGED2
+Emulator functions are shared with PGEC1/PGED1
+Background Debugger
+Emulator/debugger uses EMUC2/EMUD2
+Emulator/debugger uses EMUC1/EMUD1
+Page 22 (0x5800)
+Page 23 (0x5C00)
+Page 24 (0x6000)
+Page 25 (0x6400)
+Page 26 (0x6800)
+Page 27 (0x6C00)
+Page 28 (0x7000)
+Page 29 (0x7400)
+Page 30 (0x7800)
+Page 31 (0x7C00)
+Page 32 (0x8000)
+Page 33 (0x8400)
+Page 34 (0x8800)
+Page 35 (0x8C00)
+Page 36 (0x9000)
+Page 37 (0x9400)
+Page 38 (0x9800)
+Page 39 (0x9C00)
+Page 40 (0xA000)
+Page 41 (0xA400)
+Page 42 (0xA800)
+Highest Page (same as page 42)
+Page 0 (0x00)
+Segment Write Protection Disable bit
+Configuration Word Code Page Protection Selectbit
+Last page(at the top of program memory) and Flash configuration words are not protected
+Last page and Flash configuration words are code-protected
+Segment Write Protection End Page Select bit
+EC Oscillator mode Selected
+I2C2SEL
+Use Default SCL2/SDA2 pins for I2C2
+Use alternate ASCL2/ASDA2 pins for I2C2
+IOLOCK One-Way Set Enable bit
+Clock switching is enabled, Fail-safe Clock Monitor is disabled
+Clock switching and Fail-safe Clock Monitor are enabled
+Fast RC oscillator with Postscaler
+Primary oscillator (XT, HS, EC) with PLL module (XTPLL, HSPLL, ECPLL)
+Fast RC oscillator with Postscaler and PLL module (FRCPLL)
+Fast RC oscillator
+1:68719476736 (25.7 Days)
+1:34359738368 (12.8  Days)
+1:17179869184 (6.4 Days)
+1:8589934592 (77 Hours)
+1:4294967296 (38.5 Hours)
+1:2147483648 (19.2 Hours)
+1:1073741824 (9.6 Hours)
+1:536870912 (4.8 Hours)
+1:268435456 (2.4 Hours)
+1:134217728 (72.2 Minutes)
+1:67108864 (36.1 Minutes)
+1:33554432 (18 Minutes)
+1:16777216 (9 Minutes)
+1:8388608 (4.5 Minutes)
+1:4194304 (135.3 Secs)
+1:2097152 (67.7 Secs)
+1:1048576 (33.825 Secs)
+1:524288 (16.912 Secs)
+1:262114 (8.456 Secs)
+1:131072 (4.228 Secs)
+1:65536 (2.114 Secs)
+1:32768 (1.057 Secs)
+1:16384 (528.5 mS)
+1:8192 (264.3 mS)
+1:4096 (132.1 mS)
+1:2048 (66.1 mS)
+1:1024 (33 mS)
+1:512 (16.5 mS)
+1: 256 (8.3 mS)
+1:128 (4.1 mS)
+1:64 (2.1 mS)
+1:32 (1 mS)
+DSWDT Reference Clock Select
+Deep Sleep Watchdog Timer Enable
+DSSWEN
+DSEN Bit Enable
+RTCBAT
+RTC Battery Operation Enable
+BBEN2
+Bias2 enable bit
+Page 43 (0xAC00)
+Page 44 (0xB000)
+Page 45 (0xB400)
+Page 46 (0xB800)
+Page 47 (0xBC00)
+Page 48 (0xC000)
+Page 49 (0xC400)
+Page 50 (0xC800)
+Page 51 (0xCC00)
+Page 52 (0xD000)
+Page 53 (0xD400)
+Page 54 (0xD800)
+Page 55 (0xDC00)
+Page 56 (0xE000)
+Page 57 (0xE400)
+Page 58 (0xE800)
+Page 59 (0xEC00)
+Page 60 (0xF000)
+Page 61 (0xF400)
+Page 62 (0xF800)
+Page 63 (0xFC00)
+Page 64 (0x10000)
+Page 65 (0x10400)
+Page 66 (0x10800)
+Page 67 (0x10C00)
+Page 68 (0x11000)
+Page 69 (0x11400)
+Page 70 (0x11800)
+Page 71 (0x11C00)
+Page 72 (0x12000)
+Page 73 (0x12400)
+Page 74 (0x12800)
+Page 75 (0x12C00)
+Page 76 (0x13000)
+Page 77 (0x13400)
+Page 78 (0x13800)
+Page 79 (0x13C00)
+Page 80 (0x14000)
+Page 81 (0x14400)
+Page 82 (0x14800)
+Page 83 (0x14C00)
+Page 84 (0x15000)
+Page 85 (0x15400)
+Page 86 (0x15800)
+Page 87 (0x15C00)
+Page 88 (0x16000)
+Page 89 (0x16400)
+Page 90 (0x16800)
+Page 91 (0x16C00)
+Page 92 (0x17000)
+Page 93 (0x17400)
+Page 94 (0x17800)
+Page 95 (0x17C00)
+Page 96 (0x18000)
+Page 97 (0x18400)
+Page 98 (0x18800)
+Page 99 (0x18C00)
+Page 100 (0x19000)
+Page 101 (0x19400)
+Page 102 (0x19800)
+Page 103 (0x19C00)
+Page 104 (0x1A000)
+Page 105 (0x1A400)
+Page 106 (0x1A800)
+Page 107 (0x1AC00)
+Page 108 (0x1B000)
+Page 109 (0x1B400)
+Page 110 (0x1B800)
+Page 111 (0x1BC00)
+Page 112 (0x1C000)
+Page 113 (0x1C400)
+Page 114 (0x1C800)
+Page 115 (0x1CC00)
+Page 116 (0x1D000)
+Page 117 (0x1D400)
+Page 118 (0x1D800)
+Page 119 (0x1DC00)
+Page 120 (0x1E000)
+Page 121 (0x1E400)
+Page 122 (0x1E800)
+Page 123 (0x1EC00)
+Page 124 (0x1F000)
+Page 125 (0x1F400)
+Page 126 (0x1F800)
+Page 127 (0x1FC00)
+Secondary Oscillator Power Mode Select
+Default (high gain) Mode
+Low-Power (low gain) Mode
+External Clock Mode (SCLKI)
+Watch Dog Timer Window Width
+Watch Dog Timer Window Width is 25 percent
+Watch Dog Timer Window Width is 37.5 percent 
+Watch Dog Timer Window Width is 50 percent
+Watch Dog Timer Window Width is 75 percent
+HS Oscillator Enabled
+XT Oscillator Enabled
+External-Clock Mode Enabled
+BBDIS
+Back Bias Mode Disable bit
+Brown-out Reset Voltage
+Brown-out Reset Voltage is 2.0V
+Brown-out Reset Voltage is 1.8V
+Back Bias Feature Disable bit
+OSCIOFCN
+Clock Switching and Fail-Safe Clock Monitor Configuration bits
+Primary Oscillator with PLL module (XTPLL,HSPLL, ECPLL)
+ALTAVREF
+Alternate VREF/CVREF Pins Selection bit
+VREF and CVREF are mapped to AVDD and AVSS
+VREF is mapped to AVDD and AVSS; CVREF is mapped to default pins
+VREF is mapped to default pins; CVREF is mapped to AVDD and AVSS
+VREF and CVREF are mapped to their default pins
+Watchdog Timer Postscaler Select
+WDT Prescaler Ratio Select
+WDT enabled in hardware
+WDT controlled with the SWDTEN bit
+WDT enabled only while device active and disabled in Sleep
+WDT disabled in hardware; SWDTEN bit disabled
+Windowed WDT Disable
+LPCFG
+Low power regulator control
+Low Power Regulator Control Enable
+RTCC Reference Oscillator Select
+PLL96MHZ
+96MHz PLL Startup Select
+USB 96 MHz PLL Prescaler Select
+Oscillator input divided by 12 (48 MHz input)
+Oscillator input divided by 8 (32 MHz input)
+Oscillator input divided by 6 (24 MHz input)
+Oscillator input divided by 5 (20 MHz input)
+Oscillator input divided by 4 (16 MHz input)
+Oscillator input divided by 3 (12 MHz input)
+Oscillator input divided by 2 (8 MHz input)
+Oscillator input used directly (4 MHz input)
+Configuration Word Code Page Protection Select bit
+EC oscillator mode selected
+I2C2 Pin Select bit
+DISUVREG
+Internal USB 3.3V Regulator Disable bit
+Fast RC oscillator with Postscaler (FRCDIV)
+Primary oscillator (XT, HS, EC) with PLL module (XTPLL,HSPLL, ECPLL)
+PLL_96MHZ
+96MHz PLL Disable
+USB 96 MHz PLL Prescaler Select bits
+Oscillator input divided by 12 (48MHz input)
+Oscillator input divided by 10 (40MHz input)
+Oscillator input divided by 6 (24MHz input)
+Oscillator input divided by 5 (20MHz input)
+Oscillator input divided by 4 (16MHz input)
+Oscillator input divided by 3 (12MHz input)
+Oscillator input divided by 2 (8MHz input)
+Oscillator input used directly (4MHz input)
+Highest Page (same as page 85)
+Page 128 (0x20000)
+Page 129 (0x20400)
+Page 130 (0x20800)
+Highest Page (same as page 130)
+Page 131 (0x20C00)
+Page 132 (0x21000)
+Page 133 (0x21400)
+Page 134 (0x21800)
+Page 135 (0x21C00)
+Page 136 (0x22000)
+Page 137 (0x22400)
+Page 138 (0x22800)
+Page 139 (0x22C00)
+Page 140 (0x23000)
+Page 141 (0x23400)
+Page 142 (0x23800)
+Page 143 (0x23C00)
+Page 144 (0x24000)
+Page 145 (0x24400)
+Page 146 (0x24800)
+Page 147 (0x24C00)
+Page 148 (0x25000)
+Page 149 (0x25400)
+Page 150 (0x25800)
+Page 151 (0x25C00)
+Page 152 (0x26000)
+Page 153 (0x26400)
+Page 154 (0x26800)
+Page 155 (0x26C00)
+Page 156 (0x27000)
+Page 157 (0x27400)
+Page 158 (0x27800)
+Page 159 (0x27C00)
+Page 160 (0x28000)
+Page 161 (0x28400)
+Page 162 (0x28800)
+Page 163 (0x28C00)
+Page 164 (0x29000)
+Page 165 (0x29400)
+Page 166 (0x29800)
+Page 167 (0x29C00)
+Page 168 (0x2A000)
+Page 169 (0x2A400)
+Page 170 (0x2A800)
+Highest Page (same as page 170)
+Secondary oscillator is in Default (high drive strength) Oscillator mode
+Secondary oscillator is in Low-Power (low drive strength) Oscillator mode
+External clock (SCLKI) or Digital I/O mode(
+Fast regulator start-up time is used
+Default regulator start-up time is used
+ALTPMP
+Alternate PMP Pin Mapping
+EPMP pins are in default location mode
+EPMP pins are in alternate location mode
+Segmented code protection is disabled
+Segmented code protection is enabled; protected segment is defined by the WPEND, WPCFG and WPFPx Configuration bits
+Last page (at the top of program memory) and Flash Configuration Words are not write-protected
+Last page and Flash Configuration Words are write-protected, provided WPDIS = 0
+Protected code segment upper boundary is at the last page of program memory; the lower boundary is the code page specified by WPFP
+Protected code segment lower boundary is at the bottom of the program memory (000000h); upper boundary is the code page specified by WPFP
+Primary oscillator is disabled
+HS Oscillator mode is selected
+XT Oscillator mode is selected
+EC Oscillator mode is selected
+96 MHz PLL Prescaler Select
+Oscillator input is divided by 12 (48 MHz input)
+Oscillator input is divided by 8 (32 MHz input)
+Oscillator input is divided by 6 (24 MHz input)
+Oscillator input is divided by 5 (20 MHz input)
+Oscillator input is divided by 4 (16 MHz input)
+Oscillator input is divided by 3 (12 MHz input)
+Oscillator input is divided by 2 (8 MHz input)
+Oscillator input is used directly (4 MHz input)
+ALTVREF
+Alternate VREF location Enable
+VREF is on an alternate pin (VREF+ on RB0 and VREF- on RB1)
+VREF is on a default pin (VREF+ on RA9 and VREF- on RA10)
+Config Word Signature Bit
+Bulk erase of memory not conducated
+Bulk erase of memory area complete
+FNOP_0
+Force NOP
+NOPd
+EC oscillator, PLL enabled and under software control, CLKO function on OSC2
+EC oscillator, CLKO function on OSC2
+HS oscillator, PLL enabled and under software control
+FOSC2
+Default/Reset System Clock Select bit
+Two-Speed Start-up (Internal/External Oscillator Switchover) Control bit
+FNOP_1
+CCP2 is multiplexed with RC1
+CCP2 is multiplexed with RB3
+FNOP_2
+Stack Overflow/Underflow Reset 
+Extended Instruction Set
+EC+PLL (CLKO-RA6)
+EC (CLKO-RA6)
+HS+PLL
+INTOSCPLLO (CLKO-RA6)
+INTOSCPLL
+INTOSCO (CLKO-RA6)
+INTOSC
+T1DIG
+T1OSCEN Enforcement
+Low-Power Timer1 Oscillator
+Fail-Safe Clock Monitor
+Internal External Oscillator Switch Over Mode
+DSWDT Clock Select
+DSWDT uses INTRC
+DSWDT uses T1OSC/T1CKI
+RTCC Clock Select
+RTCC uses T1OSC/T1CKI
+RTCC uses INTRC
+Deep Sleep BOR
+Deep Sleep Watchdog Postscaler
+MSSP7B_EN
+MSSP address masking
+7 Bit address masking mode
+5 Bit address masking mode
+Write/Erase Protect Page Start/End Location
+Write Protect Program Flash Page 0
+Write Protect Program Flash Page 1
+Write Protect Program Flash Page 2
+Write Protect Program Flash Page 3
+Write Protect Program Flash Page 4
+Write Protect Program Flash Page 5
+Write Protect Program Flash Page 6
+Write Protect Program Flash Page 7
+Write Protect Program Flash Page 8
+Write Protect Program Flash Page 9
+Write Protect Program Flash Page 10
+Write Protect Program Flash Page 11
+Write Protect Program Flash Page 12
+Write Protect Program Flash Page 13
+Write Protect Program Flash Page 14
+Write Protect Program Flash Page 15
+Write/Erase Protect Region Select bit (valid when WPDIS = 0)
+Pages WPFP<5:0> to (Configuration Words page) write/erase protected
+Page 0 to WPFP<5:0> erase/write-protected
+Write/Erase Protect Configuration Region 
+CONFIG4H
+Write Protect Disable bit
+CPU System Clock Postscaler
+No CPU system clock divide
+CPU system clock divide by 2
+CPU system clock divide by 3
+CPU system clock divide by 6
+EC+PLL (CLKO-RA6), USB-EC+PLL
+EC (CLKO-RA6), USB-EC
+HS+PLL, USB-HS+PLL
+HS, USB-HS
+Write Protect Program Flash Page 16
+Write Protect Program Flash Page 17
+Write Protect Program Flash Page 18
+Write Protect Program Flash Page 19
+Write Protect Program Flash Page 20
+Write Protect Program Flash Page 21
+Write Protect Program Flash Page 22
+Write Protect Program Flash Page 23
+Write Protect Program Flash Page 24
+Write Protect Program Flash Page 25
+Write Protect Program Flash Page 26
+Write Protect Program Flash Page 27
+Write Protect Program Flash Page 28
+Write Protect Program Flash Page 29
+Write Protect Program Flash Page 30
+Write Protect Program Flash Page 31
+Write Protect Program Flash Page 32
+Write Protect Program Flash Page 33
+Write Protect Program Flash Page 34
+Write Protect Program Flash Page 35
+Write Protect Program Flash Page 36
+Write Protect Program Flash Page 37
+Write Protect Program Flash Page 38
+Write Protect Program Flash Page 39
+Write Protect Program Flash Page 40
+Write Protect Program Flash Page 41
+Write Protect Program Flash Page 42
+Write Protect Program Flash Page 43
+Write Protect Program Flash Page 44
+Write Protect Program Flash Page 45
+Write Protect Program Flash Page 46
+Write Protect Program Flash Page 47
+Write Protect Program Flash Page 48
+Write Protect Program Flash Page 49
+Write Protect Program Flash Page 50
+Write Protect Program Flash Page 51
+Write Protect Program Flash Page 52
+Write Protect Program Flash Page 53
+Write Protect Program Flash Page 54
+Write Protect Program Flash Page 55
+Write Protect Program Flash Page 56
+Write Protect Program Flash Page 57
+Write Protect Program Flash Page 58
+Write Protect Program Flash Page 59
+Write Protect Program Flash Page 60
+Write Protect Program Flash Page 61
+Write Protect Program Flash Page 62
+Write Protect Program Flash Page 63
+96MHz PLL Prescaler Selection (PLLSEL=0)
+CFGPLLEN
+PLL Enable Configuration Bit
+Stack Overflow/Underflow Reset
+T1OSC/SOSC Power Selection Bits
+Digital (SCLKI) mode selected
+Low Power T1OSC/SOSC circuit selected
+CLKOEC
+EC Clock Out Enable Bit 
+ADCSEL
+ADC 10 or 12 Bit Select
+10 - Bit ADC Enabled
+12 - Bit ADC Enabled
+PLLSEL
+PLL Selection Bit
+Selects 96MHz PLL
+Selects 4x PLL
+Pages WPFP<6:0> to (Configuration Words page) write/erase protected
+Page 0 to WPFP<6:0> erase/write-protected
+PLL Prescaler Selection
+LS48MHZ
+Low Speed USB mode with 48 MHz system clock bit
+System clock at 24 MHz USB CLKEN divide-by is set to 4
+System clock at 48 MHz USB CLKEN divide-by is set to 8
+Write Protect Program Flash Page 64
+Write Protect Program Flash Page 65
+Write Protect Program Flash Page 66
+Write Protect Program Flash Page 67
+Write Protect Program Flash Page 68
+Write Protect Program Flash Page 69
+Write Protect Program Flash Page 70
+Write Protect Program Flash Page 71
+Write Protect Program Flash Page 72
+Write Protect Program Flash Page 73
+Write Protect Program Flash Page 74
+Write Protect Program Flash Page 75
+Write Protect Program Flash Page 76
+Write Protect Program Flash Page 77
+Write Protect Program Flash Page 78
+Write Protect Program Flash Page 79
+Write Protect Program Flash Page 80
+Write Protect Program Flash Page 81
+Write Protect Program Flash Page 82
+Write Protect Program Flash Page 83
+Write Protect Program Flash Page 84
+Write Protect Program Flash Page 85
+Write Protect Program Flash Page 86
+Write Protect Program Flash Page 87
+Write Protect Program Flash Page 88
+Write Protect Program Flash Page 89
+Write Protect Program Flash Page 90
+Write Protect Program Flash Page 91
+Write Protect Program Flash Page 92
+Write Protect Program Flash Page 93
+Write Protect Program Flash Page 94
+Write Protect Program Flash Page 95
+Write Protect Program Flash Page 96
+Write Protect Program Flash Page 97
+Write Protect Program Flash Page 98
+Write Protect Program Flash Page 99
+Write Protect Program Flash Page 100
+Write Protect Program Flash Page 101
+Write Protect Program Flash Page 102
+Write Protect Program Flash Page 103
+Write Protect Program Flash Page 104
+Write Protect Program Flash Page 105
+Write Protect Program Flash Page 106
+Write Protect Program Flash Page 107
+Write Protect Program Flash Page 108
+Write Protect Program Flash Page 109
+Write Protect Program Flash Page 110
+Write Protect Program Flash Page 111
+Write Protect Program Flash Page 112
+Write Protect Program Flash Page 113
+Write Protect Program Flash Page 114
+Write Protect Program Flash Page 115
+Write Protect Program Flash Page 116
+Write Protect Program Flash Page 117
+Write Protect Program Flash Page 118
+Write Protect Program Flash Page 119
+Write Protect Program Flash Page 120
+Write Protect Program Flash Page 121
+Write Protect Program Flash Page 122
+Write Protect Program Flash Page 123
+Write Protect Program Flash Page 124
+Write Protect Program Flash Page 125
+Write Protect Program Flash Page 126
+Write Protect Program Flash Page 127
+Write/Erase Protect Configuration Region
+EC oscillator, PLL enabled and under software control, CLK function on OSC2
+Maintain these bits as 1
+CCP2 is multiplexed with RE7
+ECCP2 MUX bit
+ECCP2/P2A is multiplexed with RC1
+ECCP2/P2A is multiplexed with RE7 in Microcontroller mode or with RB3 in Extended Microcontroller mode
+Maintain this bit as 1 for 64-pin devices
+EC Oscillator with PLL, CLKO on RA6, ECPLL used by USB
+EC Oscillator with CLKO on RA6, EC used by USB
+HS oscillator, PLL enabled, HSPLL used by USB
+HS oscillator, HS used by USB
+INTOSC with PLL enabled, CLKO on RA6 and Port function on RA7
+INTOSC with PLL enabled, Port function on RA6 and RA7
+INTOSC, CLKO on RA6 and Port function on RA7
+INTOSC, Port function on RA6 and RA7
+ECCP2/P2A is multiplexed with RE7
+MSSPMSK
+MSSP Address Masking Mode Select bit
+7-Bit Address Masking mode enable
+5-Bit Address Masking mode enable
+EC Oscillator, PLL enabled, CLKO on RA6
+EC Oscillator, CLKO  on RA6
+HS oscillator, PLL enabled
+INTOSC with PLL enabled, CLKOUT on RA6 and port function on RA7
+INTOSC with PLL enabled, port function on RA6 and RA7
+Internal oscillator, CLKOUT on RA6 and port function on RA7
+Internal oscillator, port function on RA6 and RA7 
+Maintain these bits as 1 for 64-pin devices
+ETHLED
+Ethernet LED Enable bit
+EC Oscillator with PLL
+EC Oscillator with clock out on RA6
+Secondary Clock Source T1OSCEN Enforcement
+RTCSOSC
+RTCC uses T1OSC/T1CKI as reference clock
+RTCC uses INTOSC/INTRC as reference clock
+CCP2 MUX
+RE7
+RC1
+EASHFT
+External Address Bus Shift Enable bit
+External Memory Bus
+Microcontroller mode - External bus disabled
+Extended Microcontroller mode, 12-bit Address mode
+Extended Microcontroller mode, 16-bit Address mode
+Extended Microcontroller mode, 20-bit Address mode
+16-bit external bus mode
+8-bit external bus mode
+External Bus Wait Enable bit
+CCP2 is multiplexed with RE7 in Microcontroller mode or with RB3 in Extended Microcontroller mode
+Extended Microcontroller mode - 12-bit Address mode
+Extended Microcontroller mode - 16-bit Address mode
+Extended Microcontroller mode - 20-bit Address mode
+ECCPx MUX bit
+ECCP1 outputs (P1B/P1C) are multiplexed with RE6 and RE5; ECCP3 outputs (P3B/P3C) are multiplexed with RE4 and RE3
+ECCP1 outputs (P1B/P1C) are multiplexed with RH7 and RH6; ECCP3 outputs (P3B/P3C) are multiplexed with RH5 and RH4
+External Memory Bus Configuration bits
+PMPMX
+PMP Pin Multiplex bit
+PMP pins placed on EMB
+PMP pins placed else where
+PMP port pins connected to EMB (PORTD and PORTE)
+PMP port pins not connected to EMB (PORTA, PORTF and PORTH)
+RE7 <Microcontroller> / RB3
+Microcontroller mode, external bus disabled
+Extended Microcontroller mode,12-Bit Address mode
+Extended Microcontroller mode,16-Bit Address mode
+Extended Microcontroller mode, 20-Bit Address mode
+16-Bit Data Width mode
+8-Bit Data Width mode
+111X External RC oscillator, CLKOUT function on OSC2 (32kHz..4MHz)
+EC (low)
+EC, CLKOUT function on OSC2 (low)
+EC (medium)
+EC, CLKOUT function on OSC2 (medium) (32kHz..4MHz)
+Internal RC oscillator, CLKOUT function on OSC2
+Internal RC oscillator
+External RC oscillator (32kHz..4MHz)
+0110 External RC oscillator, CLKOUT function on OSC2 (32kHz..4MHz)
+EC (high) (32kHz..40MHz)
+EC, CLKOUT function on OSC2 (high) (32kHz..40MHz)
+External RC oscillator, CLKOUT function on OSC2 (32kHz..4MHz)
+4 X PLL Enable bit
+PCLKEN
+Primary Clock Enable bit
+VBOR set to 1.9 V nominal
+VBOR set to 2.2 V nominal
+VBOR set to 2.7 V nominal
+VBOR set to 3.0 V nominal
+HFOFST
+HFINTOSC Fast Start-up bit
+CPU System Clock Selection bits
+CPU System Clock divided by 4
+CPU System Clock divided by 3
+CPU System Clock divided by 2
+No CPU System Clock divide
+USB Clock Selection bit
+EC (low) (32kHz..4MHz)
+Internal RC oscillator, CLKOUT function on OSC2 (16MHz..40MHz)
+Internal RC oscillator (32kHz..40MHz)
+External RC oscillator (32kHz..40MHz)
+EC (high) (4MHz..25MHz)
+EC, CLKOUT function on OSC2 (high) (100kHz..4MHz)
+External RC oscillator, CLKOUT function on OSC2 (32kHz..200kHz)
+Table Write Protection bit
+External RC oscillator, CLKOUT function on RA6 (32kHz..4MHz)
+VBOR set to 1.8 V nominal
+HFINTOSC Fast Start-up
+Code Protection Block 0
+Code Protection Block 1
+Write Protection Block 0
+Write Protection Block 1
+Table Read Protection Block 0
+Table Read Protection Block 1
+111X External RC oscillator, CLKOUT function on RA6 (0kHz..4MHz)
+EC oscillator (low power, <500 kHz) (0kHz..4MHz)
+EC oscillator, CLKOUT function on OSC2 (low power, <500 kHz) (0kHz..4MHz)
+EC oscillator (medium power, 500 kHz-16 MHz) (4MHz..16MHz)
+EC oscillator, CLKOUT function on OSC2 (medium power, 500 kHz-16 MHz) (4MHz..16MHz)
+Internal oscillator block, CLKOUT function on OSC2 (31kHz..16MHz)
+Internal oscillator block (31kHz..16MHz)
+External RC oscillator (0kHz..4MHz)
+External RC oscillator, CLKOUT function on OSC2 (0kHz..4MHz)
+EC oscillator (high power, >16 MHz) (16MHz..64MHz)
+EC oscillator, CLKOUT function on OSC2 (high power, >16 MHz) (16MHz..64MHz)
+HS oscillator (medium power 4-16 MHz) (4MHz..16MHz)
+HS oscillator (high power > 16 MHz) (16MHz..25MHz)
+LP oscillator (32kHz..32kHz)
+PLLCFG
+4X PLL Enable
+PRICLKEN
+Primary clock enable bit
+VBOR set to 1.90 V nominal
+VBOR set to 2.20 V nominal
+VBOR set to 2.50 V nominal
+VBOR set to 2.85 V nominal
+WDT is controlled by SWDTEN bit of the WDTCON register
+WDT is disabled in sleep, otherwise enabled. SWDTEN bit has no effect
+CCP3MX
+P3A/CCP3 Mux bit
+P3A/CCP3 input/output is multiplexed with RB5
+P3A/CCP3 input/output is mulitplexed with RC6
+T3CMX
+Timer3 Clock input mux bit
+T3CKI is on RC0
+T3CKI is on RB5
+P2BMX
+ECCP2 B output mux bit
+P2B is on RB5
+P2B is on RC0
+MCLR pin enabled, RE3 input pin disabled
+RE3 input pin enabled; MCLR disabled
+Code Protection Block 2
+Code Protection Block 3
+Write Protection Block 2
+Write Protection Block 3
+Table Read Protection Block 2
+Table Read Protection Block 3
+RETEN
+VREG Sleep Enable bit
+INTOSCSEL
+LF-INTOSC Low-power Enable bit
+LF-INTOSC in Low-power mode during Sleep
+SOSC Power Selection and mode Configuration bits
+Digital (SCLKI) mode
+External RC oscillator
+External RC oscillator, CLKOUT function on OSC2
+EC oscillator (Low power, DC - 160 kHz)
+EC oscillator, CLKOUT function on OSC2 (Low power, DC - 160 kHz)
+EC oscillator (Medium power, 160 kHz - 4 MHz)
+EC oscillator, CLKOUT function on OSC2 (Medium power, 160 kHz - 4 MHz)
+EC oscillator (High power, 16 MHz - 64 MHz)
+EC oscillator, CLKOUT function on OSC2 (High power, 16 MHz - 64 MHz)
+HS oscillator (Medium power, 4 MHz - 16 MHz)
+HS oscillator (High power, 16 MHz - 25 MHz)
+PLL x4 Enable bit
+Enabled in hardware, SBOREN disabled
+Enabled while active, disabled in SLEEP, SBOREN disabled
+Controlled with SBOREN bit
+Disabled in hardware, SBOREN disabled
+1.8V
+3.0V
+BORPWR
+BORMV Power level
+ZPBORMV instead of BORMV is selected
+BORMV set to high power level
+BORMV set to medium power level
+BORMV set to low power level
+WDT enabled in hardware; SWDTEN bit disabled
+WDT controlled by SWDTEN bit setting
+WDT enabled only while device is active and disabled in Sleep mode; SWDTEN bit disabled
+1:1048576
+1:524288
+1:262144
+1:131072
+1:65536
+CANMX
+ECAN Mux bit
+ECAN TX and RX pins are located on RB2 and RB3, respectively
+ECAN TX and RX pins are located on RC6 and RC7, respectively
+5 bit address masking mode
+MCLR Enabled, RG5 Disabled
+MCLR Disabled, RG5 Enabled
+Boot Block Size
+2K word Boot Block size
+1K word Boot Block size
+Code Protect 00800-01FFF
+Code Protect 02000-03FFF
+Code Protect 04000-05FFF
+Code Protect 06000-07FFF
+Table Write Protect 00800-03FFF
+Table Write Protect 04000-07FFF
+Table Read Protect 00800-03FFF
+Table Read Protect 04000-07FFF
+Maintain bit as 0
+Code Protect 00800-03FFF
+Code Protect 04000-07FFF
+Code Protect 08000-0BFFF
+Code Protect 0C000-0FFFF
+P3A/CCP3 input/output is mulitplexed with RE0
+P2B is on RD2
+RTCC uses SOSC
+RE7-Microcontroller Mode/RB3-All other modes
+Table Write Protect 00800-017FF
+Table Write Protect 01800-03FFF
+Table Write Protect 04000-05FFF
+Table Write Protect 06000-07FFF
+EBRT0
+Table Read Protect 00800-017FF
+EBRT1
+Table Read Protect 01800-03FFF
+EBRT2
+Table Read Protect 04000-05FFF
+EBRT3
+Table Read Protect 06000-07FFF
+EBRTB
+ECAN TX and RX pins are located on RE5 and RE4, respectively
+T0CKMX
+Timer0 Clock Input Mux bit
+Timer0 gets its clock input from the RB5/T0CKI pin on 64-pin packages
+Timer0 gets its clock input from the RG4/T0CKI pin on 64-pin packages
+T3CKMX
+Timer3 Clock Input Mux bit
+Timer3 gets its clock input from the RG2/T3CKI pin on 64-pin packages
+Timer3 gets its clock input from the RB5/T3CKI pin on 64-pin packages
+Code Protect 10000-13FFF
+Code Protect 14000-17FFF
+Code Protect 18000-1BFFF
+Code Protect 1C000-1FFFF
+Table Write Protect 10000-13FFF
+Table Write Protect 14000-17FFF
+Table Write Protect 18000-1BFFF
+Table Write Protect 1C000-1FFFF
+EBRT4
+Table Read Protect 10000-13FFF
+EBRT5
+Table Read Protect 14000-17FFF
+EBRT6
+Table Read Protect 18000-1BFFF
+EBRT7
+Table Read Protect 1C000-1FFFF
+External Address Shift bit
+ABW
+20-bit address bus
+16-bit address bus
+12-bit address bus
+8-bit address bus
+Data Bus Width
+Enhanced CCP1/3 [P1B/P1C/P3B/P3C] muxed with RE6/RE5/RE4/RE3
+Enhanced CCP1/3 [P1B/P1C/P3B/P3C] muxed with RH7/RH6/RH5/RH4

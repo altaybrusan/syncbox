@@ -1,0 +1,61 @@
+[DEVICE]
+Name=P24EP512GU810
+Clock=140000000
+[MEMORY_MODEL]
+Value=0
+[BUILD_TYPE]
+Value=0
+[ACTIVE_TAB]
+Value=UARTA.c
+[USE_EEPROM]
+Value=0
+[USE_HEAP]
+Value=0
+[HEAP_SIZE]
+Value=2000
+[EEPROM_DEFINITION]
+Value=
+[FILES]
+Count=1
+File0=UARTA.c
+[BINARIES]
+Count=0
+[IMAGES]
+Count=2
+File0=UARTA.jpg
+File1=FusionV7.jpg
+ActiveImageIndex=0
+[OPENED_FILES]
+Count=1
+File0=UARTA.c
+[EEPROM]
+Count=0
+[ACTIVE_COMMENTS_FILES]
+Count=0
+[OTHER_FILES]
+Count=0
+[SEARCH_PATH]
+Count=8
+Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for dsPIC\defs\
+Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for dsPIC\uses\
+Path2=C:\Users\Burak\Desktop\UART A Tx\
+Path3=C:\Program Files (x86)\Mikroelektronika\mikroC PRO for dsPIC\defs\
+Path4=C:\Program Files (x86)\Mikroelektronika\mikroC PRO for dsPIC\uses\
+Path5=C:\Users\System Administrator\Desktop\mikroC PRO dsPIC\PIC24\UART A Tx\
+Path6=C:\Users\System Administrator\Desktop\mikroC PRO dsPIC\PIC24\UART A\
+Path7=C:\Program Files (x86)\Mikroelektronika\mikroC PRO for dsPIC\Examples\Development Systems\EasyPIC Fusion v7\PIC24EP512GU810\
+[HEADER_PATH]
+Count=0
+[HEADERS]
+Count=0
+[PLDS]
+Count=0
+[Useses]
+Count=4
+File0=UART
+File1=Peripheral_Pin_Select
+File2=Lcd
+File3=Lcd_Constants
+[EXPANDED NODES]
+Node1=Sources
+Count=1

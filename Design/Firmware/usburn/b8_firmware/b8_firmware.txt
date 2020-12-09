@@ -1,0 +1,26 @@
+++ACHTUNG++
+Die HEX-Files wurden mit der Student-Edition des C18-Compilers erstellt.
+
+
+
+Firmware fÅr Brenner9 V 0.16 (30.05.2011)
+============================
+
+Das ist die Firmware fÅr den Brenner8. Sie muss in den Steuerpic
+vom Typ PIC18F2550 gebrannt werden.
+
+Die Firmware erlaubt zusammen mit der Windowssoftware US-Burn V1.11 das Brennen von
+5V-PICs der Serien PIC10F, PIC12F, PIC16F, PIC18F und dsPIC30F.
+
+Die 3V-PICs der Serien PIC16FxxKxx und einige PICxxLFxxx erfordern die 
+Verwendung eines zus‰tzlichen 3,3V-Adapters:
+http://www.sprut.de/electronic/pic/projekte/brenner8/adapter33.html
+
+
+Um die Firmware in den SteuerPIC des Brenner8 zu bekommen, muss zunaechst der Bootloader
+in den PIC gebrannt worden sein. Danach wird der PIC in den Brenner8 als SteuerPIC eingesetzt. 
+Nun kann die Firmware mit US-Burn in den PIC nachgeladen werden, wÑrend der PIC als SteuerPIC 
+im Brenner8 sitzt.
+
+
+sprut

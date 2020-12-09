@@ -1,0 +1,5 @@
+main
+	FlashIt
+		Delay150
+		Delay250
+interrupt

@@ -1,0 +1,130 @@
+Version:0.9
+StartHTML:0000000105
+EndHTML:0000019687
+StartFragment:0000001499
+EndFragment:0000019671
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>mikroIDE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+body { font-family: Courier New; font-size: 14pt; }
+.cpp1-activecomment { color: #3399FF; font-style: italic; text-decoration: underline; }
+.cpp1-assembler { color: #FF0000; }
+.cpp1-binary { color: #800000; }
+.cpp1-character { color: #808000; }
+.cpp1-comment { color: #008000; font-style: italic; }
+.cpp1-float { color: #800000; }
+.cpp1-hexadecimal { color: #008000; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #FF0000; }
+.cpp1-imagelink { color: #800080; font-style: italic; text-decoration: underline; }
+.cpp1-number { color: #008000; }
+.cpp1-octal { color: #0000FF; }
+.cpp1-preprocessor { color: #8000FF; font-style: italic; }
+.cpp1-reservedword { color: #000000; font-weight: bold; }
+.cpp1-space { color: #F0F0F0; }
+.cpp1-string { color: #0000FF; }
+.cpp1-symbol { color: #000000; }
+.cpp1-weblink { color: #3399FF; font-style: italic; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<!--StartFragment--><pre><code><span class="cpp1-reservedword">char</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">uart_rd;
+</span><span class="cpp1-comment">//char&nbsp;uart_rd1;
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">row=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,col=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-comment">//&nbsp;LCD&nbsp;module&nbsp;connections
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_RS</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD2_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_EN</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD3_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D4</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD4_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D5</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD5_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D6</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD6_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D7</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LATD7_bit;
+
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_RS_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD2_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_EN_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD3_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D4_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD4_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D5_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD5_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D6_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD6_bit;
+</span><span class="cpp1-reservedword">sbit</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">LCD_D7_Direction</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">TRISD7_bit;
+</span><span class="cpp1-comment">//&nbsp;End&nbsp;LCD&nbsp;module&nbsp;connections
+
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">main()</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">{
+
+
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">PPS_Mapping(</span><span class="cpp1-number">100</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_INPUT,</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">_U1RX);</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;Sets&nbsp;pin&nbsp;RP100&nbsp;to&nbsp;be&nbsp;Input,&nbsp;and&nbsp;maps&nbsp;U1RX&nbsp;to&nbsp;it
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">PPS_Mapping(</span><span class="cpp1-number">101</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_OUTPUT,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_U1TX);</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;Sets&nbsp;pin&nbsp;RP101&nbsp;to&nbsp;be&nbsp;Output,&nbsp;and&nbsp;maps&nbsp;U1TX&nbsp;to&nbsp;it
+</span><span class="cpp1-space">&nbsp;&nbsp;
+&nbsp;&nbsp;</span><span class="cpp1-identifier">PPS_Mapping(</span><span class="cpp1-number">108</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_INPUT,</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">_U2RX);</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;Sets&nbsp;pin&nbsp;RP100&nbsp;to&nbsp;be&nbsp;Input,&nbsp;and&nbsp;maps&nbsp;U1RX&nbsp;to&nbsp;it
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">PPS_Mapping(</span><span class="cpp1-number">109</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_OUTPUT,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">_U2TX);</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;Sets&nbsp;pin&nbsp;RP101&nbsp;to&nbsp;be&nbsp;Output,&nbsp;and&nbsp;maps&nbsp;U1TX&nbsp;to&nbsp;it
+
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">PLLFBD</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-number">70</span><span class="cpp1-symbol">;</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;PLL&nbsp;multiplier&nbsp;M=70
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">CLKDIV</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x0000</span><span class="cpp1-symbol">;</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;PLL&nbsp;prescaler&nbsp;N1=2,&nbsp;PLL&nbsp;postscaler&nbsp;N2=2
+
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELA</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELB</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELC</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELD</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELE</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">ANSELG</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-symbol">;
+
+
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">PORTD</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-hexadecimal">0x00</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">;
+
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Init();</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//Initialize&nbsp;LCD
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Delay_ms(</span><span class="cpp1-number">100</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//Lcd_Cmd(_LCD_CLEAR);&nbsp;//Clear&nbsp;Display
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//Lcd_Cmd(_LCD_UNDERLINE_ON);&nbsp;//Underline&nbsp;fashion&nbsp;cursor
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Out(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-string">&quot;Gulmay&nbsp;Gen.&nbsp;Test&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Delay_ms(</span><span class="cpp1-number">1000</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CLEAR);
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">UART1_Init(</span><span class="cpp1-number">9600</span><span class="cpp1-symbol">);</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//Initialize&nbsp;UART&nbsp;module
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Delay_ms(</span><span class="cpp1-number">100</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">UART2_Init(</span><span class="cpp1-number">9600</span><span class="cpp1-symbol">);</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//Initialize&nbsp;UART&nbsp;module
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Delay_ms(</span><span class="cpp1-number">100</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">/*UART1_Write_Text(&quot;Start&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UART1_Write(13);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UART1_Write(10);&nbsp;*/
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">UART1_Write_Text(</span><span class="cpp1-string">&quot;?&lt;M&gt;&lt;CR&gt;&quot;</span><span class="cpp1-symbol">);
+
+
+
+</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-reservedword">while</span><span class="cpp1-symbol">(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">(UART2_Data_Ready())</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">{</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;If&nbsp;data&nbsp;is&nbsp;received
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">uart_rd</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">UART2_Read();</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;read&nbsp;the&nbsp;received&nbsp;data
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">UART2_Write(uart_rd);</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-comment">//&nbsp;and&nbsp;send&nbsp;data&nbsp;via&nbsp;UART
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(UART1_Data_Ready()==</span><span class="cpp1-number">1</span><span class="cpp1-symbol">){</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//If&nbsp;Data&nbsp;Ready,
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">uart_rd=UART1_Read();</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//Read&nbsp;it&nbsp;and&nbsp;store&nbsp;in&nbsp;variable&nbsp;i
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Chr(row,col,uart_rd);</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//Print&nbsp;it&nbsp;in&nbsp;co-ordinates&nbsp;specified
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(uart_rd==</span><span class="cpp1-number">17</span><span class="cpp1-symbol">){</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//If&nbsp;ESC&nbsp;is&nbsp;pressed,&nbsp;clear&nbsp;display
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CLEAR);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">col=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,row=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">UART1_Write(uart_rd);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">col=col+</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(col==</span><span class="cpp1-number">17</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">row==</span><span class="cpp1-number">1</span><span class="cpp1-symbol">){</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//On&nbsp;end&nbsp;of&nbsp;row,&nbsp;goto&nbsp;second&nbsp;row
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">row=</span><span class="cpp1-number">2</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">col=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(row==</span><span class="cpp1-number">2</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">col==</span><span class="cpp1-number">17</span><span class="cpp1-symbol">){</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-comment">//On&nbsp;end&nbsp;of&nbsp;display,&nbsp;clear&nbsp;display
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CLEAR);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">col=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">row=</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+}
+</span></code></pre><!--EndFragment--></body>
+</html>

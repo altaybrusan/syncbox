@@ -1,0 +1,15 @@
+LABCENTER PROTEUS PICK AND PLACE FILE
+=====================================
+
+Component positions for arduino_back.pdsprj
+
+Fields: Part ID, Value, Package, Layer, Rotation, X, Y
+Units:  Rotation - degrees, X, Y  - thou
+Notes:  The X, Y value is the centre of package as drawn in ARES.
+        The origin for these values is the Output Origin.
+        The values are a guide only and must be checked manually when
+        setting up automatic insertion equipment.
+
+"J1","TBLOCK-M3","TBLOCK-M3",TOP,0,0,0
+"J2","26630301RP2","CON3_1X3_HDR_2663",TOP,0,-800,-23.815
+"J3","26630101RP2","CON1_1X1_HDR_2663",TOP,0,575,-23.815
