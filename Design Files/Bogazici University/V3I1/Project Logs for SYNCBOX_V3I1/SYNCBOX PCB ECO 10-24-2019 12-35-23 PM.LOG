@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=RS485_RO Pin=J24-1
-Removed Pin From Net: NetName=MCU_UART4_RX Pin=J24-2
-Removed Pin From Net: NetName=CON_UART4_RX Pin=J25-1
-Removed Pin From Net: NetName=MCU_TRANS_OUT_RX Pin=J25-2
-Added Pin To Net: NetName=MCU_UART4_RX Pin=J24-1
-Added Pin To Net: NetName=RS485_RO Pin=J24-2
-Added Pin To Net: NetName=MCU_TRANS_OUT_RX Pin=J25-1
-Added Pin To Net: NetName=CON_UART4_RX Pin=J25-2
-Change Class Name : Old Net Name=[07] - CPU CONNECTORS New Net Name=[07] - CPU CONNECTORS 

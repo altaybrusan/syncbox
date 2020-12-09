@@ -1,1 +1,0 @@
-Use same naming for folders as in ! Altium Source Files

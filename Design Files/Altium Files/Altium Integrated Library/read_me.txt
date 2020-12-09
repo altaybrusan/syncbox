@@ -1,1 +1,0 @@
-Place for Altium Library files
