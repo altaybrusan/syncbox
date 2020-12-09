@@ -1,0 +1,6 @@
+<map id="SetGeneratorInUserMode" name="SetGeneratorInUserMode">
+<area shape="rect" id="node2" href="$_instrument_8c.html#a7ccf8090b585b1cca5658182baa14818" title="private function for updating state variables. " alt="" coords="273,5,367,32"/>
+<area shape="rect" id="node4" href="$_instrument_8c.html#a3f70ca48cf29b08368f959f8af8638aa" title="event handler for start exposure selection on the screen. " alt="" coords="221,57,419,98"/>
+<area shape="rect" id="node5" href="$_instrument_8c.html#a5f47e92cf4585e7c569eab9d0bab16df" title="event handler for start warmup selection on the screen. " alt="" coords="225,122,415,163"/>
+<area shape="rect" id="node3" href="$_instrument_8c.html#af47e8c6db4aa181276e336d2ba52aa5b" title="Event handler for generator update mode event. " alt="" coords="467,5,680,32"/>
+</map>

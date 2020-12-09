@@ -1,0 +1,468 @@
+\hypertarget{_gulmay_a_p_i_8h}{}\section{Gulmay\+A\+P\+I.\+h File Reference}
+\label{_gulmay_a_p_i_8h}\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+
+
+A\+PI for communicating with Gulmay Generator.  
+
+
+{\ttfamily \#include \char`\"{}Kernel.\+h\char`\"{}}\newline
+Include dependency graph for Gulmay\+A\+P\+I.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{_gulmay_a_p_i_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{_gulmay_a_p_i_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a02668eaaa258ebaf11cde72d957f0920}\label{_gulmay_a_p_i_8h_a02668eaaa258ebaf11cde72d957f0920}} 
+typedef void($\ast$ {\bfseries Generator\+Message\+Event}) (char $\ast$)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a0843186891150233d594f19bdf589672}\label{_gulmay_a_p_i_8h_a0843186891150233d594f19bdf589672}} 
+typedef void($\ast$ {\bfseries Exposure\+Stoped\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a65e2369b247a1d59e344d4c0cd714c73}\label{_gulmay_a_p_i_8h_a65e2369b247a1d59e344d4c0cd714c73}} 
+typedef void($\ast$ {\bfseries Kvp\+Updated\+Event}) (int)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a34b27715a6bf1a6319b7dc1e5658b1f7}\label{_gulmay_a_p_i_8h_a34b27715a6bf1a6319b7dc1e5658b1f7}} 
+typedef void($\ast$ {\bfseries Generator\+Mode\+Event}) (int)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_aa5b6abbbe83a758c090d232e323a8a55}\label{_gulmay_a_p_i_8h_aa5b6abbbe83a758c090d232e323a8a55}} 
+typedef void($\ast$ {\bfseries Amp\+Updated\+Event}) (int)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a0dfc674cf1d0216ad72fdbd2b7ee7064}\label{_gulmay_a_p_i_8h_a0dfc674cf1d0216ad72fdbd2b7ee7064}} 
+typedef void($\ast$ {\bfseries Passed\+Exposure\+Time\+Event}) (int)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a217fd750d01cadd3bd6b9142e7850ba8}\label{_gulmay_a_p_i_8h_a217fd750d01cadd3bd6b9142e7850ba8}} 
+typedef void($\ast$ {\bfseries Shoot\+Time\+Event}) (int)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a5f3b59192c46c17d136d08282f550f9f}\label{_gulmay_a_p_i_8h_a5f3b59192c46c17d136d08282f550f9f}} 
+typedef void($\ast$ {\bfseries Exposure\+Started\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a9c699a8c744d9ebe5205490fda712310}\label{_gulmay_a_p_i_8h_a9c699a8c744d9ebe5205490fda712310}} 
+typedef void($\ast$ {\bfseries Generator\+Error\+Event}) (char $\ast$)
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a398a8c838e4496500b3e8ec5b1c2617f}\label{_gulmay_a_p_i_8h_a398a8c838e4496500b3e8ec5b1c2617f}} 
+typedef void($\ast$ {\bfseries Generator\+Warmup\+Finished\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a9a5a1b79c840ac0a1e17448dfa74c98c}\label{_gulmay_a_p_i_8h_a9a5a1b79c840ac0a1e17448dfa74c98c}} 
+typedef void($\ast$ {\bfseries Generator\+Requires\+Short\+Warmup\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_abf1824d93d9614de8423383b7d77b752}\label{_gulmay_a_p_i_8h_abf1824d93d9614de8423383b7d77b752}} 
+typedef void($\ast$ {\bfseries Generator\+Requires\+Long\+Warmup\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_aaeb5a80c05e58ccec28ecbecbc405815}\label{_gulmay_a_p_i_8h_aaeb5a80c05e58ccec28ecbecbc405815}} 
+typedef void($\ast$ {\bfseries Larg\+Focal\+Spot\+Size\+Event}) ()
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a63ae76097579e2801c2719eaf27dc43e}\label{_gulmay_a_p_i_8h_a63ae76097579e2801c2719eaf27dc43e}} 
+typedef void($\ast$ {\bfseries Small\+Focal\+Spot\+Size\+Event}) ()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_abb608877dc715ca117536e8ea8b0a111}\label{_gulmay_a_p_i_8h_abb608877dc715ca117536e8ea8b0a111}} 
+void \hyperlink{_gulmay_a_p_i_8h_abb608877dc715ca117536e8ea8b0a111}{Reset\+Generator} ()
+\begin{DoxyCompactList}\small\item\em reset generator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a2739ffd6c208395bf3e9563592f410c9}\label{_gulmay_a_p_i_8h_a2739ffd6c208395bf3e9563592f410c9}} 
+void \hyperlink{_gulmay_a_p_i_8h_a2739ffd6c208395bf3e9563592f410c9}{Update\+Kvp} (int new\+Value)
+\begin{DoxyCompactList}\small\item\em update K\+VP value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ae6da7f07c0176169fc6e31a6636bbb4b}\label{_gulmay_a_p_i_8h_ae6da7f07c0176169fc6e31a6636bbb4b}} 
+void \hyperlink{_gulmay_a_p_i_8h_ae6da7f07c0176169fc6e31a6636bbb4b}{Update\+Amp} (int new\+Value)
+\begin{DoxyCompactList}\small\item\em update milli-\/amper value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a3946c95c3a1aa7e04793954f945e832a}\label{_gulmay_a_p_i_8h_a3946c95c3a1aa7e04793954f945e832a}} 
+void \hyperlink{_gulmay_a_p_i_8h_a3946c95c3a1aa7e04793954f945e832a}{Update\+Shoot\+Time} (int new\+Value)
+\begin{DoxyCompactList}\small\item\em update shoot time. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_ac549b847f1e073981dd7276f042ceff9}{Start\+Exposure} ()
+\begin{DoxyCompactList}\small\item\em start exposure. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_afcff0f20c10416c89d36544a14b98f2d}{Stop\+Exposure} ()
+\begin{DoxyCompactList}\small\item\em stop exposure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a109a478fc2238fad56c6a1c266a393e6}\label{_gulmay_a_p_i_8h_a109a478fc2238fad56c6a1c266a393e6}} 
+void \hyperlink{_gulmay_a_p_i_8h_a109a478fc2238fad56c6a1c266a393e6}{Set\+Fine\+Focal\+Spot\+Size} ()
+\begin{DoxyCompactList}\small\item\em activate fine focal spot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a92f2423b2925db5e42315fdac82bbab9}\label{_gulmay_a_p_i_8h_a92f2423b2925db5e42315fdac82bbab9}} 
+void \hyperlink{_gulmay_a_p_i_8h_a92f2423b2925db5e42315fdac82bbab9}{Set\+Broad\+Focal\+Spot\+Size} ()
+\begin{DoxyCompactList}\small\item\em activate broad focal spot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a28d0fba12b3f30ffd4ff75bbe7d97bdc}\label{_gulmay_a_p_i_8h_a28d0fba12b3f30ffd4ff75bbe7d97bdc}} 
+void \hyperlink{_gulmay_a_p_i_8h_a28d0fba12b3f30ffd4ff75bbe7d97bdc}{Start\+Short\+Term\+Warmup} ()
+\begin{DoxyCompactList}\small\item\em start short term warm up program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a46e773d024d2106424c1ac4ee45e331b}\label{_gulmay_a_p_i_8h_a46e773d024d2106424c1ac4ee45e331b}} 
+void \hyperlink{_gulmay_a_p_i_8h_a46e773d024d2106424c1ac4ee45e331b}{Start\+Long\+Term\+Warmup} ()
+\begin{DoxyCompactList}\small\item\em start long term warm up program. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_acc6aec4a2abf80dab4cc10d24fee24d6}{Query\+Generator\+Mode} ()
+\begin{DoxyCompactList}\small\item\em get the generator exposure mode. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_a936ac171697cec2e7d3520656b8d7a26}{Query\+Exposure\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em get the exposure parameters (K\+VP,m\+Amp and time). \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_aa7270f2beb762972ec1966e9eb4b5616}{Generator\+Process\+Kernel\+Frame} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME})
+\begin{DoxyCompactList}\small\item\em call back function. Kernel messages are received by this function. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_abeda6d4243dec415776eb16beacb0b38}{Query\+Warmup\+Program} ()
+\begin{DoxyCompactList}\small\item\em check generetor for what is the required warmup program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a3759ed567b072f3cd49020359d998d33}\label{_gulmay_a_p_i_8h_a3759ed567b072f3cd49020359d998d33}} 
+void \hyperlink{_gulmay_a_p_i_8h_a3759ed567b072f3cd49020359d998d33}{Query\+Focal\+Spot\+Size} ()
+\begin{DoxyCompactList}\small\item\em check generator for the active focal spot. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_adbb4af99d58174947214b531e2cbd45c}{Set\+Generator\+In\+User\+Mode} ()
+\begin{DoxyCompactList}\small\item\em activate the user mode program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a9eee8d4a57bdcda8bc8195629b91c51c}\label{_gulmay_a_p_i_8h_a9eee8d4a57bdcda8bc8195629b91c51c}} 
+void \hyperlink{_gulmay_a_p_i_8h_a9eee8d4a57bdcda8bc8195629b91c51c}{Suppress\+Errors\+Voltage\+And\+Amp\+Error} ()
+\begin{DoxyCompactList}\small\item\em suppress voltage and ampere errors. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_a6b577498aedd9f37f5ecf58079203c1a}{Check\+Generator\+Errors} ()
+\begin{DoxyCompactList}\small\item\em check the generetor errors \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_a4fa5370e4ed7ac42f50631f707ee8c2a}{Query\+Ellapsed\+Exposure\+Time} ()
+\begin{DoxyCompactList}\small\item\em query ellapsed exposure time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a5c136c7523618f19e288758db1231c2a}\label{_gulmay_a_p_i_8h_a5c136c7523618f19e288758db1231c2a}} 
+void {\bfseries Send\+Message} (char $\ast$current\+Request)
+\item 
+void \hyperlink{_gulmay_a_p_i_8h_ac5d01c6ebb446d070401697563c27f97}{Register\+Message\+Listener} (Generator\+Message\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator message event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_a4d3de4466610ab5ff9719860082abb2c}{Register\+Error\+Listener} (Generator\+Error\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator error event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_ad8857dcb2550f6b2ab1ea1745044be4c}{Register\+Generator\+Mode\+Listener} (Generator\+Mode\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator mode event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_a6537404a8cbbeab00b3f6fb3b7e04a24}{Register\+Focalspot\+Listeners} (Larg\+Focal\+Spot\+Size\+Event, Small\+Focal\+Spot\+Size\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator focal spot change event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_abac22860be7c048152d41af0899a5d67}{Register\+Exposure\+State\+Listeners} (Exposure\+Started\+Event, Passed\+Exposure\+Time\+Event, Exposure\+Stoped\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator exposure event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_ac2e42f9cf31e8451ea55a8584f200b19}{Register\+Exposure\+Parameter\+Listeners} (Kvp\+Updated\+Event, Amp\+Updated\+Event, Shoot\+Time\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator exposure parameter event. \end{DoxyCompactList}\item 
+void \hyperlink{_gulmay_a_p_i_8h_ae475af8e61d9df377a66dbcbd352811d}{Register\+Warmup\+Listeners} (Generator\+Requires\+Short\+Warmup\+Event, Generator\+Requires\+Long\+Warmup\+Event, Generator\+Warmup\+Finished\+Event)
+\begin{DoxyCompactList}\small\item\em register a listener for generator warmup event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a08cc0951c183e99e05ff47f230721892}\label{_gulmay_a_p_i_8h_a08cc0951c183e99e05ff47f230721892}} 
+const int \hyperlink{_gulmay_a_p_i_8h_a08cc0951c183e99e05ff47f230721892}{M\+A\+X\+\_\+\+K\+VP}
+\begin{DoxyCompactList}\small\item\em maximum allowd K\+VP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a93b11c2c97d25a712b1b1ad47647204c}\label{_gulmay_a_p_i_8h_a93b11c2c97d25a712b1b1ad47647204c}} 
+const int \hyperlink{_gulmay_a_p_i_8h_a93b11c2c97d25a712b1b1ad47647204c}{M\+I\+N\+\_\+\+K\+VP}
+\begin{DoxyCompactList}\small\item\em minimum allowd K\+VP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a8953300db9a1c7b2e78094b16525bce8}\label{_gulmay_a_p_i_8h_a8953300db9a1c7b2e78094b16525bce8}} 
+const int \hyperlink{_gulmay_a_p_i_8h_a8953300db9a1c7b2e78094b16525bce8}{M\+A\+X\+\_\+m\+A\+MP}
+\begin{DoxyCompactList}\small\item\em maximum allowd milli-\/amper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a51e5b8cb44b406747ac85a94a82e0d4c}\label{_gulmay_a_p_i_8h_a51e5b8cb44b406747ac85a94a82e0d4c}} 
+const int \hyperlink{_gulmay_a_p_i_8h_a51e5b8cb44b406747ac85a94a82e0d4c}{M\+I\+N\+\_\+m\+A\+MP}
+\begin{DoxyCompactList}\small\item\em minimum allowd milli-\/amper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ae9834f5fc94c8ce2c8cae348de2a35fa}\label{_gulmay_a_p_i_8h_ae9834f5fc94c8ce2c8cae348de2a35fa}} 
+const int \hyperlink{_gulmay_a_p_i_8h_ae9834f5fc94c8ce2c8cae348de2a35fa}{M\+I\+N\+\_\+\+E\+X\+P\+O\+S\+U\+R\+E\+\_\+\+T\+I\+ME}
+\begin{DoxyCompactList}\small\item\em minimum exposure time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a2c2d24d812e1e26c7ade9c404b844f11}\label{_gulmay_a_p_i_8h_a2c2d24d812e1e26c7ade9c404b844f11}} 
+const int \hyperlink{_gulmay_a_p_i_8h_a2c2d24d812e1e26c7ade9c404b844f11}{M\+A\+X\+\_\+\+E\+X\+P\+O\+S\+U\+R\+E\+\_\+\+T\+I\+ME}
+\begin{DoxyCompactList}\small\item\em maximum exposure time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for communicating with Gulmay Generator. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a6b577498aedd9f37f5ecf58079203c1a}\label{_gulmay_a_p_i_8h_a6b577498aedd9f37f5ecf58079203c1a}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Check\+Generator\+Errors@{Check\+Generator\+Errors}}
+\index{Check\+Generator\+Errors@{Check\+Generator\+Errors}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Check\+Generator\+Errors()}{CheckGeneratorErrors()}}
+{\footnotesize\ttfamily void Check\+Generator\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check the generetor errors 
+
+Ask generator for any error Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_a6b577498aedd9f37f5ecf58079203c1a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_aa7270f2beb762972ec1966e9eb4b5616}\label{_gulmay_a_p_i_8h_aa7270f2beb762972ec1966e9eb4b5616}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Generator\+Process\+Kernel\+Frame@{Generator\+Process\+Kernel\+Frame}}
+\index{Generator\+Process\+Kernel\+Frame@{Generator\+Process\+Kernel\+Frame}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Generator\+Process\+Kernel\+Frame()}{GeneratorProcessKernelFrame()}}
+{\footnotesize\ttfamily void Generator\+Process\+Kernel\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}}]{frame }\end{DoxyParamCaption})}
+
+
+
+call back function. Kernel messages are received by this function. 
+
+Process the generator responses and issue corresponding events. \mbox{\Hypertarget{_gulmay_a_p_i_8h_a4fa5370e4ed7ac42f50631f707ee8c2a}\label{_gulmay_a_p_i_8h_a4fa5370e4ed7ac42f50631f707ee8c2a}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Query\+Ellapsed\+Exposure\+Time@{Query\+Ellapsed\+Exposure\+Time}}
+\index{Query\+Ellapsed\+Exposure\+Time@{Query\+Ellapsed\+Exposure\+Time}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Query\+Ellapsed\+Exposure\+Time()}{QueryEllapsedExposureTime()}}
+{\footnotesize\ttfamily void Query\+Ellapsed\+Exposure\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+query ellapsed exposure time. 
+
+Ask the generator how much time has been passed from exposure. \mbox{\Hypertarget{_gulmay_a_p_i_8h_a936ac171697cec2e7d3520656b8d7a26}\label{_gulmay_a_p_i_8h_a936ac171697cec2e7d3520656b8d7a26}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Query\+Exposure\+Parameters@{Query\+Exposure\+Parameters}}
+\index{Query\+Exposure\+Parameters@{Query\+Exposure\+Parameters}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Query\+Exposure\+Parameters()}{QueryExposureParameters()}}
+{\footnotesize\ttfamily void Query\+Exposure\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the exposure parameters (K\+VP,m\+Amp and time). 
+
+Query the generator for exposure parameters, i.\+e. current K\+VP, mA, time It runs on UI thread. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_a936ac171697cec2e7d3520656b8d7a26_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_acc6aec4a2abf80dab4cc10d24fee24d6}\label{_gulmay_a_p_i_8h_acc6aec4a2abf80dab4cc10d24fee24d6}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Query\+Generator\+Mode@{Query\+Generator\+Mode}}
+\index{Query\+Generator\+Mode@{Query\+Generator\+Mode}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Query\+Generator\+Mode()}{QueryGeneratorMode()}}
+{\footnotesize\ttfamily void Query\+Generator\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the generator exposure mode. 
+
+Generator has four mode\+: \hypertarget{_gulmay_a_p_i_8h_gulmaymodes}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Gulmay generator modes}\label{_gulmay_a_p_i_8h_gulmaymodes}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ mode }&\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ mode }&\textbf{ Description }\\\cline{1-2}
+\endhead
+0 &No Activity \\\cline{1-2}
+1 &key in position 2 \\\cline{1-2}
+2 &prewarming \\\cline{1-2}
+3 &x-\/ray switching on or off \\\cline{1-2}
+4 &x-\/ray on and exposure being logged \\\cline{1-2}
+\end{longtabu}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_acc6aec4a2abf80dab4cc10d24fee24d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_abeda6d4243dec415776eb16beacb0b38}\label{_gulmay_a_p_i_8h_abeda6d4243dec415776eb16beacb0b38}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Query\+Warmup\+Program@{Query\+Warmup\+Program}}
+\index{Query\+Warmup\+Program@{Query\+Warmup\+Program}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Query\+Warmup\+Program()}{QueryWarmupProgram()}}
+{\footnotesize\ttfamily void Query\+Warmup\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check generetor for what is the required warmup program. 
+
+Asks for most appropriate warmup program \hypertarget{_gulmay_a_p_i_8h_gulmaywarmups}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Gulmay generator warmup programs}\label{_gulmay_a_p_i_8h_gulmaywarmups}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ mode }&\textbf{ Description }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ mode }&\textbf{ Description }\\\cline{1-2}
+\endhead
+000 &no warmup \\\cline{1-2}
+101 &short wamup \\\cline{1-2}
+102 &long warmup \\\cline{1-2}
+\end{longtabu}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_abeda6d4243dec415776eb16beacb0b38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a4d3de4466610ab5ff9719860082abb2c}\label{_gulmay_a_p_i_8h_a4d3de4466610ab5ff9719860082abb2c}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Error\+Listener@{Register\+Error\+Listener}}
+\index{Register\+Error\+Listener@{Register\+Error\+Listener}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Error\+Listener()}{RegisterErrorListener()}}
+{\footnotesize\ttfamily void Register\+Error\+Listener (\begin{DoxyParamCaption}\item[{Generator\+Error\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator error event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator error event. 
+\begin{DoxyParams}{Parameters}
+{\em Generator\+Error\+Event} & The function that is going to be called when an error happens. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ac2e42f9cf31e8451ea55a8584f200b19}\label{_gulmay_a_p_i_8h_ac2e42f9cf31e8451ea55a8584f200b19}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Exposure\+Parameter\+Listeners@{Register\+Exposure\+Parameter\+Listeners}}
+\index{Register\+Exposure\+Parameter\+Listeners@{Register\+Exposure\+Parameter\+Listeners}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Exposure\+Parameter\+Listeners()}{RegisterExposureParameterListeners()}}
+{\footnotesize\ttfamily void Register\+Exposure\+Parameter\+Listeners (\begin{DoxyParamCaption}\item[{Kvp\+Updated\+Event}]{,  }\item[{Amp\+Updated\+Event}]{,  }\item[{Shoot\+Time\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator exposure parameter event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator exposure-\/parameter related events. 
+\begin{DoxyParams}{Parameters}
+{\em Kvp\+Updated\+Event} & The callback function for getting the updated K\+VP value. \\
+\hline
+{\em Amp\+Updated\+Event} & The callback function for getting the updated milli-\/\+Amper value. \\
+\hline
+{\em Shoot\+Time\+Event} & The callback function for getting the shoot time value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_abac22860be7c048152d41af0899a5d67}\label{_gulmay_a_p_i_8h_abac22860be7c048152d41af0899a5d67}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Exposure\+State\+Listeners@{Register\+Exposure\+State\+Listeners}}
+\index{Register\+Exposure\+State\+Listeners@{Register\+Exposure\+State\+Listeners}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Exposure\+State\+Listeners()}{RegisterExposureStateListeners()}}
+{\footnotesize\ttfamily void Register\+Exposure\+State\+Listeners (\begin{DoxyParamCaption}\item[{Exposure\+Started\+Event}]{,  }\item[{Passed\+Exposure\+Time\+Event}]{,  }\item[{Exposure\+Stoped\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator exposure event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator exposure related events. 
+\begin{DoxyParams}{Parameters}
+{\em Exposure\+Started\+Event} & The callback function for start exposure event. \\
+\hline
+{\em Passed\+Exposure\+Time\+Event} & The callback function for how much of exposure duration passed event. \\
+\hline
+{\em Exposure\+Stoped\+Event} & The callback function for exposure stopped event. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_a6537404a8cbbeab00b3f6fb3b7e04a24}\label{_gulmay_a_p_i_8h_a6537404a8cbbeab00b3f6fb3b7e04a24}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Focalspot\+Listeners@{Register\+Focalspot\+Listeners}}
+\index{Register\+Focalspot\+Listeners@{Register\+Focalspot\+Listeners}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Focalspot\+Listeners()}{RegisterFocalspotListeners()}}
+{\footnotesize\ttfamily void Register\+Focalspot\+Listeners (\begin{DoxyParamCaption}\item[{Larg\+Focal\+Spot\+Size\+Event}]{,  }\item[{Small\+Focal\+Spot\+Size\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator focal spot change event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator focalspot changes event. 
+\begin{DoxyParams}{Parameters}
+{\em Larg\+Focal\+Spot\+Size\+Event} & The function that is going to be called when larg focal spot size is activated. \\
+\hline
+{\em Small\+Focal\+Spot\+Size\+Event} & The function that is going to be called when small focal spot size is activated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ad8857dcb2550f6b2ab1ea1745044be4c}\label{_gulmay_a_p_i_8h_ad8857dcb2550f6b2ab1ea1745044be4c}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Generator\+Mode\+Listener@{Register\+Generator\+Mode\+Listener}}
+\index{Register\+Generator\+Mode\+Listener@{Register\+Generator\+Mode\+Listener}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Generator\+Mode\+Listener()}{RegisterGeneratorModeListener()}}
+{\footnotesize\ttfamily void Register\+Generator\+Mode\+Listener (\begin{DoxyParamCaption}\item[{Generator\+Mode\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator mode event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator mode event. 
+\begin{DoxyParams}{Parameters}
+{\em Generator\+Mode\+Event} & The function that is going to be called when mode changes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ac5d01c6ebb446d070401697563c27f97}\label{_gulmay_a_p_i_8h_ac5d01c6ebb446d070401697563c27f97}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Message\+Listener@{Register\+Message\+Listener}}
+\index{Register\+Message\+Listener@{Register\+Message\+Listener}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Message\+Listener()}{RegisterMessageListener()}}
+{\footnotesize\ttfamily void Register\+Message\+Listener (\begin{DoxyParamCaption}\item[{Generator\+Message\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator message event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator new message event. 
+\begin{DoxyParams}{Parameters}
+{\em Generator\+Message\+Event} & The function that is going to be called when a new message is available. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ae475af8e61d9df377a66dbcbd352811d}\label{_gulmay_a_p_i_8h_ae475af8e61d9df377a66dbcbd352811d}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Register\+Warmup\+Listeners@{Register\+Warmup\+Listeners}}
+\index{Register\+Warmup\+Listeners@{Register\+Warmup\+Listeners}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Register\+Warmup\+Listeners()}{RegisterWarmupListeners()}}
+{\footnotesize\ttfamily void Register\+Warmup\+Listeners (\begin{DoxyParamCaption}\item[{Generator\+Requires\+Short\+Warmup\+Event}]{,  }\item[{Generator\+Requires\+Long\+Warmup\+Event}]{,  }\item[{Generator\+Warmup\+Finished\+Event}]{ }\end{DoxyParamCaption})}
+
+
+
+register a listener for generator warmup event. 
+
+the user of the Gulmay\+A\+PI (i.\+e. \hyperlink{_instrument_8c}{instrument.\+c}) register an event listener function to receive generator warmup related events. 
+\begin{DoxyParams}{Parameters}
+{\em Generator\+Requires\+Short\+Warmup\+Event} & The callback function for short term warmup event. \\
+\hline
+{\em Generator\+Requires\+Long\+Warmup\+Event} & The callback function for long term warmup event. \\
+\hline
+{\em Generator\+Warmup\+Finished\+Event} & The callback function for warmup finished event. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_adbb4af99d58174947214b531e2cbd45c}\label{_gulmay_a_p_i_8h_adbb4af99d58174947214b531e2cbd45c}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Set\+Generator\+In\+User\+Mode@{Set\+Generator\+In\+User\+Mode}}
+\index{Set\+Generator\+In\+User\+Mode@{Set\+Generator\+In\+User\+Mode}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Set\+Generator\+In\+User\+Mode()}{SetGeneratorInUserMode()}}
+{\footnotesize\ttfamily void Set\+Generator\+In\+User\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+activate the user mode program. 
+
+In this mode user can adjust K\+VP,mA and Sec. \begin{DoxyNote}{Note}
+setting to an arbitrary exposure protocol (K\+VP,mA,Time) D\+O\+ES N\+OT necessary means those values will be applied during R\+E\+AL exposure. One should check the applied exposure by ?X command. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_adbb4af99d58174947214b531e2cbd45c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_ac549b847f1e073981dd7276f042ceff9}\label{_gulmay_a_p_i_8h_ac549b847f1e073981dd7276f042ceff9}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Start\+Exposure@{Start\+Exposure}}
+\index{Start\+Exposure@{Start\+Exposure}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Start\+Exposure()}{StartExposure()}}
+{\footnotesize\ttfamily void Start\+Exposure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start exposure. 
+
+Start Exposure Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{_gulmay_a_p_i_8h_ac549b847f1e073981dd7276f042ceff9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gulmay_a_p_i_8h_afcff0f20c10416c89d36544a14b98f2d}\label{_gulmay_a_p_i_8h_afcff0f20c10416c89d36544a14b98f2d}} 
+\index{Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}!Stop\+Exposure@{Stop\+Exposure}}
+\index{Stop\+Exposure@{Stop\+Exposure}!Gulmay\+A\+P\+I.\+h@{Gulmay\+A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{Stop\+Exposure()}{StopExposure()}}
+{\footnotesize\ttfamily void Stop\+Exposure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop exposure. 
+
+Stop Exposure Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gulmay_a_p_i_8h_afcff0f20c10416c89d36544a14b98f2d_icgraph}
+\end{center}
+\end{figure}

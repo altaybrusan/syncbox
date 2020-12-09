@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=MASTER\tst_RS485Master.mcpds
+Project1=SLAVE\tst_RS485Slave.mcpds
+[ActiveProject]
+Index=1

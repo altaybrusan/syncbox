@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['setbroadfocalspotsize',['SetBroadFocalSpotSize',['../_gulmay_a_p_i_8h.html#a92f2423b2925db5e42315fdac82bbab9',1,'GulmayAPI.c']]],
+  ['setfinefocalspotsize',['SetFineFocalSpotSize',['../_gulmay_a_p_i_8h.html#a109a478fc2238fad56c6a1c266a393e6',1,'GulmayAPI.c']]],
+  ['setgeneratorinusermode',['SetGeneratorInUserMode',['../_gulmay_a_p_i_8h.html#adbb4af99d58174947214b531e2cbd45c',1,'GulmayAPI.c']]],
+  ['setjogboundaries',['SetJogBoundaries',['../_stone_a_p_i_8h.html#aecee82983f45b0a31928ff1babb52dbb',1,'StoneAPI.c']]],
+  ['setjogstepsize',['SetJogStepSize',['../_stone_a_p_i_8h.html#a03f57cada9dfce1fd9ddff7b91fd6db1',1,'StoneAPI.c']]],
+  ['setkvpboundaries',['SetKvpBoundaries',['../_stone_a_p_i_8h.html#a30cc244ba2a37ad4c495620b9f8a00dc',1,'StoneAPI.c']]],
+  ['setkvpstepsize',['SetKvpStepSize',['../_stone_a_p_i_8h.html#afd834277b44df0db2f4dc24c55e74b73',1,'StoneAPI.c']]],
+  ['setmaboundaries',['SetmABoundaries',['../_stone_a_p_i_8h.html#aa121dee7134d8fcf78e5db9ce91ed1a1',1,'StoneAPI.c']]],
+  ['setmastepsize',['SetmAStepSize',['../_stone_a_p_i_8h.html#a6dba667e707dcfd867b46dbd12284a0d',1,'StoneAPI.c']]],
+  ['setslidermotorspeed',['SetSliderMotorSpeed',['../_delta_servo_a_p_i_8h.html#a7796779a0cfc1087d269785a1ae10427',1,'DeltaServoAPI.c']]],
+  ['settimeboundaries',['SetTimeBoundaries',['../_stone_a_p_i_8h.html#a27b4f33b9e0dac43cd57d0de8d76d433',1,'StoneAPI.c']]],
+  ['settimestepsize',['SetTimeStepSize',['../_stone_a_p_i_8h.html#a9ad5a2fe597b5bb1130504b8e5764358',1,'StoneAPI.c']]],
+  ['showmainmenue',['ShowMainMenue',['../_stone_a_p_i_8h.html#a50de73c57a4a139c15f4851ac1b58415',1,'StoneAPI.c']]],
+  ['startexposure',['StartExposure',['../_gulmay_a_p_i_8h.html#ac549b847f1e073981dd7276f042ceff9',1,'GulmayAPI.c']]],
+  ['startinstrument',['StartInstrument',['../_instrument_8c.html#a44183aa55ed986e78680ae1fec9ec93a',1,'StartInstrument():&#160;Instrument.c'],['../_instrument_8h.html#a44183aa55ed986e78680ae1fec9ec93a',1,'StartInstrument():&#160;Instrument.c']]],
+  ['startinstrumentmonitor',['StartInstrumentMonitor',['../_instrument_8c.html#ad442830d468e8519958f61a9fe8b68cb',1,'Instrument.c']]],
+  ['startlongtermwarmup',['StartLongTermWarmup',['../_gulmay_a_p_i_8h.html#a46e773d024d2106424c1ac4ee45e331b',1,'GulmayAPI.c']]],
+  ['startshorttermwarmup',['StartShortTermWarmup',['../_gulmay_a_p_i_8h.html#a28d0fba12b3f30ffd4ff75bbe7d97bdc',1,'GulmayAPI.c']]],
+  ['stopexposure',['StopExposure',['../_gulmay_a_p_i_8h.html#afcff0f20c10416c89d36544a14b98f2d',1,'GulmayAPI.c']]],
+  ['stopinstrumentmonitor',['StopInstrumentMonitor',['../_instrument_8c.html#aa239e8ff1adf33ccc97f9429e83ac00a',1,'Instrument.c']]],
+  ['stopmotor',['StopMotor',['../_delta_servo_a_p_i_8h.html#a91a5f8567f150810290d2fcce6cc8d32',1,'DeltaServoAPI.c']]],
+  ['suppresserrorsvoltageandamperror',['SuppressErrorsVoltageAndAmpError',['../_gulmay_a_p_i_8h.html#a9eee8d4a57bdcda8bc8195629b91c51c',1,'GulmayAPI.c']]]
+];

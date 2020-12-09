@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\Altay\Documents\Altium\Projects\Demo\HDMI\PCB_Project\HDMI.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=hdmi-roundholes-plated.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Plated_Slot_Holes|DrillFile=hdmi-slotholes-plated.txt|DrillLayers=gtl,gbl

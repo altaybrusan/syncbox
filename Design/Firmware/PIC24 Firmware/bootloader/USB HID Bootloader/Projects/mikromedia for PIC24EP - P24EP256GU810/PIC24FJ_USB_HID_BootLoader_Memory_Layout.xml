@@ -1,0 +1,13 @@
+<PIC24FJ_USB_HID_BootLoader_Memory_Layout>
+	<Attributes>
+		<Url></Url>
+		<Image></Image>
+		<File>PIC24FJ USB HID Bootlaoder Memory Layout.pdf</File>
+	</Attributes>
+	<Events>
+		<OnLeftClick></OnLeftClick>
+		<OnRightClick></OnRightClick>
+		<OnDblClick>OpenFile</OnDblClick>
+		<OnMouseOver></OnMouseOver>
+	</Events>
+</PIC24FJ_USB_HID_BootLoader_Memory_Layout>

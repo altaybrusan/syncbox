@@ -1,0 +1,121 @@
+\hypertarget{_delta_servo_a_p_i_8h}{}\section{Delta\+Servo\+A\+P\+I.\+h File Reference}
+\label{_delta_servo_a_p_i_8h}\index{Delta\+Servo\+A\+P\+I.\+h@{Delta\+Servo\+A\+P\+I.\+h}}
+
+
+A\+PI for communicating with x-\/ray arm transform motor.  
+
+
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Connection\+Map.\+h\char`\"{}}\newline
+Include dependency graph for Delta\+Servo\+A\+P\+I.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{_delta_servo_a_p_i_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{_delta_servo_a_p_i_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a1be24a1b6189ea6e9161c93c400770ae}\label{_delta_servo_a_p_i_8h_a1be24a1b6189ea6e9161c93c400770ae}} 
+void \hyperlink{_delta_servo_a_p_i_8h_a1be24a1b6189ea6e9161c93c400770ae}{Turn\+On\+Slider\+Motor} ()
+\begin{DoxyCompactList}\small\item\em turn on slider motor on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a81608561a43bf2a44671ad65c2b3311c}\label{_delta_servo_a_p_i_8h_a81608561a43bf2a44671ad65c2b3311c}} 
+void \hyperlink{_delta_servo_a_p_i_8h_a81608561a43bf2a44671ad65c2b3311c}{Turn\+Off\+Slider\+Motor} ()
+\begin{DoxyCompactList}\small\item\em turn off slider motor on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a7796779a0cfc1087d269785a1ae10427}\label{_delta_servo_a_p_i_8h_a7796779a0cfc1087d269785a1ae10427}} 
+void \hyperlink{_delta_servo_a_p_i_8h_a7796779a0cfc1087d269785a1ae10427}{Set\+Slider\+Motor\+Speed} (int)
+\begin{DoxyCompactList}\small\item\em set slider motor speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_afb5100c2ce2b491dee220607b0f3ba0b}\label{_delta_servo_a_p_i_8h_afb5100c2ce2b491dee220607b0f3ba0b}} 
+void \hyperlink{_delta_servo_a_p_i_8h_afb5100c2ce2b491dee220607b0f3ba0b}{Rotate\+Slider\+Motor\+Counter\+Clockwise} ()
+\begin{DoxyCompactList}\small\item\em start slider motor to rotate counter clockwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a1717f9911c674bf81afee0b513f6de37}\label{_delta_servo_a_p_i_8h_a1717f9911c674bf81afee0b513f6de37}} 
+void \hyperlink{_delta_servo_a_p_i_8h_a1717f9911c674bf81afee0b513f6de37}{Rotate\+Slider\+Motor\+Clockwise} ()
+\begin{DoxyCompactList}\small\item\em start slider motor to rotate clockwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a91a5f8567f150810290d2fcce6cc8d32}\label{_delta_servo_a_p_i_8h_a91a5f8567f150810290d2fcce6cc8d32}} 
+void \hyperlink{_delta_servo_a_p_i_8h_a91a5f8567f150810290d2fcce6cc8d32}{Stop\+Motor} ()
+\begin{DoxyCompactList}\small\item\em stop slider motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_ae05447da479a74ce40ed44df1c83c20d}\label{_delta_servo_a_p_i_8h_ae05447da479a74ce40ed44df1c83c20d}} 
+void {\bfseries Actuator\+Process\+Kernel\+Frame} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a70a2c25b73b13884d92616c782f30f4e}\label{_delta_servo_a_p_i_8h_a70a2c25b73b13884d92616c782f30f4e}} 
+const int \hyperlink{_delta_servo_a_p_i_8h_a70a2c25b73b13884d92616c782f30f4e}{M\+I\+N\+\_\+\+M\+O\+T\+O\+R\+\_\+\+J\+OG}
+\begin{DoxyCompactList}\small\item\em define minimum motor jog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_delta_servo_a_p_i_8h_a0faedf55ff9b2ec1ec564cb197ca5838}\label{_delta_servo_a_p_i_8h_a0faedf55ff9b2ec1ec564cb197ca5838}} 
+const int \hyperlink{_delta_servo_a_p_i_8h_a0faedf55ff9b2ec1ec564cb197ca5838}{M\+A\+X\+\_\+\+M\+O\+T\+O\+R\+\_\+\+J\+OG}
+\begin{DoxyCompactList}\small\item\em define maximum motor jog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for communicating with x-\/ray arm transform motor. 
+
+The table top arm motor is drived by Delta\+B2 driver and this A\+PI controls that. The driver supports Modbus R\+TU for communication. Instead of complete Modebus R\+TU protocol implementation, this A\+PI sends protocol-\/compatible packets to the Delta\+B2. ~\newline
+ In order to find out the commands, first, the servo driver is connected to a PC on which A\+S\+DA soft version 5.\+3 ( Delta servo motor driver software) was running. The motor is controlled by the software while the channel was sniffing by Device Monitoring Studio version 7.\+73. In this way the set of all required commands are found and hard coded them in this A\+PI. \begin{DoxyNote}{Note}
+based on device specifications befor and after transmission 10ms of scilence in channel is required. 
+
+all operations are based on modebus command code 16 (0x10). 
+
+there is J\+U\+ST one slave with address 127.
+\end{DoxyNote}
+\hypertarget{_delta_servo_a_p_i_8h_example command}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\caption{Delta Servo motor example}\label{_delta_servo_a_p_i_8h_example command}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Description }&\textbf{ Byte one }&\textbf{ Byte two }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Description }&\textbf{ Byte one }&\textbf{ Byte two }\\\cline{1-3}
+\endhead
+slave address &0\+X01 &-\/ \\\cline{1-3}
+function &0x10 &-\/ \\\cline{1-3}
+starting data address &0\+X01(high) &0x12(low) \\\cline{1-3}
+number of data (in word) &0x00(high) &0x02(low) \\\cline{1-3}
+number of data (in byte) &0x04 &-\/ \\\cline{1-3}
+content of 1st data &0x0B(high) &0x\+B8(low) \\\cline{1-3}
+content of 2st data &0x00(high) &0x00(low) \\\cline{1-3}
+C\+RC &0x\+FC (low) &0x\+EB (high) \\\cline{1-3}
+\end{longtabu}
+
+
+The complete list of commands is shown in the following table\+: \hypertarget{_delta_servo_a_p_i_8h_DeltaServoFormat}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{8}{|X[-1]}|}
+\caption{Command sets}\label{_delta_servo_a_p_i_8h_DeltaServoFormat}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ command }&\textbf{ address }&\textbf{ function code }&\textbf{ start address }&\textbf{ \#word }&\textbf{ \#bytes }&\textbf{ bytes }&\textbf{ C\+RC }\\\cline{1-8}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ command }&\textbf{ address }&\textbf{ function code }&\textbf{ start address }&\textbf{ \#word }&\textbf{ \#bytes }&\textbf{ bytes }&\textbf{ C\+RC }\\\cline{1-8}
+\endhead
+T\+U\+RN ON M\+O\+T\+OR &0x7F &0x10 &0\+X02 0\+X3C &0\+X00 0\+X02 &0\+X04 &0\+X00 0\+X01 0\+X00 0\+X00 &0\+X26 0\+X67 \\\cline{1-8}
+T\+U\+RN O\+FF M\+O\+T\+OR &0x7F &0x10 &0\+X02 0\+X3C &0\+X00 0\+X02 &0\+X04 &0\+X00 0\+X00 0\+X00 0\+X00 &0\+X77 0\+X\+A7 \\\cline{1-8}
+S\+P\+E\+ED 100 &0x7F &0x10 &0\+X04 0\+X0A &0\+X00 0\+X02 &0\+X04 &0\+X00 0\+X64 0\+X00 0\+X00 &0\+X9E 0\+X\+E6 \\\cline{1-8}
+R\+O\+T\+A\+TE C\+CW &0x7F &0x10 &0\+X04 0\+X0A &0\+X00 0\+X02 &0\+X04 &0\+X13 0\+X86 0\+X00 0\+X00 &0\+X3A 0\+X54 \\\cline{1-8}
+R\+O\+T\+A\+TE CW &0x7F &0x10 &0\+X04 0\+X0A &0\+X00 0\+X02 &0\+X04 &0\+X13 0\+X87 0\+X00 0\+X00 &0\+X6B 0\+X94 \\\cline{1-8}
+S\+T\+OP R\+O\+T\+A\+T\+I\+ON &0x7F &0x10 &0\+X04 0\+X0A &0\+X00 0\+X02 &0\+X04 &0\+X00 0\+X00 0\+X00 0\+X00 &0\+X\+DF 0\+X39 \\\cline{1-8}
+\end{longtabu}
+
+
+\begin{DoxyNote}{Note}
+before and after transmission 10ms of scilence is needed.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Altay Brusan 
+\end{DoxyAuthor}

@@ -1,0 +1,10 @@
+<map id="Instrument.c" name="Instrument.c">
+<area shape="rect" id="node2" href="$_instrument_8h.html" title="implement the instrument logic. It containts state variables that represent the x&#45;ray machine as&#45;is a..." alt="" coords="5,80,100,107"/>
+<area shape="rect" id="node3" href="$_kernel_8h.html" title="public interface of the xPOST kernel. " alt="" coords="189,155,260,181"/>
+<area shape="rect" id="node6" href="$_gulmay_a_p_i_8h.html" title="API for communicating with Gulmay Generator. " alt="" coords="175,80,274,107"/>
+<area shape="rect" id="node7" href="$_stone_a_p_i_8h.html" title="API for communicating with Stone display. " alt="" coords="298,80,386,107"/>
+<area shape="rect" id="node8" href="$_delta_servo_a_p_i_8h.html" title="API for communicating with x&#45;ray arm transform motor. " alt="" coords="411,80,527,107"/>
+<area shape="rect" id="node10" href="$_connection_map_8h.html" title="ConnectionMap.h" alt="" coords="503,155,626,181"/>
+<area shape="rect" id="node4" href="$jsmn_8h_source.html" title="jsmn.h" alt="" coords="194,229,255,256"/>
+<area shape="rect" id="node9" href="$_types_8h.html" title="global types ar defined here. These types are used to simplify the code clearance. " alt="" coords="411,155,479,181"/>
+</map>

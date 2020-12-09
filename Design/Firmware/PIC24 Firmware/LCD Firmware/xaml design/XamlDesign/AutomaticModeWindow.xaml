@@ -1,0 +1,89 @@
+﻿<Window x:Class="XamlDesign.AutomaticModeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XamlDesign"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
+        mc:Ignorable="d"
+        Title="AutomaticModeWindow" Height="480" Width="640">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid Width="640" Height="480" Background="#FFAEAEAE">
+        <Ellipse HorizontalAlignment="Left" Margin="10,125.63,0,204.37" Stroke="Black" Width="150" Height="150">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Resources/bu.png"/>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect Color="Cyan" BlurRadius="60"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <ed:Arc ArcThickness="12" ArcThicknessUnit="Pixel"
+                 EndAngle="180" HorizontalAlignment="Left" 
+                Margin="-221.894,-10,0,10" 
+                Stretch="None" 
+                StartAngle="0" 
+                Width="437.6" 
+                RenderTransformOrigin="0.5,0.5" 
+                Height="480" 
+                d:LayoutOverrides="HorizontalAlignment"
+                Fill="#FF1DD4F7">
+            <ed:Arc.Effect>
+                <DropShadowEffect Color="#FF73D0EF" BlurRadius="18" ShadowDepth="0"/>
+            </ed:Arc.Effect>
+
+
+        </ed:Arc>
+        <TextBlock HorizontalAlignment="Left" Height="80" Margin="10,0,0,41.1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="131.5" TextDecorations="{x:Null}" FontWeight="{DynamicResource {x:Static SystemFonts.MenuFontWeightKey}}" FontSize="14"><Run Text="Syncbox "/><LineBreak/><Run Text="Bogazici University"/><LineBreak/><Run Text=" 2018"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+
+        <Ellipse Margin="0,160.846,172.571,219.154" Stroke="Lime" Width="100" HorizontalAlignment="Right" RenderTransformOrigin="0.997,0.535">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="Resources/Generator.jpg"/>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect Color="Lime" BlurRadius="60"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Right" Margin="0,160.846,45.109,219.154" Stroke="Yellow" Width="100">
+            <Ellipse.Fill>
+                <ImageBrush  ImageSource="Resources/radiation.png"/>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect  Color="Yellow" BlurRadius="60"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse Margin="237.851,160.846,302.148,219.154" Stroke="Lime" Width="100" d:LayoutOverrides="HorizontalAlignment">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="Resources/actuator.jpg"/>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect  Color="Lime" BlurRadius="60"  />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Right" Margin="0,0,45.109,53.554"  Width="100" Height="100" VerticalAlignment="Bottom" Cursor="None">
+            <Ellipse.Style>
+                <Style TargetType="{x:Type Ellipse}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Ellipse.Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="Resources/homepressed.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter Property="Ellipse.Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="Resources/diactivehome.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+
+
+    </Grid>
+</Window>

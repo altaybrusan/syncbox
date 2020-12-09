@@ -1,0 +1,1328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stone_a_p_i_8c">
+    <title>StoneAPI.c File Reference</title>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+    <programlisting>#include &quot;StoneAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;GulmayAPI.h&quot;</programlisting>
+<para>Include dependency diagram for StoneAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_stone_a_p_i_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for StoneAPI.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_stone_a_p_i_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1aa0a8e393030715169d280824eba5ee45">MIN_KVP_VAL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1ac262e168af89ca43017961440cf78f24">MAX_KVP_VAL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a27833ecc12d52189d683ccced5d4357e">KVP_STP</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1abf4a3a956bdc0a4e2936acc15daf9073">MIN_mA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1ad780df128b94666ee261970d7f6e1e4e">MAX_mA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1ad3fe820504e2fa734108ad6cd3df152f">mA_STP</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1aa9cf99726ce5b77e931be018f17870f4">MIN_TIME</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a445756f00077407c9cd42db2aa121448">MAX_TIME</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a37a863be5d8e766051d276b799481219">TIME_STP</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a03c93bae58b78d00a3b9b7ea9d165510">MIN_JOG</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a4392d56254cef4dfe5d0c8348c08645c">MAX_JOG</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a8cd67cacb2b682bb64cc094f4043acf8">JOG_STP</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StartAutomaticModeSessionEvent <link linkend="_stone_a_p_i_8c_1af42b31af201841333f20c7db88315cfa">_automaticModeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GotoHomeEvent <link linkend="_stone_a_p_i_8c_1a92f504d3ceee71ab7b4a9fd485fa7a95">_gotoHomeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StartExposureEvent <link linkend="_stone_a_p_i_8c_1abfbb9872494f540f55f193cb45ef4e44">_startExposureLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StopExposureEvent <link linkend="_stone_a_p_i_8c_1a98cf35503def0b33f65966031fcebef2">_stopExposureLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StartWarmupEvent <link linkend="_stone_a_p_i_8c_1a1911fc6ed20bc14af6cfb5175e8fdf1d">_startwarmupLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UpdateKvpEvent <link linkend="_stone_a_p_i_8c_1abcf162b775c2d269f5f69097b64f38f3">_updateKvpLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UpdatemAEvent <link linkend="_stone_a_p_i_8c_1ad64acb3c0ff378b119c2c91b22908543">_updatemALst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UpdateTimeEvent <link linkend="_stone_a_p_i_8c_1abe84385c821d5971d837e6780df56b6c">_updateTimeLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UpdateJOGEvent <link linkend="_stone_a_p_i_8c_1af6b2f624027ea87b20198bfc9e6964dd">_updateJogLst</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a2f985a1e1377f07b017259a33a4fc00f">selectPicture</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a6847d2f7e49b9997698feb43c59a99e9">displayKVPCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1af04ed23e5acfe70b510547fcb8b52f7e">displaymACmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a7e9f6daf310e8e72003259149bf6a7c1">displayTimeCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1abad247691564b412c3d8d5cfabd6cac8">displayJOGCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1af4d7c71b810d1194a86cf1bd526c7652">displaySecCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1ac3c8d99567357e87725ab1283f3ee535">clearKVPBoxCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1adc66174d345e7d3e5af3e61c482a0346">clearmABoxCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a8d87c1de47f10f105e571bae8a2aa27a">clearTimeBoxCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a94171bfa9fea50e6a7ff6f0d0468a0b4">clearJOGBoxCmd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a02b730af2d4d6778f209db61c9fc38b9">_idx</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a8b2e13c78efca330f06b6ddcd7464b41">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1afae8a65960ba8e415daff2c233cf6ba4">_result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned char <link linkend="_stone_a_p_i_8c_1a45b938cd28be32bb53d5be3ed8872834">_selectPictureCopy</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1a750b5d744c39a06bfb13e6eb010e35d0">index</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1ab03a721414192d6bcacc4194cc374253">paramVal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static unsigned char <link linkend="_stone_a_p_i_8c_1ab6c9eb8dd0558cfb0b08d70c6df25980">_receiveBuff</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="_stone_a_p_i_8c_1a78185c8abaa38c2aeb91495b61828355">mLen</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ab42f178caf40b9b987fed1021d6dda59">DisplayCallKernelSendService</link> (
+char * message, <link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link> type, int length)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1afc72c675e2c06aae8932b0634c4b405a">GetCommandParameter</link> (
+unsigned char cmd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aca11588009073d62f552351f47572e12">UpdateCommandParameter</link> (
+unsigned char cmd, int step)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_stone_a_p_i_8c_1ab18a8f5a10221e666c051d8a793d23ff">CheckMessageFinished</link> (
+unsigned char * buffer, int mLen)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a9b4b0965c563195f29ef26f4c24796ef">DisplayKVP</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a1c8dd6a9db81b504544ebd9f31c40d96">DisplaymA</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1af3f5221180150324980ace9c4684b1ed">DisplayTime</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ad439739615be31c61c27725b94c573f2">DisplayJOG</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a6f724e924066b8558b94ffbd63b14673">ClearKVPBox</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ae6b7adf2aac89ce42eb63746ef199189">ClearmABox</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a75496803314c6387a623d5be454d3e13">ClearTimeBox</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a8d1c31060cac74097b09a33d9f6a8d2a">ClearJOGBox</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a37d600cef94b18570da0dafbb3194db5">InitParameterBoard</link> (
+)<para><emphasis>initialize numberic values region on the board.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aefc4dd165b22af4b82573437e761b815">ProcessMessage</link> (
+unsigned char * message)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a30cc244ba2a37ad4c495620b9f8a00dc">SetKvpBoundaries</link> (
+int minkvp, int maxkvp)<para><emphasis>set boundries on KVP value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aa121dee7134d8fcf78e5db9ce91ed1a1">SetmABoundaries</link> (
+int minmA, int maxmA)<para><emphasis>set boundries on milli-Amper value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a27b4f33b9e0dac43cd57d0de8d76d433">SetTimeBoundaries</link> (
+int minTime, int maxTime)<para><emphasis>set boundries on time value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aecee82983f45b0a31928ff1babb52dbb">SetJogBoundaries</link> (
+int minJog, int maxJog)<para><emphasis>set boundries on JOG value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1afd834277b44df0db2f4dc24c55e74b73">SetKvpStepSize</link> (
+int step)<para><emphasis>set the step value for KVP numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a6dba667e707dcfd867b46dbd12284a0d">SetmAStepSize</link> (
+int step)<para><emphasis>set the step value for milli-amper numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a9ad5a2fe597b5bb1130504b8e5764358">SetTimeStepSize</link> (
+int step)<para><emphasis>set the step value for exposure numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a03f57cada9dfce1fd9ddff7b91fd6db1">SetJogStepSize</link> (
+int step)<para><emphasis>set the step value for JOG numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aef8e409f58a29d57b4f73fb92688f1fe">DisplayProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> )<para><emphasis>Receive the frames that are sent by Kernel.c.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a902c1af74cbe0cfb10248b7618de7022">InitDisplay</link> (
+)<para><emphasis>initialize the display.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a50de73c57a4a139c15f4851ac1b58415">ShowMainMenue</link> (
+)<para><emphasis>show main menue on the display.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a179ad87bd6e342cbf88a2c3ea95f1b70">DisplayAutomaticModeWarmingupState</link> (
+)<para><emphasis>display automatic mode warmingup state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a1efd99bd9546c4799356b2359db7e25e">DisplayAutomaticModePendingState</link> (
+)<para><emphasis>display automatic mode pending state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a3919db395d6f46ae310b9156f6a8215d">DisplayAutomaticModeWorkingState</link> (
+)<para><emphasis>display automatic mode working state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a4b35197a7f3dae5a4c04a18b6425e4c4">DisplayAutomaticModeErrorState</link> (
+)<para><emphasis>display automatic mode error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a5371889296412e101c1f3a004f449cf5">DisplayServiceModeWarmingupState</link> (
+)<para><emphasis>display service mode warmingup state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aad5c25aa42ff92ac6d66866951d0be4b">DisplayServiceModeWarmupErrorState</link> (
+)<para><emphasis>display service mode warmup error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ac6881bffd08da680e8c46c377762d703">DisplayServiceModePendingState</link> (
+)<para><emphasis>display service mode pending state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ad7b66eeb3ec69bd31f24b16e7d55bcae">DisplayServiceModeWorkingState</link> (
+)<para><emphasis>display service mode working state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a08fcb1c995537c269d1f83e492cbb5fa">DisplayServiceModeErrorState</link> (
+)<para><emphasis>display service mode error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a30918f72a44629f17320eb2d99c46dd6">RegisterStartAutomaticModeSessionListener</link> (
+StartAutomaticModeSessionEvent )<para><emphasis>register a listener for start automatic mode event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1af05fc5de029b1eb01660639ecc2adfb4">RegisterGotoHomeListener</link> (
+GotoHomeEvent )<para><emphasis>register a listener for go to home event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1ad3dd7cee16705c4f6ad85231568a857e">RegisterStartExposureListener</link> (
+StartExposureEvent )<para><emphasis>register a listener for start exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1aa83419ad4ebab7f584ebe7ae07c17eea">RegisterStopExposureListener</link> (
+StopExposureEvent )<para><emphasis>register a listener for stop exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a52914ec7b31e20f2d53ab2107f47c10e">RegisterStartWarmupEventListener</link> (
+StartWarmupEvent )<para><emphasis>register a listener for start warmup event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a65a8e779288e3892496fed81dd670500">RegisterUpdateKvpEventListener</link> (
+UpdateKvpEvent )<para><emphasis>register a listener for update KVP event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a476d1307b8935ca7102b7e70c0517c14">RegisterUpdatemAEventListener</link> (
+UpdatemAEvent )<para><emphasis>register a listener for update milli-amper event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a4909bf580b73169205df767417646559">RegisterUpdateTimeEventListener</link> (
+UpdateTimeEvent )<para><emphasis>register a listener for update exposure time event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8c_1a3ecf68a2d0409179c1c520ebb5fc754a">RegisterUpdateJOGEventListener</link> (
+UpdateJOGEvent )<para><emphasis>register a listener for update JOG event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/StoneAPI.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>&#32;&#32;<emphasis class="comment">//&#32;just&#32;for&#32;debug</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_stone_a_p_i_8h">StoneAPI.h</link>&quot;</emphasis>
+4 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_gulmay_a_p_i_8h">GulmayAPI.h</link>&quot;</emphasis>
+5 
+6 
+7 <emphasis class="comment">//*****************************&#32;Constants&#32;&amp;&#32;Values&#32;**************************************</emphasis>
+8 <emphasis class="keywordtype">int</emphasis>&#32;MIN_KVP_VAL&#32;=&#32;30;
+9 <emphasis class="keywordtype">int</emphasis>&#32;MAX_KVP_VAL&#32;=&#32;120;
+10 <emphasis class="keywordtype">int</emphasis>&#32;KVP_STP&#32;=&#32;5;
+11 
+12 <emphasis class="keywordtype">int</emphasis>&#32;MIN_mA&#32;=&#32;1;
+13 <emphasis class="keywordtype">int</emphasis>&#32;MAX_mA&#32;=&#32;50;
+14 <emphasis class="keywordtype">int</emphasis>&#32;mA_STP&#32;=&#32;5;
+15 
+16 <emphasis class="keywordtype">int</emphasis>&#32;MIN_TIME&#32;=&#32;1;
+17 <emphasis class="keywordtype">int</emphasis>&#32;MAX_TIME&#32;=&#32;999;
+18 <emphasis class="keywordtype">int</emphasis>&#32;TIME_STP&#32;=&#32;1;
+19 
+20 <emphasis class="keywordtype">int</emphasis>&#32;MIN_JOG&#32;=&#32;100;
+21 <emphasis class="keywordtype">int</emphasis>&#32;MAX_JOG&#32;=&#32;800;
+22 <emphasis class="keywordtype">int</emphasis>&#32;JOG_STP&#32;=&#32;25;
+23 
+24 <emphasis class="comment">//********************************&#32;Event&#32;handlers&#32;****************************************</emphasis>
+25 
+26 StartAutomaticModeSessionEvent&#32;&#32;&#32;&#32;_automaticModeLst&#32;=&#32;0;
+27 GotoHomeEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gotoHomeLst&#32;=&#32;0;
+28 StartExposureEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startExposureLst&#32;=&#32;0;
+29 StopExposureEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_stopExposureLst&#32;=&#32;0;
+30 StartWarmupEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startwarmupLst&#32;=&#32;0;
+31 UpdateKvpEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateKvpLst&#32;=&#32;0;
+32 UpdatemAEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updatemALst&#32;=&#32;0;
+33 UpdateTimeEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateTimeLst&#32;=&#32;0;
+34 UpdateJOGEvent&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateJogLst&#32;=&#32;0;
+35 
+36 <emphasis class="comment">//********************************&#32;&#32;Stone&#32;LCD&#32;API&#32;*****************************************</emphasis>
+37 
+38 <emphasis class="comment">//&#32;The&#32;commands&#32;tails&#32;are&#32;hard&#32;coded&#32;into&#32;the&#32;end&#32;of&#32;each&#32;command.</emphasis>
+39 <emphasis class="comment">//&#32;unsigned&#32;char&#32;tail[4]={0xCC,0x33,0xC3,0x3C};</emphasis>
+40 
+41 <emphasis class="comment">//&#32;DO&#32;NOT&#32;DO&#32;HANDSHAKE!</emphasis>
+42 <emphasis class="comment">//unsigned&#32;char&#32;handshake[6]={0xAA,0x00,0xCC,0x33,0xC3,0x3C};</emphasis>
+43 
+44 <emphasis class="comment">//&#32;FOR&#32;DEBUGING</emphasis>
+45 <emphasis class="comment">//unsigned&#32;char&#32;openclock[15]={0xAA&#32;,0x9B&#32;,0xFF,&#32;0x01&#32;,0x01&#32;,0x00&#32;,0x1F,&#32;0x00,&#32;0x0A,&#32;0x00,&#32;0x0A,&#32;0xCC&#32;,0x33,&#32;0xC3,&#32;0x3C};</emphasis>
+46 <emphasis class="comment">//unsigned&#32;char&#32;closeclock[7]={&#32;0xAA&#32;,0x9B&#32;,0x00,&#32;0xCC,&#32;0x33&#32;,0xC3,&#32;0x3C};</emphasis>
+47 
+48 <emphasis class="comment">//The&#32;default&#32;value&#32;of&#32;selectPicture&#32;is&#32;manin&#32;window</emphasis>
+49 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;&#32;selectPicture[8]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x70,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;command</emphasis>
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Picture&#32;number</emphasis>
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+52 };
+53 
+54 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;&#32;displayKVPCmd[25]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x98,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x15,&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;x&#32;&amp;&#32;y&#32;coordinate</emphasis>
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x03,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Font&#32;Id</emphasis>
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x85,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Color&#32;display&#32;mode&#32;0x85:&#32;just&#32;forground</emphasis>
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Dot&#32;matrix&#32;size&#32;(font&#32;size?!)</emphasis>
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Foreground&#32;color</emphasis>
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xFF,0xFF,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Background&#32;color</emphasis>
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;1</emphasis>
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x38,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;2</emphasis>
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;3</emphasis>
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+65 
+66 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;&#32;displaymACmd[25]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x98,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;x&#32;&amp;&#32;y&#32;coordinate</emphasis>
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x03,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Font&#32;Id</emphasis>
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x85,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Color&#32;display&#32;mode&#32;0x85:&#32;just&#32;forground</emphasis>
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Dot&#32;matrix&#32;size&#32;(font&#32;size?!)</emphasis>
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Foreground&#32;color</emphasis>
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xFF,0xFF,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Background&#32;color</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;1</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x32,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;2</emphasis>
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x35,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;3</emphasis>
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+77 
+78 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;&#32;displayTimeCmd[25]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x98,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x4B,&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;x&#32;&amp;&#32;y&#32;coordinate</emphasis>
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x03,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Font&#32;Id</emphasis>
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x85,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Color&#32;display&#32;mode&#32;0x85:&#32;just&#32;forground</emphasis>
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Dot&#32;matrix&#32;size&#32;(font&#32;size?!)</emphasis>
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Foreground&#32;color</emphasis>
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xFF,0xFF,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Background&#32;color</emphasis>
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;1</emphasis>
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x31,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;2</emphasis>
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;3</emphasis>
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+89 
+90 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;&#32;displayJOGCmd[25]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x98,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x66,&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;x&#32;&amp;&#32;y&#32;coordinate</emphasis>
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x03,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Font&#32;Id</emphasis>
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x85,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Color&#32;display&#32;mode&#32;0x85:&#32;just&#32;forground</emphasis>
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Dot&#32;matrix&#32;size&#32;(font&#32;size?!)</emphasis>
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Foreground&#32;color</emphasis>
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xFF,0xFF,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Background&#32;color</emphasis>
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x34,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;1</emphasis>
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;2</emphasis>
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Digit&#32;3</emphasis>
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+101 
+102 <emphasis class="comment">//&#32;display&#32;security&#32;menu</emphasis>
+103 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;displaySecCmd[13]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,&#32;0x7C,&#32;0x01,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;command</emphasis>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,&#32;0x60,&#32;0x01,&#32;0x90,&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;(x,y)&#32;keyboard&#32;coordinate</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x0C,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;string&#32;length</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xC3,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Scale</emphasis>
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,&#32;0x33,&#32;0xC3,&#32;0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+108 
+109 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;clearKVPBoxCmd[20]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x71,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x0A,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;source&#32;picture&#32;number</emphasis>
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x15,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;From&#32;(X,Y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x9A,0x00,0x2D,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;To&#32;(X,y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x15,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;copy&#32;to&#32;the&#32;this&#32;(x,y)&#32;of&#32;the&#32;current&#32;picure</emphasis>
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+115 
+116 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;clearmABoxCmd[20]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x71,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x0A,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;source&#32;picture&#32;number</emphasis>
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;From&#32;(X,Y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x9F,0x00,0x49,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;To&#32;(X,y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x30,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;copy&#32;to&#32;the&#32;this&#32;(x,y)&#32;of&#32;the&#32;current&#32;picure</emphasis>
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+122 
+123 
+124 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;clearTimeBoxCmd[20]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x71,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x0A,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;source&#32;picture&#32;number</emphasis>
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x4B,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;From&#32;(X,Y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x9F,0x00,0x64,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;To&#32;(X,y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x4B,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;copy&#32;to&#32;the&#32;this&#32;(x,y)&#32;of&#32;the&#32;current&#32;picure</emphasis>
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+130 
+131 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;clearJOGBoxCmd[20]&#32;=&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xAA,0x71,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Header&#32;and&#32;Command</emphasis>
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00,0x0A,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;source&#32;picture&#32;number</emphasis>
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x66,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;From&#32;(X,Y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x9F,0x00,0x7E,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;To&#32;(X,y)&#32;of&#32;the&#32;source&#32;picture</emphasis>
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01,0x64,0x00,0x66,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;copy&#32;to&#32;the&#32;this&#32;(x,y)&#32;of&#32;the&#32;current&#32;picure</emphasis>
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0xCC,0x33,0xC3,0x3C&#32;};&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Tail</emphasis>
+137 
+138 <emphasis class="comment">//****************************&#32;Event&#32;handler&#32;&#32;*****************************************</emphasis>
+139 <emphasis class="comment">/*&#32;the&#32;original&#32;naming&#32;was&#32;CallKernekSendService,&#32;but</emphasis>
+140 <emphasis class="comment">*&#32;inside&#32;each&#32;API&#32;we&#32;have&#32;to&#32;change&#32;the&#32;name.&#32;Otherwise</emphasis>
+141 <emphasis class="comment">*&#32;C-compiler&#32;issues&#32;redefined&#32;function&#32;error.</emphasis>
+142 <emphasis class="comment">*/</emphasis>
+143 <emphasis class="keywordtype">void</emphasis>&#32;DisplayCallKernelSendService(<emphasis class="keywordtype">char</emphasis>*&#32;message,&#32;<link linkend="_kernel_8h_1ae7bbafd20fabd9f3e1a4d5563f587487">FRAME_TYPE</link>&#32;type,&#32;<emphasis class="keywordtype">int</emphasis>&#32;length)
+144 {
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;_frame;
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//int&#32;index&#32;=&#32;0;</emphasis>
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1af979252e2c7fa6f78f4cfda607e7587b">F_SENDER</link>&#32;=&#32;DISPLAY;
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae2d1e98376527216fa6ff53b940a7c7a">F_RECEIVER</link>&#32;=&#32;DISPLAY;
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1ae24624f2af7ede4b38b487a23cf5c947">F_TYPE</link>&#32;=&#32;type;
+150 
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>&#32;=&#32;message;
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.MESSAGE_LENGTH&#32;=&#32;length;
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1a3d27a4b137640aaa3b112a0c236bf934">F_PRIORITY</link>&#32;=&#32;NORMAL_FRAME;
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1a6fa687e39b416d7d42b3365f89a20160">KL_SendFrame</link>(&amp;_frame);
+155 }
+156 
+157 <emphasis class="comment">//****************************&#32;Private&#32;functions&#32;**************************************</emphasis>
+158 <emphasis class="keywordtype">int</emphasis>&#32;_idx&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;used&#32;inside&#32;for-loops</emphasis>
+159 <emphasis class="keywordtype">int</emphasis>&#32;result&#32;=&#32;0;
+160 
+161 <emphasis class="keywordtype">int</emphasis>&#32;GetCommandParameter(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;cmd[])
+162 {
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_digits[3];
+164 
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_digits[0]&#32;=&#32;cmd[14];&#32;&#32;&#32;<emphasis class="comment">//&#32;read&#32;the&#32;first&#32;byte&#32;of&#32;the&#32;first&#32;digit</emphasis>
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_digits[1]&#32;=&#32;cmd[16];&#32;&#32;&#32;<emphasis class="comment">//&#32;read&#32;the&#32;first&#32;byte&#32;of&#32;the&#32;second&#32;digit</emphasis>
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_digits[2]&#32;=&#32;cmd[18];&#32;&#32;&#32;<emphasis class="comment">//&#32;read&#32;the&#32;first&#32;byte&#32;of&#32;the&#32;third&#32;digit</emphasis>
+168 
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;atoi(_digits);&#32;<emphasis class="comment">//&#32;convert&#32;digits&#32;to&#32;the&#32;intiger</emphasis>
+170 
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;result;
+172 }
+173 
+174 <emphasis class="keywordtype">int</emphasis>&#32;_result&#32;=&#32;0;
+175 <emphasis class="comment">//&#32;Update&#32;KVP,mA,Time&#32;and&#32;JOG&#32;commands&apos;&#32;parameters&#32;values</emphasis>
+176 <emphasis class="keywordtype">void</emphasis>&#32;UpdateCommandParameter(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;cmd[],&#32;<emphasis class="keywordtype">int</emphasis>&#32;step)
+177 {
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_newValue[7];
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_newValue,&#32;<emphasis class="charliteral">&apos;0&apos;</emphasis>,&#32;7);&#32;<emphasis class="comment">//&#32;make&#32;sure&#32;temp.&#32;variable&#32;is&#32;clear</emphasis>
+180 
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_result&#32;=&#32;GetCommandParameter(cmd);
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_result&#32;+=&#32;step;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;step&#32;up/down&#32;the&#32;number</emphasis>
+183 
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;intToStr(_result,&#32;_newValue);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;change&#32;the&#32;space&#32;for&#32;with&#32;zero&#32;for&#32;empty&#32;string</emphasis>
+185 
+186 
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cmd[14]&#32;=&#32;_newValue[3];&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;first&#32;digits&#32;new&#32;value</emphasis>
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cmd[16]&#32;=&#32;_newValue[4];&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;second&#32;digits&#32;new&#32;value</emphasis>
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cmd[18]&#32;=&#32;_newValue[5];&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;third&#32;digit&#32;new&#32;value</emphasis>
+190 }
+191 
+192 <emphasis class="keywordtype">int</emphasis>&#32;CheckMessageFinished(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;buffer,&#32;<emphasis class="keywordtype">int</emphasis>&#32;mLen)
+193 {
+194 
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(mLen&#32;&lt;&#32;4)
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;
+197 
+198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//frame&#32;tail&#32;:&#32;0xCC,0x33,0xC3,0x3C</emphasis>
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(buffer[mLen&#32;-&#32;4]&#32;==&#32;0xCC&#32;&amp;&amp;&#32;buffer[mLen&#32;-&#32;3]&#32;==&#32;0x33&#32;&amp;&amp;
+200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;buffer[mLen&#32;-&#32;2]&#32;==&#32;0xC3&#32;&amp;&amp;&#32;buffer[mLen&#32;-&#32;1]&#32;==&#32;0x3C)
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;1;&#32;<emphasis class="comment">//true</emphasis>
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;&#32;<emphasis class="comment">//&#32;false</emphasis>
+205 }
+206 
+207 <emphasis class="keywordtype">void</emphasis>&#32;DisplayKVP()
+208 {
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(displayKVPCmd,&#32;NORMAL_FRAME,&#32;25);
+210 }
+211 
+212 <emphasis class="keywordtype">void</emphasis>&#32;DisplaymA()
+213 {
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(displaymACmd,&#32;NORMAL_FRAME,&#32;25);
+215 }
+216 
+217 <emphasis class="keywordtype">void</emphasis>&#32;DisplayTime()
+218 {
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(displayTimeCmd,&#32;NORMAL_FRAME,&#32;25);
+220 }
+221 
+222 <emphasis class="keywordtype">void</emphasis>&#32;DisplayJOG()
+223 {
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(displayJOGCmd,&#32;NORMAL_FRAME,&#32;25);
+225 }
+226 
+227 <emphasis class="keywordtype">void</emphasis>&#32;ClearKVPBox()
+228 {
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(clearKVPBoxCmd,&#32;NORMAL_FRAME,&#32;20);
+230 }
+231 
+232 <emphasis class="keywordtype">void</emphasis>&#32;ClearmABox()
+233 {
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(clearmABoxCmd,&#32;NORMAL_FRAME,&#32;20);
+235 }
+236 
+237 <emphasis class="keywordtype">void</emphasis>&#32;ClearTimeBox()
+238 {
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(clearTimeBoxCmd,&#32;NORMAL_FRAME,&#32;20);
+240 }
+241 
+242 <emphasis class="keywordtype">void</emphasis>&#32;ClearJOGBox()
+243 {
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(clearJOGBoxCmd,&#32;NORMAL_FRAME,&#32;20);
+245 }
+246 
+<link linkend="_stone_a_p_i_8h_1a37d600cef94b18570da0dafbb3194db5">247 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a37d600cef94b18570da0dafbb3194db5">InitParameterBoard</link>()
+248 {
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayKVP();
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplaymA();
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayTime();
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayJOG();
+253 }
+254 
+255 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_selectPictureCopy[8];
+256 <emphasis class="keywordtype">int</emphasis>&#32;index&#32;=&#32;0;<emphasis class="keywordtype">int</emphasis>&#32;paramVal&#32;=&#32;0;
+257 <emphasis class="keywordtype">void</emphasis>&#32;ProcessMessage(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;message)
+258 {
+259 
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;example&#32;message&#32;to&#32;be&#32;processed:&#32;0xAA&#32;0x78&#32;0x00&#32;0x02&#32;0xCC&#32;0x33&#32;0xC3&#32;0x3C</emphasis>
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;btncode&#32;=&#32;message[3];&#32;<emphasis class="comment">//&#32;bytes&#32;2&#32;and&#32;3&#32;are&#32;pressed&#32;button&#32;code.&#32;\</emphasis>
+262 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;in&#32;our&#32;application&#32;we&#32;use&#32;just&#32;byte&#32;3</emphasis>
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;cmdcode&#32;=&#32;message[1];
+264 
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(cmdcode)
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x7C:
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;user&#32;entered&#32;the&#32;password,&#32;check&#32;it&#32;here</emphasis>
+269 
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((<emphasis class="keywordtype">int</emphasis>)message[3]&#32;==&#32;4)&#32;<emphasis class="comment">//&#32;password&#32;length&#32;is&#32;4</emphasis>
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;assume&#32;password&#32;is&#32;2018&#32;=&#32;0x32&#32;0x030&#32;0x31&#32;0x38</emphasis>
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(message[4]&#32;==&#32;0x32&#32;&amp;&amp;&#32;message[5]&#32;==&#32;0x30
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;&amp;&#32;message[6]&#32;==&#32;0x312&#32;&amp;&amp;&#32;message[7]&#32;==&#32;0x38)
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;there&#32;is&#32;issue&#32;with&#32;api.&#32;I&#32;could&#32;not&#32;find&#32;a&#32;way&#32;to</emphasis>
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;change&#32;the&#32;image&#32;here!!!</emphasis>
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//unsigned&#32;char&#32;_selectPictureCopy[8];&#32;//&#32;backup&#32;the&#32;selectPicture</emphasis>
+279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);</emphasis>
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//_selectPictureCopy[3]&#32;=&#32;0x0B;&#32;//&#32;successful&#32;login</emphasis>
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);</emphasis>
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+283 
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Show&#32;main&#32;window.&#32;</emphasis>
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(selectPicture,&#32;NORMAL_FRAME,&#32;8);
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+290 
+291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+292 
+293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x78:
+294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;a&#32;button&#32;is&#32;pressed</emphasis>
+295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(btncode)
+296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x01:
+298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;go&#32;to&#32;automatic&#32;mode</emphasis>
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_automaticModeLst&#32;!=&#32;0)
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_automaticModeLst();
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x02:
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;display&#32;password&#32;dialog</emphasis>
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(displaySecCmd,&#32;NORMAL_FRAME,&#32;13);
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x03:
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;back&#32;to&#32;main&#32;menu&#32;inside&#32;automatic&#32;mode.</emphasis>
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_gotoHomeLst&#32;!=&#32;0)
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gotoHomeLst();
+310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+312 
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x04:
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;warmup&#32;pressed</emphasis>
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//_selectPictureCopy[3]&#32;=&#32;0x0A;&#32;//&#32;successful&#32;login</emphasis>
+317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);</emphasis>
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//InitParameterBoard();&#32;//&#32;show&#32;the&#32;values;&#32;</emphasis>
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_startwarmupLst&#32;!=&#32;0)
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startwarmupLst();
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+324 
+325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x05:
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;return&#32;to&#32;main&#32;menue.</emphasis>
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_gotoHomeLst&#32;!=&#32;0)
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_gotoHomeLst();
+329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+330 
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x06:
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;start&#32;button&#32;is&#32;pressed</emphasis>
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;inform&#32;the&#32;latest&#32;parameters</emphasis>
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_updateKvpLst&#32;!=&#32;0)
+335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayKVPCmd);
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateKvpLst(paramVal);
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_updatemALst&#32;!=&#32;0)
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displaymACmd);
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updatemALst(paramVal);
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_updateTimeLst&#32;!=&#32;0)
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayTimeCmd);
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateTimeLst(paramVal);
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_updateJogLst&#32;!=&#32;0)
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayJOGCmd);
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateJogLst(paramVal);
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;start&#32;exposure&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_startExposureLst&#32;!=&#32;0)
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startExposureLst();
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x07:
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;stop&#32;button&#32;is&#32;pressed</emphasis>
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(_stopExposureLst&#32;!=&#32;0)
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_stopExposureLst();
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+363 
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x10:
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;increase&#32;kvp</emphasis>
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;GetCommandParameter&#32;is&#32;called&#32;two&#32;times.&#32;avoid&#32;it!</emphasis>
+367 
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayKVPCmd);
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((paramval&#32;+&#32;KVP_STP)&#32;&lt;=&#32;MAX_KVP_VAL)
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+371 
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayKVPCmd,&#32;KVP_STP);
+373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearKVPBox();
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayKVP();
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+376 
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x11:
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;increase&#32;ma</emphasis>
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displaymACmd);
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((paramval&#32;+&#32;mA_STP)&#32;&lt;=&#32;MAX_mA)
+382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displaymACmd,&#32;mA_STP);
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearmABox();
+385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplaymA();
+386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x12:
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;increase&#32;time</emphasis>
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayTimeCmd);
+391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((paramval&#32;+&#32;Time_STP)&#32;&lt;=&#32;MAX_Time)
+392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayTimeCmd,&#32;Time_STP);
+394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearTimeBox();
+395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayTime();
+396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x13:
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//increase&#32;jog</emphasis>
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayJOGCmd);
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((paramval&#32;+&#32;JOG_STP)&#32;&lt;=&#32;MAX_JOG)
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+403 
+404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayJOGCmd,&#32;JOG_STP);
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearJOGBox();
+406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayJOG();
+407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x14:
+410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;decrease&#32;kvp</emphasis>
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayKVPCmd);
+412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(MIN_KVP_VAL&#32;&lt;=&#32;(paramval&#32;-&#32;KVP_STP))
+413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayKVPCmd,&#32;-1&#32;*&#32;KVP_STP);
+415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearKVPBox();
+416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayKVP();
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x15:
+420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;decrease&#32;ma</emphasis>
+421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displaymACmd);
+422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(MIN_mA&#32;&lt;=&#32;(paramval&#32;-&#32;mA_STP))
+423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displaymACmd,&#32;-1&#32;*&#32;mA_STP);
+425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearmABox();
+426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplaymA();
+427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x16:
+430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;decrease&#32;time</emphasis>
+431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayTimeCmd);
+432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(MIN_Time&#32;&lt;=&#32;(paramval&#32;-&#32;Time_STP))
+433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayTimeCmd,&#32;-1&#32;*&#32;Time_STP);
+435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearTimeBox();
+436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayTime();
+437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0x17:
+440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;decrease&#32;jog</emphasis>
+441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paramVal&#32;=&#32;GetCommandParameter(displayJOGCmd);
+442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(MIN_JOG&#32;&lt;=&#32;(paramval&#32;-&#32;JOG_STP))
+443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayJOGCmd,&#32;-1&#32;*&#32;JOG_STP);
+445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClearJOGBox();
+446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayJOG();
+447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+452 
+453 }
+454 
+455 
+456 <emphasis class="comment">//****************************&#32;Public&#32;functions&#32;***************************************</emphasis>
+457 
+<link linkend="_stone_a_p_i_8h_1a30cc244ba2a37ad4c495620b9f8a00dc">458 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a30cc244ba2a37ad4c495620b9f8a00dc">SetKvpBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minkvp,<emphasis class="keywordtype">int</emphasis>&#32;maxkvp)
+459 {
+460 &#32;&#32;MIN_KVP_VAL&#32;=&#32;minkvp;
+461 &#32;&#32;MAX_KVP_VAL&#32;=&#32;maxkvp;
+462 }
+<link linkend="_stone_a_p_i_8h_1aa121dee7134d8fcf78e5db9ce91ed1a1">463 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aa121dee7134d8fcf78e5db9ce91ed1a1">SetmABoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minmA,<emphasis class="keywordtype">int</emphasis>&#32;maxmA)
+464 {
+465 &#32;&#32;MIN_mA&#32;=&#32;minmA;
+466 &#32;&#32;MAX_mA&#32;=&#32;maxmA;
+467 }
+<link linkend="_stone_a_p_i_8h_1a27b4f33b9e0dac43cd57d0de8d76d433">468 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a27b4f33b9e0dac43cd57d0de8d76d433">SetTimeBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minTime,<emphasis class="keywordtype">int</emphasis>&#32;maxTime)
+469 {
+470 &#32;&#32;MIN_TIME&#32;=&#32;minTime;
+471 &#32;&#32;MAX_TIME&#32;=&#32;maxTime;
+472 }
+<link linkend="_stone_a_p_i_8h_1aecee82983f45b0a31928ff1babb52dbb">473 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aecee82983f45b0a31928ff1babb52dbb">SetJogBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minJog,<emphasis class="keywordtype">int</emphasis>&#32;maxJog)
+474 {
+475 &#32;&#32;MIN_JOG&#32;=&#32;minJog;
+476 &#32;&#32;MAX_JOG&#32;=&#32;maxJog;
+477 }
+478 
+479 
+<link linkend="_stone_a_p_i_8h_1afd834277b44df0db2f4dc24c55e74b73">480 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1afd834277b44df0db2f4dc24c55e74b73">SetKvpStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step)
+481 {
+482 &#32;&#32;&#32;KVP_STP&#32;=&#32;step;
+483 }
+<link linkend="_stone_a_p_i_8h_1a6dba667e707dcfd867b46dbd12284a0d">484 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a6dba667e707dcfd867b46dbd12284a0d">SetmAStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step)
+485 {
+486 &#32;&#32;&#32;mA_STP&#32;=step;
+487 }
+<link linkend="_stone_a_p_i_8h_1a9ad5a2fe597b5bb1130504b8e5764358">488 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a9ad5a2fe597b5bb1130504b8e5764358">SetTimeStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step)
+489 {
+490 &#32;&#32;&#32;&#32;TIME_STP&#32;=&#32;step;
+491 }
+<link linkend="_stone_a_p_i_8h_1a03f57cada9dfce1fd9ddff7b91fd6db1">492 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a03f57cada9dfce1fd9ddff7b91fd6db1">SetJogStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step)
+493 {
+494 &#32;&#32;&#32;&#32;JOG_STP&#32;=&#32;step;
+495 }
+496 
+497 
+498 
+499 <emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;_receiveBuff[40];
+500 <emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;mLen&#32;=&#32;0;&#32;<emphasis class="comment">//&#32;message&#32;length</emphasis>
+<link linkend="_stone_a_p_i_8h_1abdb1785bf497531b4a561ea6999d8260">501 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1abdb1785bf497531b4a561ea6999d8260">DisplayProcessKernelFrame</link>(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>&#32;frame){
+502 
+503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;_receiveBuff[mLen]&#32;=&#32;frame.<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e_1adb33c1f45314f3a78597d889550e066c">FRAME_MESSAGE</link>[0];
+505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mLen++;
+506 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(CheckMessageFinished(_receiveBuff,&#32;mLen)&#32;!=&#32;0)
+507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+508 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ProcessMessage(_receiveBuff);
+509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(_receiveBuff,&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>,&#32;40);
+510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mLen&#32;=&#32;0;
+511 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+512 }
+513 
+<link linkend="_stone_a_p_i_8h_1a902c1af74cbe0cfb10248b7618de7022">514 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a902c1af74cbe0cfb10248b7618de7022">InitDisplay</link>()
+515 {
+516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;DUMMY&#32;UPDATE:&#32;remove&#32;precedding&#32;zeros</emphasis>
+517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;(0XX),&#32;(XX)</emphasis>
+518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayKVPCmd,&#32;0);
+519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displaymACmd,&#32;0);
+520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayJOGCmd,&#32;0);
+521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdateCommandParameter(displayTimeCmd,&#32;0);
+522 }
+523 
+<link linkend="_stone_a_p_i_8h_1a50de73c57a4a139c15f4851ac1b58415">524 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a50de73c57a4a139c15f4851ac1b58415">ShowMainMenue</link>()
+525 {
+526 &#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(&#32;selectPicture,NORMAL_FRAME,8);
+527 }
+528 
+<link linkend="_stone_a_p_i_8h_1a179ad87bd6e342cbf88a2c3ea95f1b70">529 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a179ad87bd6e342cbf88a2c3ea95f1b70">DisplayAutomaticModeWarmingupState</link>()
+530 {
+531 
+532 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x04;&#32;
+534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+535 }
+536 
+<link linkend="_stone_a_p_i_8h_1a1efd99bd9546c4799356b2359db7e25e">537 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a1efd99bd9546c4799356b2359db7e25e">DisplayAutomaticModePendingState</link>()
+538 {
+539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x02;&#32;
+541 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stone_a_p_i_8h_1a37d600cef94b18570da0dafbb3194db5">InitParameterBoard</link>();
+543 }
+544 
+<link linkend="_stone_a_p_i_8h_1a3919db395d6f46ae310b9156f6a8215d">545 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a3919db395d6f46ae310b9156f6a8215d">DisplayAutomaticModeWorkingState</link>()&#32;
+546 {
+547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+548 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x06;&#32;
+549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+550 }
+551 
+<link linkend="_stone_a_p_i_8h_1a4b35197a7f3dae5a4c04a18b6425e4c4">552 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a4b35197a7f3dae5a4c04a18b6425e4c4">DisplayAutomaticModeErrorState</link>()
+553 {
+554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x05;&#32;
+556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+557 }
+558 
+<link linkend="_stone_a_p_i_8h_1a5371889296412e101c1f3a004f449cf5">559 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a5371889296412e101c1f3a004f449cf5">DisplayServiceModeWarmingupState</link>()
+560 {
+561 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x08;&#32;
+563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+564 }
+565 
+<link linkend="_stone_a_p_i_8h_1aad5c25aa42ff92ac6d66866951d0be4b">566 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aad5c25aa42ff92ac6d66866951d0be4b">DisplayServiceModeWarmupErrorState</link>()
+567 {
+568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+569 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x09;&#32;
+570 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+571 }
+572 
+<link linkend="_stone_a_p_i_8h_1ac6881bffd08da680e8c46c377762d703">573 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ac6881bffd08da680e8c46c377762d703">DisplayServiceModePendingState</link>()
+574 {
+575 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+576 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x0A;&#32;
+577 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+578 }
+579 
+<link linkend="_stone_a_p_i_8h_1ad7b66eeb3ec69bd31f24b16e7d55bcae">580 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ad7b66eeb3ec69bd31f24b16e7d55bcae">DisplayServiceModeWorkingState</link>()
+581 {
+582 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+583 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x0B;&#32;
+584 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+585 }
+586 
+<link linkend="_stone_a_p_i_8h_1a08fcb1c995537c269d1f83e492cbb5fa">587 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a08fcb1c995537c269d1f83e492cbb5fa">DisplayServiceModeErrorState</link>()
+588 {
+589 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(_selectPictureCopy,&#32;selectPicture,&#32;8);
+590 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_selectPictureCopy[3]&#32;=&#32;0x0C;&#32;
+591 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayCallKernelSendService(_selectPictureCopy,&#32;NORMAL_FRAME,&#32;8);
+592 }
+593 
+594 <emphasis class="comment">//******************************&#32;Register&#32;event&#32;handlers&#32;********************************</emphasis>
+595 &#32;
+<link linkend="_stone_a_p_i_8h_1aee1ecb5c9fc7ab3bc77a61012c379aba">596 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aee1ecb5c9fc7ab3bc77a61012c379aba">RegisterStartAutomaticModeSessionListener</link>(StartAutomaticModeSessionEvent&#32;automaticModeLst)
+597 &#32;{
+598 &#32;&#32;&#32;&#32;&#32;&#32;_automaticModeLst&#32;=&#32;&#32;automaticModeLst;
+599 &#32;}
+600 &#32;
+<link linkend="_stone_a_p_i_8h_1ad462a944099154337a431650f631c5af">601 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ad462a944099154337a431650f631c5af">RegisterGotoHomeListener</link>(GotoHomeEvent&#32;gotoHomeLst)
+602 &#32;{
+603 &#32;&#32;&#32;&#32;&#32;&#32;_gotoHomeLst&#32;=&#32;gotoHomeLst;
+604 &#32;}
+605 &#32;
+<link linkend="_stone_a_p_i_8h_1afbdbc3ff988fb466aa824e5a3f01ccf8">606 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1afbdbc3ff988fb466aa824e5a3f01ccf8">RegisterStartExposureListener</link>(StartExposureEvent&#32;listener)&#32;
+607 &#32;{
+608 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startExposureLst&#32;=&#32;listener;
+609 &#32;}
+610 &#32;
+<link linkend="_stone_a_p_i_8h_1a1c11ed6f8ecd59615298403f6c5daddd">611 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a1c11ed6f8ecd59615298403f6c5daddd">RegisterStopExposureListener</link>(StopExposureEvent&#32;listener)&#32;
+612 &#32;{
+613 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_stopExposureLst&#32;=&#32;listener;
+614 &#32;}
+615 &#32;
+<link linkend="_stone_a_p_i_8h_1a2e4e3c258a026cb0595f02be2be19a09">616 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a2e4e3c258a026cb0595f02be2be19a09">RegisterStartWarmupEventListener</link>(StartWarmupEvent&#32;listener)&#32;
+617 &#32;{
+618 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_startwarmupLst&#32;=&#32;listener;
+619 &#32;}
+620 &#32;
+<link linkend="_stone_a_p_i_8h_1a93a23fc41f3963ad8cdfef4c878c8b70">621 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a93a23fc41f3963ad8cdfef4c878c8b70">RegisterUpdateKvpEventListener</link>(UpdateKvpEvent&#32;listener)&#32;
+622 &#32;{
+623 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateKvpLst&#32;=&#32;listener;
+624 &#32;}
+625 &#32;
+<link linkend="_stone_a_p_i_8h_1aea4fdecae805e4c2a5a922c8a90ee906">626 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aea4fdecae805e4c2a5a922c8a90ee906">RegisterUpdatemAEventListener</link>(UpdatemAEvent&#32;listener)&#32;
+627 &#32;{
+628 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updatemALst&#32;=&#32;listener;
+629 &#32;}
+630 &#32;
+<link linkend="_stone_a_p_i_8h_1ade8911e6ef98b92aea3f077c2404a419">631 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ade8911e6ef98b92aea3f077c2404a419">RegisterUpdateTimeEventListener</link>(UpdateTimeEvent&#32;listener)
+632 &#32;{
+633 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateTimeLst&#32;=&#32;listener;
+634 &#32;}
+635 &#32;
+<link linkend="_stone_a_p_i_8h_1ada219a6836996fd054252b7003bea979">636 </link>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ada219a6836996fd054252b7003bea979">RegisterUpdateJOGEventListener</link>(UpdateJOGEvent&#32;listener)
+637 &#32;{
+638 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_updateJogLst&#32;=&#32;listener;
+639 &#32;}
+    </computeroutput></literallayout>
+</section>

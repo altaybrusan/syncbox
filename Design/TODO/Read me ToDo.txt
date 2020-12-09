@@ -1,0 +1,14 @@
+Here describe all the things which have to be improved or done in the next revision.
+
+Schematic:
+USB3 must be revisited
+
+PCB:
+Wifi logo should be removed from top layer.
+
+Production:
+STM-32 maybe better option than PIC24E
+
+Firmware:
+Unit tesst and integrity tests should be revisited.
+The compiler must be changed from MikroC to official PİC compiler

@@ -1,0 +1,52 @@
+\hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e}{}\section{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME Struct Reference}
+\label{struct_k_e_r_n_e_l___f_r_a_m_e}\index{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME@{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}}
+
+
+define the structure of messages.  
+
+
+
+
+{\ttfamily \#include $<$Kernel.\+h$>$}
+
+
+
+Collaboration diagram for K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{struct_k_e_r_n_e_l___f_r_a_m_e__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_af979252e2c7fa6f78f4cfda607e7587b}\label{struct_k_e_r_n_e_l___f_r_a_m_e_af979252e2c7fa6f78f4cfda607e7587b}} 
+\hyperlink{_kernel_8h_add57988c892c423bff906e04292510df}{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE} \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e_af979252e2c7fa6f78f4cfda607e7587b}{F\+\_\+\+S\+E\+N\+D\+ER}
+\begin{DoxyCompactList}\small\item\em Which device produced the F\+R\+A\+ME. Useful for device level priority. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_ae2d1e98376527216fa6ff53b940a7c7a}\label{struct_k_e_r_n_e_l___f_r_a_m_e_ae2d1e98376527216fa6ff53b940a7c7a}} 
+\hyperlink{_kernel_8h_add57988c892c423bff906e04292510df}{D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE} \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e_ae2d1e98376527216fa6ff53b940a7c7a}{F\+\_\+\+R\+E\+C\+E\+I\+V\+ER}
+\begin{DoxyCompactList}\small\item\em in which buffer the F\+R\+A\+ME is stored in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_ae24624f2af7ede4b38b487a23cf5c947}\label{struct_k_e_r_n_e_l___f_r_a_m_e_ae24624f2af7ede4b38b487a23cf5c947}} 
+\hyperlink{_kernel_8h_ae7bbafd20fabd9f3e1a4d5563f587487}{F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE} \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e_ae24624f2af7ede4b38b487a23cf5c947}{F\+\_\+\+T\+Y\+PE}
+\begin{DoxyCompactList}\small\item\em J\+S\+ON parser is required or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_a3d27a4b137640aaa3b112a0c236bf934}\label{struct_k_e_r_n_e_l___f_r_a_m_e_a3d27a4b137640aaa3b112a0c236bf934}} 
+F\+R\+A\+M\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e_a3d27a4b137640aaa3b112a0c236bf934}{F\+\_\+\+P\+R\+I\+O\+R\+I\+TY}
+\begin{DoxyCompactList}\small\item\em Frame priority used by Kernel dispatcher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_adb33c1f45314f3a78597d889550e066c}\label{struct_k_e_r_n_e_l___f_r_a_m_e_adb33c1f45314f3a78597d889550e066c}} 
+char $\ast$ \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e_adb33c1f45314f3a78597d889550e066c}{F\+R\+A\+M\+E\+\_\+\+M\+E\+S\+S\+A\+GE}
+\begin{DoxyCompactList}\small\item\em Frame Content. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_k_e_r_n_e_l___f_r_a_m_e_ace41ffd02032f82d32bac76fa0d3c828}\label{struct_k_e_r_n_e_l___f_r_a_m_e_ace41ffd02032f82d32bac76fa0d3c828}} 
+int {\bfseries M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+define the structure of messages. 
+
+Kernel accept and deliver message between A\+P\+Is and devices in a \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} format. This format includes the message and some meta-\/data. based on this meta-\/data kernel treat the message in special way. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_kernel_8h}{Kernel.\+h}\end{DoxyCompactItemize}

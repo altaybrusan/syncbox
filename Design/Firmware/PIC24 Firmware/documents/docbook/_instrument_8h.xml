@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_instrument_8h">
+    <title>Instrument.h File Reference</title>
+<para>Include dependency diagram for Instrument.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_instrument_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Instrument.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_instrument_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_instrument_8h_1a44183aa55ed986e78680ae1fec9ec93a">StartInstrument</link> (
+)<para><emphasis>inception point of the instrument after successfull boot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>implement the instrument logic. It containts state variables that represent the x-ray machine as-is and update these variables based on received inputs. </para>
+
+<para>APIs send their events to <link linkend="_instrument_8c">instrument.c</link> and the decision about the machine state and next state is made there. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/Instrument.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;INSTRUMENT_H</emphasis>
+2 <emphasis class="preprocessor">&#32;&#32;#define&#32;INSTRUMENT_H</emphasis>
+3 
+11 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_instrument_8h_1a44183aa55ed986e78680ae1fec9ec93a">StartInstrument</link>();
+13 
+14 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

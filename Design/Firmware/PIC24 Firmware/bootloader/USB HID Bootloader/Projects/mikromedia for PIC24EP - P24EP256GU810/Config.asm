@@ -1,0 +1,13 @@
+
+_Config:
+
+	MOV	#70, W0
+	MOV	WREG, PLLFBD
+	CLR	CLKDIV
+	MOV	#46273, W0
+	MOV	WREG, ACLKCON3
+	MOV	#7, W0
+	MOV	WREG, ACLKDIV3
+L_end_Config:
+	RETURN
+; end of _Config

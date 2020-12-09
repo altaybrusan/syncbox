@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stone_a_p_i_8h">
+    <title>StoneAPI.h File Reference</title>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+<para>Include dependency diagram for StoneAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_stone_a_p_i_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for StoneAPI.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_stone_a_p_i_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1aae9ebb7ba3b36ce2fee95f4c4ff6849f">StartAutomaticModeSessionEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a1652e3922207ea6bb81a75296d550136">GotoHomeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a5a7573dffc56f43001786a10a59d040d">StartExposureEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a1e27e52a56d56f67bb881e8807776e2c">StopExposureEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a7738e5604b7c6ad2f76dbbd97425edcc">StartWarmupEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a336f9b0708cbd1c69e6966844dca2bc6">UpdateKvpEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a5ee6d4e207a9aecd9d9e1521ee1b0795">UpdatemAEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a853cc5d2bef99a3d332f3625cd395ba9">UpdateTimeEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_stone_a_p_i_8h_1a33ad88434baa7fcbacf877d1c94e7b64">UpdateJOGEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1abdb1785bf497531b4a561ea6999d8260">DisplayProcessKernelFrame</link> (
+<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link> )<para><emphasis>Receive the frames that are sent by Kernel.c.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a902c1af74cbe0cfb10248b7618de7022">InitDisplay</link> (
+)<para><emphasis>initialize the display.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a50de73c57a4a139c15f4851ac1b58415">ShowMainMenue</link> (
+)<para><emphasis>show main menue on the display.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a37d600cef94b18570da0dafbb3194db5">InitParameterBoard</link> (
+)<para><emphasis>initialize numberic values region on the board.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a30cc244ba2a37ad4c495620b9f8a00dc">SetKvpBoundaries</link> (
+int minkvp, int maxkvp)<para><emphasis>set boundries on KVP value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1aa121dee7134d8fcf78e5db9ce91ed1a1">SetmABoundaries</link> (
+int minmA, int maxmA)<para><emphasis>set boundries on milli-Amper value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a27b4f33b9e0dac43cd57d0de8d76d433">SetTimeBoundaries</link> (
+int minTime, int maxTime)<para><emphasis>set boundries on time value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1aecee82983f45b0a31928ff1babb52dbb">SetJogBoundaries</link> (
+int minJog, int maxJog)<para><emphasis>set boundries on JOG value selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1afd834277b44df0db2f4dc24c55e74b73">SetKvpStepSize</link> (
+int step)<para><emphasis>set the step value for KVP numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a6dba667e707dcfd867b46dbd12284a0d">SetmAStepSize</link> (
+int step)<para><emphasis>set the step value for milli-amper numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a9ad5a2fe597b5bb1130504b8e5764358">SetTimeStepSize</link> (
+int step)<para><emphasis>set the step value for exposure numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a03f57cada9dfce1fd9ddff7b91fd6db1">SetJogStepSize</link> (
+int step)<para><emphasis>set the step value for JOG numeric selector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a179ad87bd6e342cbf88a2c3ea95f1b70">DisplayAutomaticModeWarmingupState</link> (
+)<para><emphasis>display automatic mode warmingup state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a1efd99bd9546c4799356b2359db7e25e">DisplayAutomaticModePendingState</link> (
+)<para><emphasis>display automatic mode pending state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a3919db395d6f46ae310b9156f6a8215d">DisplayAutomaticModeWorkingState</link> (
+)<para><emphasis>display automatic mode working state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a4b35197a7f3dae5a4c04a18b6425e4c4">DisplayAutomaticModeErrorState</link> (
+)<para><emphasis>display automatic mode error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a5371889296412e101c1f3a004f449cf5">DisplayServiceModeWarmingupState</link> (
+)<para><emphasis>display service mode warmingup state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1aad5c25aa42ff92ac6d66866951d0be4b">DisplayServiceModeWarmupErrorState</link> (
+)<para><emphasis>display service mode warmup error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1ac6881bffd08da680e8c46c377762d703">DisplayServiceModePendingState</link> (
+)<para><emphasis>display service mode pending state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1ad7b66eeb3ec69bd31f24b16e7d55bcae">DisplayServiceModeWorkingState</link> (
+)<para><emphasis>display service mode working state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a08fcb1c995537c269d1f83e492cbb5fa">DisplayServiceModeErrorState</link> (
+)<para><emphasis>display service mode error state</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1aee1ecb5c9fc7ab3bc77a61012c379aba">RegisterStartAutomaticModeSessionListener</link> (
+StartAutomaticModeSessionEvent )<para><emphasis>register a listener for start automatic mode event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1ad462a944099154337a431650f631c5af">RegisterGotoHomeListener</link> (
+GotoHomeEvent )<para><emphasis>register a listener for go to home event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1afbdbc3ff988fb466aa824e5a3f01ccf8">RegisterStartExposureListener</link> (
+StartExposureEvent )<para><emphasis>register a listener for start exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a1c11ed6f8ecd59615298403f6c5daddd">RegisterStopExposureListener</link> (
+StopExposureEvent )<para><emphasis>register a listener for stop exposure event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a2e4e3c258a026cb0595f02be2be19a09">RegisterStartWarmupEventListener</link> (
+StartWarmupEvent )<para><emphasis>register a listener for start warmup event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1a93a23fc41f3963ad8cdfef4c878c8b70">RegisterUpdateKvpEventListener</link> (
+UpdateKvpEvent )<para><emphasis>register a listener for update KVP event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1aea4fdecae805e4c2a5a922c8a90ee906">RegisterUpdatemAEventListener</link> (
+UpdatemAEvent )<para><emphasis>register a listener for update milli-amper event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1ade8911e6ef98b92aea3f077c2404a419">RegisterUpdateTimeEventListener</link> (
+UpdateTimeEvent )<para><emphasis>register a listener for update exposure time event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_stone_a_p_i_8h_1ada219a6836996fd054252b7003bea979">RegisterUpdateJOGEventListener</link> (
+UpdateJOGEvent )<para><emphasis>register a listener for update JOG event.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>API for communicating with Stone display. </para>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/StoneAPI.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+5 <emphasis class="preprocessor">#ifndef&#32;STONEAPI_H</emphasis>
+6 <emphasis class="preprocessor">&#32;&#32;#define&#32;STONEAPI_H</emphasis>
+7 &#32;
+8 <emphasis class="preprocessor">&#32;&#32;&#32;#include&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+9 
+10 <emphasis class="comment">//&#32;public&#32;functions</emphasis>
+13 <emphasis class="comment"></emphasis><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1abdb1785bf497531b4a561ea6999d8260">DisplayProcessKernelFrame</link>(<link linkend="struct_k_e_r_n_e_l___f_r_a_m_e">KERNEL_FRAME</link>);
+15 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a902c1af74cbe0cfb10248b7618de7022">InitDisplay</link>();
+17 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a50de73c57a4a139c15f4851ac1b58415">ShowMainMenue</link>();
+19 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a37d600cef94b18570da0dafbb3194db5">InitParameterBoard</link>();
+20 
+26 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a30cc244ba2a37ad4c495620b9f8a00dc">SetKvpBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minkvp,<emphasis class="keywordtype">int</emphasis>&#32;maxkvp);
+27 
+33 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aa121dee7134d8fcf78e5db9ce91ed1a1">SetmABoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minmA,<emphasis class="keywordtype">int</emphasis>&#32;maxmA);
+34 
+40 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a27b4f33b9e0dac43cd57d0de8d76d433">SetTimeBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minTime,<emphasis class="keywordtype">int</emphasis>&#32;maxTime);
+41 
+47 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aecee82983f45b0a31928ff1babb52dbb">SetJogBoundaries</link>(<emphasis class="keywordtype">int</emphasis>&#32;minJog,<emphasis class="keywordtype">int</emphasis>&#32;maxJog);
+48 
+50 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1afd834277b44df0db2f4dc24c55e74b73">SetKvpStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step);
+52 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a6dba667e707dcfd867b46dbd12284a0d">SetmAStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step);
+54 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a9ad5a2fe597b5bb1130504b8e5764358">SetTimeStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step);
+56 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a03f57cada9dfce1fd9ddff7b91fd6db1">SetJogStepSize</link>(<emphasis class="keywordtype">int</emphasis>&#32;step);
+57 
+59 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a179ad87bd6e342cbf88a2c3ea95f1b70">DisplayAutomaticModeWarmingupState</link>();
+61 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a1efd99bd9546c4799356b2359db7e25e">DisplayAutomaticModePendingState</link>();
+63 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a3919db395d6f46ae310b9156f6a8215d">DisplayAutomaticModeWorkingState</link>();
+65 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a4b35197a7f3dae5a4c04a18b6425e4c4">DisplayAutomaticModeErrorState</link>();
+66 
+68 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a5371889296412e101c1f3a004f449cf5">DisplayServiceModeWarmingupState</link>();
+70 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aad5c25aa42ff92ac6d66866951d0be4b">DisplayServiceModeWarmupErrorState</link>();
+72 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ac6881bffd08da680e8c46c377762d703">DisplayServiceModePendingState</link>();
+74 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ad7b66eeb3ec69bd31f24b16e7d55bcae">DisplayServiceModeWorkingState</link>();
+76 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a08fcb1c995537c269d1f83e492cbb5fa">DisplayServiceModeErrorState</link>();
+77 
+78 
+79 &#32;<emphasis class="comment">//&#32;Events</emphasis>
+80 &#32;<emphasis class="comment">//&#32;The&#32;user&#32;of&#32;the&#32;StoneAPI&#32;get&#32;informed&#32;by&#32;registering</emphasis>
+81 &#32;<emphasis class="comment">//&#32;its&#32;callback&#32;into&#32;the&#32;following&#32;callback&#32;functions</emphasis>
+82 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*StartAutomaticModeSessionEvent)();
+83 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*GotoHomeEvent)();
+84 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*StartExposureEvent)();
+85 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*StopExposureEvent)();
+86 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*StartWarmupEvent)();
+87 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*UpdateKvpEvent)(<emphasis class="keywordtype">int</emphasis>&#32;kvp);
+88 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*UpdatemAEvent)(<emphasis class="keywordtype">int</emphasis>&#32;mA);
+89 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*UpdateTimeEvent)(<emphasis class="keywordtype">int</emphasis>&#32;time);
+90 &#32;<emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*UpdateJOGEvent)(<emphasis class="keywordtype">int</emphasis>&#32;jog);
+91 &#32;
+98 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aee1ecb5c9fc7ab3bc77a61012c379aba">RegisterStartAutomaticModeSessionListener</link>(StartAutomaticModeSessionEvent);
+105 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ad462a944099154337a431650f631c5af">RegisterGotoHomeListener</link>(GotoHomeEvent);
+112 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1afbdbc3ff988fb466aa824e5a3f01ccf8">RegisterStartExposureListener</link>(StartExposureEvent);
+119 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a1c11ed6f8ecd59615298403f6c5daddd">RegisterStopExposureListener</link>(StopExposureEvent);
+126 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a2e4e3c258a026cb0595f02be2be19a09">RegisterStartWarmupEventListener</link>(StartWarmupEvent);
+133 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1a93a23fc41f3963ad8cdfef4c878c8b70">RegisterUpdateKvpEventListener</link>(UpdateKvpEvent);
+140 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1aea4fdecae805e4c2a5a922c8a90ee906">RegisterUpdatemAEventListener</link>(UpdatemAEvent);
+147 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ade8911e6ef98b92aea3f077c2404a419">RegisterUpdateTimeEventListener</link>(UpdateTimeEvent);
+154 &#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_stone_a_p_i_8h_1ada219a6836996fd054252b7003bea979">RegisterUpdateJOGEventListener</link>(UpdateJOGEvent);
+155 
+156 &#32;
+157 
+158 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

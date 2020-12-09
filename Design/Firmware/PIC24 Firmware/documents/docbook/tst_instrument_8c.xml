@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="tst_instrument_8c">
+    <title>tstInstrument.c File Reference</title>
+    <programlisting>#include &quot;Instrument.h&quot;</programlisting>
+    <programlisting>#include &quot;Kernel.h&quot;</programlisting>
+    <programlisting>#include &quot;GulmayAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;StoneAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;DeltaServoAPI.h&quot;</programlisting>
+    <programlisting>#include &quot;ConnectionMap.h&quot;</programlisting>
+<para>Include dependency diagram for tstInstrument.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="tst_instrument_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for tstInstrument.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="tst_instrument_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="tst_instrument_8c_1a63c6d0d9b77893e9ef6ef160aa1bfe2e">tstStartInstrument</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/Altay/Documents/Altium/Projects/SyncBox/Work/Bogazici University/SyncBox/V3I1/Software/PIC24 Firmware/firmware/tstInstrument.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_instrument_8h">Instrument.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_kernel_8h">Kernel.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_gulmay_a_p_i_8h">GulmayAPI.h</link>&quot;</emphasis>
+4 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_stone_a_p_i_8h">StoneAPI.h</link>&quot;</emphasis>
+5 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_delta_servo_a_p_i_8h">DeltaServoAPI.h</link>&quot;</emphasis>
+6 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="_connection_map_8h">ConnectionMap.h</link>&quot;</emphasis>&#32;&#32;<emphasis class="comment">//&#32;just&#32;used&#32;for&#32;SendDebugMsg</emphasis>
+7 
+8 
+9 
+10 
+11 
+12 
+13 <emphasis class="keywordtype">void</emphasis>&#32;tstStartInstrument()
+14 {&#32;&#32;&#32;<emphasis class="comment">//int&#32;index=0;</emphasis>
+15 
+16 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Register&#32;Generator&#32;to&#32;the&#32;kernel</emphasis>
+17 &#32;&#32;&#32;&#32;<link linkend="struct_d_e_v_i_c_e___s_l_o_t">DEVICE_SLOT</link>&#32;_genslot,_actslot,&#32;_dislot&#32;;
+18 &#32;&#32;&#32;&#32;_genslot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1acaef663101fbc6dccf5014851d1cecd6">device</link>&#32;=&#32;GENERATOR;
+19 &#32;&#32;&#32;&#32;_genslot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1a2e75310ca6d52cb0e1d07a1000a86436">handler</link>&#32;=&#32;<link linkend="_gulmay_a_p_i_8h_1aa7270f2beb762972ec1966e9eb4b5616">GeneratorProcessKernelFrame</link>;
+20 &#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1afb489dd6da8fe88cf4a97f5c5e072927">KL_RegisterDevice</link>(_genslot);&#32;<emphasis class="comment">//&#32;register&#32;to&#32;event&#32;handlers</emphasis>
+21 
+22 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Register&#32;Display&#32;to&#32;the&#32;kernel</emphasis>
+23 &#32;&#32;&#32;&#32;_dislot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1acaef663101fbc6dccf5014851d1cecd6">device</link>&#32;=&#32;DISPLAY;
+24 &#32;&#32;&#32;&#32;_dislot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1a2e75310ca6d52cb0e1d07a1000a86436">handler</link>&#32;=&#32;<link linkend="_stone_a_p_i_8h_1abdb1785bf497531b4a561ea6999d8260">DisplayProcessKernelFrame</link>;
+25 &#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1afb489dd6da8fe88cf4a97f5c5e072927">KL_RegisterDevice</link>(_dislot);
+26 
+27 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Register&#32;Actuator&#32;to&#32;the&#32;kernel</emphasis>
+28 &#32;&#32;&#32;&#32;_actslot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1acaef663101fbc6dccf5014851d1cecd6">device</link>&#32;=&#32;ACTUATOR;
+29 &#32;&#32;&#32;&#32;_actslot.<link linkend="struct_d_e_v_i_c_e___s_l_o_t_1a2e75310ca6d52cb0e1d07a1000a86436">handler</link>&#32;=ActuatorProcessKernelFrame;
+30 &#32;&#32;&#32;&#32;<link linkend="_kernel_8c_1afb489dd6da8fe88cf4a97f5c5e072927">KL_RegisterDevice</link>(_actslot);
+31 
+32 
+33 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Initialize&#32;Display</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stone_a_p_i_8h_1a902c1af74cbe0cfb10248b7618de7022">InitDisplay</link>();
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stone_a_p_i_8h_1a50de73c57a4a139c15f4851ac1b58415">ShowMainMenue</link>();
+36 
+37 <emphasis class="preprocessor">#if&#32;build&#32;==&#32;debug</emphasis>
+38 
+39 &#32;&#32;<emphasis class="comment">/*</emphasis>
+40 <emphasis class="comment">&#32;&#32;&#32;&#32;TEST&#32;GENERATOR&#32;API&#32;UNDER&#32;SIMULATION&#32;LOAD</emphasis>
+41 <emphasis class="comment">&#32;&#32;&#32;&#32;------------------------------------------------------------</emphasis>
+42 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;1:&#32;Just&#32;normal&#32;packs,&#32;without&#32;any&#32;dispatching&#32;&#32;|&#32;PASSED</emphasis>
+43 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;2:&#32;Just&#32;enqueue&#32;without&#32;dequeue&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+44 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;3:&#32;Just&#32;&#32;dequeue&#32;without&#32;enque&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+45 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;4:&#32;Send&#32;different&#32;priority&#32;messages&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+46 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;5:&#32;Reduced&#32;buffersize&#32;to&#32;test&#32;ring&#32;buffer&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+47 <emphasis class="comment"></emphasis>
+48 <emphasis class="comment">&#32;&#32;&#32;&#32;for(index=0;index&lt;=100;index++)</emphasis>
+49 <emphasis class="comment">&#32;&#32;&#32;&#32;{</emphasis>
+50 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartExposure();</emphasis>
+51 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetFineFocalSpotSize();</emphasis>
+52 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopExposure();</emphasis>
+53 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetBroadFocalSpot();</emphasis>
+54 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartShortTermWarmup();</emphasis>
+55 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartLongTermWarmup();</emphasis>
+56 <emphasis class="comment">&#32;&#32;&#32;&#32;}</emphasis>
+57 <emphasis class="comment"></emphasis>
+58 <emphasis class="comment">&#32;&#32;*/</emphasis>
+59 
+60 &#32;&#32;<emphasis class="comment">/*</emphasis>
+61 <emphasis class="comment">&#32;&#32;&#32;&#32;TEST&#32;ACTUATOR&#32;API&#32;UNDER&#32;SIMULATION&#32;LOAD</emphasis>
+62 <emphasis class="comment">&#32;&#32;&#32;&#32;------------------------------------------------------------</emphasis>
+63 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;1:&#32;Over&#32;load&#32;kernel&#32;under&#32;all&#32;messages&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+64 <emphasis class="comment">&#32;&#32;&#32;&#32;for(index=0;index&lt;10;index++)</emphasis>
+65 <emphasis class="comment">&#32;&#32;&#32;&#32;{</emphasis>
+66 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;TurnOnSliderMotor();</emphasis>
+67 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;TurnOffSliderMotor();</emphasis>
+68 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetSliderMotorSpeed(100);</emphasis>
+69 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;RotateSliderMotorCounterClockwise();</emphasis>
+70 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;RotateSliderMotorClockwise();</emphasis>
+71 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StopMotor();</emphasis>
+72 <emphasis class="comment">&#32;&#32;&#32;&#32;}</emphasis>
+73 <emphasis class="comment">&#32;*/</emphasis>
+74 
+75 &#32;&#32;<emphasis class="comment">/*</emphasis>
+76 <emphasis class="comment">&#32;&#32;&#32;&#32;TEST&#32;KERNEL&#32;UNDER&#32;GENERAATOR&#32;&amp;&#32;ACTUATOR&#32;COMMANDS&#32;MIXTURE</emphasis>
+77 <emphasis class="comment">&#32;&#32;&#32;&#32;------------------------------------------------------------</emphasis>
+78 <emphasis class="comment">&#32;&#32;&#32;&#32;CASE&#32;1:&#32;Test&#32;different&#32;messages&#32;priorities&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|&#32;PASSED</emphasis>
+79 <emphasis class="comment">&#32;&#32;&#32;&#32;for(index=0;index&lt;100;index++)</emphasis>
+80 <emphasis class="comment">&#32;&#32;&#32;&#32;{</emphasis>
+81 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartExposure();</emphasis>
+82 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;TurnOnSliderMotor();</emphasis>
+83 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetBroadFocalSpot();</emphasis>
+84 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartShortTermWarmup();</emphasis>
+85 <emphasis class="comment">&#32;&#32;&#32;&#32;}</emphasis>
+86 <emphasis class="comment"></emphasis>
+87 <emphasis class="comment">*/</emphasis>
+88 
+89 &#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for(index=0;index&lt;20;index++)</emphasis>
+90 <emphasis class="comment">//&#32;&#32;&#32;&#32;{</emphasis>
+91 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartExposure();</emphasis>
+92 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;TurnOnSliderMotor();</emphasis>
+93 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetBroadFocalSpot();</emphasis>
+94 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartShortTermWarmup();</emphasis>
+95 <emphasis class="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+96 
+97 <emphasis class="comment">//&#32;TEST&#32;GENERATOR&#32;CONNECTION&#32;AND&#32;API&#32;UNDER&#32;REAL&#32;SITUATION</emphasis>
+98 <emphasis class="comment">//&#32;EACH&#32;SINGLE&#32;COMMMAND&#32;IS&#32;CALLED&#32;UNDER&#32;SINGLE&#32;CALL</emphasis>
+99 <emphasis class="comment">//&#32;IF&#32;A&#32;RESPONSE&#32;CAME&#32;THEN&#32;THE&#32;TEST&#32;IS&#32;CALLED&#32;PASSED</emphasis>
+100 <emphasis class="comment">/*</emphasis>
+101 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QueryWarmupProgram();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//PASSED</emphasis>
+102 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QueryFocalSpotSize();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//PASSED</emphasis>
+103 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetGeneratorInUserMode();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?</emphasis>
+104 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QueryGeneratorMode();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//PASSED</emphasis>
+105 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SuppressErrorsVoltageAndAmpError();&#32;//&#32;PASSED</emphasis>
+106 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CheckGeneratorErrors();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//PASSED</emphasis>
+107 <emphasis class="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;QueryEllapsedExposureTime();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//PASSED</emphasis>
+108 <emphasis class="comment">*/</emphasis>
+109 
+110 <emphasis class="preprocessor">#endif</emphasis>
+111 &#32;&#32;&#32;&#32;
+112 
+113 
+114 
+115 }
+    </computeroutput></literallayout>
+</section>

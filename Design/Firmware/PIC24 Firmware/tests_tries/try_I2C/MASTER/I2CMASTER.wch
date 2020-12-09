@@ -1,0 +1,8 @@
+<WCH v="2">
+  <item n="I2C2CON" r="0" s="False" e="False" i="157"/>
+  <item n="I2C2RCV" r="0" s="False" e="False" i="154"/>
+  <item n="I2C2STAT" r="0" s="False" e="False" i="158"/>
+  <item n="I2C2ADD" r="0" s="False" e="False" i="159"/>
+  <item n="I2C2CONbits" r="1" s="False" e="False" i="936"/>
+  <item n="I2C2BRG" r="0" s="False" e="False" i="156"/>
+</WCH>

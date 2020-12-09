@@ -1,3 +1,0 @@
-main
-	__CC2DW
-interrupt

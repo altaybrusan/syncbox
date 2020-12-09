@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=..\..\..\..\..\..\..\..\..\..\..\..\..\..\Public\Documents\Mikroelektronika\mikroC PRO for dsPIC\Examples\Development Systems\EasyPIC Fusion v7\PIC24EP512GU810\USB UARTA\UARTA.mcpds
+Project1=tstStoneLCD.mcpds
+[ActiveProject]
+Index=1

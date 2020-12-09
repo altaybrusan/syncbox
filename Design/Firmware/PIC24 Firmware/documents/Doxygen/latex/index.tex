@@ -1,0 +1,64 @@
+\hypertarget{index_project_name}{}\section{Project Details}\label{index_project_name}
+syncbox ~\newline
+ \begin{DoxyCopyright}{Copyright}
+\copyright{} 2018 Bogazici University ~\newline
+ License\+: G\+NU Public License. ~\newline
+ Bogazici University \copyright{} 2018 
+\end{DoxyCopyright}
+\hypertarget{index_revision_history}{}\section{Revision History}\label{index_revision_history}
+\hypertarget{index_revision_history_tbl}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Revision Summary}\label{index_revision_history_tbl}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ revision }&\textbf{ details }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ revision }&\textbf{ details }\\\cline{1-2}
+\endhead
+0.\+1 &Pooling method for U\+A\+RT communication. \\\cline{1-2}
+0.\+5 &R\+S-\/232 Modbus R\+TU commuication. \\\cline{1-2}
+\end{longtabu}
+\begin{DoxyNote}{Note}
+{\bfseries  Current Status\+: under development.} 
+\end{DoxyNote}
+\hypertarget{index_descriptopn}{}\section{Description}\label{index_descriptopn}
+The syncbox is a device that can control and synctonize A\+LL medical ( and non-\/medical ) X-\/ray machine components. Usually, these components ( but not confined ) are 
+\begin{DoxyItemize}
+\item X-\/ray generator 
+\item X-\/ray detector 
+\item ventilator 
+\item security, alarm and switches 
+\item worksation 
+\end{DoxyItemize}Each manufacturer has its own set of communication protocol and design specs. The aim of this synchronization box (syncbox) is to abstract away all these sort of details and let the workstation software ( we have implemented one as \href{https://github.com/altaybrusan/ibex}{\tt i\+B\+EX}) be free of concerning details. At the heart of syncbox there is Computer-\/\+On-\/module-\/\+Express(C\+O\+Me) module and a P\+I\+C24E microcontroller.\+The controller is responsible for high speed and accurate signalling and C\+O\+Me mainly deals with detector\textquotesingle{}s outputs and image processing. This project is a firmware of the P\+I\+C24E and it is responsible for communication with 
+\begin{DoxyItemize}
+\item \char`\"{}\+R\+S-\/232\char`\"{} based serial generator 
+\item \char`\"{}\+R\+S-\/232 Mod\+Bus R\+T\+U\char`\"{} based actuator 
+\item \char`\"{}\+R\+S-\/232\char`\"{} based touch screen display 
+\item serial communication with worksation machine 
+\item external trigger switch 
+\end{DoxyItemize}The code consists of a kernel and set of A\+P\+Is that control the devices. Whole machine is integrated and controlled inside a section which is called instrument. Component diagram of the machine is shown bellow.  \hypertarget{index_dev_env}{}\section{Developement Environment and Tools}\label{index_dev_env}
+\hypertarget{index_dev_env_tbl}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\caption{Environment factors table}\label{index_dev_env_tbl}\\
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Factor }&\textbf{ details }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Factor }&\textbf{ details }\\\cline{1-2}
+\endhead
+M\+CU &P24\+E\+P512\+G\+U810 \\\cline{1-2}
+M\+CU Dev.\+Board &Easy\+P\+IC Fusion v.\+7 \\\cline{1-2}
+M\+CU Oscillator &140.\+00 M\+Hz \\\cline{1-2}
+M\+CU Compiler &MikroC Pro for ds\+P\+IC v.\+7 \\\cline{1-2}
+M\+CU Compiler &mikroC P\+RO for ds\+P\+IC v7.\+0.\+0 \\\cline{1-2}
+M\+CU Ext. Modules &x \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_refs}{}\section{Refs}\label{index_refs}
+\href{http://download.mikroe.com/documents/compilers/mikroc/dspic/help/mikroc_libraries.htm}{\tt http\+://download.\+mikroe.\+com/documents/compilers/mikroc/dspic/help/mikroc\+\_\+libraries.\+htm} ~\newline
+ \href{https://github.com/altaybrusan/ibex}{\tt https\+://github.\+com/altaybrusan/ibex} 

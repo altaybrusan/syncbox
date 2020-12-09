@@ -1,0 +1,14 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [HDMI_PCB_PROJ.PrjPcb]
+   Generated File[HDMI-RoundHoles-Plated.TXT]
+   Generated File[HDMI-SlotHoles-Plated.TXT]
+   Generated File[HDMI.DRL]
+   Generated File[HDMI.LDP]
+   Generated File[HDMI.DRR]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 12:16:49 PM On 5/2/2019

@@ -1,0 +1,423 @@
+\hypertarget{_connection_map_8h}{}\section{Connection\+Map.\+h File Reference}
+\label{_connection_map_8h}\index{Connection\+Map.\+h@{Connection\+Map.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{_connection_map_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_connection_map_8h_af7a5aa944fb2d9a0c1696e3fd6add389}{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN}~3
+\item 
+\#define \hyperlink{_connection_map_8h_aee101e2d200a902eac84ac35d3a742b5}{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT}~\&P\+O\+R\+TD
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Devices}\par
+{\em There 1\+:1 map between each D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE \& Communication port }\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_connection_map_8h_a19a251b46b04cee3fd8612bf2c5fb3d6}{U\+A\+R\+T1\+Mapped\+Device}~G\+E\+N\+E\+R\+A\+T\+OR
+\item 
+\#define \hyperlink{_connection_map_8h_aa41dfef3ad002d29bf9dd7185e264e6c}{U\+A\+R\+T2\+Mapped\+Device}~A\+C\+T\+U\+A\+T\+OR
+\item 
+\#define \hyperlink{_connection_map_8h_a6ffacf4569652e94c075afb464255015}{U\+A\+R\+T3\+Mapped\+Device}~W\+O\+R\+K\+S\+T\+A\+T\+I\+ON
+\item 
+\#define \hyperlink{_connection_map_8h_a05502dd71095271c855ec569b862597d}{U\+A\+R\+T4\+Mapped\+Device}~D\+I\+S\+P\+L\+AY
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ MicroC command map}\par
+{\em A set of functions that maps the MicroC U\+A\+RT commands into more readable form.
+
+\hyperlink{_kernel_8c}{Kernel.\+c} needs to write into serial ports. To make the \hyperlink{_kernel_8c}{Kernel.\+c} more clear a set of Send\+To macros are defined. \begin{DoxyNote}{Note}
+Instead of sending whole message at once, using MikroC {\bfseries Uartx\+\_\+\+Write\+\_\+\+Text}, charachter based transmission is prefered. In practice, Uartx\+\_\+\+Write\+\_\+\+Text addes some not-\/wanted charachters to the end of transmitted message. For example, Me\+Ss\+Ag\+Eü may appear instead of !\+Me\+Ss\+AgE. 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_connection_map_8h_ad2731d221b525ebf2d261ca509b1cdd7}{Send\+To\+Generator}(msg)~U\+A\+R\+T1\+\_\+\+Write(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Generator. \end{DoxyCompactList}\item 
+\#define \hyperlink{_connection_map_8h_ac359f38d30e6b036b02bb4320b4ebc96}{Send\+To\+Actuator}(msg)~U\+A\+R\+T2\+\_\+\+Write(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Actuator. \end{DoxyCompactList}\item 
+\#define \hyperlink{_connection_map_8h_afb324ab68dc7689f397f7dfe29de058c}{Send\+To\+Workstation}(msg)~U\+A\+R\+T3\+\_\+\+Write(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Workstation. \end{DoxyCompactList}\item 
+\#define \hyperlink{_connection_map_8h_abcf5d591cde4bb9a39ee64180a181ede}{Send\+To\+Display}(msg)~U\+A\+R\+T4\+\_\+\+Write(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Display. \end{DoxyCompactList}\item 
+\#define \hyperlink{_connection_map_8h_a057c92e4c30690f2618df7d1814fabf0}{Send\+Debug\+Msg}(msg)~U\+A\+R\+T3\+\_\+\+Write\+\_\+\+Text(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+Debug\+Msg. \end{DoxyCompactList}\item 
+\#define \hyperlink{_connection_map_8h_a0959c4c87a8e202f9263a740604b5207}{Send\+Debug\+Chr}(msg)~U\+A\+R\+T3\+\_\+\+Write(msg)
+\begin{DoxyCompactList}\small\item\em rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+Debug\+Chr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ U\+A\+RT pin map}\par
+{\em Pins are compatible with P\+IC Fusion v.\+7 devboard }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_connection_map_8h_aa97b2533063dfbfcd603d7845492776a}\label{_connection_map_8h_aa97b2533063dfbfcd603d7845492776a}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U1\+RX}~100
+\item 
+\mbox{\Hypertarget{_connection_map_8h_ab1330b667f4859a604c3c412a6742993}\label{_connection_map_8h_ab1330b667f4859a604c3c412a6742993}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U1\+TX}~101
+\item 
+\mbox{\Hypertarget{_connection_map_8h_a678392b619a2763c0208a608338b9e7d}\label{_connection_map_8h_a678392b619a2763c0208a608338b9e7d}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U2\+RX}~108
+\item 
+\mbox{\Hypertarget{_connection_map_8h_a0536087115f0638acd2881a6967da71e}\label{_connection_map_8h_a0536087115f0638acd2881a6967da71e}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U2\+TX}~109
+\item 
+\mbox{\Hypertarget{_connection_map_8h_ae30392838f3b8102e7c20de487861f5b}\label{_connection_map_8h_ae30392838f3b8102e7c20de487861f5b}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U3\+RX}~124
+\item 
+\mbox{\Hypertarget{_connection_map_8h_a10022e3bed483f8b10e2270ccc7c107d}\label{_connection_map_8h_a10022e3bed483f8b10e2270ccc7c107d}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U3\+TX}~125
+\item 
+\mbox{\Hypertarget{_connection_map_8h_aa99873684dcfd5801029fb5ab6f97c38}\label{_connection_map_8h_aa99873684dcfd5801029fb5ab6f97c38}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U4\+RX}~112
+\item 
+\mbox{\Hypertarget{_connection_map_8h_a7b1cd31f8fbca088fe291027c27671fd}\label{_connection_map_8h_a7b1cd31f8fbca088fe291027c27671fd}} 
+\#define {\bfseries M\+A\+P\+\_\+\+U4\+TX}~113
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ serial ports settings}\par
+{\em Specify\+: bitrate, parity, data bit and stop bit. }\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_connection_map_8h_a77886b9a97eb863b281adadc72ca8023}{U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE}~9600
+\item 
+\#define \hyperlink{_connection_map_8h_a1ff024f7b26f29a108ee4c641d095055}{U\+A\+R\+T1\+\_\+\+C\+O\+NF}~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY
+\item 
+\#define \hyperlink{_connection_map_8h_ad9171125a0f3f0ecb41ace1eba2c4ac5}{U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT}~\+\_\+\+U\+A\+R\+T\+\_\+\+O\+N\+E\+\_\+\+S\+T\+O\+P\+B\+IT
+\item 
+\#define \hyperlink{_connection_map_8h_aac31fb6c838c1aa070e88a2737140249}{U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED}~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED
+\item 
+\#define \hyperlink{_connection_map_8h_ae963fb4bf70c37887babd9fa1a0c8499}{U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE}~9600
+\item 
+\#define \hyperlink{_connection_map_8h_ac33d3997e556812f9242a71a171f959c}{U\+A\+R\+T2\+\_\+\+C\+O\+NF}~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY
+\item 
+\#define \hyperlink{_connection_map_8h_ac3f2fada823206ca45ac41c42f8b3f4c}{U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT}~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS
+\item 
+\#define \hyperlink{_connection_map_8h_accacd1e26d86834058ad0dd625fb6982}{U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED}~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED
+\item 
+\#define \hyperlink{_connection_map_8h_a950f2005adba7cc4bbaae8d448fff4c2}{U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE}~9600
+\item 
+\#define \hyperlink{_connection_map_8h_a64999dd177c0788d633421d81d14e6ad}{U\+A\+R\+T3\+\_\+\+C\+O\+NF}~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY
+\item 
+\#define \hyperlink{_connection_map_8h_a71b6ffa46b52aa482d69e8b4a50e577e}{U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT}~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS
+\item 
+\#define \hyperlink{_connection_map_8h_ad2ded3499fdcaf33ddd04f4d0decc7b0}{U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED}~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED
+\item 
+\#define \hyperlink{_connection_map_8h_aed7daac2bb4cc8c328af44afddf0dbef}{U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE}~9600
+\item 
+\#define \hyperlink{_connection_map_8h_acea86e2ebfb1a194fb1f3187aa76fd0e}{U\+A\+R\+T4\+\_\+\+C\+O\+NF}~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY
+\item 
+\#define \hyperlink{_connection_map_8h_a74f0af1f25871927b632743d38e4fe68}{U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT}~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS
+\item 
+\#define \hyperlink{_connection_map_8h_a98e9973b57ed9ffe39fdde8f4842d13a}{U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED}~\+\_\+\+U\+A\+R\+T\+\_\+\+Hi\+\_\+\+S\+P\+E\+ED
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ serial connection message terminator}\par
+{\em Serial connection messages are packed and processed. The messages may have fixed length, finished at a specific delimiter or processed charachter by charachter. }\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_connection_map_8h_a3af69910ac5de5a229e3486211ec9944}{U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}~0
+\item 
+\#define \hyperlink{_connection_map_8h_aa5a18ef2cd8bdee21c3bdf2b93dee3c9}{U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}~0
+\item 
+\#define \hyperlink{_connection_map_8h_a4704e5492e5de6f023d519e911d7ba43}{U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}~0
+\item 
+\#define \hyperlink{_connection_map_8h_af6ad5d197c564ad4a7d3a19ed76f362d}{U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}~0
+\item 
+\#define \hyperlink{_connection_map_8h_adae2579ea095f57cda20d3a3d9b93fcb}{U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}~0x0d
+\item 
+\#define \hyperlink{_connection_map_8h_a8b99c3a3ceadd01a51f5a211d4ebc4b3}{U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}~0
+\item 
+\#define \hyperlink{_connection_map_8h_a32717dfa7cc08af0494c325f1ec485f7}{U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}~0
+\item 
+\#define \hyperlink{_connection_map_8h_ae65f4ef2d52a2d8c491b20af3c56afbf}{U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}~0
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Contains global configuration and settings of connections. Each device type (generator, actuator,etc.) has a special set of connection parameters. The \hyperlink{_connection_map_8h}{Connection\+Map.\+h} stores all these parameters. The \begin{DoxySeeAlso}{See also}
+\hyperlink{_kernel_8c}{kernel.\+c} uses the connection parameters to setup the microntroller. 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The A\+PI\textquotesingle{}s normally do not use \hyperlink{_connection_map_8h}{Connection\+Map.\+h} unless for debugging. 
+\end{DoxyNote}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_connection_map_8h_af7a5aa944fb2d9a0c1696e3fd6add389}\label{_connection_map_8h_af7a5aa944fb2d9a0c1696e3fd6add389}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN@{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN}}
+\index{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN@{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN}{MAP\_SPK\_PIN}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+IN~3}
+
+Speaker pin number \mbox{\Hypertarget{_connection_map_8h_aee101e2d200a902eac84ac35d3a742b5}\label{_connection_map_8h_aee101e2d200a902eac84ac35d3a742b5}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT@{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT}}
+\index{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT@{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT}{MAP\_SPK\_PORT}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+S\+P\+K\+\_\+\+P\+O\+RT~\&P\+O\+R\+TD}
+
+Speaker port name. \mbox{\Hypertarget{_connection_map_8h_a0959c4c87a8e202f9263a740604b5207}\label{_connection_map_8h_a0959c4c87a8e202f9263a740604b5207}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+Debug\+Chr@{Send\+Debug\+Chr}}
+\index{Send\+Debug\+Chr@{Send\+Debug\+Chr}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+Debug\+Chr}{SendDebugChr}}
+{\footnotesize\ttfamily \#define Send\+Debug\+Chr(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T3\+\_\+\+Write(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+Debug\+Chr. 
+
+Debugging may require to send {\itshape charachter}. Send\+Debug\+Chr is for this need. \begin{DoxySeeAlso}{See also}
+\hyperlink{_connection_map_8h_a057c92e4c30690f2618df7d1814fabf0}{Send\+Debug\+Msg} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_a057c92e4c30690f2618df7d1814fabf0}\label{_connection_map_8h_a057c92e4c30690f2618df7d1814fabf0}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+Debug\+Msg@{Send\+Debug\+Msg}}
+\index{Send\+Debug\+Msg@{Send\+Debug\+Msg}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+Debug\+Msg}{SendDebugMsg}}
+{\footnotesize\ttfamily \#define Send\+Debug\+Msg(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T3\+\_\+\+Write\+\_\+\+Text(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+Debug\+Msg. 
+
+Debugging may require to send {\itshape string}. Send\+Debug\+Msg is for this need. \begin{DoxySeeAlso}{See also}
+\hyperlink{_connection_map_8h_a0959c4c87a8e202f9263a740604b5207}{Send\+Debug\+Chr} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter string to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_ac359f38d30e6b036b02bb4320b4ebc96}\label{_connection_map_8h_ac359f38d30e6b036b02bb4320b4ebc96}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+To\+Actuator@{Send\+To\+Actuator}}
+\index{Send\+To\+Actuator@{Send\+To\+Actuator}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+To\+Actuator}{SendToActuator}}
+{\footnotesize\ttfamily \#define Send\+To\+Actuator(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T2\+\_\+\+Write(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Actuator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_abcf5d591cde4bb9a39ee64180a181ede}\label{_connection_map_8h_abcf5d591cde4bb9a39ee64180a181ede}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+To\+Display@{Send\+To\+Display}}
+\index{Send\+To\+Display@{Send\+To\+Display}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+To\+Display}{SendToDisplay}}
+{\footnotesize\ttfamily \#define Send\+To\+Display(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T4\+\_\+\+Write(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_ad2731d221b525ebf2d261ca509b1cdd7}\label{_connection_map_8h_ad2731d221b525ebf2d261ca509b1cdd7}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+To\+Generator@{Send\+To\+Generator}}
+\index{Send\+To\+Generator@{Send\+To\+Generator}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+To\+Generator}{SendToGenerator}}
+{\footnotesize\ttfamily \#define Send\+To\+Generator(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T1\+\_\+\+Write(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_afb324ab68dc7689f397f7dfe29de058c}\label{_connection_map_8h_afb324ab68dc7689f397f7dfe29de058c}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!Send\+To\+Workstation@{Send\+To\+Workstation}}
+\index{Send\+To\+Workstation@{Send\+To\+Workstation}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{Send\+To\+Workstation}{SendToWorkstation}}
+{\footnotesize\ttfamily \#define Send\+To\+Workstation(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~U\+A\+R\+T3\+\_\+\+Write(msg)}
+
+
+
+rename MicroC U\+A\+R\+Tx\+\_\+\+Write command to Send\+To\+Workstation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & charachter to be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_connection_map_8h_a77886b9a97eb863b281adadc72ca8023}\label{_connection_map_8h_a77886b9a97eb863b281adadc72ca8023}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE}{UART1\_BITRATE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+B\+I\+T\+R\+A\+TE~9600}
+
+U\+A\+R\+T1 bitrate. \mbox{\Hypertarget{_connection_map_8h_a1ff024f7b26f29a108ee4c641d095055}\label{_connection_map_8h_a1ff024f7b26f29a108ee4c641d095055}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+C\+O\+NF@{U\+A\+R\+T1\+\_\+\+C\+O\+NF}}
+\index{U\+A\+R\+T1\+\_\+\+C\+O\+NF@{U\+A\+R\+T1\+\_\+\+C\+O\+NF}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+C\+O\+NF}{UART1\_CONF}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+C\+O\+NF~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY}
+
+U\+A\+R\+T1 databit and parity. Refer to mikroC Data/\+Parity Mode constants. \mbox{\Hypertarget{_connection_map_8h_adae2579ea095f57cda20d3a3d9b93fcb}\label{_connection_map_8h_adae2579ea095f57cda20d3a3d9b93fcb}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}}
+\index{U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}{UART1\_DELIMITER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER~0x0d}
+
+U\+A\+R\+T1 delimiter. Zero means messages are not finished at a specific delimiter. \mbox{\Hypertarget{_connection_map_8h_a3af69910ac5de5a229e3486211ec9944}\label{_connection_map_8h_a3af69910ac5de5a229e3486211ec9944}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}}
+\index{U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}{UART1\_MSG\_LENGTH}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH~0}
+
+U\+A\+R\+T1 message length. Zero means messages are not fixed length. \mbox{\Hypertarget{_connection_map_8h_aac31fb6c838c1aa070e88a2737140249}\label{_connection_map_8h_aac31fb6c838c1aa070e88a2737140249}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED}}
+\index{U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED}{UART1\_SPEED}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+S\+P\+E\+ED~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED}
+
+U\+A\+R\+T1 High or Low speed. Refer to High/\+Low Speed. \mbox{\Hypertarget{_connection_map_8h_ad9171125a0f3f0ecb41ace1eba2c4ac5}\label{_connection_map_8h_ad9171125a0f3f0ecb41ace1eba2c4ac5}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT}}
+\index{U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT}{UART1\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+S\+T\+O\+P\+B\+IT~\+\_\+\+U\+A\+R\+T\+\_\+\+O\+N\+E\+\_\+\+S\+T\+O\+P\+B\+IT}
+
+U\+A\+R\+T1 stop bit. Refer to mikroC Stop bits. \mbox{\Hypertarget{_connection_map_8h_a19a251b46b04cee3fd8612bf2c5fb3d6}\label{_connection_map_8h_a19a251b46b04cee3fd8612bf2c5fb3d6}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T1\+Mapped\+Device@{U\+A\+R\+T1\+Mapped\+Device}}
+\index{U\+A\+R\+T1\+Mapped\+Device@{U\+A\+R\+T1\+Mapped\+Device}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T1\+Mapped\+Device}{UART1MappedDevice}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+Mapped\+Device~G\+E\+N\+E\+R\+A\+T\+OR}
+
+maps U\+A\+R\+T1\+Mapped\+Device to G\+E\+N\+E\+R\+A\+T\+OR. \mbox{\Hypertarget{_connection_map_8h_ae963fb4bf70c37887babd9fa1a0c8499}\label{_connection_map_8h_ae963fb4bf70c37887babd9fa1a0c8499}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE}{UART2\_BITRATE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+B\+I\+T\+R\+A\+TE~9600}
+
+U\+A\+R\+T2 bitrate. \mbox{\Hypertarget{_connection_map_8h_ac33d3997e556812f9242a71a171f959c}\label{_connection_map_8h_ac33d3997e556812f9242a71a171f959c}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+C\+O\+NF@{U\+A\+R\+T2\+\_\+\+C\+O\+NF}}
+\index{U\+A\+R\+T2\+\_\+\+C\+O\+NF@{U\+A\+R\+T2\+\_\+\+C\+O\+NF}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+C\+O\+NF}{UART2\_CONF}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+C\+O\+NF~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY}
+
+U\+A\+R\+T2 databit and parity. Refer to mikroC Data/\+Parity Mode constants. \mbox{\Hypertarget{_connection_map_8h_a8b99c3a3ceadd01a51f5a211d4ebc4b3}\label{_connection_map_8h_a8b99c3a3ceadd01a51f5a211d4ebc4b3}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}}
+\index{U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}{UART2\_DELIMITER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER~0}
+
+U\+A\+R\+T2 delimiter. Zero means messages are not finished at a specific delimiter. \mbox{\Hypertarget{_connection_map_8h_aa5a18ef2cd8bdee21c3bdf2b93dee3c9}\label{_connection_map_8h_aa5a18ef2cd8bdee21c3bdf2b93dee3c9}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}}
+\index{U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}{UART2\_MSG\_LENGTH}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH~0}
+
+U\+A\+R\+T2 message length. Zero means messages are not fixed length. \mbox{\Hypertarget{_connection_map_8h_accacd1e26d86834058ad0dd625fb6982}\label{_connection_map_8h_accacd1e26d86834058ad0dd625fb6982}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED}}
+\index{U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED}{UART2\_SPEED}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+S\+P\+E\+ED~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED}
+
+U\+A\+R\+T2 High or Low speed. Refer to High/\+Low Speed. \mbox{\Hypertarget{_connection_map_8h_ac3f2fada823206ca45ac41c42f8b3f4c}\label{_connection_map_8h_ac3f2fada823206ca45ac41c42f8b3f4c}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT}}
+\index{U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT}{UART2\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+\_\+\+S\+T\+O\+P\+B\+IT~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS}
+
+U\+A\+R\+T2 stop bit. Refer to mikroC Stop bits. \mbox{\Hypertarget{_connection_map_8h_aa41dfef3ad002d29bf9dd7185e264e6c}\label{_connection_map_8h_aa41dfef3ad002d29bf9dd7185e264e6c}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T2\+Mapped\+Device@{U\+A\+R\+T2\+Mapped\+Device}}
+\index{U\+A\+R\+T2\+Mapped\+Device@{U\+A\+R\+T2\+Mapped\+Device}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T2\+Mapped\+Device}{UART2MappedDevice}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T2\+Mapped\+Device~A\+C\+T\+U\+A\+T\+OR}
+
+maps U\+A\+R\+T2\+Mapped\+Device to A\+C\+T\+U\+A\+T\+OR. \mbox{\Hypertarget{_connection_map_8h_a950f2005adba7cc4bbaae8d448fff4c2}\label{_connection_map_8h_a950f2005adba7cc4bbaae8d448fff4c2}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE}{UART3\_BITRATE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+B\+I\+T\+R\+A\+TE~9600}
+
+U\+A\+R\+T3 bitrate. \mbox{\Hypertarget{_connection_map_8h_a64999dd177c0788d633421d81d14e6ad}\label{_connection_map_8h_a64999dd177c0788d633421d81d14e6ad}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+C\+O\+NF@{U\+A\+R\+T3\+\_\+\+C\+O\+NF}}
+\index{U\+A\+R\+T3\+\_\+\+C\+O\+NF@{U\+A\+R\+T3\+\_\+\+C\+O\+NF}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+C\+O\+NF}{UART3\_CONF}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+C\+O\+NF~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY}
+
+U\+A\+R\+T3 databit and parity. Refer to mikroC Data/\+Parity Mode constants. \mbox{\Hypertarget{_connection_map_8h_a32717dfa7cc08af0494c325f1ec485f7}\label{_connection_map_8h_a32717dfa7cc08af0494c325f1ec485f7}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}}
+\index{U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}{UART3\_DELIMITER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER~0}
+
+U\+A\+R\+T3 delimiter. Zero means messages are not finished at a specific delimiter. \mbox{\Hypertarget{_connection_map_8h_a4704e5492e5de6f023d519e911d7ba43}\label{_connection_map_8h_a4704e5492e5de6f023d519e911d7ba43}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}}
+\index{U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}{UART3\_MSG\_LENGTH}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH~0}
+
+U\+A\+R\+T3 message length. Zero means messages are not fixed length. \mbox{\Hypertarget{_connection_map_8h_ad2ded3499fdcaf33ddd04f4d0decc7b0}\label{_connection_map_8h_ad2ded3499fdcaf33ddd04f4d0decc7b0}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED}}
+\index{U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED}{UART3\_SPEED}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+S\+P\+E\+ED~\+\_\+\+U\+A\+R\+T\+\_\+\+L\+O\+W\+\_\+\+S\+P\+E\+ED}
+
+U\+A\+R\+T3 High or Low speed. Refer to High/\+Low Speed. \mbox{\Hypertarget{_connection_map_8h_a71b6ffa46b52aa482d69e8b4a50e577e}\label{_connection_map_8h_a71b6ffa46b52aa482d69e8b4a50e577e}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT}}
+\index{U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT}{UART3\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+\_\+\+S\+T\+O\+P\+B\+IT~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS}
+
+U\+A\+R\+T3 stop bit. Refer to mikroC Stop bits. \mbox{\Hypertarget{_connection_map_8h_a6ffacf4569652e94c075afb464255015}\label{_connection_map_8h_a6ffacf4569652e94c075afb464255015}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T3\+Mapped\+Device@{U\+A\+R\+T3\+Mapped\+Device}}
+\index{U\+A\+R\+T3\+Mapped\+Device@{U\+A\+R\+T3\+Mapped\+Device}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T3\+Mapped\+Device}{UART3MappedDevice}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T3\+Mapped\+Device~W\+O\+R\+K\+S\+T\+A\+T\+I\+ON}
+
+maps U\+A\+R\+T3\+Mapped\+Device to W\+O\+R\+K\+S\+T\+A\+T\+I\+ON. \mbox{\Hypertarget{_connection_map_8h_aed7daac2bb4cc8c328af44afddf0dbef}\label{_connection_map_8h_aed7daac2bb4cc8c328af44afddf0dbef}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE@{U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE}{UART4\_BITRATE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+B\+I\+T\+R\+A\+TE~9600}
+
+U\+A\+R\+T4 bitrate. \mbox{\Hypertarget{_connection_map_8h_acea86e2ebfb1a194fb1f3187aa76fd0e}\label{_connection_map_8h_acea86e2ebfb1a194fb1f3187aa76fd0e}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+C\+O\+NF@{U\+A\+R\+T4\+\_\+\+C\+O\+NF}}
+\index{U\+A\+R\+T4\+\_\+\+C\+O\+NF@{U\+A\+R\+T4\+\_\+\+C\+O\+NF}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+C\+O\+NF}{UART4\_CONF}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+C\+O\+NF~\+\_\+\+U\+A\+R\+T\+\_\+8\+B\+I\+T\+\_\+\+N\+O\+P\+A\+R\+I\+TY}
+
+U\+A\+R\+T4 databit and parity. Refer to mikroC Data/\+Parity Mode constants. \mbox{\Hypertarget{_connection_map_8h_ae65f4ef2d52a2d8c491b20af3c56afbf}\label{_connection_map_8h_ae65f4ef2d52a2d8c491b20af3c56afbf}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}}
+\index{U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER@{U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}{UART4\_DELIMITER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER~0}
+
+U\+A\+R\+T4 delimiter. Zero means messages are not finished at a specific delimiter. \mbox{\Hypertarget{_connection_map_8h_af6ad5d197c564ad4a7d3a19ed76f362d}\label{_connection_map_8h_af6ad5d197c564ad4a7d3a19ed76f362d}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}}
+\index{U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH@{U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH}{UART4\_MSG\_LENGTH}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+M\+S\+G\+\_\+\+L\+E\+N\+G\+TH~0}
+
+U\+A\+R\+T4 message length. Zero means messages are not fixed length. \mbox{\Hypertarget{_connection_map_8h_a98e9973b57ed9ffe39fdde8f4842d13a}\label{_connection_map_8h_a98e9973b57ed9ffe39fdde8f4842d13a}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED}}
+\index{U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED@{U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED}{UART4\_SPEED}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+S\+P\+E\+ED~\+\_\+\+U\+A\+R\+T\+\_\+\+Hi\+\_\+\+S\+P\+E\+ED}
+
+U\+A\+R\+T4 High or Low speed. Refer to High/\+Low Speed. \mbox{\Hypertarget{_connection_map_8h_a74f0af1f25871927b632743d38e4fe68}\label{_connection_map_8h_a74f0af1f25871927b632743d38e4fe68}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT}}
+\index{U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT@{U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT}{UART4\_STOPBIT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+\_\+\+S\+T\+O\+P\+B\+IT~\+\_\+\+U\+A\+R\+T\+\_\+\+T\+W\+O\+\_\+\+S\+T\+O\+P\+B\+I\+TS}
+
+U\+A\+R\+T4 stop bit. Refer to mikroC Stop bits. \mbox{\Hypertarget{_connection_map_8h_a05502dd71095271c855ec569b862597d}\label{_connection_map_8h_a05502dd71095271c855ec569b862597d}} 
+\index{Connection\+Map.\+h@{Connection\+Map.\+h}!U\+A\+R\+T4\+Mapped\+Device@{U\+A\+R\+T4\+Mapped\+Device}}
+\index{U\+A\+R\+T4\+Mapped\+Device@{U\+A\+R\+T4\+Mapped\+Device}!Connection\+Map.\+h@{Connection\+Map.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T4\+Mapped\+Device}{UART4MappedDevice}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T4\+Mapped\+Device~D\+I\+S\+P\+L\+AY}
+
+maps U\+A\+R\+T4\+Mapped\+Device to D\+I\+S\+P\+L\+AY. 

@@ -1,0 +1,6 @@
+debug=0
+release=1
+display_debug=2
+generator_debug=3
+
+build=debug

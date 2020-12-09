@@ -1,0 +1,34 @@
+D:\Trash\Stone LCD\Project\xaml design\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+D:\Trash\Stone LCD\Project\xaml design\WpfApplication2\obj\Debug\WpfApplication2.exe
+D:\Trash\Stone LCD\Project\xaml design\WpfApplication2\obj\Debug\WpfApplication2.pdb
+D:\Trash\Stone LCD\Project\xaml design\XamlDesign\bin\Debug\WpfApplication2.exe.config
+D:\Trash\Stone LCD\Project\xaml design\XamlDesign\obj\Debug\WpfApplication2.exe
+D:\Trash\Stone LCD\Project\xaml design\XamlDesign\obj\Debug\WpfApplication2.pdb
+D:\Trash\xaml design\XamlDesign\bin\Debug\WpfApplication2.exe.config
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2.exe
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2.pdb
+D:\Trash\xaml design\XamlDesign\obj\Debug\XamlDesign.csprojResolveAssemblyReference.cache
+D:\Trash\xaml design\XamlDesign\obj\Debug\AutomaticModeWindow.g.cs
+D:\Trash\xaml design\XamlDesign\obj\Debug\MainWindow.g.cs
+D:\Trash\xaml design\XamlDesign\obj\Debug\App.g.cs
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2_MarkupCompile.cache
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2_MarkupCompile.lref
+D:\Trash\xaml design\XamlDesign\bin\Debug\WpfApplication2.exe
+D:\Trash\xaml design\XamlDesign\bin\Debug\WpfApplication2.pdb
+D:\Trash\xaml design\XamlDesign\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
+D:\Trash\xaml design\XamlDesign\obj\Debug\ServicemodeWindow.g.cs
+D:\Trash\xaml design\XamlDesign\obj\Debug\AutomaticModeWindow.baml
+D:\Trash\xaml design\XamlDesign\obj\Debug\MainWindow.baml
+D:\Trash\xaml design\XamlDesign\obj\Debug\ServicemodeWindow.baml
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2.g.resources
+D:\Trash\xaml design\XamlDesign\obj\Debug\WpfApplication2.Properties.Resources.resources
+D:\Trash\xaml design\XamlDesign\obj\Debug\XamlDesign.csproj.GenerateResource.Cache

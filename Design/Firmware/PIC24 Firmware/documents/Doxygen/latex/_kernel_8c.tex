@@ -1,0 +1,704 @@
+\hypertarget{_kernel_8c}{}\section{Kernel.\+c File Reference}
+\label{_kernel_8c}\index{Kernel.\+c@{Kernel.\+c}}
+
+
+implement x\+P\+O\+ST kernel.  
+
+
+{\ttfamily \#include \char`\"{}kernel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jsmn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Connection\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+I\+C24e\+Def.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for Kernel.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{_kernel_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}
+\begin{DoxyCompactList}\small\item\em Kernal internal data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_kernel_8c_a0c4128cc61b6311392f8616b91da75fe}{K\+L\+\_\+\+Clear\+Kernel\+Memory} ()
+\begin{DoxyCompactList}\small\item\em kernel private function. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_aa9e1a6a114d8540f7e56b15f6469b390}{K\+L\+\_\+\+Call\+Slot\+Handler} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} \+\_\+frame)
+\begin{DoxyCompactList}\small\item\em kernal private function. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_a2be230c5110e54df15c7c9815b8a5d2b}{K\+L\+\_\+\+Start\+Dispacher\+Engine} ()
+\begin{DoxyCompactList}\small\item\em starts the dispacher engine to start dispatch the buffers contents. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_a50b8810e4526728644323c40fb681e9f}{K\+L\+\_\+\+Distribute\+Frames} ()
+\begin{DoxyCompactList}\small\item\em the dispacher engin executes K\+L\+\_\+\+Distribute\+Frames periodically. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_a125c74ce934e9777b99e811f0ff51ca8}{Enqueue\+Frame\+Into\+Send\+Buffer} (\hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} buffer\mbox{[}$\,$\mbox{]}, \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$frame, int $\ast$index, bool $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em private function that enqueue frame into send buffer. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_a3af547b9656eb54f650875fd47e38da5}{Enqueue\+Frame\+Into\+Receive\+Buffer} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} buffer\mbox{[}$\,$\mbox{]}, \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$frame, int $\ast$index, bool $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em private function that enqueue frame into receive buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_ac24ba3cc0417bbd139f78f26f594d847}\label{_kernel_8c_ac24ba3cc0417bbd139f78f26f594d847}} 
+void {\bfseries K\+L\+\_\+\+Dispacher} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$frame)
+\item 
+\mbox{\Hypertarget{_kernel_8c_a08ea5e9ea1b3912b83a3ef84018b7099}\label{_kernel_8c_a08ea5e9ea1b3912b83a3ef84018b7099}} 
+void \hyperlink{_kernel_8c_a08ea5e9ea1b3912b83a3ef84018b7099}{K\+L\+\_\+\+U\+A\+R\+T1\+Message\+Receive\+Handler} ()
+\begin{DoxyCompactList}\small\item\em kernel internal event handler for uart1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_a06efb2246d13a903e3452e6ac47dcbea}\label{_kernel_8c_a06efb2246d13a903e3452e6ac47dcbea}} 
+void \hyperlink{_kernel_8c_a06efb2246d13a903e3452e6ac47dcbea}{K\+L\+\_\+\+U\+A\+R\+T2\+Message\+Receive\+Handler} ()
+\begin{DoxyCompactList}\small\item\em kernel internal event handler for uart2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_a2d4df0b6ce2b96a6f858e9f5af5a3389}\label{_kernel_8c_a2d4df0b6ce2b96a6f858e9f5af5a3389}} 
+void \hyperlink{_kernel_8c_a2d4df0b6ce2b96a6f858e9f5af5a3389}{K\+L\+\_\+\+U\+A\+R\+T3\+Message\+Receive\+Handler} ()
+\begin{DoxyCompactList}\small\item\em kernel internal event handler for uart3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_aebf7e73baddeceb1782644513e5e3048}\label{_kernel_8c_aebf7e73baddeceb1782644513e5e3048}} 
+void \hyperlink{_kernel_8c_aebf7e73baddeceb1782644513e5e3048}{K\+L\+\_\+\+U\+A\+R\+T4\+Message\+Receive\+Handler} ()
+\begin{DoxyCompactList}\small\item\em kernel internal event handler for uart4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_abfb44ecc19e20a4c8df5901ffaa79e93}\label{_kernel_8c_abfb44ecc19e20a4c8df5901ffaa79e93}} 
+void {\bfseries K\+L\+\_\+\+Timer1\+Interrupt} ()
+\item 
+void \hyperlink{_kernel_8c_a6fa687e39b416d7d42b3365f89a20160}{K\+L\+\_\+\+Send\+Frame} (\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$frame)
+\begin{DoxyCompactList}\small\item\em proxy function for dispatching frames made by A\+P\+Is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_afb489dd6da8fe88cf4a97f5c5e072927}\label{_kernel_8c_afb489dd6da8fe88cf4a97f5c5e072927}} 
+void \hyperlink{_kernel_8c_afb489dd6da8fe88cf4a97f5c5e072927}{K\+L\+\_\+\+Register\+Device} (\hyperlink{struct_d_e_v_i_c_e___s_l_o_t}{D\+E\+V\+I\+C\+E\+\_\+\+S\+L\+OT} slot)
+\begin{DoxyCompactList}\small\item\em register a device into kernel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_af01826d33dbf7faf2832db87998f8d47}\label{_kernel_8c_af01826d33dbf7faf2832db87998f8d47}} 
+void \hyperlink{_kernel_8c_af01826d33dbf7faf2832db87998f8d47}{K\+L\+\_\+\+Bootup} ()
+\begin{DoxyCompactList}\small\item\em bootup kernel. \end{DoxyCompactList}\item 
+void \hyperlink{_kernel_8c_a90ae338762233fac549a147face7891d}{K\+L\+\_\+\+Register\+Instrument} (Instrument\+Start function)
+\begin{DoxyCompactList}\small\item\em register instrument\textquotesingle{}s start function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_kernel_8c_a24c014602906305014a892e9297270b7}\label{_kernel_8c_a24c014602906305014a892e9297270b7}} 
+static const int \hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} = 35
+\begin{DoxyCompactList}\small\item\em Amount of buffer for each device type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_aed005504e2719145cb789100005b650b}\label{_kernel_8c_aed005504e2719145cb789100005b650b}} 
+static const int \hyperlink{_kernel_8c_aed005504e2719145cb789100005b650b}{J\+S\+O\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+A\+R\+D\+I\+N\+A\+L\+I\+TY} = 128
+\begin{DoxyCompactList}\small\item\em Maximum amount of J\+S\+ON tokens in a message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}\label{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}} 
+static const int \hyperlink{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}{M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE} = 30
+\begin{DoxyCompactList}\small\item\em Maximum message size. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} \hyperlink{_kernel_8c_ab1a887fd4bcd916fb3d84abdb4d655d4}{Uart1\+Receive\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart1. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_afe0dd5676314b5ed5d547a671e9a2c30}{Uart1\+Rciv\+Buf\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T1 received buffer read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a7a2438664f1cb67837e070d7c4da6ccc}{Uart1\+Rciv\+Buf\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T1 received buffer write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} \hyperlink{_kernel_8c_a9a3fdabb4306658c4c597099d690e7ea}{Uart2\+Receive\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart2. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a896503a45cde815b86bef2ad724e454e}{Uart2\+Rciv\+Buf\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T2 received buffer read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a343aa6e0e887dbc857fa45f632949d56}{Uart2\+Rciv\+Buf\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T2 received buffer write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} \hyperlink{_kernel_8c_afdaa6e44d535e713283e148068e4189b}{Uart3\+Receive\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart3. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_af6d21a1b9d99d453de22e4caf108e3ad}{Uart3\+Rciv\+Buf\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T3 received buffer read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a9a65b97d5f1bb87798b4d2b1ae253557}{Uart3\+Rciv\+Buf\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T3 received buffer write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} \hyperlink{_kernel_8c_af2437d9b9378091419caf60751e3a23d}{Uart4\+Receive\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart4. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a520493841c3025c6a3937aaab9abfd51}{Uart4\+Rciv\+Buf\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T4 received buffer read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a038a41ee82205b936566e2b06b5718d1}{Uart4\+Rciv\+Buf\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T4 received buffer write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{_kernel_8c_ab30dfd49b2827416598d63514e6a610e}{gen\+Send\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for generator. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a1b88577a7d57988730e509f4f9614ae5}{gen\+Snd\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em generator-\/send read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a71075a0b51c5fbe98badbe4f6c4f92b8}{gen\+Snd\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em generator-\/send write pointer. \end{DoxyCompactList}\item 
+volatile \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{_kernel_8c_ad884afc5c7cc2ef34cabb559187ccbdc}{act\+Send\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for actuator. \end{DoxyCompactList}\item 
+volatile int \hyperlink{_kernel_8c_a86868421d574a221701eaf5da3805714}{act\+Snd\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em actuator-\/send read pointer. \end{DoxyCompactList}\item 
+volatile int \hyperlink{_kernel_8c_a223c74e59b34d2a826b2862850e6d232}{act\+Snd\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em actuator-\/send write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{_kernel_8c_a68e05fe4980f5146c2a77cbf52d590cf}{wrk\+Send\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for workstation. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_add3cf3af36f795e9417f7870a23562f5}{wrk\+Snd\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em workstation-\/send read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_ae1f5c8a91bd0d72baf0b17d5eea03535}{wrk\+Snd\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em workstation-\/send write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{_kernel_8c_aa7616a2399391851fa489893d1a1e23b}{dis\+Snd\+Buf} \mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for display. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_a31d8d459627c50a7054f1536602f1e9e}{dis\+Snd\+Rd\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em display-\/send read pointer. \end{DoxyCompactList}\item 
+int \hyperlink{_kernel_8c_ad943a225011e2c6a36915c9067ca111d}{dis\+Snd\+Wr\+Ptr} = 0
+\begin{DoxyCompactList}\small\item\em display-\/send write pointer. \end{DoxyCompactList}\item 
+static \hyperlink{structjsmn__parser}{jsmn\+\_\+parser} \hyperlink{_kernel_8c_a07a65543a451fd3c61397332baa54aef}{\+\_\+parser}
+\begin{DoxyCompactList}\small\item\em J\+S\+ON parser instance from jsmn.\+c. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_aa7be1644f671af19abd6c01662fa3425}\label{_kernel_8c_aa7be1644f671af19abd6c01662fa3425}} 
+\hyperlink{structjsmntok__t}{jsmntok\+\_\+t} \hyperlink{_kernel_8c_aa7be1644f671af19abd6c01662fa3425}{tokens} \mbox{[}\hyperlink{_kernel_8c_aed005504e2719145cb789100005b650b}{J\+S\+O\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+A\+R\+D\+I\+N\+A\+L\+I\+TY}\mbox{]}
+\begin{DoxyCompactList}\small\item\em J\+S\+ON tokes paresed by {\itshape \+\_\+parser} are stored inside tokens. \end{DoxyCompactList}\item 
+\hyperlink{struct_d_e_v_i_c_e___s_l_o_t}{D\+E\+V\+I\+C\+E\+\_\+\+S\+L\+OT} \hyperlink{_kernel_8c_a351b6ce917d3748bc1cfaa09c60f89a3}{\+\_\+\+S\+L\+O\+TS} \mbox{[}\+\_\+\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+C\+O\+U\+NT\mbox{]}
+\begin{DoxyCompactList}\small\item\em for each device type there is one slot on the kernel \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_a7d2f781d2c7db9e4280ef84feb814cbe}\label{_kernel_8c_a7d2f781d2c7db9e4280ef84feb814cbe}} 
+char \hyperlink{_kernel_8c_a7d2f781d2c7db9e4280ef84feb814cbe}{\+\_\+uart1\+Acc\+Buf} \mbox{[}\hyperlink{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}{M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em a temporary accumulator array for holding the received messages from uart1 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_ae052b1be02736763a2ec65b5b30e2ab4}\label{_kernel_8c_ae052b1be02736763a2ec65b5b30e2ab4}} 
+char \hyperlink{_kernel_8c_ae052b1be02736763a2ec65b5b30e2ab4}{\+\_\+uart2\+Acc\+Buf} \mbox{[}\hyperlink{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}{M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em a temporary accumulator array for holding the received messages from uart2 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_ab27594ad37cac6e7fba076d307d1bee9}\label{_kernel_8c_ab27594ad37cac6e7fba076d307d1bee9}} 
+char \hyperlink{_kernel_8c_ab27594ad37cac6e7fba076d307d1bee9}{\+\_\+uart3\+Acc\+Buf} \mbox{[}\hyperlink{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}{M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em a temporary accumulator array for holding the received messages from uart3 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_a86c056e2cac04b0ceaafc3e734a21c6e}\label{_kernel_8c_a86c056e2cac04b0ceaafc3e734a21c6e}} 
+char \hyperlink{_kernel_8c_a86c056e2cac04b0ceaafc3e734a21c6e}{\+\_\+uart4\+Acc\+Buf} \mbox{[}\hyperlink{_kernel_8c_af176e32c7a1ac429d45241dbcda652f9}{M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em a temporary accumulator array for holding the received messages from uart4 \end{DoxyCompactList}\item 
+Instrument\+Start \hyperlink{_kernel_8c_a056c6b29e3facb6cb70e0a15f57f4a5c}{\+\_\+startup\+Function} = 0
+\begin{DoxyCompactList}\small\item\em after successful bootup, kernel calls \+\_\+startup\+Function \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a5251a4fd7e61ad6a4da92e8e8278362d}{gen\+Send\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em generator send buffer mutex. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a0b1bfc7e0a865a44fd6fbc889a4097f0}{act\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em actuator send buffer mutex. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a2a469597d0a271004b8c32f9522d2132}{dis\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em display send buffer mutex. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_aee5a841a4efd80d4d9c4778b90bc13b8}{uart1\+Receive\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em mutex for uart1 receive buffer. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a57631cf06c4598d2e81707d2fd37158a}{uart2\+Receive\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em mutex for uart2 receive buffer. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a4a56c9e6290938a6cf02d5b369b8c397}{uart3\+Receive\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em mutex for uart3 receive buffer. \end{DoxyCompactList}\item 
+volatile bool \hyperlink{_kernel_8c_a4b475ea06e9d33be01d87e5b4e8c2140}{uart4\+Receive\+Mutex} = false
+\begin{DoxyCompactList}\small\item\em mutex for uart4 receive buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_kernel_8c_ac38d232accc6bb4b21601a3b5edd7f1c}\label{_kernel_8c_ac38d232accc6bb4b21601a3b5edd7f1c}} 
+static int {\bfseries u1\+Msg\+Size} = 0
+\item 
+\mbox{\Hypertarget{_kernel_8c_a3cc9e2f28db4046ec17de88d2d4fe6f8}\label{_kernel_8c_a3cc9e2f28db4046ec17de88d2d4fe6f8}} 
+static int {\bfseries u2\+Msg\+Size} = 0
+\item 
+\mbox{\Hypertarget{_kernel_8c_a873c5611262ab607676d595fd7037aaf}\label{_kernel_8c_a873c5611262ab607676d595fd7037aaf}} 
+static int {\bfseries u3\+Msg\+Size} = 0
+\item 
+\mbox{\Hypertarget{_kernel_8c_ad2fabbe0004c5f6173a6aa57d8548fff}\label{_kernel_8c_ad2fabbe0004c5f6173a6aa57d8548fff}} 
+static int {\bfseries u4\+Msg\+Size} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implement x\+P\+O\+ST kernel. 
+
+Messages produced by device\textquotesingle{}s A\+PI and send to Kernel and the kernel delivers them to the port and vice versa. Messages are divided into two types\+: Real-\/time which are sent immadiately and normal messages which are piled up into the device buffer and sent by kernel\textquotesingle{}s dispacher engine. Each message is array of charachters. The maximum size of the array is tunable inside the kernel via {\bfseries M\+A\+X\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}. If a device message length was equal zero then the kernel assumes that the message was C-\/\+Style charachter string. In other words, the message is terminated by a \textquotesingle{}\textbackslash{}0\textquotesingle{}. So, during enlisting and sending the operation is continued up until the first \textquotesingle{}\textbackslash{}0\textquotesingle{} is hit. If the message length where not equal to zero, then kernel automatically reads, enlist and transmit it up to a specific message length (see also \hyperlink{_connection_map_8h}{Connection\+Map.\+h}). Each device type has a specified amount of buffer for sending the message to the device. The device buffer is static array with fixed size. We have tested dynamic memory allocation, but we noticed some problems during runtime. For this, version we have used this static array, but we are planning for turning it into dynamic memory allocation approach for the future implementations. Device buffer is filled in circular linked list fasion. It would be better to seperate the implementaion in a separate file instead of hard coding it inside this kernel file and It is planned for future version.
+
+
+\begin{DoxyItemize}
+\item Abrivations
+\begin{DoxyEnumerate}
+\item gen\+: Generator Len\+: Length
+\item act\+: Actuator
+\item wks\+: Workstation
+\item ptr\+: Pointer
+\item buf\+: Buffer
+\item msg\+: Message
+\item Acc\+: Accumulator
+\item Len\+: Length
+\item trc\+: Trace
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Altay Brusan 
+
+Aytac Durmaz 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+5a 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+\&copy 2018 Bogazici University ~\newline
+ License\+: G\+NU Public License. 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_kernel_8c_a3af547b9656eb54f650875fd47e38da5}\label{_kernel_8c_a3af547b9656eb54f650875fd47e38da5}} 
+\index{Kernel.\+c@{Kernel.\+c}!Enqueue\+Frame\+Into\+Receive\+Buffer@{Enqueue\+Frame\+Into\+Receive\+Buffer}}
+\index{Enqueue\+Frame\+Into\+Receive\+Buffer@{Enqueue\+Frame\+Into\+Receive\+Buffer}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Enqueue\+Frame\+Into\+Receive\+Buffer()}{EnqueueFrameIntoReceiveBuffer()}}
+{\footnotesize\ttfamily void Enqueue\+Frame\+Into\+Receive\+Buffer (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}}]{buffer\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$}]{frame,  }\item[{int $\ast$}]{index,  }\item[{bool $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+private function that enqueue frame into receive buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buffer} & the buffer which is going to be enqueued in. \\
+\hline
+\mbox{\tt in}  & {\em frame} & the frame which is going to be enqueued. \\
+\hline
+\mbox{\tt in}  & {\em index} & the index of buffer which is going to be written n. \\
+\hline
+\mbox{\tt in}  & {\em mutex} & the send buffer mutex. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_kernel_8c_a125c74ce934e9777b99e811f0ff51ca8}\label{_kernel_8c_a125c74ce934e9777b99e811f0ff51ca8}} 
+\index{Kernel.\+c@{Kernel.\+c}!Enqueue\+Frame\+Into\+Send\+Buffer@{Enqueue\+Frame\+Into\+Send\+Buffer}}
+\index{Enqueue\+Frame\+Into\+Send\+Buffer@{Enqueue\+Frame\+Into\+Send\+Buffer}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Enqueue\+Frame\+Into\+Send\+Buffer()}{EnqueueFrameIntoSendBuffer()}}
+{\footnotesize\ttfamily void Enqueue\+Frame\+Into\+Send\+Buffer (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}}]{buffer\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$}]{frame,  }\item[{int $\ast$}]{index,  }\item[{bool $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+private function that enqueue frame into send buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buffer} & the buffer which is going to be enqueued in. \\
+\hline
+\mbox{\tt in}  & {\em frame} & the frame which is going to be enqueued. \\
+\hline
+\mbox{\tt in}  & {\em index} & the index of buffer which is going to be written n. \\
+\hline
+\mbox{\tt in}  & {\em mutex} & the send buffer mutex. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_kernel_8c_aa9e1a6a114d8540f7e56b15f6469b390}\label{_kernel_8c_aa9e1a6a114d8540f7e56b15f6469b390}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Call\+Slot\+Handler@{K\+L\+\_\+\+Call\+Slot\+Handler}}
+\index{K\+L\+\_\+\+Call\+Slot\+Handler@{K\+L\+\_\+\+Call\+Slot\+Handler}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Call\+Slot\+Handler()}{KL\_CallSlotHandler()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Call\+Slot\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}}]{\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+kernal private function. 
+
+The Call\+Slot\+Handler searchs among the registered devices and call its handler. In this way, a frame is transfered from Kernel to A\+PI. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & The frame that is going to be delivered to the A\+PI \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_kernel_8c_aa9e1a6a114d8540f7e56b15f6469b390_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_kernel_8c_a0c4128cc61b6311392f8616b91da75fe}\label{_kernel_8c_a0c4128cc61b6311392f8616b91da75fe}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Clear\+Kernel\+Memory@{K\+L\+\_\+\+Clear\+Kernel\+Memory}}
+\index{K\+L\+\_\+\+Clear\+Kernel\+Memory@{K\+L\+\_\+\+Clear\+Kernel\+Memory}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Clear\+Kernel\+Memory()}{KL\_ClearKernelMemory()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Clear\+Kernel\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kernel private function. 
+
+reset all internal buffers and variables. This function is just called during bootup. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_kernel_8c_a0c4128cc61b6311392f8616b91da75fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_kernel_8c_a50b8810e4526728644323c40fb681e9f}\label{_kernel_8c_a50b8810e4526728644323c40fb681e9f}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Distribute\+Frames@{K\+L\+\_\+\+Distribute\+Frames}}
+\index{K\+L\+\_\+\+Distribute\+Frames@{K\+L\+\_\+\+Distribute\+Frames}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Distribute\+Frames()}{KL\_DistributeFrames()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Distribute\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the dispacher engin executes K\+L\+\_\+\+Distribute\+Frames periodically. 
+
+distribute frames inside send and receive buffers for all device types. the K\+L\+\_\+\+Distribute\+Frames dequeue frames for all devices of both send and receive types. and calls private function K\+L\+\_\+\+Call\+Slot\+Handler to hand over the frame to A\+PI. \begin{DoxyNote}{Note}
+the order that the buffers are dequeued reflect the device type importance 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_kernel_8c_a50b8810e4526728644323c40fb681e9f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_kernel_8c_a90ae338762233fac549a147face7891d}\label{_kernel_8c_a90ae338762233fac549a147face7891d}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Register\+Instrument@{K\+L\+\_\+\+Register\+Instrument}}
+\index{K\+L\+\_\+\+Register\+Instrument@{K\+L\+\_\+\+Register\+Instrument}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Register\+Instrument()}{KL\_RegisterInstrument()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Register\+Instrument (\begin{DoxyParamCaption}\item[{Instrument\+Start}]{function }\end{DoxyParamCaption})}
+
+
+
+register instrument\textquotesingle{}s start function. 
+
+at the last step of boot process, the kernel calls instrument start function. this function must already be registered. \mbox{\Hypertarget{_kernel_8c_a6fa687e39b416d7d42b3365f89a20160}\label{_kernel_8c_a6fa687e39b416d7d42b3365f89a20160}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Send\+Frame@{K\+L\+\_\+\+Send\+Frame}}
+\index{K\+L\+\_\+\+Send\+Frame@{K\+L\+\_\+\+Send\+Frame}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Send\+Frame()}{KL\_SendFrame()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Send\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} $\ast$}]{frame }\end{DoxyParamCaption})}
+
+
+
+proxy function for dispatching frames made by A\+P\+Is. 
+
+public function that is used by A\+P\+Is to send message to a device or communicate in between themselves. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame made by A\+PI. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_kernel_8c_a2be230c5110e54df15c7c9815b8a5d2b}\label{_kernel_8c_a2be230c5110e54df15c7c9815b8a5d2b}} 
+\index{Kernel.\+c@{Kernel.\+c}!K\+L\+\_\+\+Start\+Dispacher\+Engine@{K\+L\+\_\+\+Start\+Dispacher\+Engine}}
+\index{K\+L\+\_\+\+Start\+Dispacher\+Engine@{K\+L\+\_\+\+Start\+Dispacher\+Engine}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{K\+L\+\_\+\+Start\+Dispacher\+Engine()}{KL\_StartDispacherEngine()}}
+{\footnotesize\ttfamily void K\+L\+\_\+\+Start\+Dispacher\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+starts the dispacher engine to start dispatch the buffers contents. 
+
+The dispacher engin is Timer1. With the device configurations timer1 period is Time = 200 ms. It is adjustable via Time Calculator tool provided by MikroE. Just copy and past the content into this file. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{_kernel_8c_a2be230c5110e54df15c7c9815b8a5d2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_kernel_8c_a07a65543a451fd3c61397332baa54aef}\label{_kernel_8c_a07a65543a451fd3c61397332baa54aef}} 
+\index{Kernel.\+c@{Kernel.\+c}!\+\_\+parser@{\+\_\+parser}}
+\index{\+\_\+parser@{\+\_\+parser}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+parser}{\_parser}}
+{\footnotesize\ttfamily \hyperlink{structjsmn__parser}{jsmn\+\_\+parser} \+\_\+parser\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+J\+S\+ON parser instance from jsmn.\+c. 
+
+the formated messages are parsed by {\itshape \+\_\+parser}. \mbox{\Hypertarget{_kernel_8c_a351b6ce917d3748bc1cfaa09c60f89a3}\label{_kernel_8c_a351b6ce917d3748bc1cfaa09c60f89a3}} 
+\index{Kernel.\+c@{Kernel.\+c}!\+\_\+\+S\+L\+O\+TS@{\+\_\+\+S\+L\+O\+TS}}
+\index{\+\_\+\+S\+L\+O\+TS@{\+\_\+\+S\+L\+O\+TS}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+L\+O\+TS}{\_SLOTS}}
+{\footnotesize\ttfamily \hyperlink{struct_d_e_v_i_c_e___s_l_o_t}{D\+E\+V\+I\+C\+E\+\_\+\+S\+L\+OT} \+\_\+\+S\+L\+O\+TS\mbox{[}\+\_\+\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+C\+O\+U\+NT\mbox{]}}
+
+
+
+for each device type there is one slot on the kernel 
+
+Each device A\+PI register a callback function with kernel. By means of this function kernel can communicate with the A\+PI device. \mbox{\Hypertarget{_kernel_8c_a056c6b29e3facb6cb70e0a15f57f4a5c}\label{_kernel_8c_a056c6b29e3facb6cb70e0a15f57f4a5c}} 
+\index{Kernel.\+c@{Kernel.\+c}!\+\_\+startup\+Function@{\+\_\+startup\+Function}}
+\index{\+\_\+startup\+Function@{\+\_\+startup\+Function}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+startup\+Function}{\_startupFunction}}
+{\footnotesize\ttfamily Instrument\+Start \+\_\+startup\+Function = 0}
+
+
+
+after successful bootup, kernel calls \+\_\+startup\+Function 
+
+the main.\+c should register the insrument.\+c startup function into the \hyperlink{_kernel_8c}{kernel.\+c} \mbox{\Hypertarget{_kernel_8c_a0b1bfc7e0a865a44fd6fbc889a4097f0}\label{_kernel_8c_a0b1bfc7e0a865a44fd6fbc889a4097f0}} 
+\index{Kernel.\+c@{Kernel.\+c}!act\+Mutex@{act\+Mutex}}
+\index{act\+Mutex@{act\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{act\+Mutex}{actMutex}}
+{\footnotesize\ttfamily volatile bool act\+Mutex = false}
+
+
+
+actuator send buffer mutex. 
+
+false means the mutex is not acquired and true means the mutex is acquired \mbox{\Hypertarget{_kernel_8c_ad884afc5c7cc2ef34cabb559187ccbdc}\label{_kernel_8c_ad884afc5c7cc2ef34cabb559187ccbdc}} 
+\index{Kernel.\+c@{Kernel.\+c}!act\+Send\+Buf@{act\+Send\+Buf}}
+\index{act\+Send\+Buf@{act\+Send\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{act\+Send\+Buf}{actSendBuf}}
+{\footnotesize\ttfamily volatile \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} act\+Send\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for actuator. 
+
+The actuator A\+PI sends \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} to the kernel. The kernel reads the packet content and if it was not real-\/time, it is buffered inside the act\+Send\+Buf. Later on, the packet is dispached to the device \mbox{\Hypertarget{_kernel_8c_a86868421d574a221701eaf5da3805714}\label{_kernel_8c_a86868421d574a221701eaf5da3805714}} 
+\index{Kernel.\+c@{Kernel.\+c}!act\+Snd\+Rd\+Ptr@{act\+Snd\+Rd\+Ptr}}
+\index{act\+Snd\+Rd\+Ptr@{act\+Snd\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{act\+Snd\+Rd\+Ptr}{actSndRdPtr}}
+{\footnotesize\ttfamily volatile int act\+Snd\+Rd\+Ptr = 0}
+
+
+
+actuator-\/send read pointer. 
+
+The {\itshape act\+Snd\+Rd\+Ptr} locates the index of the act\+Send\+Buf from which the \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} is going to be read. \mbox{\Hypertarget{_kernel_8c_a223c74e59b34d2a826b2862850e6d232}\label{_kernel_8c_a223c74e59b34d2a826b2862850e6d232}} 
+\index{Kernel.\+c@{Kernel.\+c}!act\+Snd\+Wr\+Ptr@{act\+Snd\+Wr\+Ptr}}
+\index{act\+Snd\+Wr\+Ptr@{act\+Snd\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{act\+Snd\+Wr\+Ptr}{actSndWrPtr}}
+{\footnotesize\ttfamily volatile int act\+Snd\+Wr\+Ptr = 0}
+
+
+
+actuator-\/send write pointer. 
+
+The {\itshape gen\+Snd\+Wr\+Ptr} locates the index of act\+Send\+Buf that the next frame is going to be written on. \mbox{\Hypertarget{_kernel_8c_a2a469597d0a271004b8c32f9522d2132}\label{_kernel_8c_a2a469597d0a271004b8c32f9522d2132}} 
+\index{Kernel.\+c@{Kernel.\+c}!dis\+Mutex@{dis\+Mutex}}
+\index{dis\+Mutex@{dis\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{dis\+Mutex}{disMutex}}
+{\footnotesize\ttfamily volatile bool dis\+Mutex = false}
+
+
+
+display send buffer mutex. 
+
+false means the mutex is not acquired and true means the mutex is acquired \mbox{\Hypertarget{_kernel_8c_aa7616a2399391851fa489893d1a1e23b}\label{_kernel_8c_aa7616a2399391851fa489893d1a1e23b}} 
+\index{Kernel.\+c@{Kernel.\+c}!dis\+Snd\+Buf@{dis\+Snd\+Buf}}
+\index{dis\+Snd\+Buf@{dis\+Snd\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{dis\+Snd\+Buf}{disSndBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} dis\+Snd\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for display. 
+
+The display A\+PI sends \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} to the kernel. The kernel reads the packet content and if it was not real-\/time, it is buffered inside the dis\+Send\+Buf. Later on, the packet is dispached to the device \mbox{\Hypertarget{_kernel_8c_a31d8d459627c50a7054f1536602f1e9e}\label{_kernel_8c_a31d8d459627c50a7054f1536602f1e9e}} 
+\index{Kernel.\+c@{Kernel.\+c}!dis\+Snd\+Rd\+Ptr@{dis\+Snd\+Rd\+Ptr}}
+\index{dis\+Snd\+Rd\+Ptr@{dis\+Snd\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{dis\+Snd\+Rd\+Ptr}{disSndRdPtr}}
+{\footnotesize\ttfamily int dis\+Snd\+Rd\+Ptr = 0}
+
+
+
+display-\/send read pointer. 
+
+The {\itshape dis\+Snd\+Rd\+Ptr} locates the index of the dis\+Send\+Buf from which the \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} is going to be read. \mbox{\Hypertarget{_kernel_8c_ad943a225011e2c6a36915c9067ca111d}\label{_kernel_8c_ad943a225011e2c6a36915c9067ca111d}} 
+\index{Kernel.\+c@{Kernel.\+c}!dis\+Snd\+Wr\+Ptr@{dis\+Snd\+Wr\+Ptr}}
+\index{dis\+Snd\+Wr\+Ptr@{dis\+Snd\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{dis\+Snd\+Wr\+Ptr}{disSndWrPtr}}
+{\footnotesize\ttfamily int dis\+Snd\+Wr\+Ptr = 0}
+
+
+
+display-\/send write pointer. 
+
+The {\itshape dis\+Snd\+Wr\+Ptr} locates the index of dis\+Send\+Buf that the next frame is going to be written on. \mbox{\Hypertarget{_kernel_8c_ab30dfd49b2827416598d63514e6a610e}\label{_kernel_8c_ab30dfd49b2827416598d63514e6a610e}} 
+\index{Kernel.\+c@{Kernel.\+c}!gen\+Send\+Buf@{gen\+Send\+Buf}}
+\index{gen\+Send\+Buf@{gen\+Send\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{gen\+Send\+Buf}{genSendBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} gen\+Send\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for generator. 
+
+The generator A\+PI sends \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} to the kernel. The kernel reads the packet content and if it was not real-\/time, it is buffered inside the gen\+Send\+Buf. Later on, the packet is dispached to the device \mbox{\Hypertarget{_kernel_8c_a5251a4fd7e61ad6a4da92e8e8278362d}\label{_kernel_8c_a5251a4fd7e61ad6a4da92e8e8278362d}} 
+\index{Kernel.\+c@{Kernel.\+c}!gen\+Send\+Mutex@{gen\+Send\+Mutex}}
+\index{gen\+Send\+Mutex@{gen\+Send\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{gen\+Send\+Mutex}{genSendMutex}}
+{\footnotesize\ttfamily volatile bool gen\+Send\+Mutex = false}
+
+
+
+generator send buffer mutex. 
+
+false means the mutex is not acquired and true means the mutex is acquired \mbox{\Hypertarget{_kernel_8c_a1b88577a7d57988730e509f4f9614ae5}\label{_kernel_8c_a1b88577a7d57988730e509f4f9614ae5}} 
+\index{Kernel.\+c@{Kernel.\+c}!gen\+Snd\+Rd\+Ptr@{gen\+Snd\+Rd\+Ptr}}
+\index{gen\+Snd\+Rd\+Ptr@{gen\+Snd\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{gen\+Snd\+Rd\+Ptr}{genSndRdPtr}}
+{\footnotesize\ttfamily int gen\+Snd\+Rd\+Ptr = 0}
+
+
+
+generator-\/send read pointer. 
+
+The {\itshape gen\+Snd\+Rd\+Ptr} locates the index of the gen\+Send\+Buf from which the \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} is going to be read. \mbox{\Hypertarget{_kernel_8c_a71075a0b51c5fbe98badbe4f6c4f92b8}\label{_kernel_8c_a71075a0b51c5fbe98badbe4f6c4f92b8}} 
+\index{Kernel.\+c@{Kernel.\+c}!gen\+Snd\+Wr\+Ptr@{gen\+Snd\+Wr\+Ptr}}
+\index{gen\+Snd\+Wr\+Ptr@{gen\+Snd\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{gen\+Snd\+Wr\+Ptr}{genSndWrPtr}}
+{\footnotesize\ttfamily int gen\+Snd\+Wr\+Ptr = 0}
+
+
+
+generator-\/send write pointer. 
+
+The {\itshape gen\+Snd\+Wr\+Ptr} locates the index of gen\+Send\+Buf that the next frame is going to be written on. \mbox{\Hypertarget{_kernel_8c_afe0dd5676314b5ed5d547a671e9a2c30}\label{_kernel_8c_afe0dd5676314b5ed5d547a671e9a2c30}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart1\+Rciv\+Buf\+Rd\+Ptr@{Uart1\+Rciv\+Buf\+Rd\+Ptr}}
+\index{Uart1\+Rciv\+Buf\+Rd\+Ptr@{Uart1\+Rciv\+Buf\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart1\+Rciv\+Buf\+Rd\+Ptr}{Uart1RcivBufRdPtr}}
+{\footnotesize\ttfamily int Uart1\+Rciv\+Buf\+Rd\+Ptr = 0}
+
+
+
+U\+A\+R\+T1 received buffer read pointer. 
+
+The {\itshape Uart1\+Rciv\+Buf\+Rd\+Ptr} locates the index of the slot of the Uart1\+Receive\+Buf on which the \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} is going to be read from. \mbox{\Hypertarget{_kernel_8c_a7a2438664f1cb67837e070d7c4da6ccc}\label{_kernel_8c_a7a2438664f1cb67837e070d7c4da6ccc}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart1\+Rciv\+Buf\+Wr\+Ptr@{Uart1\+Rciv\+Buf\+Wr\+Ptr}}
+\index{Uart1\+Rciv\+Buf\+Wr\+Ptr@{Uart1\+Rciv\+Buf\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart1\+Rciv\+Buf\+Wr\+Ptr}{Uart1RcivBufWrPtr}}
+{\footnotesize\ttfamily int Uart1\+Rciv\+Buf\+Wr\+Ptr = 0}
+
+
+
+U\+A\+R\+T1 received buffer write pointer. 
+
+The {\itshape Uart1\+Rciv\+Buf\+Wr\+Ptr} locates the index of the slot of the Uart1\+Receive\+Buf that the next frame is going to be written to. \mbox{\Hypertarget{_kernel_8c_ab1a887fd4bcd916fb3d84abdb4d655d4}\label{_kernel_8c_ab1a887fd4bcd916fb3d84abdb4d655d4}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart1\+Receive\+Buf@{Uart1\+Receive\+Buf}}
+\index{Uart1\+Receive\+Buf@{Uart1\+Receive\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart1\+Receive\+Buf}{Uart1ReceiveBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} Uart1\+Receive\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart1. 
+
+The device connected to U\+A\+R\+T1 sends string message to kernel. Then the kernel reads the message charachter by charachter and depends on \hyperlink{_connection_map_8h}{Connection\+Map.\+h} configuration, (may) construct a K\+E\+N\+R\+E\+N\+L\+\_\+\+F\+R\+A\+ME instance. This instance is buffered inside the U\+A\+R\+T1 received buffer. \mbox{\Hypertarget{_kernel_8c_aee5a841a4efd80d4d9c4778b90bc13b8}\label{_kernel_8c_aee5a841a4efd80d4d9c4778b90bc13b8}} 
+\index{Kernel.\+c@{Kernel.\+c}!uart1\+Receive\+Mutex@{uart1\+Receive\+Mutex}}
+\index{uart1\+Receive\+Mutex@{uart1\+Receive\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{uart1\+Receive\+Mutex}{uart1ReceiveMutex}}
+{\footnotesize\ttfamily volatile bool uart1\+Receive\+Mutex = false}
+
+
+
+mutex for uart1 receive buffer. 
+
+false means the mutex is not acquired and true means the mutex is acquired. \mbox{\Hypertarget{_kernel_8c_a896503a45cde815b86bef2ad724e454e}\label{_kernel_8c_a896503a45cde815b86bef2ad724e454e}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart2\+Rciv\+Buf\+Rd\+Ptr@{Uart2\+Rciv\+Buf\+Rd\+Ptr}}
+\index{Uart2\+Rciv\+Buf\+Rd\+Ptr@{Uart2\+Rciv\+Buf\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart2\+Rciv\+Buf\+Rd\+Ptr}{Uart2RcivBufRdPtr}}
+{\footnotesize\ttfamily int Uart2\+Rciv\+Buf\+Rd\+Ptr = 0}
+
+
+
+U\+A\+R\+T2 received buffer read pointer. 
+
+The {\itshape Uart2\+Rciv\+Buf\+Rd\+Ptr} locates the index of the slot of the Uart2\+Receive\+Buf on which the \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} is going to be read from. \mbox{\Hypertarget{_kernel_8c_a343aa6e0e887dbc857fa45f632949d56}\label{_kernel_8c_a343aa6e0e887dbc857fa45f632949d56}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart2\+Rciv\+Buf\+Wr\+Ptr@{Uart2\+Rciv\+Buf\+Wr\+Ptr}}
+\index{Uart2\+Rciv\+Buf\+Wr\+Ptr@{Uart2\+Rciv\+Buf\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart2\+Rciv\+Buf\+Wr\+Ptr}{Uart2RcivBufWrPtr}}
+{\footnotesize\ttfamily int Uart2\+Rciv\+Buf\+Wr\+Ptr = 0}
+
+
+
+U\+A\+R\+T2 received buffer write pointer. 
+
+The {\itshape Uart2\+Rciv\+Buf\+Wr\+Ptr} locates the index of the slot of the Uart2\+Receive\+Buf that the next frame is going to be written to. \mbox{\Hypertarget{_kernel_8c_a9a3fdabb4306658c4c597099d690e7ea}\label{_kernel_8c_a9a3fdabb4306658c4c597099d690e7ea}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart2\+Receive\+Buf@{Uart2\+Receive\+Buf}}
+\index{Uart2\+Receive\+Buf@{Uart2\+Receive\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart2\+Receive\+Buf}{Uart2ReceiveBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} Uart2\+Receive\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart2. 
+
+The device connected to U\+A\+R\+T2 sends string message to kernel. Then the kernel reads the message charachter by charachter and depends on \hyperlink{_connection_map_8h}{Connection\+Map.\+h} configuration, (may) construct a K\+E\+N\+R\+E\+N\+L\+\_\+\+F\+R\+A\+ME instance. This instance is buffered inside the U\+A\+R\+T2 received buffer. \mbox{\Hypertarget{_kernel_8c_a57631cf06c4598d2e81707d2fd37158a}\label{_kernel_8c_a57631cf06c4598d2e81707d2fd37158a}} 
+\index{Kernel.\+c@{Kernel.\+c}!uart2\+Receive\+Mutex@{uart2\+Receive\+Mutex}}
+\index{uart2\+Receive\+Mutex@{uart2\+Receive\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{uart2\+Receive\+Mutex}{uart2ReceiveMutex}}
+{\footnotesize\ttfamily volatile bool uart2\+Receive\+Mutex = false}
+
+
+
+mutex for uart2 receive buffer. 
+
+false means the mutex is not acquired and true means the mutex is acquired. \mbox{\Hypertarget{_kernel_8c_af6d21a1b9d99d453de22e4caf108e3ad}\label{_kernel_8c_af6d21a1b9d99d453de22e4caf108e3ad}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart3\+Rciv\+Buf\+Rd\+Ptr@{Uart3\+Rciv\+Buf\+Rd\+Ptr}}
+\index{Uart3\+Rciv\+Buf\+Rd\+Ptr@{Uart3\+Rciv\+Buf\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart3\+Rciv\+Buf\+Rd\+Ptr}{Uart3RcivBufRdPtr}}
+{\footnotesize\ttfamily int Uart3\+Rciv\+Buf\+Rd\+Ptr = 0}
+
+
+
+U\+A\+R\+T3 received buffer read pointer. 
+
+The {\itshape Uart3\+Rciv\+Buf\+Rd\+Ptr} locates the index of the slot of the Uart3\+Receive\+Buf on which the \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} is going to be read from. \mbox{\Hypertarget{_kernel_8c_a9a65b97d5f1bb87798b4d2b1ae253557}\label{_kernel_8c_a9a65b97d5f1bb87798b4d2b1ae253557}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart3\+Rciv\+Buf\+Wr\+Ptr@{Uart3\+Rciv\+Buf\+Wr\+Ptr}}
+\index{Uart3\+Rciv\+Buf\+Wr\+Ptr@{Uart3\+Rciv\+Buf\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart3\+Rciv\+Buf\+Wr\+Ptr}{Uart3RcivBufWrPtr}}
+{\footnotesize\ttfamily int Uart3\+Rciv\+Buf\+Wr\+Ptr = 0}
+
+
+
+U\+A\+R\+T3 received buffer write pointer. 
+
+The {\itshape Uart3\+Rciv\+Buf\+Wr\+Ptr} locates the index of the slot of the Uart3\+Receive\+Buf that the next frame is going to be written to. \mbox{\Hypertarget{_kernel_8c_afdaa6e44d535e713283e148068e4189b}\label{_kernel_8c_afdaa6e44d535e713283e148068e4189b}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart3\+Receive\+Buf@{Uart3\+Receive\+Buf}}
+\index{Uart3\+Receive\+Buf@{Uart3\+Receive\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart3\+Receive\+Buf}{Uart3ReceiveBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} Uart3\+Receive\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart3. 
+
+The device connected to U\+A\+R\+T3 sends string message to kernel. Then the kernel reads the message charachter by charachter and depends on \hyperlink{_connection_map_8h}{Connection\+Map.\+h} configuration, (may) construct a K\+E\+N\+R\+E\+N\+L\+\_\+\+F\+R\+A\+ME instance. This instance is buffered inside the U\+A\+R\+T3 received buffer. \mbox{\Hypertarget{_kernel_8c_a4a56c9e6290938a6cf02d5b369b8c397}\label{_kernel_8c_a4a56c9e6290938a6cf02d5b369b8c397}} 
+\index{Kernel.\+c@{Kernel.\+c}!uart3\+Receive\+Mutex@{uart3\+Receive\+Mutex}}
+\index{uart3\+Receive\+Mutex@{uart3\+Receive\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{uart3\+Receive\+Mutex}{uart3ReceiveMutex}}
+{\footnotesize\ttfamily volatile bool uart3\+Receive\+Mutex = false}
+
+
+
+mutex for uart3 receive buffer. 
+
+false means the mutex is not acquired and true means the mutex is acquired. \mbox{\Hypertarget{_kernel_8c_a520493841c3025c6a3937aaab9abfd51}\label{_kernel_8c_a520493841c3025c6a3937aaab9abfd51}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart4\+Rciv\+Buf\+Rd\+Ptr@{Uart4\+Rciv\+Buf\+Rd\+Ptr}}
+\index{Uart4\+Rciv\+Buf\+Rd\+Ptr@{Uart4\+Rciv\+Buf\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart4\+Rciv\+Buf\+Rd\+Ptr}{Uart4RcivBufRdPtr}}
+{\footnotesize\ttfamily int Uart4\+Rciv\+Buf\+Rd\+Ptr = 0}
+
+
+
+U\+A\+R\+T4 received buffer read pointer. 
+
+The {\itshape Uart4\+Rciv\+Buf\+Rd\+Ptr} locates the index of the slot of the Uart4\+Receive\+Buf on which the \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} is going to be read from. \mbox{\Hypertarget{_kernel_8c_a038a41ee82205b936566e2b06b5718d1}\label{_kernel_8c_a038a41ee82205b936566e2b06b5718d1}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart4\+Rciv\+Buf\+Wr\+Ptr@{Uart4\+Rciv\+Buf\+Wr\+Ptr}}
+\index{Uart4\+Rciv\+Buf\+Wr\+Ptr@{Uart4\+Rciv\+Buf\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart4\+Rciv\+Buf\+Wr\+Ptr}{Uart4RcivBufWrPtr}}
+{\footnotesize\ttfamily int Uart4\+Rciv\+Buf\+Wr\+Ptr = 0}
+
+
+
+U\+A\+R\+T4 received buffer write pointer. 
+
+The {\itshape Uart4\+Rciv\+Buf\+Wr\+Ptr} locates the index of the slot of the Uart4\+Receive\+Buf that the next frame is going to be written to. \mbox{\Hypertarget{_kernel_8c_af2437d9b9378091419caf60751e3a23d}\label{_kernel_8c_af2437d9b9378091419caf60751e3a23d}} 
+\index{Kernel.\+c@{Kernel.\+c}!Uart4\+Receive\+Buf@{Uart4\+Receive\+Buf}}
+\index{Uart4\+Receive\+Buf@{Uart4\+Receive\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{Uart4\+Receive\+Buf}{Uart4ReceiveBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME} Uart4\+Receive\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_e_r_n_e_l___f_r_a_m_e}{K\+E\+R\+N\+E\+L\+\_\+\+F\+R\+A\+ME}} for uart4. 
+
+The device connected to U\+A\+R\+T4 sends string message to kernel. Then the kernel reads the message charachter by charachter and depends on \hyperlink{_connection_map_8h}{Connection\+Map.\+h} configuration, (may) construct a K\+E\+N\+R\+E\+N\+L\+\_\+\+F\+R\+A\+ME instance. This instance is buffered inside the U\+A\+R\+T4 received buffer. \mbox{\Hypertarget{_kernel_8c_a4b475ea06e9d33be01d87e5b4e8c2140}\label{_kernel_8c_a4b475ea06e9d33be01d87e5b4e8c2140}} 
+\index{Kernel.\+c@{Kernel.\+c}!uart4\+Receive\+Mutex@{uart4\+Receive\+Mutex}}
+\index{uart4\+Receive\+Mutex@{uart4\+Receive\+Mutex}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{uart4\+Receive\+Mutex}{uart4ReceiveMutex}}
+{\footnotesize\ttfamily volatile bool uart4\+Receive\+Mutex = false}
+
+
+
+mutex for uart4 receive buffer. 
+
+false means the mutex is not acquired and true means the mutex is acquired. \mbox{\Hypertarget{_kernel_8c_a68e05fe4980f5146c2a77cbf52d590cf}\label{_kernel_8c_a68e05fe4980f5146c2a77cbf52d590cf}} 
+\index{Kernel.\+c@{Kernel.\+c}!wrk\+Send\+Buf@{wrk\+Send\+Buf}}
+\index{wrk\+Send\+Buf@{wrk\+Send\+Buf}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{wrk\+Send\+Buf}{wrkSendBuf}}
+{\footnotesize\ttfamily \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} wrk\+Send\+Buf\mbox{[}\hyperlink{_kernel_8c_a24c014602906305014a892e9297270b7}{D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate {\itshape D\+E\+V\+I\+C\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} of {\itshape \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET}} for workstation. 
+
+The workstation A\+PI sends \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} to the kernel. The kernel reads the packet content and if it was not real-\/time, it is buffered inside the wrk\+Send\+Buf. Later on, the packet is dispached to the device \mbox{\Hypertarget{_kernel_8c_add3cf3af36f795e9417f7870a23562f5}\label{_kernel_8c_add3cf3af36f795e9417f7870a23562f5}} 
+\index{Kernel.\+c@{Kernel.\+c}!wrk\+Snd\+Rd\+Ptr@{wrk\+Snd\+Rd\+Ptr}}
+\index{wrk\+Snd\+Rd\+Ptr@{wrk\+Snd\+Rd\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{wrk\+Snd\+Rd\+Ptr}{wrkSndRdPtr}}
+{\footnotesize\ttfamily int wrk\+Snd\+Rd\+Ptr = 0}
+
+
+
+workstation-\/send read pointer. 
+
+The {\itshape wrk\+Snd\+Rd\+Ptr} locates the index of the wrk\+Send\+Buf from which the \hyperlink{struct_k_l___p_a_c_k_e_t}{K\+L\+\_\+\+P\+A\+C\+K\+ET} is going to be read. \mbox{\Hypertarget{_kernel_8c_ae1f5c8a91bd0d72baf0b17d5eea03535}\label{_kernel_8c_ae1f5c8a91bd0d72baf0b17d5eea03535}} 
+\index{Kernel.\+c@{Kernel.\+c}!wrk\+Snd\+Wr\+Ptr@{wrk\+Snd\+Wr\+Ptr}}
+\index{wrk\+Snd\+Wr\+Ptr@{wrk\+Snd\+Wr\+Ptr}!Kernel.\+c@{Kernel.\+c}}
+\subsubsection{\texorpdfstring{wrk\+Snd\+Wr\+Ptr}{wrkSndWrPtr}}
+{\footnotesize\ttfamily int wrk\+Snd\+Wr\+Ptr = 0}
+
+
+
+workstation-\/send write pointer. 
+
+The {\itshape wrk\+Snd\+Wr\+Ptr} locates the index of wrk\+Send\+Buf that the next frame is going to be written on. 

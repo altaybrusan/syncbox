@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Syncbox Firmware</title>
+    </info>
+        <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <chapter>
+        <title>Data Structure Documentation</title>
+        <xi:include href="struct_d_e_v_i_c_e___s_l_o_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_d_i_s_p___s_t_a_t_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_g_e_n___s_t_a_t_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structjsmn__parser.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structjsmntok__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_k_e_r_n_e_l___f_r_a_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_k_l___p_a_c_k_e_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="_connection_map_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_delta_servo_a_p_i_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_delta_servo_a_p_i_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_gulmay_a_p_i_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_gulmay_a_p_i_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_instrument_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_instrument_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="jsmn_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="jsmn_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_kernel_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_kernel_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_p_i_c24e_def_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_stone_a_p_i_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_stone_a_p_i_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="tst_instrument_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_types_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

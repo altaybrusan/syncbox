@@ -1,0 +1,12 @@
+%FSTAX23Y23*%
+%MOIN*%
+%SFA1B1*%
+
+%IPPOS*%
+%ADD9527C,0.127952*%
+%LNsyncbox-roundholes-nonplated-1*%
+%LPD*%
+G54D9527*
+X01045Y00137D03*
+X01545D03*
+M02*
